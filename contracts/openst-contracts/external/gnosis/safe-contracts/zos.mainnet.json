@@ -1,0 +1,182 @@
+{
+  "contracts": {
+    "GnosisSafe": {
+      "address": "0x8942595a2dc5181df0465af0d7be08c8f23c93af",
+      "constructorCode": "608060405234801561001057600080fd5b506158ca80620000216000396000f3fe",
+      "bodyBytecodeHash": "4fcddedeb8aa08b4ab4b55651396372c2bb6122e88636f9228f95bcd059258dc",
+      "localBytecodeHash": "da3c317db7fc36fca0211c6c3e5b394230a244f1a62e98588f45485e9686b63f",
+      "deployedBytecodeHash": "da3c317db7fc36fca0211c6c3e5b394230a244f1a62e98588f45485e9686b63f",
+      "types": {
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_mapping<t_address>": {
+          "id": "t_mapping<t_address>",
+          "valueType": "t_address",
+          "label": "mapping(key => address)",
+          "kind": "mapping"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_bytes32": {
+          "id": "t_bytes32",
+          "kind": "elementary",
+          "label": "bytes32"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "MasterCopy",
+          "path": "contracts/common/MasterCopy.sol",
+          "label": "masterCopy",
+          "astId": 1740,
+          "type": "t_address",
+          "src": "465:18:9"
+        },
+        {
+          "contract": "ModuleManager",
+          "path": "contracts/base/ModuleManager.sol",
+          "label": "modules",
+          "astId": 979,
+          "type": "t_mapping<t_address>",
+          "src": "550:45:5"
+        },
+        {
+          "contract": "OwnerManager",
+          "path": "contracts/base/OwnerManager.sol",
+          "label": "owners",
+          "astId": 1283,
+          "type": "t_mapping<t_address>",
+          "src": "480:43:6"
+        },
+        {
+          "contract": "OwnerManager",
+          "path": "contracts/base/OwnerManager.sol",
+          "label": "ownerCount",
+          "astId": 1285,
+          "type": "t_uint256",
+          "src": "529:18:6"
+        },
+        {
+          "contract": "OwnerManager",
+          "path": "contracts/base/OwnerManager.sol",
+          "label": "threshold",
+          "astId": 1287,
+          "type": "t_uint256",
+          "src": "553:26:6"
+        },
+        {
+          "contract": "GnosisSafe",
+          "path": "contracts/GnosisSafe.sol",
+          "label": "nonce",
+          "astId": 41,
+          "type": "t_uint256",
+          "src": "1557:20:0"
+        },
+        {
+          "contract": "GnosisSafe",
+          "path": "contracts/GnosisSafe.sol",
+          "label": "domainSeparator",
+          "astId": 43,
+          "type": "t_bytes32",
+          "src": "1583:30:0"
+        },
+        {
+          "contract": "GnosisSafe",
+          "path": "contracts/GnosisSafe.sol",
+          "label": "signedMessages",
+          "astId": 47,
+          "type": "t_mapping<t_uint256>",
+          "src": "1716:49:0"
+        },
+        {
+          "contract": "GnosisSafe",
+          "path": "contracts/GnosisSafe.sol",
+          "label": "approvedHashes",
+          "astId": 53,
+          "type": "t_mapping<t_uint256>",
+          "src": "1876:69:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "ProxyFactory": {
+      "address": "0x88cd603a5dc47857d02865bbc7941b588c533263",
+      "constructorCode": "608060405234801561001057600080fd5b50610560806100206000396000f3fe",
+      "bodyBytecodeHash": "03897e0c4b90b86278b1de7df6841122c6864a19c208c83b89f1649b59237ee2",
+      "localBytecodeHash": "964a1c5c4857dce474c89ceeb91c9d7ca33dcb205f9bcc6a1ee8c54970596921",
+      "deployedBytecodeHash": "964a1c5c4857dce474c89ceeb91c9d7ca33dcb205f9bcc6a1ee8c54970596921",
+      "types": {},
+      "storage": [],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "CreateAndAddModules": {
+      "address": "0xcbf223ccb3264e447167d4772c312df403ab87f0",
+      "constructorCode": "608060405234801561001057600080fd5b506102e2806100206000396000f3fe",
+      "bodyBytecodeHash": "3f1bef8e42a5176d17fd5ee15e86baed6de4d458520547043900628174ab7011",
+      "localBytecodeHash": "c7d3d295d98039fc0b0401490d4e3a131ca6004645161018f5780f6e62ce54d3",
+      "deployedBytecodeHash": "c7d3d295d98039fc0b0401490d4e3a131ca6004645161018f5780f6e62ce54d3",
+      "types": {},
+      "storage": [],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "MultiSend": {
+      "address": "0xe74d6af1670fb6560dd61ee29eb57c7bc027ce4e",
+      "constructorCode": "608060405234801561001057600080fd5b506101c8806100206000396000f3fe",
+      "bodyBytecodeHash": "58eba12a004b48496cb944b7b298706b494b8be2860cd3dfe09680782f137695",
+      "localBytecodeHash": "6d7ca04270952b10d6bfedd61779fd066ebe62137c396bba5520b774cef03ae4",
+      "deployedBytecodeHash": "6d7ca04270952b10d6bfedd61779fd066ebe62137c396bba5520b774cef03ae4",
+      "types": {},
+      "storage": [],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {},
+  "zosversion": "2",
+  "version": "0.1.0",
+  "app": {
+    "address": "0x3c47f9098f9e7c6ea942f8a8d8ba8bcca03a958d"
+  },
+  "package": {
+    "address": "0x304ee2f5077593b052c5f3a1266e87e029686ef2"
+  },
+  "provider": {
+    "address": "0x05e7ae3b0bad5bfd1f681165cd9e5d0ea004b08d"
+  }
+}
