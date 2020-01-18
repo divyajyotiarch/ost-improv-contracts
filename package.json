@@ -21,7 +21,8 @@
     "url": "https://github.com/divyajyotiuk/ost-improv-contracts/issues"
   },
   "files": [
-    "npm_package/dist"
+    "npm_package/dist",
+    "npm_package/contract_name.json"
   ],
   "main": "./npm_package/dist/index.js",
   "scripts": {
