@@ -1692,7 +1692,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 13059,
+                              "referencedDeclaration": 12999,
                               "src": "2530:4:68",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_GnosisSafe_$9120",
@@ -11543,7 +11543,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 13059,
+                              "referencedDeclaration": 12999,
                               "src": "2530:4:68",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_GnosisSafe_$9120",
@@ -20573,7 +20573,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.168Z",
+  "updatedAt": "2020-01-19T12:15:30.191Z",
   "devdoc": {
     "author": "Stefan George - <stefan@gnosis.pm>Richard Meissner - <richard@gnosis.pm>Ricardo Guilherme Schmidt - (Status Research & Development GmbH) - Gas Token Payment",
     "methods": {

@@ -2748,7 +2748,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.002Z",
+  "updatedAt": "2020-01-19T12:15:30.109Z",
   "devdoc": {
     "methods": {
       "acceptStakeRequest(bytes32,bytes32,bytes32,uint8)": {

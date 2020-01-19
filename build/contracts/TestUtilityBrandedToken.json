@@ -1854,7 +1854,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:25.991Z",
+  "updatedAt": "2020-01-19T12:15:30.105Z",
   "devdoc": {
     "details": "TestUtilityBrandedToken facilitates testing of UtilityBrandedToken. ",
     "methods": {

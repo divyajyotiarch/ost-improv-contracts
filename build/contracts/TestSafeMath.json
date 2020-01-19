@@ -1452,7 +1452,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.102Z",
+  "updatedAt": "2020-01-19T12:15:30.154Z",
   "devdoc": {
     "methods": {
       "add(uint256,uint256)": {
