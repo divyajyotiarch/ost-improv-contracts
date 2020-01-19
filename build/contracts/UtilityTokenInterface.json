@@ -1,0 +1,945 @@
+{
+  "contractName": "UtilityTokenInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseSupply",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success_",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseSupply",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success_",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_coGateway",
+          "type": "address"
+        }
+      ],
+      "name": "setCoGateway",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_actor",
+          "type": "address"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "exists_",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"decreaseSupply\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success_\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_actor\",\"type\":\"address\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"exists_\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"increaseSupply\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success_\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_coGateway\",\"type\":\"address\"}],\"name\":\"setCoGateway\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"decreaseSupply(uint256)\":{\"details\":\"Decreases the token balance from the msg.sender address and     decreases the total token supply count.\",\"params\":{\"_amount\":\"Amount of tokens.\"},\"return\":\"success_ `true` if decrease supply is successful, false otherwise.\"},\"exists(address)\":{\"params\":{\"_actor\":\"Address that needs to be checked\"},\"return\":\"exists_ `true` if the address is allowed otherwise `false`\"},\"increaseSupply(address,uint256)\":{\"details\":\"Adds number of tokens to beneficiary balance and increases the     total token supply.\",\"params\":{\"_account\":\"Account address for which the balance will be increased.                This is payable so that it provides flexibility of                transferring base token to account on increase supply.\",\"_amount\":\"Amount of tokens.\"},\"return\":\"success_ `true` if increase supply is successful, false otherwise.\"},\"setCoGateway(address)\":{\"details\":\"Function requires:         - It is called by whitelisted workers.         - coGateway address is set only once.         - coGateway.utilityToken must match this contract.\",\"params\":{\"_coGateway\":\"CoGateway contract address.     \"}}},\"title\":\"UtilityTokenInterface contract.\"},\"userdoc\":{\"methods\":{\"decreaseSupply(uint256)\":{\"notice\":\"Decreases the token supply.\"},\"exists(address)\":{\"notice\":\"Checks if an address exists.\"},\"increaseSupply(address,uint256)\":{\"notice\":\"Increases the total token supply.\"},\"setCoGateway(address)\":{\"notice\":\"Sets the CoGateway contract address.\"}},\"notice\":\"Provides the interface to utility token contract.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol\":\"UtilityTokenInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol\":{\"keccak256\":\"0x3a439adaa4b3e0c1fe8aa8b045c936f48b5bbb4eb35f3fd83ecd19ab79c84c71\",\"urls\":[\"bzz-raw://688911157df119690e750a853b93f0d7a4885aa6d3936c2ffbb218be2d6397de\",\"dweb:/ipfs/QmTZ1jZxJRiZqtoA5EFamTUriUVUtRQXyL36brtXAY4cQY\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/* solhint-disable-next-line compiler-fixed */\npragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n//\n// ----------------------------------------------------------------------------\n//\n// http://www.simpletoken.org/\n//\n// ----------------------------------------------------------------------------\n\n/**\n *  @title UtilityTokenInterface contract.\n *\n *  @notice Provides the interface to utility token contract.\n */\ncontract UtilityTokenInterface {\n\n    /* External functions */\n\n    /**\n     * @notice Increases the total token supply.\n     *\n     * @dev Adds number of tokens to beneficiary balance and increases the\n     *      total token supply.\n     *\n     * @param _account Account address for which the balance will be increased.\n     *                 This is payable so that it provides flexibility of\n     *                 transferring base token to account on increase supply.\n     * @param _amount Amount of tokens.\n     *\n     * @return success_ `true` if increase supply is successful, false otherwise.\n     */\n    function increaseSupply(\n        address payable _account,\n        uint256 _amount\n    )\n        external\n        returns (bool success_);\n\n    /**\n     * @notice Decreases the token supply.\n     *\n     * @dev Decreases the token balance from the msg.sender address and\n     *      decreases the total token supply count.\n     *\n     * @param _amount Amount of tokens.\n     *\n     * @return success_ `true` if decrease supply is successful, false otherwise.\n     */\n    function decreaseSupply(uint256 _amount) external returns (bool success_);\n\n    /**\n     * @notice Sets the CoGateway contract address.\n     *\n     * @dev Function requires:\n     *          - It is called by whitelisted workers.\n     *          - coGateway address is set only once.\n     *          - coGateway.utilityToken must match this contract.\n     *\n     * @param _coGateway CoGateway contract address.\n     *\n     */\n    function setCoGateway(address _coGateway) external returns (bool);\n\n    /**\n     * @notice  Checks if an address exists.\n     *\n     * @param _actor Address that needs to be checked\n     *\n     * @return exists_ `true` if the address is allowed otherwise `false`\n     */\n    function exists(address _actor) external returns (bool exists_);\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol",
+    "exportedSymbols": {
+      "UtilityTokenInterface": [
+        3267
+      ]
+    },
+    "id": 3268,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3236,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "47:23:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title UtilityTokenInterface contract.\n *  @notice Provides the interface to utility token contract.",
+        "fullyImplemented": false,
+        "id": 3267,
+        "linearizedBaseContracts": [
+          3267
+        ],
+        "name": "UtilityTokenInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Increases the total token supply.\n     * @dev Adds number of tokens to beneficiary balance and increases the\n     total token supply.\n     * @param _account Account address for which the balance will be increased.\n                This is payable so that it provides flexibility of\n                transferring base token to account on increase supply.\n@param _amount Amount of tokens.\n     * @return success_ `true` if increase supply is successful, false otherwise.",
+            "id": 3245,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3241,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3238,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3245,
+                  "src": "1624:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 3237,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1624:15:24",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3240,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3245,
+                  "src": "1658:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3239,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1658:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1614:65:24"
+            },
+            "returnParameters": {
+              "id": 3244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3243,
+                  "name": "success_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3245,
+                  "src": "1714:13:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3242,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1714:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1713:15:24"
+            },
+            "scope": 3267,
+            "src": "1591:138:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Decreases the token supply.\n     * @dev Decreases the token balance from the msg.sender address and\n     decreases the total token supply count.\n     * @param _amount Amount of tokens.\n     * @return success_ `true` if decrease supply is successful, false otherwise.",
+            "id": 3252,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decreaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3248,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3247,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3252,
+                  "src": "2085:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3246,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2085:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2084:17:24"
+            },
+            "returnParameters": {
+              "id": 3251,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3250,
+                  "name": "success_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3252,
+                  "src": "2120:13:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3249,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2120:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2119:15:24"
+            },
+            "scope": 3267,
+            "src": "2061:74:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Sets the CoGateway contract address.\n     * @dev Function requires:\n         - It is called by whitelisted workers.\n         - coGateway address is set only once.\n         - coGateway.utilityToken must match this contract.\n     * @param _coGateway CoGateway contract address.\n     ",
+            "id": 3259,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCoGateway",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3254,
+                  "name": "_coGateway",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3259,
+                  "src": "2512:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3253,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2512:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2511:20:24"
+            },
+            "returnParameters": {
+              "id": 3258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3257,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3259,
+                  "src": "2550:4:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3256,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2550:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2549:6:24"
+            },
+            "scope": 3267,
+            "src": "2490:66:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice  Checks if an address exists.\n     * @param _actor Address that needs to be checked\n     * @return exists_ `true` if the address is allowed otherwise `false`",
+            "id": 3266,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3261,
+                  "name": "_actor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3266,
+                  "src": "2781:14:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2781:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2780:16:24"
+            },
+            "returnParameters": {
+              "id": 3265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3264,
+                  "name": "exists_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3266,
+                  "src": "2815:12:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3263,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2815:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2814:14:24"
+            },
+            "scope": 3267,
+            "src": "2765:64:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3268,
+        "src": "976:1855:24"
+      }
+    ],
+    "src": "47:2785:24"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol",
+    "exportedSymbols": {
+      "UtilityTokenInterface": [
+        3267
+      ]
+    },
+    "id": 3268,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3236,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "47:23:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title UtilityTokenInterface contract.\n *  @notice Provides the interface to utility token contract.",
+        "fullyImplemented": false,
+        "id": 3267,
+        "linearizedBaseContracts": [
+          3267
+        ],
+        "name": "UtilityTokenInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Increases the total token supply.\n     * @dev Adds number of tokens to beneficiary balance and increases the\n     total token supply.\n     * @param _account Account address for which the balance will be increased.\n                This is payable so that it provides flexibility of\n                transferring base token to account on increase supply.\n@param _amount Amount of tokens.\n     * @return success_ `true` if increase supply is successful, false otherwise.",
+            "id": 3245,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3241,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3238,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3245,
+                  "src": "1624:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 3237,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1624:15:24",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3240,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3245,
+                  "src": "1658:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3239,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1658:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1614:65:24"
+            },
+            "returnParameters": {
+              "id": 3244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3243,
+                  "name": "success_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3245,
+                  "src": "1714:13:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3242,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1714:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1713:15:24"
+            },
+            "scope": 3267,
+            "src": "1591:138:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Decreases the token supply.\n     * @dev Decreases the token balance from the msg.sender address and\n     decreases the total token supply count.\n     * @param _amount Amount of tokens.\n     * @return success_ `true` if decrease supply is successful, false otherwise.",
+            "id": 3252,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decreaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3248,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3247,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3252,
+                  "src": "2085:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3246,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2085:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2084:17:24"
+            },
+            "returnParameters": {
+              "id": 3251,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3250,
+                  "name": "success_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3252,
+                  "src": "2120:13:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3249,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2120:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2119:15:24"
+            },
+            "scope": 3267,
+            "src": "2061:74:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Sets the CoGateway contract address.\n     * @dev Function requires:\n         - It is called by whitelisted workers.\n         - coGateway address is set only once.\n         - coGateway.utilityToken must match this contract.\n     * @param _coGateway CoGateway contract address.\n     ",
+            "id": 3259,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCoGateway",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3254,
+                  "name": "_coGateway",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3259,
+                  "src": "2512:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3253,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2512:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2511:20:24"
+            },
+            "returnParameters": {
+              "id": 3258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3257,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3259,
+                  "src": "2550:4:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3256,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2550:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2549:6:24"
+            },
+            "scope": 3267,
+            "src": "2490:66:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice  Checks if an address exists.\n     * @param _actor Address that needs to be checked\n     * @return exists_ `true` if the address is allowed otherwise `false`",
+            "id": 3266,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3261,
+                  "name": "_actor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3266,
+                  "src": "2781:14:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2781:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2780:16:24"
+            },
+            "returnParameters": {
+              "id": 3265,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3264,
+                  "name": "exists_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3266,
+                  "src": "2815:12:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3263,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2815:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2814:14:24"
+            },
+            "scope": 3267,
+            "src": "2765:64:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3268,
+        "src": "976:1855:24"
+      }
+    ],
+    "src": "47:2785:24"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.088Z",
+  "devdoc": {
+    "methods": {
+      "decreaseSupply(uint256)": {
+        "details": "Decreases the token balance from the msg.sender address and     decreases the total token supply count.",
+        "params": {
+          "_amount": "Amount of tokens."
+        },
+        "return": "success_ `true` if decrease supply is successful, false otherwise."
+      },
+      "exists(address)": {
+        "params": {
+          "_actor": "Address that needs to be checked"
+        },
+        "return": "exists_ `true` if the address is allowed otherwise `false`"
+      },
+      "increaseSupply(address,uint256)": {
+        "details": "Adds number of tokens to beneficiary balance and increases the     total token supply.",
+        "params": {
+          "_account": "Account address for which the balance will be increased.                This is payable so that it provides flexibility of                transferring base token to account on increase supply.",
+          "_amount": "Amount of tokens."
+        },
+        "return": "success_ `true` if increase supply is successful, false otherwise."
+      },
+      "setCoGateway(address)": {
+        "details": "Function requires:         - It is called by whitelisted workers.         - coGateway address is set only once.         - coGateway.utilityToken must match this contract.",
+        "params": {
+          "_coGateway": "CoGateway contract address.     "
+        }
+      }
+    },
+    "title": "UtilityTokenInterface contract."
+  },
+  "userdoc": {
+    "methods": {
+      "decreaseSupply(uint256)": {
+        "notice": "Decreases the token supply."
+      },
+      "exists(address)": {
+        "notice": "Checks if an address exists."
+      },
+      "increaseSupply(address,uint256)": {
+        "notice": "Increases the total token supply."
+      },
+      "setCoGateway(address)": {
+        "notice": "Sets the CoGateway contract address."
+      }
+    },
+    "notice": "Provides the interface to utility token contract."
+  }
+}

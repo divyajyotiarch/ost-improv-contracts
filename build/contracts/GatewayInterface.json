@@ -1,0 +1,1033 @@
+{
+  "contractName": "GatewayInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "bounty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_gasPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_gasLimit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_nonce",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_hashLock",
+          "type": "bytes32"
+        }
+      ],
+      "name": "stake",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "messageHash_",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_messageHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "revertStake",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "staker_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stakerNonce_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"bounty\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_messageHash\",\"type\":\"bytes32\"}],\"name\":\"revertStake\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"staker_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"stakerNonce_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_gasPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_gasLimit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_nonce\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"_hashLock\",\"type\":\"bytes32\"}],\"name\":\"stake\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"messageHash_\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"bounty()\":{\"return\":\"Amount of ERC20 which needs to be staked by facilitator.\"},\"revertStake(bytes32)\":{\"details\":\"To revert the the sender must sign the sha3(messageHash, nonce+1)\",\"params\":{\"_messageHash\":\"Message hash.\"},\"return\":\"staker_ Staker addressstakerNonce_ Staker nonceamount_ Stake amount\"},\"stake(uint256,address,uint256,uint256,uint256,bytes32)\":{\"params\":{\"_amount\":\"Stake amount that will be transferred from the staker               account.\",\"_beneficiary\":\"The address in the auxiliary chain where the utility                    tokens will be minted.\",\"_gasLimit\":\"Gas limit that staker is ready to pay.\",\"_gasPrice\":\"Gas price that staker is ready to pay to get the stake                 and mint process done.\",\"_hashLock\":\"Hash Lock provided by the facilitator.\",\"_nonce\":\"Nonce of the staker address.\"},\"return\":\"messageHash_ Message hash is unique for each request.\"}},\"title\":\"GatewayInterface Contract\"},\"userdoc\":{\"methods\":{\"bounty()\":{\"notice\":\"Returns bounty amount.\"},\"revertStake(bytes32)\":{\"notice\":\"Revert stake process and get the stake        amount back. Only staker can revert stake by providing        penalty i.e. 1.5 times of bounty amount. On progress revert stake        penalty and facilitator bounty will be burned.\"},\"stake(uint256,address,uint256,uint256,uint256,bytes32)\":{\"notice\":\"Initiates the stake process.  In order to stake the staker        needs to approve Gateway contract for stake amount.        Staked amount is transferred from staker address to        Gateway contract. Bounty amount is also transferred from staker.\"}},\"notice\":\"Provides interface for gateway contract.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/GatewayInterface.sol\":\"GatewayInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/GatewayInterface.sol\":{\"keccak256\":\"0x5b17a07b45ffc46857ea7467b525bc68b3ceb6a58b22e53ac94adaee48a8924e\",\"urls\":[\"bzz-raw://7d466817aec81a5464a19381ce10a79d57e4eb1e10df908410b1e54d57b3ef46\",\"dweb:/ipfs/QmenjVgPhWnqd3wdob1GLMc96gr6nUWw656p2wEYbcNuwZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2018 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n\n/**\n * @title GatewayInterface Contract\n *\n * @notice Provides interface for gateway contract.\n */\ninterface GatewayInterface {\n\n    /* External functions */\n\n    /**\n     * @notice Returns bounty amount.\n     *\n     * @return Amount of ERC20 which needs to be staked by facilitator.\n     */\n    function bounty()\n        external\n        returns (uint256);\n\n    /**\n     * @notice Initiates the stake process.  In order to stake the staker\n     *         needs to approve Gateway contract for stake amount.\n     *         Staked amount is transferred from staker address to\n     *         Gateway contract. Bounty amount is also transferred from staker.\n     *\n     * @param _amount Stake amount that will be transferred from the staker\n     *                account.\n     * @param _beneficiary The address in the auxiliary chain where the utility\n     *                     tokens will be minted.\n     * @param _gasPrice Gas price that staker is ready to pay to get the stake\n     *                  and mint process done.\n     * @param _gasLimit Gas limit that staker is ready to pay.\n     * @param _nonce Nonce of the staker address.\n     * @param _hashLock Hash Lock provided by the facilitator.\n     *\n     * @return messageHash_ Message hash is unique for each request.\n     */\n    function stake(\n        uint256 _amount,\n        address _beneficiary,\n        uint256 _gasPrice,\n        uint256 _gasLimit,\n        uint256 _nonce,\n        bytes32 _hashLock\n    )\n        external\n        returns (bytes32 messageHash_);\n\n    /**\n     * @notice Revert stake process and get the stake\n     *         amount back. Only staker can revert stake by providing\n     *         penalty i.e. 1.5 times of bounty amount. On progress revert stake\n     *         penalty and facilitator bounty will be burned.\n     *\n     * @dev To revert the the sender must sign the sha3(messageHash, nonce+1)\n     *\n     * @param _messageHash Message hash.\n     *\n     * @return staker_ Staker address\n     * @return stakerNonce_ Staker nonce\n     * @return amount_ Stake amount\n     */\n    function revertStake(\n        bytes32 _messageHash\n    )\n        external\n        returns\n    (\n        address staker_,\n        uint256 stakerNonce_,\n        uint256 amount_\n    );\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/GatewayInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/GatewayInterface.sol",
+    "exportedSymbols": {
+      "GatewayInterface": [
+        1912
+      ]
+    },
+    "id": 1913,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1878,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title GatewayInterface Contract\n * @notice Provides interface for gateway contract.",
+        "fullyImplemented": false,
+        "id": 1912,
+        "linearizedBaseContracts": [
+          1912
+        ],
+        "name": "GatewayInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Returns bounty amount.\n     * @return Amount of ERC20 which needs to be staked by facilitator.",
+            "id": 1883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bounty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1879,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "925:2:6"
+            },
+            "returnParameters": {
+              "id": 1882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1881,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1883,
+                  "src": "962:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1880,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "962:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:9:6"
+            },
+            "scope": 1912,
+            "src": "910:61:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Initiates the stake process.  In order to stake the staker\n        needs to approve Gateway contract for stake amount.\n        Staked amount is transferred from staker address to\n        Gateway contract. Bounty amount is also transferred from staker.\n     * @param _amount Stake amount that will be transferred from the staker\n               account.\n@param _beneficiary The address in the auxiliary chain where the utility\n                    tokens will be minted.\n@param _gasPrice Gas price that staker is ready to pay to get the stake\n                 and mint process done.\n@param _gasLimit Gas limit that staker is ready to pay.\n@param _nonce Nonce of the staker address.\n@param _hashLock Hash Lock provided by the facilitator.\n     * @return messageHash_ Message hash is unique for each request.",
+            "id": 1900,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1896,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1885,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "1927:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1884,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1927:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "1952:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1952:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1889,
+                  "name": "_gasPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "1982:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1982:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1891,
+                  "name": "_gasLimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2009:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1890,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2009:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "_nonce",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2036:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2036:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1895,
+                  "name": "_hashLock",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2060:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1894,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2060:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1917:166:6"
+            },
+            "returnParameters": {
+              "id": 1899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1898,
+                  "name": "messageHash_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2118:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1897,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2118:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2117:22:6"
+            },
+            "scope": 1912,
+            "src": "1903:237:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Revert stake process and get the stake\n        amount back. Only staker can revert stake by providing\n        penalty i.e. 1.5 times of bounty amount. On progress revert stake\n        penalty and facilitator bounty will be burned.\n     * @dev To revert the the sender must sign the sha3(messageHash, nonce+1)\n     * @param _messageHash Message hash.\n     * @return staker_ Staker address\n@return stakerNonce_ Staker nonce\n@return amount_ Stake amount",
+            "id": 1911,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revertStake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1903,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1902,
+                  "name": "_messageHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2714:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1901,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2714:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2704:36:6"
+            },
+            "returnParameters": {
+              "id": 1910,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1905,
+                  "name": "staker_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2788:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1904,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2788:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1907,
+                  "name": "stakerNonce_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2813:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1906,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2813:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1909,
+                  "name": "amount_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2843:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1908,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2843:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2778:86:6"
+            },
+            "scope": 1912,
+            "src": "2684:181:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1913,
+        "src": "713:2154:6"
+      }
+    ],
+    "src": "0:2868:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/GatewayInterface.sol",
+    "exportedSymbols": {
+      "GatewayInterface": [
+        1912
+      ]
+    },
+    "id": 1913,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1878,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:6"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title GatewayInterface Contract\n * @notice Provides interface for gateway contract.",
+        "fullyImplemented": false,
+        "id": 1912,
+        "linearizedBaseContracts": [
+          1912
+        ],
+        "name": "GatewayInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Returns bounty amount.\n     * @return Amount of ERC20 which needs to be staked by facilitator.",
+            "id": 1883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bounty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1879,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "925:2:6"
+            },
+            "returnParameters": {
+              "id": 1882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1881,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1883,
+                  "src": "962:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1880,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "962:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:9:6"
+            },
+            "scope": 1912,
+            "src": "910:61:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Initiates the stake process.  In order to stake the staker\n        needs to approve Gateway contract for stake amount.\n        Staked amount is transferred from staker address to\n        Gateway contract. Bounty amount is also transferred from staker.\n     * @param _amount Stake amount that will be transferred from the staker\n               account.\n@param _beneficiary The address in the auxiliary chain where the utility\n                    tokens will be minted.\n@param _gasPrice Gas price that staker is ready to pay to get the stake\n                 and mint process done.\n@param _gasLimit Gas limit that staker is ready to pay.\n@param _nonce Nonce of the staker address.\n@param _hashLock Hash Lock provided by the facilitator.\n     * @return messageHash_ Message hash is unique for each request.",
+            "id": 1900,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1896,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1885,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "1927:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1884,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1927:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "1952:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1952:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1889,
+                  "name": "_gasPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "1982:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1982:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1891,
+                  "name": "_gasLimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2009:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1890,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2009:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "_nonce",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2036:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2036:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1895,
+                  "name": "_hashLock",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2060:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1894,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2060:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1917:166:6"
+            },
+            "returnParameters": {
+              "id": 1899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1898,
+                  "name": "messageHash_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "2118:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1897,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2118:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2117:22:6"
+            },
+            "scope": 1912,
+            "src": "1903:237:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Revert stake process and get the stake\n        amount back. Only staker can revert stake by providing\n        penalty i.e. 1.5 times of bounty amount. On progress revert stake\n        penalty and facilitator bounty will be burned.\n     * @dev To revert the the sender must sign the sha3(messageHash, nonce+1)\n     * @param _messageHash Message hash.\n     * @return staker_ Staker address\n@return stakerNonce_ Staker nonce\n@return amount_ Stake amount",
+            "id": 1911,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revertStake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1903,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1902,
+                  "name": "_messageHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2714:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1901,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2714:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2704:36:6"
+            },
+            "returnParameters": {
+              "id": 1910,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1905,
+                  "name": "staker_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2788:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1904,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2788:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1907,
+                  "name": "stakerNonce_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2813:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1906,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2813:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1909,
+                  "name": "amount_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "2843:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1908,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2843:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2778:86:6"
+            },
+            "scope": 1912,
+            "src": "2684:181:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1913,
+        "src": "713:2154:6"
+      }
+    ],
+    "src": "0:2868:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:25.980Z",
+  "devdoc": {
+    "methods": {
+      "bounty()": {
+        "return": "Amount of ERC20 which needs to be staked by facilitator."
+      },
+      "revertStake(bytes32)": {
+        "details": "To revert the the sender must sign the sha3(messageHash, nonce+1)",
+        "params": {
+          "_messageHash": "Message hash."
+        },
+        "return": "staker_ Staker addressstakerNonce_ Staker nonceamount_ Stake amount"
+      },
+      "stake(uint256,address,uint256,uint256,uint256,bytes32)": {
+        "params": {
+          "_amount": "Stake amount that will be transferred from the staker               account.",
+          "_beneficiary": "The address in the auxiliary chain where the utility                    tokens will be minted.",
+          "_gasLimit": "Gas limit that staker is ready to pay.",
+          "_gasPrice": "Gas price that staker is ready to pay to get the stake                 and mint process done.",
+          "_hashLock": "Hash Lock provided by the facilitator.",
+          "_nonce": "Nonce of the staker address."
+        },
+        "return": "messageHash_ Message hash is unique for each request."
+      }
+    },
+    "title": "GatewayInterface Contract"
+  },
+  "userdoc": {
+    "methods": {
+      "bounty()": {
+        "notice": "Returns bounty amount."
+      },
+      "revertStake(bytes32)": {
+        "notice": "Revert stake process and get the stake        amount back. Only staker can revert stake by providing        penalty i.e. 1.5 times of bounty amount. On progress revert stake        penalty and facilitator bounty will be burned."
+      },
+      "stake(uint256,address,uint256,uint256,uint256,bytes32)": {
+        "notice": "Initiates the stake process.  In order to stake the staker        needs to approve Gateway contract for stake amount.        Staked amount is transferred from staker address to        Gateway contract. Bounty amount is also transferred from staker."
+      }
+    },
+    "notice": "Provides interface for gateway contract."
+  }
+}

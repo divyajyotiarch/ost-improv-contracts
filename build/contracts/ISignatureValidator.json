@@ -1,0 +1,355 @@
+{
+  "contractName": "ISignatureValidator",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "isValidSignature",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValid",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"_signature\",\"type\":\"bytes\"}],\"name\":\"isValidSignature\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValid\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isValidSignature(bytes,bytes)\":{\"details\":\"Should return whether the signature provided is valid for the provided data\",\"params\":{\"_data\":\"Arbitrary length data signed on the behalf of address(this)\",\"_signature\":\"Signature byte array associated with _data    * MUST return a bool upon valid or invalid signature with corresponding _data MUST take (bytes, bytes) as arguments\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol\":\"ISignatureValidator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol\":{\"keccak256\":\"0xed7badda65ff2c5921587a127c2ea3a0247d58a4cd19727a1d633eb5c3f2ae32\",\"urls\":[\"bzz-raw://0994f174c576b5220deee1d673daa24a848a05acf139825ca709cd0356da356f\",\"dweb:/ipfs/QmVLM1CrhSqnbQKnY4od5e12Z8TnMwG1bbyzVCFoW3nTjh\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.0;\n\ncontract ISignatureValidator {\n    /**\n    * @dev Should return whether the signature provided is valid for the provided data\n    * @param _data Arbitrary length data signed on the behalf of address(this)\n    * @param _signature Signature byte array associated with _data\n    *\n    * MUST return a bool upon valid or invalid signature with corresponding _data\n    * MUST take (bytes, bytes) as arguments\n    */ \n    function isValidSignature(\n        bytes calldata _data, \n        bytes calldata _signature)\n        external\n        returns (bool isValid); \n}",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol",
+    "exportedSymbols": {
+      "ISignatureValidator": [
+        10415
+      ]
+    },
+    "id": 10416,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10405,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:82"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 10415,
+        "linearizedBaseContracts": [
+          10415
+        ],
+        "name": "ISignatureValidator",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Should return whether the signature provided is valid for the provided data\n@param _data Arbitrary length data signed on the behalf of address(this)\n@param _signature Signature byte array associated with _data\n    * MUST return a bool upon valid or invalid signature with corresponding _data\nMUST take (bytes, bytes) as arguments",
+            "id": 10414,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidSignature",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10410,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10407,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10414,
+                  "src": "476:20:82",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10406,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:5:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10409,
+                  "name": "_signature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10414,
+                  "src": "507:25:82",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10408,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:5:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "466:67:82"
+            },
+            "returnParameters": {
+              "id": 10413,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10412,
+                  "name": "isValid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10414,
+                  "src": "568:12:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10411,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "568:4:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "567:14:82"
+            },
+            "scope": 10415,
+            "src": "441:141:82",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10416,
+        "src": "25:560:82"
+      }
+    ],
+    "src": "0:585:82"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol",
+    "exportedSymbols": {
+      "ISignatureValidator": [
+        10415
+      ]
+    },
+    "id": 10416,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10405,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:82"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 10415,
+        "linearizedBaseContracts": [
+          10415
+        ],
+        "name": "ISignatureValidator",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Should return whether the signature provided is valid for the provided data\n@param _data Arbitrary length data signed on the behalf of address(this)\n@param _signature Signature byte array associated with _data\n    * MUST return a bool upon valid or invalid signature with corresponding _data\nMUST take (bytes, bytes) as arguments",
+            "id": 10414,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidSignature",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10410,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10407,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10414,
+                  "src": "476:20:82",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10406,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:5:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10409,
+                  "name": "_signature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10414,
+                  "src": "507:25:82",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10408,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:5:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "466:67:82"
+            },
+            "returnParameters": {
+              "id": 10413,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10412,
+                  "name": "isValid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10414,
+                  "src": "568:12:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10411,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "568:4:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "567:14:82"
+            },
+            "scope": 10415,
+            "src": "441:141:82",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10416,
+        "src": "25:560:82"
+      }
+    ],
+    "src": "0:585:82"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.194Z",
+  "devdoc": {
+    "methods": {
+      "isValidSignature(bytes,bytes)": {
+        "details": "Should return whether the signature provided is valid for the provided data",
+        "params": {
+          "_data": "Arbitrary length data signed on the behalf of address(this)",
+          "_signature": "Signature byte array associated with _data    * MUST return a bool upon valid or invalid signature with corresponding _data MUST take (bytes, bytes) as arguments"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

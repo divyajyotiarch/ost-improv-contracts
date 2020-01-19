@@ -1,0 +1,1314 @@
+{
+  "contractName": "FirewalledRule",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract OrganizationInterface",
+          "name": "_organization",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "FirewallDisabled",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "firewallEnabled",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "organization",
+      "outputs": [
+        {
+          "internalType": "contract OrganizationInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "disableFirewall",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract OrganizationInterface\",\"name\":\"_organization\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"FirewallDisabled\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"disableFirewall\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"firewallEnabled\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"organization\",\"outputs\":[{\"internalType\":\"contract OrganizationInterface\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"params\":{\"_organization\":\"The address of an organization contract.\"}}},\"title\":\"Extend this rule in order to restrict relayers of a meta-transaction.\"},\"userdoc\":{\"methods\":{\"disableFirewall()\":{\"notice\":\"Disables the firewall so that anyone can use firewalled methods.        Disabling the firewall cannot be done undone. There is no method        to enable the firewall again.        Emits a `FirewallDisabled` event.\"}},\"notice\":\"If you want to restrict the relayers that can relay meta-transactions        to your rule, you can extend this contract with your rule. Your rule        has to include the modifier `firewalled` for all functions that        should be restricted.        The firewall can be disabled, but not enabled again. When it is        disabled, the modifier basically does nothing anymore.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol\":\"FirewalledRule\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/OrganizationInterface.sol\":{\"keccak256\":\"0xac45d29a498c6531778e0a0cdb31c0d0c2fa6f090dfe9ff99e5ee056657e1962\",\"urls\":[\"bzz-raw://c1269e9993d4f7562855faefbc64f15e7bbe7468777a99611ddfcb4c980c22e1\",\"dweb:/ipfs/QmNRV39vV9RCyovb7EyxWakL2CcMXgoTpToxrfDp9wwQbq\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/Organized.sol\":{\"keccak256\":\"0x16d60f305a592f262b1603bb0b3b50596a91910bf1ea7de4f9642f01dce01356\",\"urls\":[\"bzz-raw://b7e8bc23f708ba7a0dc2cd1e7c48c8a4248a19260a4052b97fdd18be5f4dd352\",\"dweb:/ipfs/QmWPgpQafZXVAnHPEx9awFircyn2NRfdt7rdqPwv4qqVso\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol\":{\"keccak256\":\"0xb56e5264d5b5eaf1fc193ca16ce9207db58d6829279f725aaadc5dac240e97f7\",\"urls\":[\"bzz-raw://055c82f965433e9e551920fc934dcdaac6a491a22fdef1434bf98239c5609e17\",\"dweb:/ipfs/QmdNNxukPsK7X9x1sg4jDejikNHSzmiyPTDrAChBZo8pwV\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516102e93803806102e98339818101604052602081101561003357600080fd5b5051806001600160a01b03811661007b5760405162461bcd60e51b815260040180806020018281038252602f8152602001806102ba602f913960400191505060405180910390fd5b6000805460ff60a01b196001600160a01b039093166001600160a01b03199091161791909116600160a01b17905550610201806100b96000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063090ee9691461004657806323bd4d7a1461005057806397732d6c14610074575b600080fd5b61004e610090565b005b610058610178565b604080516001600160a01b039092168252519081900360200190f35b61007c610187565b604080519115158252519081900360200190f35b6000546040805163b1ce8eab60e01b815233600482015290516001600160a01b039092169163b1ce8eab91602480820192602092909190829003018186803b1580156100db57600080fd5b505afa1580156100ef573d6000803e3d6000fd5b505050506040513d602081101561010557600080fd5b50516101425760405162461bcd60e51b81526004018080602001828103825260358152602001806101986035913960400191505060405180910390fd5b6000805460ff60a01b191681556040517f8c61b806d365933201f6956f3187a13394061c3da1c6c8bad5ec88d7ee0112a39190a1565b6000546001600160a01b031681565b600054600160a01b900460ff168156fe4f6e6c7920746865206f7267616e697a6174696f6e20697320616c6c6f77656420746f2063616c6c2074686973206d6574686f642ea265627a7a72315820db6224b8189774389535bd98a7e1e4b62a3b9c188581c43e0f0e97c903a13d7b64736f6c634300051000324f7267616e697a6174696f6e20636f6e74726163742061646472657373206d757374206e6f74206265207a65726f2e",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063090ee9691461004657806323bd4d7a1461005057806397732d6c14610074575b600080fd5b61004e610090565b005b610058610178565b604080516001600160a01b039092168252519081900360200190f35b61007c610187565b604080519115158252519081900360200190f35b6000546040805163b1ce8eab60e01b815233600482015290516001600160a01b039092169163b1ce8eab91602480820192602092909190829003018186803b1580156100db57600080fd5b505afa1580156100ef573d6000803e3d6000fd5b505050506040513d602081101561010557600080fd5b50516101425760405162461bcd60e51b81526004018080602001828103825260358152602001806101986035913960400191505060405180910390fd5b6000805460ff60a01b191681556040517f8c61b806d365933201f6956f3187a13394061c3da1c6c8bad5ec88d7ee0112a39190a1565b6000546001600160a01b031681565b600054600160a01b900460ff168156fe4f6e6c7920746865206f7267616e697a6174696f6e20697320616c6c6f77656420746f2063616c6c2074686973206d6574686f642ea265627a7a72315820db6224b8189774389535bd98a7e1e4b62a3b9c188581c43e0f0e97c903a13d7b64736f6c63430005100032",
+  "sourceMap": "1227:2207:49:-;;;2727:272;8:9:-1;5:2;;;30:1;27;20:12;5:2;2727:272:49;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2727:272:49;;-1:-1:-1;;;;;1888:36:41;;1867:130;;;;-1:-1:-1;;;1867:130:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2008:12;:28;;-1:-1:-1;;;;;;;;;2008:28:41;;;-1:-1:-1;;;;;;2008:28:41;;;;2970:22:49;;;;-1:-1:-1;;;2970:22:49;;;-1:-1:-1;1227:2207:49;;;;;;",
+  "deployedSourceMap": "1227:2207:49:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1227:2207:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3306:126;;;:::i;:::-;;1153:41:41;;;:::i;:::-;;;;-1:-1:-1;;;;;1153:41:41;;;;;;;;;;;;;;1622:27:49;;;:::i;:::-;;;;;;;;;;;;;;;;;;3306:126;1286:12:41;;:39;;;-1:-1:-1;;;1286:39:41;;1314:10;1286:39;;;;;;-1:-1:-1;;;;;1286:12:41;;;;:27;;:39;;;;;;;;;;;;;;;:12;:39;;;5:2:-1;;;;30:1;27;20:12;5:2;1286:39:41;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1286:39:41;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1286:39:41;1265:139;;;;-1:-1:-1;;;1265:139:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3387:5:49;3369:23;;-1:-1:-1;;;;3369:23:49;;;3407:18;;;;3387:5;3407:18;3306:126::o;1153:41:41:-;;;-1:-1:-1;;;;;1153:41:41;;:::o;1622:27:49:-;;;-1:-1:-1;;;1622:27:49;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\nimport \"../organization/contracts/Organized.sol\";\nimport \"../organization/contracts/OrganizationInterface.sol\";\n\n/**\n * @title Extend this rule in order to restrict relayers of a meta-transaction.\n *\n * @notice If you want to restrict the relayers that can relay meta-transactions\n *         to your rule, you can extend this contract with your rule. Your rule\n *         has to include the modifier `firewalled` for all functions that\n *         should be restricted.\n *         The firewall can be disabled, but not enabled again. When it is\n *         disabled, the modifier basically does nothing anymore.\n */\ncontract FirewalledRule is Organized {\n\n    /* Events */\n\n    /**\n     * Emitted when the firewall gets disabled.\n     * It is the only event, because a firewall cannot get re-enabled.\n     */\n    event FirewallDisabled();\n\n\n    /* Storage */\n\n    /**\n     * Records whether the firewall is checked in the relevant modifier.\n     * Is set to `false` when the firewall gets disabled.\n     */\n    bool public firewallEnabled;\n\n\n    /* Modifiers */\n\n    /**\n     * Requires that `tx.origin` is an organization worker, if the firewall is\n     * enabled. Once the firewall has been disabled, this modifier will not\n     * enforce any checks anymore.\n     * The modifier checks `tx.origin` and not `msg.sender`, because\n     * `msg.sender` can be another contract. However, what the firewall is\n     * supposed to check is who relayed the meta-transaction. The relayer is\n     * always `tx.origin`.\n     */\n    modifier firewalled() {\n        if (firewallEnabled) {\n            require(\n                // We deliberately chose `tx.origin` and not `msg.sender`.\n                // See modifier documentation for more details.\n                // solium-disable-next-line security/no-tx-origin\n                organization.isWorker(tx.origin),\n                \"This method is firewalled. Transaction must originate from an organization worker.\"\n            );\n        }\n\n        _;\n    }\n\n\n    /* Special Functions */\n\n    /**\n     * @param _organization The address of an organization contract.\n     */\n    constructor(\n        OrganizationInterface _organization\n    )\n        Organized(_organization)\n        public\n    {\n        // The firewall must be enabled by default, as there is no function to\n        // enable a disabled firewall.\n        firewallEnabled = true;\n    }\n\n\n    /* External Functions */\n\n    /**\n     * @notice Disables the firewall so that anyone can use firewalled methods.\n     *         Disabling the firewall cannot be done undone. There is no method\n     *         to enable the firewall again.\n     *         Emits a `FirewallDisabled` event.\n     */\n    function disableFirewall() external onlyOrganization {\n        firewallEnabled = false;\n        emit FirewallDisabled();\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
+    "exportedSymbols": {
+      "FirewalledRule": [
+        5651
+      ]
+    },
+    "id": 5652,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5600,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:49"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/Organized.sol",
+        "file": "../organization/contracts/Organized.sol",
+        "id": 5601,
+        "nodeType": "ImportDirective",
+        "scope": 5652,
+        "sourceUnit": 5176,
+        "src": "613:49:49",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/OrganizationInterface.sol",
+        "file": "../organization/contracts/OrganizationInterface.sol",
+        "id": 5602,
+        "nodeType": "ImportDirective",
+        "scope": 5652,
+        "sourceUnit": 5123,
+        "src": "663:61:49",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5603,
+              "name": "Organized",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5175,
+              "src": "1254:9:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Organized_$5175",
+                "typeString": "contract Organized"
+              }
+            },
+            "id": 5604,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1254:9:49"
+          }
+        ],
+        "contractDependencies": [
+          5175
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Extend this rule in order to restrict relayers of a meta-transaction.\n * @notice If you want to restrict the relayers that can relay meta-transactions\n        to your rule, you can extend this contract with your rule. Your rule\n        has to include the modifier `firewalled` for all functions that\n        should be restricted.\n        The firewall can be disabled, but not enabled again. When it is\n        disabled, the modifier basically does nothing anymore.",
+        "fullyImplemented": true,
+        "id": 5651,
+        "linearizedBaseContracts": [
+          5651,
+          5175
+        ],
+        "name": "FirewalledRule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": "Emitted when the firewall gets disabled.\nIt is the only event, because a firewall cannot get re-enabled.",
+            "id": 5606,
+            "name": "FirewallDisabled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 5605,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1446:2:49"
+            },
+            "src": "1424:25:49"
+          },
+          {
+            "constant": false,
+            "id": 5608,
+            "name": "firewallEnabled",
+            "nodeType": "VariableDeclaration",
+            "scope": 5651,
+            "src": "1622:27:49",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 5607,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1622:4:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5623,
+              "nodeType": "Block",
+              "src": "2154:452:49",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 5610,
+                    "name": "firewallEnabled",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5608,
+                    "src": "2168:15:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 5621,
+                  "nodeType": "IfStatement",
+                  "src": "2164:424:49",
+                  "trueBody": {
+                    "id": 5620,
+                    "nodeType": "Block",
+                    "src": "2185:403:49",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "id": 5614,
+                                    "name": "tx",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 12893,
+                                    "src": "2451:2:49",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_magic_transaction",
+                                      "typeString": "tx"
+                                    }
+                                  },
+                                  "id": 5615,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "memberName": "origin",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": null,
+                                  "src": "2451:9:49",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_address_payable",
+                                    "typeString": "address payable"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_address_payable",
+                                    "typeString": "address payable"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 5612,
+                                  "name": "organization",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 5127,
+                                  "src": "2429:12:49",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                                    "typeString": "contract OrganizationInterface"
+                                  }
+                                },
+                                "id": 5613,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "isWorker",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 5121,
+                                "src": "2429:21:49",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                                  "typeString": "function (address) view external returns (bool)"
+                                }
+                              },
+                              "id": 5616,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2429:32:49",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "54686973206d6574686f64206973206669726577616c6c65642e205472616e73616374696f6e206d757374206f726967696e6174652066726f6d20616e206f7267616e697a6174696f6e20776f726b65722e",
+                              "id": 5617,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "2479:84:49",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_0c52eacb85791221dea879398be0b78ae07d26ccef44b9f25a20019dc2263e1e",
+                                "typeString": "literal_string \"This method is firewalled. Transaction must originate from an organization worker.\""
+                              },
+                              "value": "This method is firewalled. Transaction must originate from an organization worker."
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_0c52eacb85791221dea879398be0b78ae07d26ccef44b9f25a20019dc2263e1e",
+                                "typeString": "literal_string \"This method is firewalled. Transaction must originate from an organization worker.\""
+                              }
+                            ],
+                            "id": 5611,
+                            "name": "require",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              12884,
+                              12885
+                            ],
+                            "referencedDeclaration": 12885,
+                            "src": "2199:7:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (bool,string memory) pure"
+                            }
+                          },
+                          "id": 5618,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2199:378:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 5619,
+                        "nodeType": "ExpressionStatement",
+                        "src": "2199:378:49"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": 5622,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "2598:1:49"
+                }
+              ]
+            },
+            "documentation": "Requires that `tx.origin` is an organization worker, if the firewall is\nenabled. Once the firewall has been disabled, this modifier will not\nenforce any checks anymore.\nThe modifier checks `tx.origin` and not `msg.sender`, because\n`msg.sender` can be another contract. However, what the firewall is\nsupposed to check is who relayed the meta-transaction. The relayer is\nalways `tx.origin`.",
+            "id": 5624,
+            "name": "firewalled",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 5609,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2151:2:49"
+            },
+            "src": "2132:474:49",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 5636,
+              "nodeType": "Block",
+              "src": "2842:157:49",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5634,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5632,
+                      "name": "firewallEnabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5608,
+                      "src": "2970:15:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 5633,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2988:4:49",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "2970:22:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5635,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2970:22:49"
+                }
+              ]
+            },
+            "documentation": "@param _organization The address of an organization contract.",
+            "id": 5637,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 5629,
+                    "name": "_organization",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5626,
+                    "src": "2808:13:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  }
+                ],
+                "id": 5630,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5628,
+                  "name": "Organized",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5175,
+                  "src": "2798:9:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Organized_$5175_$",
+                    "typeString": "type(contract Organized)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2798:24:49"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5626,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5637,
+                  "src": "2748:35:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                    "typeString": "contract OrganizationInterface"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5625,
+                    "name": "OrganizationInterface",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5122,
+                    "src": "2748:21:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2738:51:49"
+            },
+            "returnParameters": {
+              "id": 5631,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2842:0:49"
+            },
+            "scope": 5651,
+            "src": "2727:272:49",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5649,
+              "nodeType": "Block",
+              "src": "3359:73:49",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5644,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5642,
+                      "name": "firewallEnabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5608,
+                      "src": "3369:15:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 5643,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "3387:5:49",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "3369:23:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5645,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3369:23:49"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5646,
+                      "name": "FirewallDisabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5606,
+                      "src": "3407:16:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5647,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3407:18:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5648,
+                  "nodeType": "EmitStatement",
+                  "src": "3402:23:49"
+                }
+              ]
+            },
+            "documentation": "@notice Disables the firewall so that anyone can use firewalled methods.\n        Disabling the firewall cannot be done undone. There is no method\n        to enable the firewall again.\n        Emits a `FirewallDisabled` event.",
+            "id": 5650,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 5640,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5639,
+                  "name": "onlyOrganization",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5140,
+                  "src": "3342:16:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "3342:16:49"
+              }
+            ],
+            "name": "disableFirewall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5638,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3330:2:49"
+            },
+            "returnParameters": {
+              "id": 5641,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3359:0:49"
+            },
+            "scope": 5651,
+            "src": "3306:126:49",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5652,
+        "src": "1227:2207:49"
+      }
+    ],
+    "src": "0:3435:49"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
+    "exportedSymbols": {
+      "FirewalledRule": [
+        5651
+      ]
+    },
+    "id": 5652,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5600,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:49"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/Organized.sol",
+        "file": "../organization/contracts/Organized.sol",
+        "id": 5601,
+        "nodeType": "ImportDirective",
+        "scope": 5652,
+        "sourceUnit": 5176,
+        "src": "613:49:49",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/OrganizationInterface.sol",
+        "file": "../organization/contracts/OrganizationInterface.sol",
+        "id": 5602,
+        "nodeType": "ImportDirective",
+        "scope": 5652,
+        "sourceUnit": 5123,
+        "src": "663:61:49",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5603,
+              "name": "Organized",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5175,
+              "src": "1254:9:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Organized_$5175",
+                "typeString": "contract Organized"
+              }
+            },
+            "id": 5604,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1254:9:49"
+          }
+        ],
+        "contractDependencies": [
+          5175
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Extend this rule in order to restrict relayers of a meta-transaction.\n * @notice If you want to restrict the relayers that can relay meta-transactions\n        to your rule, you can extend this contract with your rule. Your rule\n        has to include the modifier `firewalled` for all functions that\n        should be restricted.\n        The firewall can be disabled, but not enabled again. When it is\n        disabled, the modifier basically does nothing anymore.",
+        "fullyImplemented": true,
+        "id": 5651,
+        "linearizedBaseContracts": [
+          5651,
+          5175
+        ],
+        "name": "FirewalledRule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": "Emitted when the firewall gets disabled.\nIt is the only event, because a firewall cannot get re-enabled.",
+            "id": 5606,
+            "name": "FirewallDisabled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 5605,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1446:2:49"
+            },
+            "src": "1424:25:49"
+          },
+          {
+            "constant": false,
+            "id": 5608,
+            "name": "firewallEnabled",
+            "nodeType": "VariableDeclaration",
+            "scope": 5651,
+            "src": "1622:27:49",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 5607,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1622:4:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5623,
+              "nodeType": "Block",
+              "src": "2154:452:49",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 5610,
+                    "name": "firewallEnabled",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5608,
+                    "src": "2168:15:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 5621,
+                  "nodeType": "IfStatement",
+                  "src": "2164:424:49",
+                  "trueBody": {
+                    "id": 5620,
+                    "nodeType": "Block",
+                    "src": "2185:403:49",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "id": 5614,
+                                    "name": "tx",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 12893,
+                                    "src": "2451:2:49",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_magic_transaction",
+                                      "typeString": "tx"
+                                    }
+                                  },
+                                  "id": 5615,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "memberName": "origin",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": null,
+                                  "src": "2451:9:49",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_address_payable",
+                                    "typeString": "address payable"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_address_payable",
+                                    "typeString": "address payable"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 5612,
+                                  "name": "organization",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 5127,
+                                  "src": "2429:12:49",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                                    "typeString": "contract OrganizationInterface"
+                                  }
+                                },
+                                "id": 5613,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "isWorker",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 5121,
+                                "src": "2429:21:49",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                                  "typeString": "function (address) view external returns (bool)"
+                                }
+                              },
+                              "id": 5616,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2429:32:49",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "54686973206d6574686f64206973206669726577616c6c65642e205472616e73616374696f6e206d757374206f726967696e6174652066726f6d20616e206f7267616e697a6174696f6e20776f726b65722e",
+                              "id": 5617,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "2479:84:49",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_0c52eacb85791221dea879398be0b78ae07d26ccef44b9f25a20019dc2263e1e",
+                                "typeString": "literal_string \"This method is firewalled. Transaction must originate from an organization worker.\""
+                              },
+                              "value": "This method is firewalled. Transaction must originate from an organization worker."
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_0c52eacb85791221dea879398be0b78ae07d26ccef44b9f25a20019dc2263e1e",
+                                "typeString": "literal_string \"This method is firewalled. Transaction must originate from an organization worker.\""
+                              }
+                            ],
+                            "id": 5611,
+                            "name": "require",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              12884,
+                              12885
+                            ],
+                            "referencedDeclaration": 12885,
+                            "src": "2199:7:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (bool,string memory) pure"
+                            }
+                          },
+                          "id": 5618,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2199:378:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 5619,
+                        "nodeType": "ExpressionStatement",
+                        "src": "2199:378:49"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": 5622,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "2598:1:49"
+                }
+              ]
+            },
+            "documentation": "Requires that `tx.origin` is an organization worker, if the firewall is\nenabled. Once the firewall has been disabled, this modifier will not\nenforce any checks anymore.\nThe modifier checks `tx.origin` and not `msg.sender`, because\n`msg.sender` can be another contract. However, what the firewall is\nsupposed to check is who relayed the meta-transaction. The relayer is\nalways `tx.origin`.",
+            "id": 5624,
+            "name": "firewalled",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 5609,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2151:2:49"
+            },
+            "src": "2132:474:49",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 5636,
+              "nodeType": "Block",
+              "src": "2842:157:49",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5634,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5632,
+                      "name": "firewallEnabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5608,
+                      "src": "2970:15:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 5633,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2988:4:49",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "2970:22:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5635,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2970:22:49"
+                }
+              ]
+            },
+            "documentation": "@param _organization The address of an organization contract.",
+            "id": 5637,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 5629,
+                    "name": "_organization",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5626,
+                    "src": "2808:13:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  }
+                ],
+                "id": 5630,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5628,
+                  "name": "Organized",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5175,
+                  "src": "2798:9:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Organized_$5175_$",
+                    "typeString": "type(contract Organized)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2798:24:49"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5626,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5637,
+                  "src": "2748:35:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                    "typeString": "contract OrganizationInterface"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5625,
+                    "name": "OrganizationInterface",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5122,
+                    "src": "2748:21:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2738:51:49"
+            },
+            "returnParameters": {
+              "id": 5631,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2842:0:49"
+            },
+            "scope": 5651,
+            "src": "2727:272:49",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5649,
+              "nodeType": "Block",
+              "src": "3359:73:49",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5644,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5642,
+                      "name": "firewallEnabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5608,
+                      "src": "3369:15:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 5643,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "3387:5:49",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "3369:23:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5645,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3369:23:49"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5646,
+                      "name": "FirewallDisabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5606,
+                      "src": "3407:16:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5647,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3407:18:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5648,
+                  "nodeType": "EmitStatement",
+                  "src": "3402:23:49"
+                }
+              ]
+            },
+            "documentation": "@notice Disables the firewall so that anyone can use firewalled methods.\n        Disabling the firewall cannot be done undone. There is no method\n        to enable the firewall again.\n        Emits a `FirewallDisabled` event.",
+            "id": 5650,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 5640,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5639,
+                  "name": "onlyOrganization",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5140,
+                  "src": "3342:16:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "3342:16:49"
+              }
+            ],
+            "name": "disableFirewall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5638,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3330:2:49"
+            },
+            "returnParameters": {
+              "id": 5641,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3359:0:49"
+            },
+            "scope": 5651,
+            "src": "3306:126:49",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5652,
+        "src": "1227:2207:49"
+      }
+    ],
+    "src": "0:3435:49"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.129Z",
+  "devdoc": {
+    "methods": {
+      "constructor": {
+        "params": {
+          "_organization": "The address of an organization contract."
+        }
+      }
+    },
+    "title": "Extend this rule in order to restrict relayers of a meta-transaction."
+  },
+  "userdoc": {
+    "methods": {
+      "disableFirewall()": {
+        "notice": "Disables the firewall so that anyone can use firewalled methods.        Disabling the firewall cannot be done undone. There is no method        to enable the firewall again.        Emits a `FirewallDisabled` event."
+      }
+    },
+    "notice": "If you want to restrict the relayers that can relay meta-transactions        to your rule, you can extend this contract with your rule. Your rule        has to include the modifier `firewalled` for all functions that        should be restricted.        The firewall can be disabled, but not enabled again. When it is        disabled, the modifier basically does nothing anymore."
+  }
+}

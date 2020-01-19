@@ -1,0 +1,572 @@
+{
+  "contractName": "MockCoGateway",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "utilityToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"utilityToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"utilityToken()\":{\"return\":\"Address of utility token.\"}},\"title\":\"MockCoGateway contract.\"},\"userdoc\":{\"methods\":{\"utilityToken()\":{\"notice\":\"Get the utility token address.\"}},\"notice\":\"It contains utility token address.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/MockCoGateway.sol\":\"MockCoGateway\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/MockCoGateway.sol\":{\"keccak256\":\"0xfb45ba50e4ec5465d65b38199731c4ee864f374548fdd0d7d4423b9118fd9a05\",\"urls\":[\"bzz-raw://9a6b2bb3b5a7a726399816bbbbca97091c1741a1990ed6bdb8beb8a2de39883f\",\"dweb:/ipfs/QmSK6gyMaJw97HARnKZMMqwfSw7DrhbnCwqNcrXo6ew5ji\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516100f73803806100f78339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b03199092169190911790556093806100646000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ae86ed8914602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03169056fea265627a7a72315820b8ea8d4b9a979ec72bcd345156a556d0bc22d1f82842f9e54f580444c91776ff64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063ae86ed8914602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03169056fea265627a7a72315820b8ea8d4b9a979ec72bcd345156a556d0bc22d1f82842f9e54f580444c91776ff64736f6c63430005100032",
+  "sourceMap": "707:444:8:-;;;850:68;8:9:-1;5:2;;;30:1;27;20:12;5:2;850:68:8;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;850:68:8;896:5;:14;;-1:-1:-1;;;;;896:14:8;;;-1:-1:-1;;;;;;896:14:8;;;;;;;;;707:444;;;;;;",
+  "deployedSourceMap": "707:444:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;707:444:8;;;;;;;;;;;;;;;;;;;1061:87;;;:::i;:::-;;;;-1:-1:-1;;;;;1061:87:8;;;;;;;;;;;;;;;1106:7;1136:5;-1:-1:-1;;;;;1136:5:8;1061:87;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2018 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n\n/**\n *  @title MockCoGateway contract.\n *\n *  @notice It contains utility token address.\n */\ncontract MockCoGateway {\n\n\n    /* Storage */\n\n    /** Address of utilityToken */\n    address private token;\n\n\n    /* Special functions */\n\n    constructor(address _token) public {\n\n        token = _token;\n\n    }\n\n\n    /* Public methods */\n\n    /**\n     * @notice Get the utility token address.\n     *\n     * @return Address of utility token.\n     */\n    function utilityToken() public view returns (address)\n    {\n        return token;\n    }\n\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/MockCoGateway.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/MockCoGateway.sol",
+    "exportedSymbols": {
+      "MockCoGateway": [
+        2127
+      ]
+    },
+    "id": 2128,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2106,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title MockCoGateway contract.\n *  @notice It contains utility token address.",
+        "fullyImplemented": true,
+        "id": 2127,
+        "linearizedBaseContracts": [
+          2127
+        ],
+        "name": "MockCoGateway",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2108,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 2127,
+            "src": "792:21:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2107,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "792:7:8",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 2117,
+              "nodeType": "Block",
+              "src": "885:33:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2113,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2108,
+                      "src": "896:5:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2114,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2110,
+                      "src": "904:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "896:14:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2116,
+                  "nodeType": "ExpressionStatement",
+                  "src": "896:14:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2118,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2110,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2118,
+                  "src": "862:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2109,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "862:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "861:16:8"
+            },
+            "returnParameters": {
+              "id": 2112,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "885:0:8"
+            },
+            "scope": 2127,
+            "src": "850:68:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2125,
+              "nodeType": "Block",
+              "src": "1119:29:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2123,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2108,
+                    "src": "1136:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 2122,
+                  "id": 2124,
+                  "nodeType": "Return",
+                  "src": "1129:12:8"
+                }
+              ]
+            },
+            "documentation": "@notice Get the utility token address.\n     * @return Address of utility token.",
+            "id": 2126,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "utilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1082:2:8"
+            },
+            "returnParameters": {
+              "id": 2122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2121,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2126,
+                  "src": "1106:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2120,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1106:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1105:9:8"
+            },
+            "scope": 2127,
+            "src": "1061:87:8",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2128,
+        "src": "707:444:8"
+      }
+    ],
+    "src": "0:1152:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/MockCoGateway.sol",
+    "exportedSymbols": {
+      "MockCoGateway": [
+        2127
+      ]
+    },
+    "id": 2128,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2106,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title MockCoGateway contract.\n *  @notice It contains utility token address.",
+        "fullyImplemented": true,
+        "id": 2127,
+        "linearizedBaseContracts": [
+          2127
+        ],
+        "name": "MockCoGateway",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2108,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 2127,
+            "src": "792:21:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2107,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "792:7:8",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 2117,
+              "nodeType": "Block",
+              "src": "885:33:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2113,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2108,
+                      "src": "896:5:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2114,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2110,
+                      "src": "904:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "896:14:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2116,
+                  "nodeType": "ExpressionStatement",
+                  "src": "896:14:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2118,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2110,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2118,
+                  "src": "862:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2109,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "862:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "861:16:8"
+            },
+            "returnParameters": {
+              "id": 2112,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "885:0:8"
+            },
+            "scope": 2127,
+            "src": "850:68:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2125,
+              "nodeType": "Block",
+              "src": "1119:29:8",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2123,
+                    "name": "token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2108,
+                    "src": "1136:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 2122,
+                  "id": 2124,
+                  "nodeType": "Return",
+                  "src": "1129:12:8"
+                }
+              ]
+            },
+            "documentation": "@notice Get the utility token address.\n     * @return Address of utility token.",
+            "id": 2126,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "utilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1082:2:8"
+            },
+            "returnParameters": {
+              "id": 2122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2121,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2126,
+                  "src": "1106:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2120,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1106:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1105:9:8"
+            },
+            "scope": 2127,
+            "src": "1061:87:8",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2128,
+        "src": "707:444:8"
+      }
+    ],
+    "src": "0:1152:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:25.989Z",
+  "devdoc": {
+    "methods": {
+      "utilityToken()": {
+        "return": "Address of utility token."
+      }
+    },
+    "title": "MockCoGateway contract."
+  },
+  "userdoc": {
+    "methods": {
+      "utilityToken()": {
+        "notice": "Get the utility token address."
+      }
+    },
+    "notice": "It contains utility token address."
+  }
+}

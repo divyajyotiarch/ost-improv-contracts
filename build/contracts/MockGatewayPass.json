@@ -1,0 +1,1612 @@
+{
+  "contractName": "MockGatewayPass",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "bounty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "stake",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "revertStake",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"bounty\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"revertStake\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"stake\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"bounty()\":{\"return\":\"Amount of ERC20 which needs to be staked by facilitator.\"},\"revertStake(bytes32)\":{\"details\":\"The only parameter is _messageHash.     *      Returns are in below order:     - staker_     - stakerNonce_     - amount_\"},\"stake(uint256,address,uint256,uint256,uint256,bytes32)\":{\"details\":\"parameters are in below order:     _amount     _beneficiary     _gasPrice     _gasLimit     _nonce     _hashLock\",\"return\":\"Message hash unique for each request.\"}},\"title\":\"MockGatewayPass contract.\"},\"userdoc\":{\"methods\":{\"bounty()\":{\"notice\":\"Returns bounty amount.\"},\"revertStake(bytes32)\":{\"notice\":\"Revert stake process and get the stake        amount back. Only staker can revert stake by providing        penalty i.e. 1.5 times of bounty amount. On progress revert stake        penalty and facilitator bounty will be burned.\"},\"stake(uint256,address,uint256,uint256,uint256,bytes32)\":{\"notice\":\"Initiates the stake process. In order to stake the staker        needs to approve Gateway contract for stake amount.        Staked amount is transferred from staker address to        Gateway contract. Bounty amount is also transferred from staker.\"}},\"notice\":\"Mocks gateway contract with successful returns.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayPass.sol\":\"MockGatewayPass\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayPass.sol\":{\"keccak256\":\"0x0c5e188428ffe860a83e092ced46361c1f4e01f1dbdfc71c3bd79db3550fd63d\",\"urls\":[\"bzz-raw://34c76c32d0377215a2ce46aaf0d8ab9c9a73b74b89eaf0f25b3f3f7273ea7a34\",\"dweb:/ipfs/QmQMpfbC5dFebpjPXneb6TLckudXa7gH2iJVj86mP23vtK\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061012c806100206000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063212dbdbe1460415780636bb12049146083578063943dfef11460d6575b600080fd5b605b60048036036020811015605557600080fd5b503560dc565b604080516001600160a01b039094168452602084019290925282820152519081900360600190f35b60c4600480360360c0811015609757600080fd5b508035906001600160a01b036020820135169060408101359060608101359060808101359060a0013560e6565b60408051918252519081900360200190f35b60c460f2565b5060009081908190565b60009695505050505050565b60009056fea265627a7a723158207fa7aeace7de3ca36fa4a25984bbc2d378246d5b876d21c50f86481acb8176da64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063212dbdbe1460415780636bb12049146083578063943dfef11460d6575b600080fd5b605b60048036036020811015605557600080fd5b503560dc565b604080516001600160a01b039094168452602084019290925282820152519081900360600190f35b60c4600480360360c0811015609757600080fd5b508035906001600160a01b036020820135169060408101359060608101359060808101359060a0013560e6565b60408051918252519081900360200190f35b60c460f2565b5060009081908190565b60009695505050505050565b60009056fea265627a7a723158207fa7aeace7de3ca36fa4a25984bbc2d378246d5b876d21c50f86481acb8176da64736f6c63430005100032",
+  "sourceMap": "720:1710:15:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;720:1710:15;;;;;;;",
+  "deployedSourceMap": "720:1710:15:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;720:1710:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2246:182;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2246:182:15;;:::i;:::-;;;;-1:-1:-1;;;;;2246:182:15;;;;;;;;;;;;;;;;;;;;;;;;;1567:217;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;1567:217:15;;;-1:-1:-1;;;;;1567:217:15;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;915:103;;;:::i;2246:182::-;-1:-1:-1;2337:7:15;;;;;;2246:182::o;1567:217::-;1737:7;1567:217;;;;;;;;:::o;915:103::-;980:7;915:103;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2018 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n\n/**\n * @title MockGatewayPass contract.\n *\n * @notice Mocks gateway contract with successful returns.\n */\ncontract MockGatewayPass {\n\n    /* External Functions */\n\n    /**\n     * @notice Returns bounty amount.\n     *\n     * @return Amount of ERC20 which needs to be staked by facilitator.\n     */\n    function bounty()\n        external\n        pure\n        returns (uint256)\n    {\n        return 0;\n    }\n\n    /**\n     * @notice Initiates the stake process. In order to stake the staker\n     *         needs to approve Gateway contract for stake amount.\n     *         Staked amount is transferred from staker address to\n     *         Gateway contract. Bounty amount is also transferred from staker.\n     *\n     * @dev parameters are in below order:\n     *      _amount\n     *      _beneficiary\n     *      _gasPrice\n     *      _gasLimit\n     *      _nonce\n     *      _hashLock\n     *\n     * @return Message hash unique for each request.\n     */\n    function stake(\n        uint256,\n        address,\n        uint256,\n        uint256,\n        uint256,\n        bytes32\n    )\n        external\n        pure\n        returns (bytes32)\n    {\n        return bytes32(0);\n    }\n\n    /**\n     * @notice Revert stake process and get the stake\n     *         amount back. Only staker can revert stake by providing\n     *         penalty i.e. 1.5 times of bounty amount. On progress revert stake\n     *         penalty and facilitator bounty will be burned.\n     *\n     * @dev The only parameter is _messageHash.\n     *\n     *      Returns are in below order:\n     *      - staker_\n     *      - stakerNonce_\n     *      - amount_\n     */\n    function revertStake(\n        bytes32\n    )\n        external\n        pure\n        returns (address, uint256, uint256)\n    {\n        return (address(0), uint256(0), uint256(0));\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayPass.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayPass.sol",
+    "exportedSymbols": {
+      "MockGatewayPass": [
+        2478
+      ]
+    },
+    "id": 2479,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2424,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title MockGatewayPass contract.\n * @notice Mocks gateway contract with successful returns.",
+        "fullyImplemented": true,
+        "id": 2478,
+        "linearizedBaseContracts": [
+          2478
+        ],
+        "name": "MockGatewayPass",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2431,
+              "nodeType": "Block",
+              "src": "993:25:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 2429,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1010:1:15",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 2428,
+                  "id": 2430,
+                  "nodeType": "Return",
+                  "src": "1003:8:15"
+                }
+              ]
+            },
+            "documentation": "@notice Returns bounty amount.\n     * @return Amount of ERC20 which needs to be staked by facilitator.",
+            "id": 2432,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bounty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2425,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "930:2:15"
+            },
+            "returnParameters": {
+              "id": 2428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2427,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2432,
+                  "src": "980:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2426,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "980:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "979:9:15"
+            },
+            "scope": 2478,
+            "src": "915:103:15",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2453,
+              "nodeType": "Block",
+              "src": "1750:34:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 2450,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1775:1:15",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 2449,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1767:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes32_$",
+                        "typeString": "type(bytes32)"
+                      },
+                      "typeName": "bytes32"
+                    },
+                    "id": 2451,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1767:10:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 2448,
+                  "id": 2452,
+                  "nodeType": "Return",
+                  "src": "1760:17:15"
+                }
+              ]
+            },
+            "documentation": "@notice Initiates the stake process. In order to stake the staker\n        needs to approve Gateway contract for stake amount.\n        Staked amount is transferred from staker address to\n        Gateway contract. Bounty amount is also transferred from staker.\n     * @dev parameters are in below order:\n     _amount\n     _beneficiary\n     _gasPrice\n     _gasLimit\n     _nonce\n     _hashLock\n     * @return Message hash unique for each request.",
+            "id": 2454,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2445,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2434,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1591:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2433,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1591:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2436,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1608:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2435,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1608:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2438,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1625:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2437,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1625:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2440,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1642:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2439,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1642:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2442,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1659:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2441,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1659:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2444,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1676:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2443,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1676:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1581:108:15"
+            },
+            "returnParameters": {
+              "id": 2448,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2447,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1737:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2446,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1737:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1736:9:15"
+            },
+            "scope": 2478,
+            "src": "1567:217:15",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2476,
+              "nodeType": "Block",
+              "src": "2368:60:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 2466,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2394:1:15",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 2465,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2386:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 2467,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2386:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 2469,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2406:1:15",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 2468,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2398:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint256"
+                        },
+                        "id": 2470,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2398:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 2472,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2418:1:15",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 2471,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2410:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint256"
+                        },
+                        "id": 2473,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2410:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 2474,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2385:36:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_payable_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(address payable,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 2464,
+                  "id": 2475,
+                  "nodeType": "Return",
+                  "src": "2378:43:15"
+                }
+              ]
+            },
+            "documentation": "@notice Revert stake process and get the stake\n        amount back. Only staker can revert stake by providing\n        penalty i.e. 1.5 times of bounty amount. On progress revert stake\n        penalty and facilitator bounty will be burned.\n     * @dev The only parameter is _messageHash.\n     *      Returns are in below order:\n     - staker_\n     - stakerNonce_\n     - amount_",
+            "id": 2477,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revertStake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2456,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2276:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2455,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2276:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2266:23:15"
+            },
+            "returnParameters": {
+              "id": 2464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2459,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2337:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2337:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2461,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2346:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2460,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2346:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2463,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2355:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2462,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2355:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2336:27:15"
+            },
+            "scope": 2478,
+            "src": "2246:182:15",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2479,
+        "src": "720:1710:15"
+      }
+    ],
+    "src": "0:2431:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayPass.sol",
+    "exportedSymbols": {
+      "MockGatewayPass": [
+        2478
+      ]
+    },
+    "id": 2479,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2424,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title MockGatewayPass contract.\n * @notice Mocks gateway contract with successful returns.",
+        "fullyImplemented": true,
+        "id": 2478,
+        "linearizedBaseContracts": [
+          2478
+        ],
+        "name": "MockGatewayPass",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2431,
+              "nodeType": "Block",
+              "src": "993:25:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 2429,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1010:1:15",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 2428,
+                  "id": 2430,
+                  "nodeType": "Return",
+                  "src": "1003:8:15"
+                }
+              ]
+            },
+            "documentation": "@notice Returns bounty amount.\n     * @return Amount of ERC20 which needs to be staked by facilitator.",
+            "id": 2432,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bounty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2425,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "930:2:15"
+            },
+            "returnParameters": {
+              "id": 2428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2427,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2432,
+                  "src": "980:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2426,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "980:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "979:9:15"
+            },
+            "scope": 2478,
+            "src": "915:103:15",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2453,
+              "nodeType": "Block",
+              "src": "1750:34:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 2450,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1775:1:15",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 2449,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1767:7:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes32_$",
+                        "typeString": "type(bytes32)"
+                      },
+                      "typeName": "bytes32"
+                    },
+                    "id": 2451,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1767:10:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 2448,
+                  "id": 2452,
+                  "nodeType": "Return",
+                  "src": "1760:17:15"
+                }
+              ]
+            },
+            "documentation": "@notice Initiates the stake process. In order to stake the staker\n        needs to approve Gateway contract for stake amount.\n        Staked amount is transferred from staker address to\n        Gateway contract. Bounty amount is also transferred from staker.\n     * @dev parameters are in below order:\n     _amount\n     _beneficiary\n     _gasPrice\n     _gasLimit\n     _nonce\n     _hashLock\n     * @return Message hash unique for each request.",
+            "id": 2454,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2445,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2434,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1591:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2433,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1591:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2436,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1608:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2435,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1608:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2438,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1625:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2437,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1625:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2440,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1642:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2439,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1642:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2442,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1659:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2441,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1659:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2444,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1676:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2443,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1676:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1581:108:15"
+            },
+            "returnParameters": {
+              "id": 2448,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2447,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2454,
+                  "src": "1737:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2446,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1737:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1736:9:15"
+            },
+            "scope": 2478,
+            "src": "1567:217:15",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2476,
+              "nodeType": "Block",
+              "src": "2368:60:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 2466,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2394:1:15",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 2465,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2386:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 2467,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2386:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 2469,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2406:1:15",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 2468,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2398:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint256"
+                        },
+                        "id": 2470,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2398:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 2472,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2418:1:15",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            }
+                          ],
+                          "id": 2471,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2410:7:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint256"
+                        },
+                        "id": 2473,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2410:10:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 2474,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2385:36:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_payable_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(address payable,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 2464,
+                  "id": 2475,
+                  "nodeType": "Return",
+                  "src": "2378:43:15"
+                }
+              ]
+            },
+            "documentation": "@notice Revert stake process and get the stake\n        amount back. Only staker can revert stake by providing\n        penalty i.e. 1.5 times of bounty amount. On progress revert stake\n        penalty and facilitator bounty will be burned.\n     * @dev The only parameter is _messageHash.\n     *      Returns are in below order:\n     - staker_\n     - stakerNonce_\n     - amount_",
+            "id": 2477,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revertStake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2456,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2276:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2455,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2276:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2266:23:15"
+            },
+            "returnParameters": {
+              "id": 2464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2459,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2337:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2337:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2461,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2346:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2460,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2346:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2463,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2477,
+                  "src": "2355:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2462,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2355:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2336:27:15"
+            },
+            "scope": 2478,
+            "src": "2246:182:15",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2479,
+        "src": "720:1710:15"
+      }
+    ],
+    "src": "0:2431:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.030Z",
+  "devdoc": {
+    "methods": {
+      "bounty()": {
+        "return": "Amount of ERC20 which needs to be staked by facilitator."
+      },
+      "revertStake(bytes32)": {
+        "details": "The only parameter is _messageHash.     *      Returns are in below order:     - staker_     - stakerNonce_     - amount_"
+      },
+      "stake(uint256,address,uint256,uint256,uint256,bytes32)": {
+        "details": "parameters are in below order:     _amount     _beneficiary     _gasPrice     _gasLimit     _nonce     _hashLock",
+        "return": "Message hash unique for each request."
+      }
+    },
+    "title": "MockGatewayPass contract."
+  },
+  "userdoc": {
+    "methods": {
+      "bounty()": {
+        "notice": "Returns bounty amount."
+      },
+      "revertStake(bytes32)": {
+        "notice": "Revert stake process and get the stake        amount back. Only staker can revert stake by providing        penalty i.e. 1.5 times of bounty amount. On progress revert stake        penalty and facilitator bounty will be burned."
+      },
+      "stake(uint256,address,uint256,uint256,uint256,bytes32)": {
+        "notice": "Initiates the stake process. In order to stake the staker        needs to approve Gateway contract for stake amount.        Staked amount is transferred from staker address to        Gateway contract. Bounty amount is also transferred from staker."
+      }
+    },
+    "notice": "Mocks gateway contract with successful returns."
+  }
+}

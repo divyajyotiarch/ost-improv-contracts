@@ -1,0 +1,162 @@
+{
+  "contractName": "Enum",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Richard Meissner - <richard@gnosis.pm>\",\"methods\":{},\"title\":\"Enum - Collection of enums\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/Enum.sol\":\"Enum\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/Enum.sol\":{\"keccak256\":\"0xa7a7883be39218c7402cbe698716d2eda015e93b417f771231941decfc4737ae\",\"urls\":[\"bzz-raw://fb4db3af8fc70726eb75e1766d84a0d6356501e3bb66b9d7ab66c93a93138128\",\"dweb:/ipfs/QmQxmZMaa1BgHRZ72C6vePCim9oXYVR2CV4hZv6y9fkUpV\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582083cc3a1771f2fd5a528c7946a47af628300f220a018b08d7141a2402d0b8d07764736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582083cc3a1771f2fd5a528c7946a47af628300f220a018b08d7141a2402d0b8d07764736f6c63430005100032",
+  "sourceMap": "115:95:75:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;115:95:75;;;;;;;",
+  "deployedSourceMap": "115:95:75:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\n\n/// @title Enum - Collection of enums\n/// @author Richard Meissner - <richard@gnosis.pm>\ncontract Enum {\n    enum Operation {\n        Call,\n        DelegateCall,\n        Create\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/Enum.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/Enum.sol",
+    "exportedSymbols": {
+      "Enum": [
+        10141
+      ]
+    },
+    "id": 10142,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10136,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:75"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Enum - Collection of enums\n @author Richard Meissner - <richard@gnosis.pm>",
+        "fullyImplemented": true,
+        "id": 10141,
+        "linearizedBaseContracts": [
+          10141
+        ],
+        "name": "Enum",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Enum.Operation",
+            "id": 10140,
+            "members": [
+              {
+                "id": 10137,
+                "name": "Call",
+                "nodeType": "EnumValue",
+                "src": "160:4:75"
+              },
+              {
+                "id": 10138,
+                "name": "DelegateCall",
+                "nodeType": "EnumValue",
+                "src": "174:12:75"
+              },
+              {
+                "id": 10139,
+                "name": "Create",
+                "nodeType": "EnumValue",
+                "src": "196:6:75"
+              }
+            ],
+            "name": "Operation",
+            "nodeType": "EnumDefinition",
+            "src": "135:73:75"
+          }
+        ],
+        "scope": 10142,
+        "src": "115:95:75"
+      }
+    ],
+    "src": "0:211:75"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/Enum.sol",
+    "exportedSymbols": {
+      "Enum": [
+        10141
+      ]
+    },
+    "id": 10142,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10136,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:75"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Enum - Collection of enums\n @author Richard Meissner - <richard@gnosis.pm>",
+        "fullyImplemented": true,
+        "id": 10141,
+        "linearizedBaseContracts": [
+          10141
+        ],
+        "name": "Enum",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Enum.Operation",
+            "id": 10140,
+            "members": [
+              {
+                "id": 10137,
+                "name": "Call",
+                "nodeType": "EnumValue",
+                "src": "160:4:75"
+              },
+              {
+                "id": 10138,
+                "name": "DelegateCall",
+                "nodeType": "EnumValue",
+                "src": "174:12:75"
+              },
+              {
+                "id": 10139,
+                "name": "Create",
+                "nodeType": "EnumValue",
+                "src": "196:6:75"
+              }
+            ],
+            "name": "Operation",
+            "nodeType": "EnumDefinition",
+            "src": "135:73:75"
+          }
+        ],
+        "scope": 10142,
+        "src": "115:95:75"
+      }
+    ],
+    "src": "0:211:75"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.191Z",
+  "devdoc": {
+    "author": "Richard Meissner - <richard@gnosis.pm>",
+    "methods": {},
+    "title": "Enum - Collection of enums"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "contractName": "CoGatewayUtilityTokenInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "utilityToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "utilityToken_",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"utilityToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"utilityToken_\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"utilityToken()\":{\"return\":\"utilityToken_ Address of utility token.\"}}},\"userdoc\":{\"methods\":{\"utilityToken()\":{\"notice\":\"Get the utility token address.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol\":\"CoGatewayUtilityTokenInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol\":{\"keccak256\":\"0x1b0b312c2c5e70b654698a178739b03a3f55cc1013062feaabd7b18aa7df46a1\",\"urls\":[\"bzz-raw://45c35c1add98c6eb58946470c2f324b8a6fb9ac8549d0282ec9531d7ae1dd30e\",\"dweb:/ipfs/QmSj4hSPjosD9wR2aRg5Emm2zgU1SJG786CTw4YS2SDEQw\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n//\n// ----------------------------------------------------------------------------\n//\n// http://www.simpletoken.org/\n//\n// ----------------------------------------------------------------------------\n\ncontract CoGatewayUtilityTokenInterface {\n\n    /**\n     * @notice Get the utility token address.\n     *\n     * @return utilityToken_ Address of utility token.\n     */\n    function utilityToken()\n        public\n        returns (address utilityToken_);\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
+    "exportedSymbols": {
+      "CoGatewayUtilityTokenInterface": [
+        2618
+      ]
+    },
+    "id": 2619,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2612,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2618,
+        "linearizedBaseContracts": [
+          2618
+        ],
+        "name": "CoGatewayUtilityTokenInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the utility token address.\n     * @return utilityToken_ Address of utility token.",
+            "id": 2617,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "utilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2613,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1005:2:20"
+            },
+            "returnParameters": {
+              "id": 2616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2615,
+                  "name": "utilityToken_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2617,
+                  "src": "1040:21:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2614,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1040:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1039:23:20"
+            },
+            "scope": 2618,
+            "src": "984:79:20",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2619,
+        "src": "813:252:20"
+      }
+    ],
+    "src": "0:1066:20"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
+    "exportedSymbols": {
+      "CoGatewayUtilityTokenInterface": [
+        2618
+      ]
+    },
+    "id": 2619,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2612,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2618,
+        "linearizedBaseContracts": [
+          2618
+        ],
+        "name": "CoGatewayUtilityTokenInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the utility token address.\n     * @return utilityToken_ Address of utility token.",
+            "id": 2617,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "utilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2613,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1005:2:20"
+            },
+            "returnParameters": {
+              "id": 2616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2615,
+                  "name": "utilityToken_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2617,
+                  "src": "1040:21:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2614,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1040:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1039:23:20"
+            },
+            "scope": 2618,
+            "src": "984:79:20",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2619,
+        "src": "813:252:20"
+      }
+    ],
+    "src": "0:1066:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.080Z",
+  "devdoc": {
+    "methods": {
+      "utilityToken()": {
+        "return": "utilityToken_ Address of utility token."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "utilityToken()": {
+        "notice": "Get the utility token address."
+      }
+    }
+  }
+}

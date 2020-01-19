@@ -1,0 +1,703 @@
+{
+  "contractName": "MockEIP20CoGateway",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_utilityToken",
+          "type": "address"
+        }
+      ],
+      "name": "setUtilityToken",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "utilityToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "utilityToken_",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_utilityToken\",\"type\":\"address\"}],\"name\":\"setUtilityToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"utilityToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"utilityToken_\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"setUtilityToken(address)\":{\"params\":{\"_utilityToken\":\"Utility token address.\"}},\"utilityToken()\":{\"return\":\"utilityToken_ Mocked utility token address\"}},\"title\":\"MockEIP20CoGateway contract.\"},\"userdoc\":{\"methods\":{\"setUtilityToken(address)\":{\"notice\":\"Set the utility token address for testing.\"},\"utilityToken()\":{\"notice\":\"Get the utility token address. This is mock function for testing.\"}},\"notice\":\"This contract mocks the EIP20CoGateway. This is used only for testing.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol\":\"MockEIP20CoGateway\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol\":{\"keccak256\":\"0x1b0b312c2c5e70b654698a178739b03a3f55cc1013062feaabd7b18aa7df46a1\",\"urls\":[\"bzz-raw://45c35c1add98c6eb58946470c2f324b8a6fb9ac8549d0282ec9531d7ae1dd30e\",\"dweb:/ipfs/QmSj4hSPjosD9wR2aRg5Emm2zgU1SJG786CTw4YS2SDEQw\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol\":{\"keccak256\":\"0x0c110c3930ea196e6a069d9455677ad411f5b9f06a95cc7b41f9873da13d1400\",\"urls\":[\"bzz-raw://d42b1d7a603ddeff5a457001684466af323d7eb6a9e31d8486130604a548d9fb\",\"dweb:/ipfs/QmYC6c37wfLjiCcM9MLyEpRb7aENQzXiqeQc5TDxGKJu7f\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060e48061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80639013ae08146037578063ae86ed8914605c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b0316607e565b005b606260a0565b604080516001600160a01b039092168252519081900360200190f35b600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b03169056fea265627a7a7231582084968dc885c34fbefc2dfacdb7d2e887a578c8034ab8343d3ca5abb4d0aea3f164736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80639013ae08146037578063ae86ed8914605c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b0316607e565b005b606260a0565b604080516001600160a01b039092168252519081900360200190f35b600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b03169056fea265627a7a7231582084968dc885c34fbefc2dfacdb7d2e887a578c8034ab8343d3ca5abb4d0aea3f164736f6c63430005100032",
+  "sourceMap": "994:714:31:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;994:714:31;;;;;;;",
+  "deployedSourceMap": "994:714:31:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;994:714:31;;;;;;;;;;;;;;;;;;;;;;;;1294:109;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1294:109:31;-1:-1:-1;;;;;1294:109:31;;:::i;:::-;;1571:135;;;:::i;:::-;;;;-1:-1:-1;;;;;1571:135:31;;;;;;;;;;;;;;1294:109;1361:19;:35;;-1:-1:-1;;;;;;1361:35:31;-1:-1:-1;;;;;1361:35:31;;;;;;;;;;1294:109::o;1571:135::-;1627:21;1680:19;-1:-1:-1;;;;;1680:19:31;;1571:135::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n//\n// ----------------------------------------------------------------------------\n//\n// http://www.simpletoken.org/\n//\n// ----------------------------------------------------------------------------\n\nimport \"../CoGatewayUtilityTokenInterface.sol\";\n\n/**\n * @title MockEIP20CoGateway contract.\n *\n * @notice This contract mocks the EIP20CoGateway. This is used only for testing.\n */\ncontract MockEIP20CoGateway is CoGatewayUtilityTokenInterface {\n\n    /** Stores the utility token address for testing. */\n    address private utilityTokenAddress;\n\n    /**\n     * @notice Set the utility token address for testing.\n     *\n     * @param _utilityToken Utility token address.\n     */\n    function setUtilityToken(address _utilityToken) external {\n        utilityTokenAddress = _utilityToken;\n    }\n\n    /**\n     * @notice Get the utility token address. This is mock function for testing.\n     *\n     * @return utilityToken_ Mocked utility token address\n     */\n    function utilityToken()\n        public\n        returns (address utilityToken_)\n    {\n        utilityToken_ = utilityTokenAddress;\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol",
+    "exportedSymbols": {
+      "MockEIP20CoGateway": [
+        3943
+      ]
+    },
+    "id": 3944,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3917,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
+        "file": "../CoGatewayUtilityTokenInterface.sol",
+        "id": 3918,
+        "nodeType": "ImportDirective",
+        "scope": 3944,
+        "sourceUnit": 2619,
+        "src": "813:47:31",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3919,
+              "name": "CoGatewayUtilityTokenInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2618,
+              "src": "1025:30:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CoGatewayUtilityTokenInterface_$2618",
+                "typeString": "contract CoGatewayUtilityTokenInterface"
+              }
+            },
+            "id": 3920,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1025:30:31"
+          }
+        ],
+        "contractDependencies": [
+          2618
+        ],
+        "contractKind": "contract",
+        "documentation": "@title MockEIP20CoGateway contract.\n * @notice This contract mocks the EIP20CoGateway. This is used only for testing.",
+        "fullyImplemented": true,
+        "id": 3943,
+        "linearizedBaseContracts": [
+          3943,
+          2618
+        ],
+        "name": "MockEIP20CoGateway",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3922,
+            "name": "utilityTokenAddress",
+            "nodeType": "VariableDeclaration",
+            "scope": 3943,
+            "src": "1120:35:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 3921,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1120:7:31",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 3931,
+              "nodeType": "Block",
+              "src": "1351:52:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3929,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3927,
+                      "name": "utilityTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3922,
+                      "src": "1361:19:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3928,
+                      "name": "_utilityToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3924,
+                      "src": "1383:13:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1361:35:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 3930,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1361:35:31"
+                }
+              ]
+            },
+            "documentation": "@notice Set the utility token address for testing.\n     * @param _utilityToken Utility token address.",
+            "id": 3932,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUtilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3925,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3924,
+                  "name": "_utilityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3932,
+                  "src": "1319:21:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3923,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1319:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1318:23:31"
+            },
+            "returnParameters": {
+              "id": 3926,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1351:0:31"
+            },
+            "scope": 3943,
+            "src": "1294:109:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3941,
+              "nodeType": "Block",
+              "src": "1654:52:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3939,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3937,
+                      "name": "utilityToken_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3935,
+                      "src": "1664:13:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3938,
+                      "name": "utilityTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3922,
+                      "src": "1680:19:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1664:35:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 3940,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1664:35:31"
+                }
+              ]
+            },
+            "documentation": "@notice Get the utility token address. This is mock function for testing.\n     * @return utilityToken_ Mocked utility token address",
+            "id": 3942,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "utilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3933,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1592:2:31"
+            },
+            "returnParameters": {
+              "id": 3936,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3935,
+                  "name": "utilityToken_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3942,
+                  "src": "1627:21:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3934,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1627:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1626:23:31"
+            },
+            "scope": 3943,
+            "src": "1571:135:31",
+            "stateMutability": "nonpayable",
+            "superFunction": 2617,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3944,
+        "src": "994:714:31"
+      }
+    ],
+    "src": "0:1709:31"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol",
+    "exportedSymbols": {
+      "MockEIP20CoGateway": [
+        3943
+      ]
+    },
+    "id": 3944,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3917,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
+        "file": "../CoGatewayUtilityTokenInterface.sol",
+        "id": 3918,
+        "nodeType": "ImportDirective",
+        "scope": 3944,
+        "sourceUnit": 2619,
+        "src": "813:47:31",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3919,
+              "name": "CoGatewayUtilityTokenInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2618,
+              "src": "1025:30:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CoGatewayUtilityTokenInterface_$2618",
+                "typeString": "contract CoGatewayUtilityTokenInterface"
+              }
+            },
+            "id": 3920,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1025:30:31"
+          }
+        ],
+        "contractDependencies": [
+          2618
+        ],
+        "contractKind": "contract",
+        "documentation": "@title MockEIP20CoGateway contract.\n * @notice This contract mocks the EIP20CoGateway. This is used only for testing.",
+        "fullyImplemented": true,
+        "id": 3943,
+        "linearizedBaseContracts": [
+          3943,
+          2618
+        ],
+        "name": "MockEIP20CoGateway",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3922,
+            "name": "utilityTokenAddress",
+            "nodeType": "VariableDeclaration",
+            "scope": 3943,
+            "src": "1120:35:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 3921,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1120:7:31",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 3931,
+              "nodeType": "Block",
+              "src": "1351:52:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3929,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3927,
+                      "name": "utilityTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3922,
+                      "src": "1361:19:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3928,
+                      "name": "_utilityToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3924,
+                      "src": "1383:13:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1361:35:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 3930,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1361:35:31"
+                }
+              ]
+            },
+            "documentation": "@notice Set the utility token address for testing.\n     * @param _utilityToken Utility token address.",
+            "id": 3932,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUtilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3925,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3924,
+                  "name": "_utilityToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3932,
+                  "src": "1319:21:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3923,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1319:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1318:23:31"
+            },
+            "returnParameters": {
+              "id": 3926,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1351:0:31"
+            },
+            "scope": 3943,
+            "src": "1294:109:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 3941,
+              "nodeType": "Block",
+              "src": "1654:52:31",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3939,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3937,
+                      "name": "utilityToken_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3935,
+                      "src": "1664:13:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3938,
+                      "name": "utilityTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3922,
+                      "src": "1680:19:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1664:35:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 3940,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1664:35:31"
+                }
+              ]
+            },
+            "documentation": "@notice Get the utility token address. This is mock function for testing.\n     * @return utilityToken_ Mocked utility token address",
+            "id": 3942,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "utilityToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3933,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1592:2:31"
+            },
+            "returnParameters": {
+              "id": 3936,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3935,
+                  "name": "utilityToken_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3942,
+                  "src": "1627:21:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3934,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1627:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1626:23:31"
+            },
+            "scope": 3943,
+            "src": "1571:135:31",
+            "stateMutability": "nonpayable",
+            "superFunction": 2617,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3944,
+        "src": "994:714:31"
+      }
+    ],
+    "src": "0:1709:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.105Z",
+  "devdoc": {
+    "methods": {
+      "setUtilityToken(address)": {
+        "params": {
+          "_utilityToken": "Utility token address."
+        }
+      },
+      "utilityToken()": {
+        "return": "utilityToken_ Mocked utility token address"
+      }
+    },
+    "title": "MockEIP20CoGateway contract."
+  },
+  "userdoc": {
+    "methods": {
+      "setUtilityToken(address)": {
+        "notice": "Set the utility token address for testing."
+      },
+      "utilityToken()": {
+        "notice": "Get the utility token address. This is mock function for testing."
+      }
+    },
+    "notice": "This contract mocks the EIP20CoGateway. This is used only for testing."
+  }
+}

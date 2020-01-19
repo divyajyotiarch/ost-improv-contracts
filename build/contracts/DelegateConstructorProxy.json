@@ -1,0 +1,687 @@
+{
+  "contractName": "DelegateConstructorProxy",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_masterCopy",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "initializer",
+          "type": "bytes"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyType",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_masterCopy\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"initializer\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxyType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Stefan George - <stefan@gnosis.pm>Richard Meissner - <richard@gnosis.pm>\",\"methods\":{\"constructor\":{\"details\":\"Constructor function sets address of master copy contract.\",\"params\":{\"_masterCopy\":\"Master copy address.\",\"initializer\":\"Data used for a delegate call to initialize the contract.\"}}},\"title\":\"Delegate Constructor Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor.\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol\":\"DelegateConstructorProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol\":{\"keccak256\":\"0x3dbba76bd2f0bc29a1faf8fa44fcf1ece714baacd35745c747a7766c895c882a\",\"urls\":[\"bzz-raw://5dc4fc4e7067eab14dd454c1735d3689d1d414f013a6d5a1e06cda0f4f595ef0\",\"dweb:/ipfs/QmR4DhmpqnasBdoPHa38oDszEQz827ywVbyPWBkbgmy3vJ\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/Proxy.sol\":{\"keccak256\":\"0xdf6a93e2905af13cb5a544437505820b56eed652076f0035cf7f7f823c052b95\",\"urls\":[\"bzz-raw://abd934c185def0772a547109cba77ce7af504c5ce0e24d56d20c00f745baa1d5\",\"dweb:/ipfs/QmZUC1f5PGMCzoTStNt2e3ZfFFfRweeJZxEXMM5FF43XP2\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516102ab3803806102ab8339818101604052604081101561003357600080fd5b81516020830180516040519294929383019291908464010000000082111561005a57600080fd5b90830190602082018581111561006f57600080fd5b825164010000000081118282018810171561008957600080fd5b82525081516020918201929091019080838360005b838110156100b657818101518382015260200161009e565b50505050905090810190601f1680156100e35780820380516001836020036101000a031916815260200191505b5060405250839150506001600160a01b0381166101315760405162461bcd60e51b81526004018080602001828103825260248152602001806102876024913960400191505060405180910390fd5b600080546001600160a01b0319166001600160a01b0392909216919091179055805115610189576001600160a01b0360005416600080835160208501846127105a03f46040513d6000823e81610185573d81fd5b5050505b505060ee806101996000396000f3fe60806040526004361060265760003560e01c80634555d5c91460535780635c60da1b146077575b6001600160a01b03600054163660008037600080366000845af43d6000803e80604e573d6000fd5b3d6000f35b348015605e57600080fd5b50606560a5565b60408051918252519081900360200190f35b348015608257600080fd5b50608960aa565b604080516001600160a01b039092168252519081900360200190f35b600290565b6000546001600160a01b03169056fea265627a7a7231582016e422fbda419a5c47c527bcb5ae2a56b755299db9014d5b727ed1f40b19d76964736f6c63430005100032496e76616c6964206d617374657220636f707920616464726573732070726f7669646564",
+  "deployedBytecode": "0x60806040526004361060265760003560e01c80634555d5c91460535780635c60da1b146077575b6001600160a01b03600054163660008037600080366000845af43d6000803e80604e573d6000fd5b3d6000f35b348015605e57600080fd5b50606560a5565b60408051918252519081900360200190f35b348015608257600080fd5b50608960aa565b604080516001600160a01b039092168252519081900360200190f35b600290565b6000546001600160a01b03169056fea265627a7a7231582016e422fbda419a5c47c527bcb5ae2a56b755299db9014d5b727ed1f40b19d76964736f6c63430005100032",
+  "sourceMap": "355:889:90:-;;;610:632;8:9:-1;5:2;;;30:1;27;20:12;5:2;610:632:90;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;610:632:90;;;;;;;;;;;;;;;;;;;19:11:-1;11:20;;8:2;;;44:1;41;34:12;8:2;62:21;;;;123:4;114:14;;138:31;;;135:2;;;182:1;179;172:12;135:2;213:10;;261:11;244:29;;285:43;;;282:58;-1:-1;233:115;230:2;;;361:1;358;351:12;230:2;372:25;;-1:-1;610:632:90;;420:4:-1;411:14;;;;610:632:90;;;;;411:14:-1;610:632:90;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;610:632:90;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;610:632:90;;-1:-1:-1;675:11:90;;-1:-1:-1;;;;;;;578:25:92;;570:74;;;;-1:-1:-1;;;570:74:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;654:10;:24;;-1:-1:-1;;;;;;654:24:92;-1:-1:-1;;;;;654:24:92;;;;;;;;;;721:18:90;;:22;717:519;;-1:-1:-1;;;;;882:1:90;876:8;872:57;1050:1;1047;1033:11;1027:18;1020:4;1007:11;1003:22;991:10;983:5;978:3;974:15;961:91;1086:4;1080:11;1131:14;1128:1;1123:3;1108:38;1166:14;1163:2;;1195:14;1190:3;1183:27;1163:2;836:390;;;;610:632;;355:889;;;;;;",
+  "deployedSourceMap": "355:889:90:-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;960:1:92;954:8;950:57;1039:14;1036:1;1033;1020:34;1134:1;1131;1115:14;1112:1;1100:10;1095:3;1082:54;1170:16;1167:1;1164;1149:38;1203:14;1200:2;;1230:16;1227:1;1220:27;1200:2;1272:16;1269:1;1262:27;1435:104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1435:104:92;;;:::i;:::-;;;;;;;;;;;;;;;;1311:118;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1311:118:92;;;:::i;:::-;;;;-1:-1:-1;;;;;1311:118:92;;;;;;;;;;;;;;1435:104;1531:1;1435:104;:::o;1311:118::-;1382:7;1412:10;-1:-1:-1;;;;;1412:10:92;1311:118;:::o",
+  "source": "pragma solidity ^0.5.0;\nimport \"./Proxy.sol\";\n\n\n/// @title Delegate Constructor Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor.\n/// @author Stefan George - <stefan@gnosis.pm>\n/// @author Richard Meissner - <richard@gnosis.pm>\ncontract DelegateConstructorProxy is Proxy {\n\n    /// @dev Constructor function sets address of master copy contract.\n    /// @param _masterCopy Master copy address.\n    /// @param initializer Data used for a delegate call to initialize the contract.\n    constructor(address _masterCopy, bytes memory initializer) Proxy(_masterCopy)\n        public\n    {\n        if (initializer.length > 0) {\n            // solium-disable-next-line security/no-inline-assembly\n            assembly {\n                let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)\n                let success := delegatecall(sub(gas, 10000), masterCopy, add(initializer, 0x20), mload(initializer), 0, 0)\n                let ptr := mload(0x40)\n                returndatacopy(ptr, 0, returndatasize)\n                if eq(success, 0) { revert(ptr, returndatasize) }\n            }\n        }\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol",
+    "exportedSymbols": {
+      "DelegateConstructorProxy": [
+        11370
+      ]
+    },
+    "id": 11371,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11348,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:90"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/Proxy.sol",
+        "file": "./Proxy.sol",
+        "id": 11349,
+        "nodeType": "ImportDirective",
+        "scope": 11371,
+        "sourceUnit": 11473,
+        "src": "24:21:90",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 11350,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11472,
+              "src": "392:5:90",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$11472",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 11351,
+            "nodeType": "InheritanceSpecifier",
+            "src": "392:5:90"
+          }
+        ],
+        "contractDependencies": [
+          11472
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Delegate Constructor Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
+        "fullyImplemented": true,
+        "id": 11370,
+        "linearizedBaseContracts": [
+          11370,
+          11472
+        ],
+        "name": "DelegateConstructorProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11368,
+              "nodeType": "Block",
+              "src": "707:535:90",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 11364,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11361,
+                        "name": "initializer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11355,
+                        "src": "721:11:90",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 11362,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "721:18:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11363,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "742:1:90",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "721:22:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 11367,
+                  "nodeType": "IfStatement",
+                  "src": "717:519:90",
+                  "trueBody": {
+                    "id": 11366,
+                    "nodeType": "Block",
+                    "src": "745:491:90",
+                    "statements": [
+                      {
+                        "externalReferences": [
+                          {
+                            "initializer": {
+                              "declaration": 11355,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "1033:11:90",
+                              "valueSize": 1
+                            }
+                          },
+                          {
+                            "initializer": {
+                              "declaration": 11355,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "1007:11:90",
+                              "valueSize": 1
+                            }
+                          }
+                        ],
+                        "id": 11365,
+                        "nodeType": "InlineAssembly",
+                        "operations": "{\n    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)\n    let success := delegatecall(sub(gas(), 10000), masterCopy, add(initializer, 0x20), mload(initializer), 0, 0)\n    let ptr := mload(0x40)\n    returndatacopy(ptr, 0, returndatasize())\n    if eq(success, 0) { revert(ptr, returndatasize()) }\n}",
+                        "src": "827:399:90"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": "@dev Constructor function sets address of master copy contract.\n @param _masterCopy Master copy address.\n @param initializer Data used for a delegate call to initialize the contract.",
+            "id": 11369,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 11358,
+                    "name": "_masterCopy",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 11353,
+                    "src": "675:11:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 11359,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 11357,
+                  "name": "Proxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 11472,
+                  "src": "669:5:90",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Proxy_$11472_$",
+                    "typeString": "type(contract Proxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "669:18:90"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11356,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11353,
+                  "name": "_masterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11369,
+                  "src": "622:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11352,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "622:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11355,
+                  "name": "initializer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11369,
+                  "src": "643:24:90",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11354,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "643:5:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "621:47:90"
+            },
+            "returnParameters": {
+              "id": 11360,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "707:0:90"
+            },
+            "scope": 11370,
+            "src": "610:632:90",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 11371,
+        "src": "355:889:90"
+      }
+    ],
+    "src": "0:1245:90"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol",
+    "exportedSymbols": {
+      "DelegateConstructorProxy": [
+        11370
+      ]
+    },
+    "id": 11371,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11348,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:90"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/Proxy.sol",
+        "file": "./Proxy.sol",
+        "id": 11349,
+        "nodeType": "ImportDirective",
+        "scope": 11371,
+        "sourceUnit": 11473,
+        "src": "24:21:90",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 11350,
+              "name": "Proxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11472,
+              "src": "392:5:90",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Proxy_$11472",
+                "typeString": "contract Proxy"
+              }
+            },
+            "id": 11351,
+            "nodeType": "InheritanceSpecifier",
+            "src": "392:5:90"
+          }
+        ],
+        "contractDependencies": [
+          11472
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Delegate Constructor Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
+        "fullyImplemented": true,
+        "id": 11370,
+        "linearizedBaseContracts": [
+          11370,
+          11472
+        ],
+        "name": "DelegateConstructorProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11368,
+              "nodeType": "Block",
+              "src": "707:535:90",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 11364,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11361,
+                        "name": "initializer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11355,
+                        "src": "721:11:90",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 11362,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "721:18:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11363,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "742:1:90",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "721:22:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 11367,
+                  "nodeType": "IfStatement",
+                  "src": "717:519:90",
+                  "trueBody": {
+                    "id": 11366,
+                    "nodeType": "Block",
+                    "src": "745:491:90",
+                    "statements": [
+                      {
+                        "externalReferences": [
+                          {
+                            "initializer": {
+                              "declaration": 11355,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "1033:11:90",
+                              "valueSize": 1
+                            }
+                          },
+                          {
+                            "initializer": {
+                              "declaration": 11355,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "1007:11:90",
+                              "valueSize": 1
+                            }
+                          }
+                        ],
+                        "id": 11365,
+                        "nodeType": "InlineAssembly",
+                        "operations": "{\n    let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)\n    let success := delegatecall(sub(gas(), 10000), masterCopy, add(initializer, 0x20), mload(initializer), 0, 0)\n    let ptr := mload(0x40)\n    returndatacopy(ptr, 0, returndatasize())\n    if eq(success, 0) { revert(ptr, returndatasize()) }\n}",
+                        "src": "827:399:90"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": "@dev Constructor function sets address of master copy contract.\n @param _masterCopy Master copy address.\n @param initializer Data used for a delegate call to initialize the contract.",
+            "id": 11369,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 11358,
+                    "name": "_masterCopy",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 11353,
+                    "src": "675:11:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 11359,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 11357,
+                  "name": "Proxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 11472,
+                  "src": "669:5:90",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Proxy_$11472_$",
+                    "typeString": "type(contract Proxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "669:18:90"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11356,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11353,
+                  "name": "_masterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11369,
+                  "src": "622:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11352,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "622:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11355,
+                  "name": "initializer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11369,
+                  "src": "643:24:90",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11354,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "643:5:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "621:47:90"
+            },
+            "returnParameters": {
+              "id": 11360,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "707:0:90"
+            },
+            "scope": 11370,
+            "src": "610:632:90",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 11371,
+        "src": "355:889:90"
+      }
+    ],
+    "src": "0:1245:90"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.208Z",
+  "devdoc": {
+    "author": "Stefan George - <stefan@gnosis.pm>Richard Meissner - <richard@gnosis.pm>",
+    "methods": {
+      "constructor": {
+        "details": "Constructor function sets address of master copy contract.",
+        "params": {
+          "_masterCopy": "Master copy address.",
+          "initializer": "Data used for a delegate call to initialize the contract."
+        }
+      }
+    },
+    "title": "Delegate Constructor Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor."
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

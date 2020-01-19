@@ -1,0 +1,3548 @@
+{
+  "contractName": "PriceOracleFake",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes3",
+          "name": "_baseCurrencyCode",
+          "type": "bytes3"
+        },
+        {
+          "internalType": "bytes3",
+          "name": "_quoteCurrencyCode",
+          "type": "bytes3"
+        },
+        {
+          "internalType": "uint8",
+          "name": "_quoteCurrencyDecimals",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_initialPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expirationHeight",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "PriceUpdated",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "baseCurrency",
+      "outputs": [
+        {
+          "internalType": "bytes3",
+          "name": "",
+          "type": "bytes3"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "quoteCurrency",
+      "outputs": [
+        {
+          "internalType": "bytes3",
+          "name": "",
+          "type": "bytes3"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expirationHeight",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPrice",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes3\",\"name\":\"_baseCurrencyCode\",\"type\":\"bytes3\"},{\"internalType\":\"bytes3\",\"name\":\"_quoteCurrencyCode\",\"type\":\"bytes3\"},{\"internalType\":\"uint8\",\"name\":\"_quoteCurrencyDecimals\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"_initialPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_expirationHeight\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"PriceUpdated\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"baseCurrency\",\"outputs\":[{\"internalType\":\"bytes3\",\"name\":\"\",\"type\":\"bytes3\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"quoteCurrency\",\"outputs\":[{\"internalType\":\"bytes3\",\"name\":\"\",\"type\":\"bytes3\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_expirationHeight\",\"type\":\"uint256\"}],\"name\":\"setPrice\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"baseCurrency()\":{\"details\":\"Base currency code is not according to ISO 4217 or other standard.\"},\"getPrice()\":{\"details\":\"Function throws an exception if the price is invalid, for example,     was not set, or became outdated, etc.\",\"return\":\"An amount of the quote currency needed to purchase one unit of        the base base currency.\"},\"quoteCurrency()\":{\"details\":\"Quote currency code is not according to ISO 4217 or other standard.\"}}},\"userdoc\":{\"methods\":{\"baseCurrency()\":{\"notice\":\"Returns base currency code.\"},\"decimals()\":{\"notice\":\"Returns quote currency decimals.\"},\"getPrice()\":{\"notice\":\"Returns an amount of the quote currency needed to purchase        one unit of the base currency.\"},\"quoteCurrency()\":{\"notice\":\"Returns quote currency code.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol\":\"PriceOracleFake\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/PriceOracleInterface.sol\":{\"keccak256\":\"0x799f9f77766e8dbb3bc6ebde1a158820920323d647b67af7b0c430aa3d61be98\",\"urls\":[\"bzz-raw://88a00e9197d7610b6effab3ce715f89f484da28a51866d3d1cb06e6a5fc73256\",\"dweb:/ipfs/QmTKXEjH1KcuRWxc9VgF9qPN7vxbayG3yedNSTkEC5wfBt\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol\":{\"keccak256\":\"0x027b3077aad060a5f10b8b08e68b5731f6d9682dd73edda3a4003c9f22e230a9\",\"urls\":[\"bzz-raw://7a672c7b3615c7663a3e818e3a503ba5d5e59e3745f55cafaaea3cb0f428c059\",\"dweb:/ipfs/QmUe5PbAHQoRhXU8XEg7CoAU2QscRZtvPDWEtxpGbTTKBc\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610462380380610462833981810160405260a081101561003357600080fd5b508051602082015160408301516060840151608090940151929391929091906001600160e81b031985166100ae576040805162461bcd60e51b815260206004820152601c60248201527f426173652063757272656e637920636f646520697320656d7074792e00000000604482015290519081900360640190fd5b6001600160e81b0319841661010a576040805162461bcd60e51b815260206004820152601d60248201527f51756f74652063757272656e637920636f646520697320656d7074792e000000604482015290519081900360640190fd5b6000805462ffffff191660e887811c9190911765ffffff000000191663010000009187901c919091021790556003805460ff191660ff851617905561014f8282610159565b50505050506101d8565b4381116101975760405162461bcd60e51b815260040180806020018281038252603b815260200180610427603b913960400191505060405180910390fd5b600182905560028190556040805183815290517f66cbca4f3c64fecf1dcb9ce094abcf7f68c3450a1d4e3a8e917dd621edb4ebe09181900360200190a15050565b610240806101e76000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063313ce5671461005c57806382564bca1461007a57806392a85fde1461009f57806398d5fdca146100a7578063f7d97577146100c1575b600080fd5b6100646100e6565b6040805160ff9092168252519081900360200190f35b6100826100ef565b604080516001600160e81b03199092168252519081900360200190f35b6100826100ff565b6100af610108565b60408051918252519081900360200190f35b6100e4600480360360408110156100d757600080fd5b5080359060200135610151565b005b60035460ff1690565b6000546301000000900460e81b90565b60005460e81b90565b6000436002541161014a5760405162461bcd60e51b815260040180806020018281038252603b8152602001806101d1603b913960400191505060405180910390fd5b5060015490565b43811161018f5760405162461bcd60e51b815260040180806020018281038252603b8152602001806101d1603b913960400191505060405180910390fd5b600182905560028190556040805183815290517f66cbca4f3c64fecf1dcb9ce094abcf7f68c3450a1d4e3a8e917dd621edb4ebe09181900360200190a1505056fe50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742ea265627a7a723158208b031b12f7370734754892467a38c312ddb98cd35db6cf4fb08c3b16039c15e164736f6c6343000510003250726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063313ce5671461005c57806382564bca1461007a57806392a85fde1461009f57806398d5fdca146100a7578063f7d97577146100c1575b600080fd5b6100646100e6565b6040805160ff9092168252519081900360200190f35b6100826100ef565b604080516001600160e81b03199092168252519081900360200190f35b6100826100ff565b6100af610108565b60408051918252519081900360200190f35b6100e4600480360360408110156100d757600080fd5b5080359060200135610151565b005b60035460ff1690565b6000546301000000900460e81b90565b60005460e81b90565b6000436002541161014a5760405162461bcd60e51b815260040180806020018281038252603b8152602001806101d1603b913960400191505060405180910390fd5b5060015490565b43811161018f5760405162461bcd60e51b815260040180806020018281038252603b8152602001806101d1603b913960400191505060405180910390fd5b600182905560028190556040805183815290517f66cbca4f3c64fecf1dcb9ce094abcf7f68c3450a1d4e3a8e917dd621edb4ebe09181900360200190a1505056fe50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742ea265627a7a723158208b031b12f7370734754892467a38c312ddb98cd35db6cf4fb08c3b16039c15e164736f6c63430005100032",
+  "sourceMap": "664:2732:59:-;;;905:656;8:9:-1;5:2;;;30:1;27;20:12;5:2;905:656:59;;;;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;905:656:59;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;1146:30:59;;1125:105;;;;;-1:-1:-1;;;1125:105:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;1262:31:59;;1241:107;;;;;-1:-1:-1;;;1241:107:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;1359:16;:36;;-1:-1:-1;;1359:36:59;;;;;;;;;-1:-1:-1;;1406:38:59;;;;;;;;;;;;;:17;1455:46;;-1:-1:-1;;1455:46:59;;;;;;;1512:42;1521:13;1536:17;1512:8;:42::i;:::-;905:656;;;;;664:2732;;3030:364;3183:12;3163:17;:32;3142:138;;;;-1:-1:-1;;;3142:138:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3291:5;:14;;;3316:16;:36;;;3368:19;;;;;;;;;;;;;;;;;3030:364;;:::o;664:2732::-;;;;;;;",
+  "deployedSourceMap": "664:2732:59:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;664:2732:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2214:122;;;:::i;:::-;;;;;;;;;;;;;;;;;;;2019:125;;;:::i;:::-;;;;-1:-1:-1;;;;;;2019:125:59;;;;;;;;;;;;;;1743:123;;;:::i;2738:257::-;;;:::i;:::-;;;;;;;;;;;;;;;;3030:364;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3030:364:59;;;;;;;:::i;:::-;;2214:122;2308:21;;;;2214:122;:::o;2019:125::-;2091:6;2120:17;;;;;;2019:125;:::o;1743:123::-;1814:6;1843:16;;;1743:123;:::o;2738:257::-;2805:7;2868:12;2849:16;;:31;2828:137;;;;-1:-1:-1;;;2828:137:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2983:5:59;;2738:257;:::o;3030:364::-;3183:12;3163:17;:32;3142:138;;;;-1:-1:-1;;;3142:138:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3291:5;:14;;;3316:16;:36;;;3368:19;;;;;;;;;;;;;;;;;3030:364;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\nimport \"../../../rules/PriceOracleInterface.sol\";\n\ncontract PriceOracleFake is PriceOracleInterface {\n\n    /* Storage */\n\n    bytes3 baseCurrencyCode;\n\n    bytes3 quoteCurrencyCode;\n\n    uint256 price;\n\n    uint256 expirationHeight;\n\n    uint8 quoteCurrencyDecimals;\n\n\n    /* Special */\n\n    constructor(\n        bytes3 _baseCurrencyCode,\n        bytes3 _quoteCurrencyCode,\n        uint8 _quoteCurrencyDecimals,\n        uint256 _initialPrice,\n        uint256 _expirationHeight\n    )\n        public\n    {\n        require(\n            _baseCurrencyCode != bytes3(0),\n            \"Base currency code is empty.\"\n        );\n\n        require(\n            _quoteCurrencyCode != bytes3(0),\n            \"Quote currency code is empty.\"\n        );\n\n        baseCurrencyCode = _baseCurrencyCode;\n\n        quoteCurrencyCode = _quoteCurrencyCode;\n\n        quoteCurrencyDecimals = _quoteCurrencyDecimals;\n\n        setPrice(_initialPrice, _expirationHeight);\n    }\n\n\n    /* External Functions */\n\n    /**\n     * @notice Returns base currency code.\n     *\n     * @dev Base currency code is not according to ISO 4217 or other standard.\n     */\n    function baseCurrency()\n        external\n        view\n        returns (bytes3)\n    {\n        return baseCurrencyCode;\n    }\n\n    /**\n     * @notice Returns quote currency code.\n     *\n     * @dev Quote currency code is not according to ISO 4217 or other standard.\n     */\n    function quoteCurrency()\n        external\n        view\n        returns (bytes3)\n    {\n        return quoteCurrencyCode;\n    }\n\n    /**\n     * @notice Returns quote currency decimals.\n     */\n    function decimals()\n        external\n        view\n        returns(uint8)\n    {\n        return quoteCurrencyDecimals;\n    }\n\n    /**\n     * @notice Returns an amount of the quote currency needed to purchase\n     *         one unit of the base currency.\n     *\n     * @dev Function throws an exception if the price is invalid, for example,\n     *      was not set, or became outdated, etc.\n     *\n     * @return An amount of the quote currency needed to purchase one unit of\n     *         the base base currency.\n     */\n    function getPrice()\n        external\n        view\n        returns (uint256)\n    {\n        require(\n            expirationHeight > block.number,\n            \"Price expiration height is lte to the current block height.\"\n        );\n\n        return price;\n    }\n\n\n    /* Public Functions */\n\n    function setPrice(\n        uint256 _price,\n        uint256 _expirationHeight\n    )\n        public\n    {\n        require(\n            _expirationHeight > block.number,\n            \"Price expiration height is lte to the current block height.\"\n        );\n\n        price = _price;\n\n        expirationHeight = _expirationHeight;\n\n        emit PriceUpdated(price);\n    }\n}",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol",
+    "exportedSymbols": {
+      "PriceOracleFake": [
+        6942
+      ]
+    },
+    "id": 6943,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6811,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:59"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/PriceOracleInterface.sol",
+        "file": "../../../rules/PriceOracleInterface.sol",
+        "id": 6812,
+        "nodeType": "ImportDirective",
+        "scope": 6943,
+        "sourceUnit": 5679,
+        "src": "613:49:59",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6813,
+              "name": "PriceOracleInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5678,
+              "src": "692:20:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PriceOracleInterface_$5678",
+                "typeString": "contract PriceOracleInterface"
+              }
+            },
+            "id": 6814,
+            "nodeType": "InheritanceSpecifier",
+            "src": "692:20:59"
+          }
+        ],
+        "contractDependencies": [
+          5678
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6942,
+        "linearizedBaseContracts": [
+          6942,
+          5678
+        ],
+        "name": "PriceOracleFake",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6816,
+            "name": "baseCurrencyCode",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "739:23:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes3",
+              "typeString": "bytes3"
+            },
+            "typeName": {
+              "id": 6815,
+              "name": "bytes3",
+              "nodeType": "ElementaryTypeName",
+              "src": "739:6:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes3",
+                "typeString": "bytes3"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6818,
+            "name": "quoteCurrencyCode",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "769:24:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes3",
+              "typeString": "bytes3"
+            },
+            "typeName": {
+              "id": 6817,
+              "name": "bytes3",
+              "nodeType": "ElementaryTypeName",
+              "src": "769:6:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes3",
+                "typeString": "bytes3"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6820,
+            "name": "price",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "800:13:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6819,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "800:7:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6822,
+            "name": "expirationHeight",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "820:24:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6821,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "820:7:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6824,
+            "name": "quoteCurrencyDecimals",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "851:27:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 6823,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "851:5:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6872,
+              "nodeType": "Block",
+              "src": "1115:446:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes3",
+                          "typeString": "bytes3"
+                        },
+                        "id": 6842,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6838,
+                          "name": "_baseCurrencyCode",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6826,
+                          "src": "1146:17:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6840,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1174:1:59",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6839,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1167:6:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes3_$",
+                              "typeString": "type(bytes3)"
+                            },
+                            "typeName": "bytes3"
+                          },
+                          "id": 6841,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1167:9:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "src": "1146:30:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "426173652063757272656e637920636f646520697320656d7074792e",
+                        "id": 6843,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1190:30:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_25881ed6fd08dfa1305d2c5013469231d01501ebfcd4f464da86e6313d4602fe",
+                          "typeString": "literal_string \"Base currency code is empty.\""
+                        },
+                        "value": "Base currency code is empty."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_25881ed6fd08dfa1305d2c5013469231d01501ebfcd4f464da86e6313d4602fe",
+                          "typeString": "literal_string \"Base currency code is empty.\""
+                        }
+                      ],
+                      "id": 6837,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "1125:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6844,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1125:105:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6845,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1125:105:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes3",
+                          "typeString": "bytes3"
+                        },
+                        "id": 6851,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6847,
+                          "name": "_quoteCurrencyCode",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6828,
+                          "src": "1262:18:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6849,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1291:1:59",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6848,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1284:6:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes3_$",
+                              "typeString": "type(bytes3)"
+                            },
+                            "typeName": "bytes3"
+                          },
+                          "id": 6850,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1284:9:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "src": "1262:31:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "51756f74652063757272656e637920636f646520697320656d7074792e",
+                        "id": 6852,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1307:31:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0547b348601c7a63010a395e4b0b8d197bef7df1b21f30e97cee1ee47c77416",
+                          "typeString": "literal_string \"Quote currency code is empty.\""
+                        },
+                        "value": "Quote currency code is empty."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_a0547b348601c7a63010a395e4b0b8d197bef7df1b21f30e97cee1ee47c77416",
+                          "typeString": "literal_string \"Quote currency code is empty.\""
+                        }
+                      ],
+                      "id": 6846,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "1241:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6853,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1241:107:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6854,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1241:107:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6857,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6855,
+                      "name": "baseCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6816,
+                      "src": "1359:16:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6856,
+                      "name": "_baseCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6826,
+                      "src": "1378:17:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "src": "1359:36:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "id": 6858,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1359:36:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6861,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6859,
+                      "name": "quoteCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6818,
+                      "src": "1406:17:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6860,
+                      "name": "_quoteCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6828,
+                      "src": "1426:18:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "src": "1406:38:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "id": 6862,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1406:38:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6865,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6863,
+                      "name": "quoteCurrencyDecimals",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6824,
+                      "src": "1455:21:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6864,
+                      "name": "_quoteCurrencyDecimals",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6830,
+                      "src": "1479:22:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1455:46:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 6866,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1455:46:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 6868,
+                        "name": "_initialPrice",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6832,
+                        "src": "1521:13:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 6869,
+                        "name": "_expirationHeight",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6834,
+                        "src": "1536:17:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 6867,
+                      "name": "setPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6941,
+                      "src": "1512:8:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 6870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1512:42:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6871,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1512:42:59"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6873,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6835,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6826,
+                  "name": "_baseCurrencyCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "926:24:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6825,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "926:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6828,
+                  "name": "_quoteCurrencyCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "960:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6827,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "960:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6830,
+                  "name": "_quoteCurrencyDecimals",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "995:28:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6829,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "995:5:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6832,
+                  "name": "_initialPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "1033:21:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6831,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1033:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6834,
+                  "name": "_expirationHeight",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "1064:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6833,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1064:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "916:179:59"
+            },
+            "returnParameters": {
+              "id": 6836,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1115:0:59"
+            },
+            "scope": 6942,
+            "src": "905:656:59",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6880,
+              "nodeType": "Block",
+              "src": "1826:40:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6878,
+                    "name": "baseCurrencyCode",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6816,
+                    "src": "1843:16:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "functionReturnParameters": 6877,
+                  "id": 6879,
+                  "nodeType": "Return",
+                  "src": "1836:23:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns base currency code.\n     * @dev Base currency code is not according to ISO 4217 or other standard.",
+            "id": 6881,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "baseCurrency",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6874,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1764:2:59"
+            },
+            "returnParameters": {
+              "id": 6877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6876,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6881,
+                  "src": "1814:6:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6875,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1814:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1813:8:59"
+            },
+            "scope": 6942,
+            "src": "1743:123:59",
+            "stateMutability": "view",
+            "superFunction": 5662,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6888,
+              "nodeType": "Block",
+              "src": "2103:41:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6886,
+                    "name": "quoteCurrencyCode",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6818,
+                    "src": "2120:17:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "functionReturnParameters": 6885,
+                  "id": 6887,
+                  "nodeType": "Return",
+                  "src": "2113:24:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns quote currency code.\n     * @dev Quote currency code is not according to ISO 4217 or other standard.",
+            "id": 6889,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "quoteCurrency",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2041:2:59"
+            },
+            "returnParameters": {
+              "id": 6885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6884,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6889,
+                  "src": "2091:6:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6883,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2091:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2090:8:59"
+            },
+            "scope": 6942,
+            "src": "2019:125:59",
+            "stateMutability": "view",
+            "superFunction": 5667,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6896,
+              "nodeType": "Block",
+              "src": "2291:45:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6894,
+                    "name": "quoteCurrencyDecimals",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6824,
+                    "src": "2308:21:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 6893,
+                  "id": 6895,
+                  "nodeType": "Return",
+                  "src": "2301:28:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns quote currency decimals.",
+            "id": 6897,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2231:2:59"
+            },
+            "returnParameters": {
+              "id": 6893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6897,
+                  "src": "2280:5:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6891,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2280:5:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2279:7:59"
+            },
+            "scope": 6942,
+            "src": "2214:122:59",
+            "stateMutability": "view",
+            "superFunction": 5672,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6912,
+              "nodeType": "Block",
+              "src": "2818:177:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 6906,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6903,
+                          "name": "expirationHeight",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6822,
+                          "src": "2849:16:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 6904,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12871,
+                            "src": "2868:5:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 6905,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2868:12:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "2849:31:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
+                        "id": 6907,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2894:61:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        },
+                        "value": "Price expiration height is lte to the current block height."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        }
+                      ],
+                      "id": 6902,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "2828:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6908,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2828:137:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6909,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2828:137:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6910,
+                    "name": "price",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6820,
+                    "src": "2983:5:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6901,
+                  "id": 6911,
+                  "nodeType": "Return",
+                  "src": "2976:12:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns an amount of the quote currency needed to purchase\n        one unit of the base currency.\n     * @dev Function throws an exception if the price is invalid, for example,\n     was not set, or became outdated, etc.\n     * @return An amount of the quote currency needed to purchase one unit of\n        the base base currency.",
+            "id": 6913,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6898,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2755:2:59"
+            },
+            "returnParameters": {
+              "id": 6901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6900,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6913,
+                  "src": "2805:7:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6899,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2805:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2804:9:59"
+            },
+            "scope": 6942,
+            "src": "2738:257:59",
+            "stateMutability": "view",
+            "superFunction": 5677,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6940,
+              "nodeType": "Block",
+              "src": "3132:262:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 6924,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6921,
+                          "name": "_expirationHeight",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6917,
+                          "src": "3163:17:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 6922,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12871,
+                            "src": "3183:5:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 6923,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "3183:12:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "3163:32:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
+                        "id": 6925,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3209:61:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        },
+                        "value": "Price expiration height is lte to the current block height."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        }
+                      ],
+                      "id": 6920,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "3142:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6926,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3142:138:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6927,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3142:138:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6930,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6928,
+                      "name": "price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6820,
+                      "src": "3291:5:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6929,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6915,
+                      "src": "3299:6:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "3291:14:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6931,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3291:14:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6934,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6932,
+                      "name": "expirationHeight",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6822,
+                      "src": "3316:16:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6933,
+                      "name": "_expirationHeight",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6917,
+                      "src": "3335:17:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "3316:36:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6935,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3316:36:59"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 6937,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6820,
+                        "src": "3381:5:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 6936,
+                      "name": "PriceUpdated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5657,
+                      "src": "3368:12:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 6938,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3368:19:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6939,
+                  "nodeType": "EmitStatement",
+                  "src": "3363:24:59"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6941,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6915,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6941,
+                  "src": "3057:14:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6914,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3057:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6917,
+                  "name": "_expirationHeight",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6941,
+                  "src": "3081:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6916,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3081:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3047:65:59"
+            },
+            "returnParameters": {
+              "id": 6919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3132:0:59"
+            },
+            "scope": 6942,
+            "src": "3030:364:59",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6943,
+        "src": "664:2732:59"
+      }
+    ],
+    "src": "0:3396:59"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol",
+    "exportedSymbols": {
+      "PriceOracleFake": [
+        6942
+      ]
+    },
+    "id": 6943,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6811,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:59"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/PriceOracleInterface.sol",
+        "file": "../../../rules/PriceOracleInterface.sol",
+        "id": 6812,
+        "nodeType": "ImportDirective",
+        "scope": 6943,
+        "sourceUnit": 5679,
+        "src": "613:49:59",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6813,
+              "name": "PriceOracleInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5678,
+              "src": "692:20:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PriceOracleInterface_$5678",
+                "typeString": "contract PriceOracleInterface"
+              }
+            },
+            "id": 6814,
+            "nodeType": "InheritanceSpecifier",
+            "src": "692:20:59"
+          }
+        ],
+        "contractDependencies": [
+          5678
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6942,
+        "linearizedBaseContracts": [
+          6942,
+          5678
+        ],
+        "name": "PriceOracleFake",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6816,
+            "name": "baseCurrencyCode",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "739:23:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes3",
+              "typeString": "bytes3"
+            },
+            "typeName": {
+              "id": 6815,
+              "name": "bytes3",
+              "nodeType": "ElementaryTypeName",
+              "src": "739:6:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes3",
+                "typeString": "bytes3"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6818,
+            "name": "quoteCurrencyCode",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "769:24:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes3",
+              "typeString": "bytes3"
+            },
+            "typeName": {
+              "id": 6817,
+              "name": "bytes3",
+              "nodeType": "ElementaryTypeName",
+              "src": "769:6:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes3",
+                "typeString": "bytes3"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6820,
+            "name": "price",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "800:13:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6819,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "800:7:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6822,
+            "name": "expirationHeight",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "820:24:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6821,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "820:7:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6824,
+            "name": "quoteCurrencyDecimals",
+            "nodeType": "VariableDeclaration",
+            "scope": 6942,
+            "src": "851:27:59",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 6823,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "851:5:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6872,
+              "nodeType": "Block",
+              "src": "1115:446:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes3",
+                          "typeString": "bytes3"
+                        },
+                        "id": 6842,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6838,
+                          "name": "_baseCurrencyCode",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6826,
+                          "src": "1146:17:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6840,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1174:1:59",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6839,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1167:6:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes3_$",
+                              "typeString": "type(bytes3)"
+                            },
+                            "typeName": "bytes3"
+                          },
+                          "id": 6841,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1167:9:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "src": "1146:30:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "426173652063757272656e637920636f646520697320656d7074792e",
+                        "id": 6843,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1190:30:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_25881ed6fd08dfa1305d2c5013469231d01501ebfcd4f464da86e6313d4602fe",
+                          "typeString": "literal_string \"Base currency code is empty.\""
+                        },
+                        "value": "Base currency code is empty."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_25881ed6fd08dfa1305d2c5013469231d01501ebfcd4f464da86e6313d4602fe",
+                          "typeString": "literal_string \"Base currency code is empty.\""
+                        }
+                      ],
+                      "id": 6837,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "1125:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6844,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1125:105:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6845,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1125:105:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes3",
+                          "typeString": "bytes3"
+                        },
+                        "id": 6851,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6847,
+                          "name": "_quoteCurrencyCode",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6828,
+                          "src": "1262:18:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6849,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1291:1:59",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6848,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1284:6:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes3_$",
+                              "typeString": "type(bytes3)"
+                            },
+                            "typeName": "bytes3"
+                          },
+                          "id": 6850,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1284:9:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes3",
+                            "typeString": "bytes3"
+                          }
+                        },
+                        "src": "1262:31:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "51756f74652063757272656e637920636f646520697320656d7074792e",
+                        "id": 6852,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1307:31:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0547b348601c7a63010a395e4b0b8d197bef7df1b21f30e97cee1ee47c77416",
+                          "typeString": "literal_string \"Quote currency code is empty.\""
+                        },
+                        "value": "Quote currency code is empty."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_a0547b348601c7a63010a395e4b0b8d197bef7df1b21f30e97cee1ee47c77416",
+                          "typeString": "literal_string \"Quote currency code is empty.\""
+                        }
+                      ],
+                      "id": 6846,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "1241:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6853,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1241:107:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6854,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1241:107:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6857,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6855,
+                      "name": "baseCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6816,
+                      "src": "1359:16:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6856,
+                      "name": "_baseCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6826,
+                      "src": "1378:17:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "src": "1359:36:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "id": 6858,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1359:36:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6861,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6859,
+                      "name": "quoteCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6818,
+                      "src": "1406:17:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6860,
+                      "name": "_quoteCurrencyCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6828,
+                      "src": "1426:18:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes3",
+                        "typeString": "bytes3"
+                      }
+                    },
+                    "src": "1406:38:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "id": 6862,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1406:38:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6865,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6863,
+                      "name": "quoteCurrencyDecimals",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6824,
+                      "src": "1455:21:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6864,
+                      "name": "_quoteCurrencyDecimals",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6830,
+                      "src": "1479:22:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1455:46:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 6866,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1455:46:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 6868,
+                        "name": "_initialPrice",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6832,
+                        "src": "1521:13:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 6869,
+                        "name": "_expirationHeight",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6834,
+                        "src": "1536:17:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 6867,
+                      "name": "setPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6941,
+                      "src": "1512:8:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 6870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1512:42:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6871,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1512:42:59"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6873,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6835,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6826,
+                  "name": "_baseCurrencyCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "926:24:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6825,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "926:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6828,
+                  "name": "_quoteCurrencyCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "960:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6827,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "960:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6830,
+                  "name": "_quoteCurrencyDecimals",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "995:28:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6829,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "995:5:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6832,
+                  "name": "_initialPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "1033:21:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6831,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1033:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6834,
+                  "name": "_expirationHeight",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6873,
+                  "src": "1064:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6833,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1064:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "916:179:59"
+            },
+            "returnParameters": {
+              "id": 6836,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1115:0:59"
+            },
+            "scope": 6942,
+            "src": "905:656:59",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6880,
+              "nodeType": "Block",
+              "src": "1826:40:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6878,
+                    "name": "baseCurrencyCode",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6816,
+                    "src": "1843:16:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "functionReturnParameters": 6877,
+                  "id": 6879,
+                  "nodeType": "Return",
+                  "src": "1836:23:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns base currency code.\n     * @dev Base currency code is not according to ISO 4217 or other standard.",
+            "id": 6881,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "baseCurrency",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6874,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1764:2:59"
+            },
+            "returnParameters": {
+              "id": 6877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6876,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6881,
+                  "src": "1814:6:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6875,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1814:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1813:8:59"
+            },
+            "scope": 6942,
+            "src": "1743:123:59",
+            "stateMutability": "view",
+            "superFunction": 5662,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6888,
+              "nodeType": "Block",
+              "src": "2103:41:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6886,
+                    "name": "quoteCurrencyCode",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6818,
+                    "src": "2120:17:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "functionReturnParameters": 6885,
+                  "id": 6887,
+                  "nodeType": "Return",
+                  "src": "2113:24:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns quote currency code.\n     * @dev Quote currency code is not according to ISO 4217 or other standard.",
+            "id": 6889,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "quoteCurrency",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2041:2:59"
+            },
+            "returnParameters": {
+              "id": 6885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6884,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6889,
+                  "src": "2091:6:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes3",
+                    "typeString": "bytes3"
+                  },
+                  "typeName": {
+                    "id": 6883,
+                    "name": "bytes3",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2091:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes3",
+                      "typeString": "bytes3"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2090:8:59"
+            },
+            "scope": 6942,
+            "src": "2019:125:59",
+            "stateMutability": "view",
+            "superFunction": 5667,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6896,
+              "nodeType": "Block",
+              "src": "2291:45:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6894,
+                    "name": "quoteCurrencyDecimals",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6824,
+                    "src": "2308:21:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 6893,
+                  "id": 6895,
+                  "nodeType": "Return",
+                  "src": "2301:28:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns quote currency decimals.",
+            "id": 6897,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2231:2:59"
+            },
+            "returnParameters": {
+              "id": 6893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6897,
+                  "src": "2280:5:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6891,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2280:5:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2279:7:59"
+            },
+            "scope": 6942,
+            "src": "2214:122:59",
+            "stateMutability": "view",
+            "superFunction": 5672,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6912,
+              "nodeType": "Block",
+              "src": "2818:177:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 6906,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6903,
+                          "name": "expirationHeight",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6822,
+                          "src": "2849:16:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 6904,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12871,
+                            "src": "2868:5:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 6905,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2868:12:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "2849:31:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
+                        "id": 6907,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2894:61:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        },
+                        "value": "Price expiration height is lte to the current block height."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        }
+                      ],
+                      "id": 6902,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "2828:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6908,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2828:137:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6909,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2828:137:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6910,
+                    "name": "price",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6820,
+                    "src": "2983:5:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6901,
+                  "id": 6911,
+                  "nodeType": "Return",
+                  "src": "2976:12:59"
+                }
+              ]
+            },
+            "documentation": "@notice Returns an amount of the quote currency needed to purchase\n        one unit of the base currency.\n     * @dev Function throws an exception if the price is invalid, for example,\n     was not set, or became outdated, etc.\n     * @return An amount of the quote currency needed to purchase one unit of\n        the base base currency.",
+            "id": 6913,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6898,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2755:2:59"
+            },
+            "returnParameters": {
+              "id": 6901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6900,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6913,
+                  "src": "2805:7:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6899,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2805:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2804:9:59"
+            },
+            "scope": 6942,
+            "src": "2738:257:59",
+            "stateMutability": "view",
+            "superFunction": 5677,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6940,
+              "nodeType": "Block",
+              "src": "3132:262:59",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 6924,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 6921,
+                          "name": "_expirationHeight",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6917,
+                          "src": "3163:17:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 6922,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 12871,
+                            "src": "3183:5:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 6923,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "3183:12:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "3163:32:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
+                        "id": 6925,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3209:61:59",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        },
+                        "value": "Price expiration height is lte to the current block height."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d8fad0c419a6975bf5634644f3aa3b48cb36f183b4edd77dac1662063f2d3a3e",
+                          "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
+                        }
+                      ],
+                      "id": 6920,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12884,
+                        12885
+                      ],
+                      "referencedDeclaration": 12885,
+                      "src": "3142:7:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 6926,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3142:138:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6927,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3142:138:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6930,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6928,
+                      "name": "price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6820,
+                      "src": "3291:5:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6929,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6915,
+                      "src": "3299:6:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "3291:14:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6931,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3291:14:59"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6934,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6932,
+                      "name": "expirationHeight",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6822,
+                      "src": "3316:16:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6933,
+                      "name": "_expirationHeight",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6917,
+                      "src": "3335:17:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "3316:36:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6935,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3316:36:59"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 6937,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6820,
+                        "src": "3381:5:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 6936,
+                      "name": "PriceUpdated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5657,
+                      "src": "3368:12:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 6938,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3368:19:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6939,
+                  "nodeType": "EmitStatement",
+                  "src": "3363:24:59"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6941,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6915,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6941,
+                  "src": "3057:14:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6914,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3057:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6917,
+                  "name": "_expirationHeight",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6941,
+                  "src": "3081:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6916,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3081:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3047:65:59"
+            },
+            "returnParameters": {
+              "id": 6919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3132:0:59"
+            },
+            "scope": 6942,
+            "src": "3030:364:59",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6943,
+        "src": "664:2732:59"
+      }
+    ],
+    "src": "0:3396:59"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.148Z",
+  "devdoc": {
+    "methods": {
+      "baseCurrency()": {
+        "details": "Base currency code is not according to ISO 4217 or other standard."
+      },
+      "getPrice()": {
+        "details": "Function throws an exception if the price is invalid, for example,     was not set, or became outdated, etc.",
+        "return": "An amount of the quote currency needed to purchase one unit of        the base base currency."
+      },
+      "quoteCurrency()": {
+        "details": "Quote currency code is not according to ISO 4217 or other standard."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "baseCurrency()": {
+        "notice": "Returns base currency code."
+      },
+      "decimals()": {
+        "notice": "Returns quote currency decimals."
+      },
+      "getPrice()": {
+        "notice": "Returns an amount of the quote currency needed to purchase        one unit of the base currency."
+      },
+      "quoteCurrency()": {
+        "notice": "Returns quote currency code."
+      }
+    }
+  }
+}

@@ -1,0 +1,1014 @@
+{
+  "contractName": "ProxyFactory",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract Proxy",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyCreation",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "masterCopy",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "createProxy",
+      "outputs": [
+        {
+          "internalType": "contract Proxy",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"contract Proxy\",\"name\":\"proxy\",\"type\":\"address\"}],\"name\":\"ProxyCreation\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"masterCopy\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"createProxy\",\"outputs\":[{\"internalType\":\"contract Proxy\",\"name\":\"proxy\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Stefan George - <stefan@gnosis.pm>\",\"methods\":{\"createProxy(address,bytes)\":{\"details\":\"Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\",\"params\":{\"data\":\"Payload for message call sent to new proxy contract.\",\"masterCopy\":\"Address of master copy.\"}}},\"title\":\"Proxy Factory - Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/ProxyFactory.sol\":\"ProxyFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/Proxy.sol\":{\"keccak256\":\"0xdf6a93e2905af13cb5a544437505820b56eed652076f0035cf7f7f823c052b95\",\"urls\":[\"bzz-raw://abd934c185def0772a547109cba77ce7af504c5ce0e24d56d20c00f745baa1d5\",\"dweb:/ipfs/QmZUC1f5PGMCzoTStNt2e3ZfFFfRweeJZxEXMM5FF43XP2\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/ProxyFactory.sol\":{\"keccak256\":\"0x82d08ea192c9f1435021567381ac25a5eaafc4d825cadb3db439e1a92b064591\",\"urls\":[\"bzz-raw://b7a6fb7f8a3652c52db2daf954af432da3b08964c8b4d0fb55429acfa8fa4873\",\"dweb:/ipfs/QmQmhzm8B8nDnVECBjEtCRYtqgSnrw7SbUjiULTy2ee589\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103a3806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806361b69abd14610030575b600080fd5b6100e66004803603604081101561004657600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561007157600080fd5b82018360208201111561008357600080fd5b803590602001918460018302840111640100000000831117156100a557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610102945050505050565b604080516001600160a01b039092168252519081900360200190f35b600082604051610111906101a6565b6001600160a01b03909116815260405190819003602001906000f08015801561013e573d6000803e3d6000fd5b508251909150156101645760008060008451602086016000865af1141561016457600080fd5b604080516001600160a01b038316815290517fa38789425dbeee0239e16ff2d2567e31720127fbc6430758c1a4efc6aef29f809181900360200190a192915050565b6101bb806101b48339019056fe608060405234801561001057600080fd5b506040516101bb3803806101bb8339818101604052602081101561003357600080fd5b50516001600160a01b03811661007a5760405162461bcd60e51b81526004018080602001828103825260248152602001806101976024913960400191505060405180910390fd5b600080546001600160a01b039092166001600160a01b031990921691909117905560ee806100a96000396000f3fe60806040526004361060265760003560e01c80634555d5c91460535780635c60da1b146077575b6001600160a01b03600054163660008037600080366000845af43d6000803e80604e573d6000fd5b3d6000f35b348015605e57600080fd5b50606560a5565b60408051918252519081900360200190f35b348015608257600080fd5b50608960aa565b604080516001600160a01b039092168252519081900360200190f35b600290565b6000546001600160a01b03169056fea265627a7a723158205e4eab03ed6825fd19fd86bfa47bef4a271cb65a8512a12725eca3ae5f2e12a564736f6c63430005100032496e76616c6964206d617374657220636f707920616464726573732070726f7669646564a265627a7a72315820b10c589d15ef853b3256395b516ca74321e626e5d232d8add632c1c1b037598264736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806361b69abd14610030575b600080fd5b6100e66004803603604081101561004657600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561007157600080fd5b82018360208201111561008357600080fd5b803590602001918460018302840111640100000000831117156100a557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610102945050505050565b604080516001600160a01b039092168252519081900360200190f35b600082604051610111906101a6565b6001600160a01b03909116815260405190819003602001906000f08015801561013e573d6000803e3d6000fd5b508251909150156101645760008060008451602086016000865af1141561016457600080fd5b604080516001600160a01b038316815290517fa38789425dbeee0239e16ff2d2567e31720127fbc6430758c1a4efc6aef29f809181900360200190a192915050565b6101bb806101b48339019056fe608060405234801561001057600080fd5b506040516101bb3803806101bb8339818101604052602081101561003357600080fd5b50516001600160a01b03811661007a5760405162461bcd60e51b81526004018080602001828103825260248152602001806101976024913960400191505060405180910390fd5b600080546001600160a01b039092166001600160a01b031990921691909117905560ee806100a96000396000f3fe60806040526004361060265760003560e01c80634555d5c91460535780635c60da1b146077575b6001600160a01b03600054163660008037600080366000845af43d6000803e80604e573d6000fd5b3d6000f35b348015605e57600080fd5b50606560a5565b60408051918252519081900360200190f35b348015608257600080fd5b50608960aa565b604080516001600160a01b039092168252519081900360200190f35b600290565b6000546001600160a01b03169056fea265627a7a723158205e4eab03ed6825fd19fd86bfa47bef4a271cb65a8512a12725eca3ae5f2e12a564736f6c63430005100032496e76616c6964206d617374657220636f707920616464726573732070726f7669646564a265627a7a72315820b10c589d15ef853b3256395b516ca74321e626e5d232d8add632c1c1b037598264736f6c63430005100032",
+  "sourceMap": "225:732:93:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;225:732:93;;;;;;;",
+  "deployedSourceMap": "225:732:93:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;225:732:93;;;;;;;;;;;;;;;;;;;532:423;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;532:423:93;;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;532:423:93;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;532:423:93;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;532:423:93;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;532:423:93;;-1:-1:-1;532:423:93;;-1:-1:-1;;;;;532:423:93:i;:::-;;;;-1:-1:-1;;;;;532:423:93;;;;;;;;;;;;;;;624:11;669:10;659:21;;;;;:::i;:::-;-1:-1:-1;;;;;659:21:93;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;694:11:93;;651:29;;-1:-1:-1;694:15:93;690:224;;881:1;877;874;867:4;861:11;854:4;848;844:15;841:1;834:5;829:3;824:55;821:62;818:2;;;896:1;893;886:12;818:2;928:20;;;-1:-1:-1;;;;;928:20:93;;;;;;;;;;;;;;;532:423;;;;:::o;225:732::-;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\nimport \"./Proxy.sol\";\n\n\n/// @title Proxy Factory - Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\n/// @author Stefan George - <stefan@gnosis.pm>\ncontract ProxyFactory {\n\n    event ProxyCreation(Proxy proxy);\n\n    /// @dev Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\n    /// @param masterCopy Address of master copy.\n    /// @param data Payload for message call sent to new proxy contract.\n    function createProxy(address masterCopy, bytes memory data)\n        public\n        returns (Proxy proxy)\n    {\n        proxy = new Proxy(masterCopy);\n        if (data.length > 0)\n            // solium-disable-next-line security/no-inline-assembly\n            assembly {\n                if eq(call(gas, proxy, 0, add(data, 0x20), mload(data), 0, 0), 0) { revert(0, 0) }\n            }\n        emit ProxyCreation(proxy);\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/ProxyFactory.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/ProxyFactory.sol",
+    "exportedSymbols": {
+      "ProxyFactory": [
+        11507
+      ]
+    },
+    "id": 11508,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11474,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:93"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/Proxy.sol",
+        "file": "./Proxy.sol",
+        "id": 11475,
+        "nodeType": "ImportDirective",
+        "scope": 11508,
+        "sourceUnit": 11473,
+        "src": "24:21:93",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          11472
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Proxy Factory - Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\n @author Stefan George - <stefan@gnosis.pm>",
+        "fullyImplemented": true,
+        "id": 11507,
+        "linearizedBaseContracts": [
+          11507
+        ],
+        "name": "ProxyFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 11479,
+            "name": "ProxyCreation",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 11478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11477,
+                  "indexed": false,
+                  "name": "proxy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11479,
+                  "src": "274:11:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Proxy_$11472",
+                    "typeString": "contract Proxy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11476,
+                    "name": "Proxy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11472,
+                    "src": "274:5:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Proxy_$11472",
+                      "typeString": "contract Proxy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "273:13:93"
+            },
+            "src": "254:33:93"
+          },
+          {
+            "body": {
+              "id": 11505,
+              "nodeType": "Block",
+              "src": "641:314:93",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11493,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11488,
+                      "name": "proxy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11486,
+                      "src": "651:5:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Proxy_$11472",
+                        "typeString": "contract Proxy"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 11491,
+                          "name": "masterCopy",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11481,
+                          "src": "669:10:93",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 11490,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "659:9:93",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_Proxy_$11472_$",
+                          "typeString": "function (address) returns (contract Proxy)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 11489,
+                          "name": "Proxy",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 11472,
+                          "src": "663:5:93",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Proxy_$11472",
+                            "typeString": "contract Proxy"
+                          }
+                        }
+                      },
+                      "id": 11492,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "659:21:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Proxy_$11472",
+                        "typeString": "contract Proxy"
+                      }
+                    },
+                    "src": "651:29:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Proxy_$11472",
+                      "typeString": "contract Proxy"
+                    }
+                  },
+                  "id": 11494,
+                  "nodeType": "ExpressionStatement",
+                  "src": "651:29:93"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 11498,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11495,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11483,
+                        "src": "694:4:93",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 11496,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "694:11:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11497,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "708:1:93",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "694:15:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 11500,
+                  "nodeType": "IfStatement",
+                  "src": "690:224:93",
+                  "trueBody": {
+                    "externalReferences": [
+                      {
+                        "data": {
+                          "declaration": 11483,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "867:4:93",
+                          "valueSize": 1
+                        }
+                      },
+                      {
+                        "data": {
+                          "declaration": 11483,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "848:4:93",
+                          "valueSize": 1
+                        }
+                      },
+                      {
+                        "proxy": {
+                          "declaration": 11486,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "834:5:93",
+                          "valueSize": 1
+                        }
+                      }
+                    ],
+                    "id": 11499,
+                    "nodeType": "InlineAssembly",
+                    "operations": "{\n    if eq(call(gas(), proxy, 0, add(data, 0x20), mload(data), 0, 0), 0) { revert(0, 0) }\n}",
+                    "src": "791:123:93"
+                  }
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11502,
+                        "name": "proxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11486,
+                        "src": "942:5:93",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Proxy_$11472",
+                          "typeString": "contract Proxy"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Proxy_$11472",
+                          "typeString": "contract Proxy"
+                        }
+                      ],
+                      "id": 11501,
+                      "name": "ProxyCreation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11479,
+                      "src": "928:13:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_Proxy_$11472_$returns$__$",
+                        "typeString": "function (contract Proxy)"
+                      }
+                    },
+                    "id": 11503,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "928:20:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11504,
+                  "nodeType": "EmitStatement",
+                  "src": "923:25:93"
+                }
+              ]
+            },
+            "documentation": "@dev Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\n @param masterCopy Address of master copy.\n @param data Payload for message call sent to new proxy contract.",
+            "id": 11506,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createProxy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11481,
+                  "name": "masterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11506,
+                  "src": "553:18:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11480,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:7:93",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11483,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11506,
+                  "src": "573:17:93",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11482,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "573:5:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "552:39:93"
+            },
+            "returnParameters": {
+              "id": 11487,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11486,
+                  "name": "proxy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11506,
+                  "src": "624:11:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Proxy_$11472",
+                    "typeString": "contract Proxy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11485,
+                    "name": "Proxy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11472,
+                    "src": "624:5:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Proxy_$11472",
+                      "typeString": "contract Proxy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:13:93"
+            },
+            "scope": 11507,
+            "src": "532:423:93",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 11508,
+        "src": "225:732:93"
+      }
+    ],
+    "src": "0:958:93"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/ProxyFactory.sol",
+    "exportedSymbols": {
+      "ProxyFactory": [
+        11507
+      ]
+    },
+    "id": 11508,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11474,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:93"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/Proxy.sol",
+        "file": "./Proxy.sol",
+        "id": 11475,
+        "nodeType": "ImportDirective",
+        "scope": 11508,
+        "sourceUnit": 11473,
+        "src": "24:21:93",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          11472
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Proxy Factory - Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\n @author Stefan George - <stefan@gnosis.pm>",
+        "fullyImplemented": true,
+        "id": 11507,
+        "linearizedBaseContracts": [
+          11507
+        ],
+        "name": "ProxyFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 11479,
+            "name": "ProxyCreation",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 11478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11477,
+                  "indexed": false,
+                  "name": "proxy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11479,
+                  "src": "274:11:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Proxy_$11472",
+                    "typeString": "contract Proxy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11476,
+                    "name": "Proxy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11472,
+                    "src": "274:5:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Proxy_$11472",
+                      "typeString": "contract Proxy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "273:13:93"
+            },
+            "src": "254:33:93"
+          },
+          {
+            "body": {
+              "id": 11505,
+              "nodeType": "Block",
+              "src": "641:314:93",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11493,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11488,
+                      "name": "proxy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11486,
+                      "src": "651:5:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Proxy_$11472",
+                        "typeString": "contract Proxy"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 11491,
+                          "name": "masterCopy",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11481,
+                          "src": "669:10:93",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 11490,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "659:9:93",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_Proxy_$11472_$",
+                          "typeString": "function (address) returns (contract Proxy)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 11489,
+                          "name": "Proxy",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 11472,
+                          "src": "663:5:93",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Proxy_$11472",
+                            "typeString": "contract Proxy"
+                          }
+                        }
+                      },
+                      "id": 11492,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "659:21:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Proxy_$11472",
+                        "typeString": "contract Proxy"
+                      }
+                    },
+                    "src": "651:29:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Proxy_$11472",
+                      "typeString": "contract Proxy"
+                    }
+                  },
+                  "id": 11494,
+                  "nodeType": "ExpressionStatement",
+                  "src": "651:29:93"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 11498,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11495,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11483,
+                        "src": "694:4:93",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 11496,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "694:11:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11497,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "708:1:93",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "694:15:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 11500,
+                  "nodeType": "IfStatement",
+                  "src": "690:224:93",
+                  "trueBody": {
+                    "externalReferences": [
+                      {
+                        "data": {
+                          "declaration": 11483,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "867:4:93",
+                          "valueSize": 1
+                        }
+                      },
+                      {
+                        "data": {
+                          "declaration": 11483,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "848:4:93",
+                          "valueSize": 1
+                        }
+                      },
+                      {
+                        "proxy": {
+                          "declaration": 11486,
+                          "isOffset": false,
+                          "isSlot": false,
+                          "src": "834:5:93",
+                          "valueSize": 1
+                        }
+                      }
+                    ],
+                    "id": 11499,
+                    "nodeType": "InlineAssembly",
+                    "operations": "{\n    if eq(call(gas(), proxy, 0, add(data, 0x20), mload(data), 0, 0), 0) { revert(0, 0) }\n}",
+                    "src": "791:123:93"
+                  }
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11502,
+                        "name": "proxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11486,
+                        "src": "942:5:93",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Proxy_$11472",
+                          "typeString": "contract Proxy"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Proxy_$11472",
+                          "typeString": "contract Proxy"
+                        }
+                      ],
+                      "id": 11501,
+                      "name": "ProxyCreation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11479,
+                      "src": "928:13:93",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_Proxy_$11472_$returns$__$",
+                        "typeString": "function (contract Proxy)"
+                      }
+                    },
+                    "id": 11503,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "928:20:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11504,
+                  "nodeType": "EmitStatement",
+                  "src": "923:25:93"
+                }
+              ]
+            },
+            "documentation": "@dev Allows to create new proxy contact and execute a message call to the new proxy within one transaction.\n @param masterCopy Address of master copy.\n @param data Payload for message call sent to new proxy contract.",
+            "id": 11506,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createProxy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11481,
+                  "name": "masterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11506,
+                  "src": "553:18:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11480,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:7:93",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11483,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11506,
+                  "src": "573:17:93",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11482,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "573:5:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "552:39:93"
+            },
+            "returnParameters": {
+              "id": 11487,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11486,
+                  "name": "proxy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11506,
+                  "src": "624:11:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Proxy_$11472",
+                    "typeString": "contract Proxy"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11485,
+                    "name": "Proxy",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11472,
+                    "src": "624:5:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Proxy_$11472",
+                      "typeString": "contract Proxy"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "623:13:93"
+            },
+            "scope": 11507,
+            "src": "532:423:93",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 11508,
+        "src": "225:732:93"
+      }
+    ],
+    "src": "0:958:93"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.126Z",
+  "devdoc": {
+    "author": "Stefan George - <stefan@gnosis.pm>",
+    "methods": {
+      "createProxy(address,bytes)": {
+        "details": "Allows to create new proxy contact and execute a message call to the new proxy within one transaction.",
+        "params": {
+          "data": "Payload for message call sent to new proxy contract.",
+          "masterCopy": "Address of master copy."
+        }
+      }
+    },
+    "title": "Proxy Factory - Allows to create new proxy contact and execute a message call to the new proxy within one transaction."
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

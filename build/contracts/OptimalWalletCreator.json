@@ -1,0 +1,2276 @@
+{
+  "contractName": "OptimalWalletCreator",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_ubtContractAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_walletFactoryContractAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "contract OrganizationInterface",
+          "name": "_organization",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "organization",
+      "outputs": [
+        {
+          "internalType": "contract OrganizationInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_gnosisSafeMasterCopy",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_gnosisSafeData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "address",
+          "name": "_tokenHolderMasterCopy",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_tokenRules",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_sessionKeys",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_sessionKeysSpendingLimits",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_sessionKeysExpirationHeights",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_internalActors",
+          "type": "address[]"
+        }
+      ],
+      "name": "optimalCall",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ubtContractAddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_walletFactoryContractAddr\",\"type\":\"address\"},{\"internalType\":\"contract OrganizationInterface\",\"name\":\"_organization\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_gnosisSafeMasterCopy\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_gnosisSafeData\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"_tokenHolderMasterCopy\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_tokenRules\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_sessionKeys\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_sessionKeysSpendingLimits\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_sessionKeysExpirationHeights\",\"type\":\"uint256[]\"},{\"internalType\":\"address[]\",\"name\":\"_internalActors\",\"type\":\"address[]\"}],\"name\":\"optimalCall\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"organization\",\"outputs\":[{\"internalType\":\"contract OrganizationInterface\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"optimalCall(address,bytes,address,address,address,address[],uint256[],uint256[],address[])\":{\"params\":{\"_gnosisSafeData\":\"The message data to be called on a newly created                       gnosis safe proxy.\",\"_gnosisSafeMasterCopy\":\"The address of a master copy of gnosis safe.\",\"_internalActors\":\"Array of addresses of the internal actors to register.\",\"_sessionKeys\":\"Session key addresses to authorize.\",\"_sessionKeysExpirationHeights\":\"Session keys' expiration heights.\",\"_sessionKeysSpendingLimits\":\"Session keys' spending limits.\",\"_token\":\"The address of the economy token.\",\"_tokenHolderMasterCopy\":\"The address of a master copy of token                              holder.\",\"_tokenRules\":\"The address of the token rules.\"}}},\"title\":\"Allows to call function createUserWallet from UserWalletFactory       Allows to call function registerInternalActors from UtilityBrandedToken       Two methods called in single transaction\"},\"userdoc\":{\"methods\":{\"optimalCall(address,bytes,address,address,address,address[],uint256[],uint256[],address[])\":{\"notice\":\"Create a new gnosis safe proxy and executes a        message call to the newly created proxy. Afterwards, in the same        transaction, creates a new token holder proxy by specifying        as an owner the newly created gnosis safe proxy contract.        Registers internal actors.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/OptimalWalletCreator.sol\":\"OptimalWalletCreator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/OptimalWalletCreator.sol\":{\"keccak256\":\"0x9cd86782a884cb29df54d6a51008e97ba184efa837b92f107812f629c928cdc4\",\"urls\":[\"bzz-raw://d13c467f2cbd1cbb86754799663b5f45cdb56f3e9360c1c0c9ff548f8e7414a8\",\"dweb:/ipfs/QmSzQV93xzN6jGNkkRuoYvbDGKkc5hPbMtGt23HC5upKrs\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/UtilityBrandedToken.sol\":{\"keccak256\":\"0xc5bb50b32eb1bff04f50fe919f16fa1effa2b892e533dcaddb15e7335ced2943\",\"urls\":[\"bzz-raw://7d26c4af45b7959e904ee566c6c8b00feb9be693933e3e29222d8032d600c13d\",\"dweb:/ipfs/QmR8ajgwbohkfGwD88WzvDbYamTDjsfJx5rKHm7ENjmGxG\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol\":{\"keccak256\":\"0x1b0b312c2c5e70b654698a178739b03a3f55cc1013062feaabd7b18aa7df46a1\",\"urls\":[\"bzz-raw://45c35c1add98c6eb58946470c2f324b8a6fb9ac8549d0282ec9531d7ae1dd30e\",\"dweb:/ipfs/QmSj4hSPjosD9wR2aRg5Emm2zgU1SJG786CTw4YS2SDEQw\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/EIP20Interface.sol\":{\"keccak256\":\"0x7c5b888213a8e212d947108846e7a8bb3fd2b23c4ed87a59862ddedd153f93e1\",\"urls\":[\"bzz-raw://379a54e97a1aa1565ba35943b4c728e3938726d5e5452c577af6e6a5e9d456ed\",\"dweb:/ipfs/Qmbxawuc7GEQrT5N6BfMZpzPSRMKRzJ11Zmgh1RErtrNfB\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/EIP20Token.sol\":{\"keccak256\":\"0xe7631bfaad4d7473c06a23f7c5f92d8fbe105ce941a774dfb1b574903003baa6\",\"urls\":[\"bzz-raw://35137c1127d184e2ba3d8482fa5106b60443a39c3a971d5eb95b85189a583fcc\",\"dweb:/ipfs/QmWNyZ74NCyV6GPbY3zNBRMUTVUaQkjgfLVxTBGUskDHcZ\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityToken.sol\":{\"keccak256\":\"0x68a7b586e1fa4c215a8ac2270c9a4e3de20e68ad58dce8a217ed80f1f9a4b06c\",\"urls\":[\"bzz-raw://ae470f2c2abb62d150a2c4a2da7e22be2ca4b925d2467ecc066c1a7b84ac5d30\",\"dweb:/ipfs/QmcuSnjPATbw2XV1e8sjShRf12UxB8TFi5qAyQgvvMJXSL\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol\":{\"keccak256\":\"0x3a439adaa4b3e0c1fe8aa8b045c936f48b5bbb4eb35f3fd83ecd19ab79c84c71\",\"urls\":[\"bzz-raw://688911157df119690e750a853b93f0d7a4885aa6d3936c2ffbb218be2d6397de\",\"dweb:/ipfs/QmTZ1jZxJRiZqtoA5EFamTUriUVUtRQXyL36brtXAY4cQY\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol\":{\"keccak256\":\"0xac45d29a498c6531778e0a0cdb31c0d0c2fa6f090dfe9ff99e5ee056657e1962\",\"urls\":[\"bzz-raw://c1269e9993d4f7562855faefbc64f15e7bbe7468777a99611ddfcb4c980c22e1\",\"dweb:/ipfs/QmNRV39vV9RCyovb7EyxWakL2CcMXgoTpToxrfDp9wwQbq\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol\":{\"keccak256\":\"0x16d60f305a592f262b1603bb0b3b50596a91910bf1ea7de4f9642f01dce01356\",\"urls\":[\"bzz-raw://b7e8bc23f708ba7a0dc2cd1e7c48c8a4248a19260a4052b97fdd18be5f4dd352\",\"dweb:/ipfs/QmWPgpQafZXVAnHPEx9awFircyn2NRfdt7rdqPwv4qqVso\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/proxies/Proxy.sol\":{\"keccak256\":\"0x8224702eddb9155e961f132f8c347852d8a5129988d76dbefb9572b58fade2e7\",\"urls\":[\"bzz-raw://8c395f4b3be559f94c26846bfcb98e19b0d386bd31b8464a4aaa06b9b2545194\",\"dweb:/ipfs/QmcHGsyDgPwF5rpjER7CLQuv7H9xR72V8TBpErNbkVbwu5\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/proxies/UserWalletFactory.sol\":{\"keccak256\":\"0xf06d163131f7c31cbee5f6d6c09963f13dfe426bcb10df6421a9d01ee7acdcb2\",\"urls\":[\"bzz-raw://a7b382d16f2cca04605d45d1fd0d770693e73c39a8c99935f57dcafd190ce002\",\"dweb:/ipfs/QmQ6bbmFdXa1uVwcmuovCYTGi5J9WV4ygv7gqZgvg47p2S\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x965012d27b4262d7a41f5028cbb30c51ebd9ecd4be8fb30380aaa7a3c64fbc8b\",\"urls\":[\"bzz-raw://1eb493553b27efd46c231a836a83ce50d215639feb97b4aac9f301d0fd034ff5\",\"dweb:/ipfs/QmbMdvSXcqGKxeeYvzF3VrWpoHQyVzMXBhzhAokF2Gdymv\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108033803806108038339818101604052606081101561003357600080fd5b5080516020820151604090920151909190806001600160a01b03811661008a5760405162461bcd60e51b815260040180806020018281038252602f8152602001806107d4602f913960400191505060405180910390fd5b600080546001600160a01b039283166001600160a01b0319918216179091556001805494831694821694909417909355600280549490911693909216929092179055506106f8806100dc6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80630ad8d04d1461003b57806323bd4d7a1461031c575b600080fd5b61031a600480360361012081101561005257600080fd5b6001600160a01b038235169190810190604081016020820135600160201b81111561007c57600080fd5b82018360208201111561008e57600080fd5b803590602001918460018302840111600160201b831117156100af57600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092956001600160a01b038535811696602087013582169660408101359092169550919350909150608081019060600135600160201b81111561012357600080fd5b82018360208201111561013557600080fd5b803590602001918460208302840111600160201b8311171561015657600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295949360208101935035915050600160201b8111156101a557600080fd5b8201836020820111156101b757600080fd5b803590602001918460208302840111600160201b831117156101d857600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295949360208101935035915050600160201b81111561022757600080fd5b82018360208201111561023957600080fd5b803590602001918460208302840111600160201b8311171561025a57600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295949360208101935035915050600160201b8111156102a957600080fd5b8201836020820111156102bb57600080fd5b803590602001918460208302840111600160201b831117156102dc57600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250929550610340945050505050565b005b61032461067b565b604080516001600160a01b039092168252519081900360200190f35b6000546040805163aa15664560e01b815233600482015290516001600160a01b039092169163aa15664591602480820192602092909190829003018186803b15801561038b57600080fd5b505afa15801561039f573d6000803e3d6000fd5b505050506040513d60208110156103b557600080fd5b50516103f25760405162461bcd60e51b815260040180806020018281038252603981526020018061068b6039913960400191505060405180910390fd5b60015460405163d94c252960e01b81526001600160a01b038b8116600483019081528a8216604484015289821660648401528882166084840152610100602484019081528c516101048501528c51929094169363d94c2529938e938e938e938e938e938e938e938e939192909160a481019160c482019160e48101916101249091019060208e019080838360005b83811015610498578181015183820152602001610480565b50505050905090810190601f1680156104c55780820380516001836020036101000a031916815260200191505b508581038452885181528851602091820191808b01910280838360005b838110156104fa5781810151838201526020016104e2565b50505050905001858103835287818151815260200191508051906020019060200280838360005b83811015610539578181015183820152602001610521565b50505050905001858103825286818151815260200191508051906020019060200280838360005b83811015610578578181015183820152602001610560565b505050509050019c505050505050505050505050506040805180830381600087803b1580156105a657600080fd5b505af11580156105ba573d6000803e3d6000fd5b505050506040513d60408110156105d057600080fd5b5050600254604051630908693760e41b81526020600482018181528451602484015284516001600160a01b039094169363908693709386938392604490920191858201910280838360005b8381101561063357818101518382015260200161061b565b5050505090500192505050600060405180830381600087803b15801561065857600080fd5b505af115801561066c573d6000803e3d6000fd5b50505050505050505050505050565b6000546001600160a01b03168156fe4f6e6c792077686974656c697374656420776f726b6572732061726520616c6c6f77656420746f2063616c6c2074686973206d6574686f642ea265627a7a7231582069fca6d8a55fefd49e33f2372eccb8b05f37603bd30a8bb6581b171b96c6bc1b64736f6c634300051000324f7267616e697a6174696f6e20636f6e74726163742061646472657373206d757374206e6f74206265207a65726f2e",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80630ad8d04d1461003b57806323bd4d7a1461031c575b600080fd5b61031a600480360361012081101561005257600080fd5b6001600160a01b038235169190810190604081016020820135600160201b81111561007c57600080fd5b82018360208201111561008e57600080fd5b803590602001918460018302840111600160201b831117156100af57600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092956001600160a01b038535811696602087013582169660408101359092169550919350909150608081019060600135600160201b81111561012357600080fd5b82018360208201111561013557600080fd5b803590602001918460208302840111600160201b8311171561015657600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295949360208101935035915050600160201b8111156101a557600080fd5b8201836020820111156101b757600080fd5b803590602001918460208302840111600160201b831117156101d857600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295949360208101935035915050600160201b81111561022757600080fd5b82018360208201111561023957600080fd5b803590602001918460208302840111600160201b8311171561025a57600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295949360208101935035915050600160201b8111156102a957600080fd5b8201836020820111156102bb57600080fd5b803590602001918460208302840111600160201b831117156102dc57600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250929550610340945050505050565b005b61032461067b565b604080516001600160a01b039092168252519081900360200190f35b6000546040805163aa15664560e01b815233600482015290516001600160a01b039092169163aa15664591602480820192602092909190829003018186803b15801561038b57600080fd5b505afa15801561039f573d6000803e3d6000fd5b505050506040513d60208110156103b557600080fd5b50516103f25760405162461bcd60e51b815260040180806020018281038252603981526020018061068b6039913960400191505060405180910390fd5b60015460405163d94c252960e01b81526001600160a01b038b8116600483019081528a8216604484015289821660648401528882166084840152610100602484019081528c516101048501528c51929094169363d94c2529938e938e938e938e938e938e938e938e939192909160a481019160c482019160e48101916101249091019060208e019080838360005b83811015610498578181015183820152602001610480565b50505050905090810190601f1680156104c55780820380516001836020036101000a031916815260200191505b508581038452885181528851602091820191808b01910280838360005b838110156104fa5781810151838201526020016104e2565b50505050905001858103835287818151815260200191508051906020019060200280838360005b83811015610539578181015183820152602001610521565b50505050905001858103825286818151815260200191508051906020019060200280838360005b83811015610578578181015183820152602001610560565b505050509050019c505050505050505050505050506040805180830381600087803b1580156105a657600080fd5b505af11580156105ba573d6000803e3d6000fd5b505050506040513d60408110156105d057600080fd5b5050600254604051630908693760e41b81526020600482018181528451602484015284516001600160a01b039094169363908693709386938392604490920191858201910280838360005b8381101561063357818101518382015260200161061b565b5050505090500192505050600060405180830381600087803b15801561065857600080fd5b505af115801561066c573d6000803e3d6000fd5b50505050505050505050505050565b6000546001600160a01b03168156fe4f6e6c792077686974656c697374656420776f726b6572732061726520616c6c6f77656420746f2063616c6c2074686973206d6574686f642ea265627a7a7231582069fca6d8a55fefd49e33f2372eccb8b05f37603bd30a8bb6581b171b96c6bc1b64736f6c63430005100032",
+  "sourceMap": "602:2686:0:-;;;739:344;8:9:-1;5:2;;;30:1;27;20:12;5:2;739:344:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;739:344:0;;;;;;;;;;;;;;;-1:-1:-1;;;;;1888:36:27;;1867:130;;;;-1:-1:-1;;;1867:130:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2008:12;:28;;-1:-1:-1;;;;;2008:28:27;;;-1:-1:-1;;;;;;2008:28:27;;;;;;;;942:65:0;;;;;;;;;;;;;;;1017:19;:59;;;;;;;;;;;;;;;;-1:-1:-1;602:2686:0;;;;;;",
+  "deployedSourceMap": "602:2686:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;602:2686:0;;;;;;;;;;;;;;;;;;;;;;;;2197:1089;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;;;;;2197:1089:0;;;;;;;;;;;;;;;-1:-1:-1;;;5:28;;2:2;;;46:1;43;36:12;2:2;2197:1089:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;2197:1089:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;-1:-1;;;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;2197:1089:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;2197:1089:0;;-1:-1:-1;;;;;2197:1089:0;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2197:1089:0;;-1:-1:-1;2197:1089:0;;-1:-1:-1;2197:1089:0;;;;;;;-1:-1:-1;;;5:28;;2:2;;;46:1;43;36:12;2:2;2197:1089:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;2197:1089:0;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;-1:-1;;;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;2197:1089:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;2197:1089:0;;;;;;;;-1:-1:-1;2197:1089:0;;-1:-1:-1;;;;;5:28;;2:2;;;46:1;43;36:12;2:2;2197:1089:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;2197:1089:0;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;-1:-1;;;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;2197:1089:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;2197:1089:0;;;;;;;;-1:-1:-1;2197:1089:0;;-1:-1:-1;;;;;5:28;;2:2;;;46:1;43;36:12;2:2;2197:1089:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;2197:1089:0;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;-1:-1;;;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;2197:1089:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;2197:1089:0;;;;;;;;-1:-1:-1;2197:1089:0;;-1:-1:-1;;;;;5:28;;2:2;;;46:1;43;36:12;2:2;2197:1089:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;2197:1089:0;;;;;;101:9:-1;95:2;81:12;77:21;67:8;63:36;60:51;-1:-1;;;25:12;22:29;11:108;8:2;;;132:1;129;122:12;8:2;2197:1089:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;2197:1089:0;;-1:-1:-1;2197:1089:0;;-1:-1:-1;;;;;2197:1089:0:i;:::-;;1153:41:27;;;:::i;:::-;;;;-1:-1:-1;;;;;1153:41:27;;;;;;;;;;;;;;2197:1089:0;1486:12:27;;:33;;;-1:-1:-1;;;1486:33:27;;1508:10;1486:33;;;;;;-1:-1:-1;;;;;1486:12:27;;;;:21;;:33;;;;;;;;;;;;;;;:12;:33;;;5:2:-1;;;;30:1;27;20:12;5:2;1486:33:27;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1486:33:27;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1486:33:27;1465:137;;;;-1:-1:-1;;;1465:137:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2633:17:0;;:298;;-1:-1:-1;;;2633:298:0;;-1:-1:-1;;;;;2633:298:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:17;:298;;;;;;;;;;;;;;:17;;;;;:34;;2681:21;;2716:15;;2745:22;;2781:6;;2801:11;;2826:12;;2852:26;;2892:29;;2633:298;;;;;;;;;;;;;;;;;;;;;;;;;;;;:17;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;2633:298:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2633:298:0;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;2633:298:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;2633:298:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;2633:298:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2633:298:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2633:298:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;3033:19:0;;2633:298;3033:59;-1:-1:-1;;;3033:59:0;;2633:298;3033:59;;;;;;;;;;;;;;-1:-1:-1;;;;;3033:19:0;;;;:42;;3076:15;;3033:59;;;;;;;;;;;;;;;:19;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;3033:59:0;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3033:59:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;3033:59:0;;;;2197:1089;;;;;;;;;:::o;1153:41:27:-;;;-1:-1:-1;;;;;1153:41:27;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"./brandedtoken-contracts/contracts/UtilityBrandedToken.sol\";\nimport \"./openst-contracts/contracts/proxies/UserWalletFactory.sol\";\nimport \"./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol\";\nimport \"./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol\";\n\n/**\n * @title Allows to call function createUserWallet from UserWalletFactory\n *        Allows to call function registerInternalActors from UtilityBrandedToken\n *        Two methods called in single transaction\n */\n\ncontract OptimalWalletCreator is Organized {\n\n    UserWalletFactory userWalletFactory;\n    UtilityBrandedToken utilityBrandedToken;\n\n    constructor(\n        address _ubtContractAddr,\n        address _walletFactoryContractAddr,\n        OrganizationInterface _organization\n    )\n        public\n        Organized(_organization)\n    {\n        userWalletFactory = UserWalletFactory(_walletFactoryContractAddr);\n        utilityBrandedToken = UtilityBrandedToken(_ubtContractAddr);\n    }\n\n    /* External Functions  */\n\n    /**\n    * @notice Create a new gnosis safe proxy and executes a\n    *         message call to the newly created proxy. Afterwards, in the same\n    *         transaction, creates a new token holder proxy by specifying\n    *         as an owner the newly created gnosis safe proxy contract.\n    *         Registers internal actors.\n    *\n    * @param _gnosisSafeMasterCopy The address of a master copy of gnosis safe.\n    * @param _gnosisSafeData The message data to be called on a newly created\n    *                        gnosis safe proxy.\n    * @param _tokenHolderMasterCopy The address of a master copy of token\n    *                               holder.\n    * @param _token The address of the economy token.\n    * @param _tokenRules The address of the token rules.\n    * @param _sessionKeys Session key addresses to authorize.\n    * @param _sessionKeysSpendingLimits Session keys' spending limits.\n    * @param _sessionKeysExpirationHeights Session keys' expiration heights.\n    * @param _internalActors Array of addresses of the internal actors to register.\n    */\n\n    function optimalCall(\n        address _gnosisSafeMasterCopy,\n        bytes memory _gnosisSafeData,\n        address _tokenHolderMasterCopy,\n        address _token,\n        address _tokenRules,\n        address[] memory _sessionKeys,\n        uint256[] memory _sessionKeysSpendingLimits,\n        uint256[] memory _sessionKeysExpirationHeights,\n        address[] memory _internalActors\n    )\n        public\n        onlyWorker\n    {\n\n        userWalletFactory.createUserWallet(\n            _gnosisSafeMasterCopy,\n            _gnosisSafeData,\n            _tokenHolderMasterCopy,\n            _token,\n            _tokenRules,\n            _sessionKeys,\n            _sessionKeysSpendingLimits,\n            _sessionKeysExpirationHeights\n        );\n\n        /*\n         * first call to createWalletUser with all above parameters\n         */\n        utilityBrandedToken.registerInternalActors(_internalActors);\n\n        /*\n         * second call to registerInternalActors from UtilityBrandedToken\n         * considering that this contract is set as a worker already by the organization\n         */\n    }\n}",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/OptimalWalletCreator.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/OptimalWalletCreator.sol",
+    "exportedSymbols": {
+      "OptimalWalletCreator": [
+        84
+      ]
+    },
+    "id": 85,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/UtilityBrandedToken.sol",
+        "file": "./brandedtoken-contracts/contracts/UtilityBrandedToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 2105,
+        "src": "25:68:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/proxies/UserWalletFactory.sol",
+        "file": "./openst-contracts/contracts/proxies/UserWalletFactory.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 5599,
+        "src": "94:68:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
+        "file": "./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 3619,
+        "src": "163:116:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol",
+        "file": "./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol",
+        "id": 5,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 3672,
+        "src": "280:104:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "Organized",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3671,
+              "src": "635:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Organized_$3671",
+                "typeString": "contract Organized"
+              }
+            },
+            "id": 7,
+            "nodeType": "InheritanceSpecifier",
+            "src": "635:9:0"
+          }
+        ],
+        "contractDependencies": [
+          3671
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Allows to call function createUserWallet from UserWalletFactory\n       Allows to call function registerInternalActors from UtilityBrandedToken\n       Two methods called in single transaction",
+        "fullyImplemented": true,
+        "id": 84,
+        "linearizedBaseContracts": [
+          84,
+          3671
+        ],
+        "name": "OptimalWalletCreator",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 9,
+            "name": "userWalletFactory",
+            "nodeType": "VariableDeclaration",
+            "scope": 84,
+            "src": "652:35:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+              "typeString": "contract UserWalletFactory"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 8,
+              "name": "UserWalletFactory",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5598,
+              "src": "652:17:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                "typeString": "contract UserWalletFactory"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 11,
+            "name": "utilityBrandedToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 84,
+            "src": "693:39:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+              "typeString": "contract UtilityBrandedToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 10,
+              "name": "UtilityBrandedToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2104,
+              "src": "693:19:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                "typeString": "contract UtilityBrandedToken"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 35,
+              "nodeType": "Block",
+              "src": "932:151:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 23,
+                      "name": "userWalletFactory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "942:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                        "typeString": "contract UserWalletFactory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 25,
+                          "name": "_walletFactoryContractAddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15,
+                          "src": "980:26:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "UserWalletFactory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5598,
+                        "src": "962:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_UserWalletFactory_$5598_$",
+                          "typeString": "type(contract UserWalletFactory)"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "962:45:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                        "typeString": "contract UserWalletFactory"
+                      }
+                    },
+                    "src": "942:65:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                      "typeString": "contract UserWalletFactory"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "942:65:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 33,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 29,
+                      "name": "utilityBrandedToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "1017:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                        "typeString": "contract UtilityBrandedToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 31,
+                          "name": "_ubtContractAddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13,
+                          "src": "1059:16:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 30,
+                        "name": "UtilityBrandedToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2104,
+                        "src": "1039:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_UtilityBrandedToken_$2104_$",
+                          "typeString": "type(contract UtilityBrandedToken)"
+                        }
+                      },
+                      "id": 32,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1039:37:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                        "typeString": "contract UtilityBrandedToken"
+                      }
+                    },
+                    "src": "1017:59:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                      "typeString": "contract UtilityBrandedToken"
+                    }
+                  },
+                  "id": 34,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1017:59:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 36,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 20,
+                    "name": "_organization",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 17,
+                    "src": "913:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  }
+                ],
+                "id": 21,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 19,
+                  "name": "Organized",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3671,
+                  "src": "903:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Organized_$3671_$",
+                    "typeString": "type(contract Organized)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "903:24:0"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13,
+                  "name": "_ubtContractAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "760:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "760:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15,
+                  "name": "_walletFactoryContractAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "794:34:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 17,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "838:35:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                    "typeString": "contract OrganizationInterface"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 16,
+                    "name": "OrganizationInterface",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3618,
+                    "src": "838:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "750:129:0"
+            },
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "932:0:0"
+            },
+            "scope": 84,
+            "src": "739:344:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 82,
+              "nodeType": "Block",
+              "src": "2622:664:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "_gnosisSafeMasterCopy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "2681:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 67,
+                        "name": "_gnosisSafeData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 40,
+                        "src": "2716:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 68,
+                        "name": "_tokenHolderMasterCopy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42,
+                        "src": "2745:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "_token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 44,
+                        "src": "2781:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "_tokenRules",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 46,
+                        "src": "2801:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "_sessionKeys",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 49,
+                        "src": "2826:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "_sessionKeysSpendingLimits",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "2852:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 73,
+                        "name": "_sessionKeysExpirationHeights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "2892:29:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "userWalletFactory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9,
+                        "src": "2633:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                          "typeString": "contract UserWalletFactory"
+                        }
+                      },
+                      "id": 65,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "createUserWallet",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5582,
+                      "src": "2633:34:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_address_$_t_address_$_t_address_$_t_array$_t_address_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$_t_contract$_Proxy_$5453_$_t_contract$_Proxy_$5453_$",
+                        "typeString": "function (address,bytes memory,address,address,address,address[] memory,uint256[] memory,uint256[] memory) external returns (contract Proxy,contract Proxy)"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2633:298:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_contract$_Proxy_$5453_$_t_contract$_Proxy_$5453_$",
+                      "typeString": "tuple(contract Proxy,contract Proxy)"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2633:298:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "_internalActors",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "3076:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "utilityBrandedToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "3033:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                          "typeString": "contract UtilityBrandedToken"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "registerInternalActors",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1990,
+                      "src": "3033:42:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_array$_t_address_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (address[] memory) external"
+                      }
+                    },
+                    "id": 80,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3033:59:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 81,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3033:59:0"
+                }
+              ]
+            },
+            "documentation": "@notice Create a new gnosis safe proxy and executes a\n        message call to the newly created proxy. Afterwards, in the same\n        transaction, creates a new token holder proxy by specifying\n        as an owner the newly created gnosis safe proxy contract.\n        Registers internal actors.\n    * @param _gnosisSafeMasterCopy The address of a master copy of gnosis safe.\n@param _gnosisSafeData The message data to be called on a newly created\n                       gnosis safe proxy.\n@param _tokenHolderMasterCopy The address of a master copy of token\n                              holder.\n@param _token The address of the economy token.\n@param _tokenRules The address of the token rules.\n@param _sessionKeys Session key addresses to authorize.\n@param _sessionKeysSpendingLimits Session keys' spending limits.\n@param _sessionKeysExpirationHeights Session keys' expiration heights.\n@param _internalActors Array of addresses of the internal actors to register.",
+            "id": 83,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 61,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 60,
+                  "name": "onlyWorker",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3649,
+                  "src": "2607:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2607:10:0"
+              }
+            ],
+            "name": "optimalCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38,
+                  "name": "_gnosisSafeMasterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2227:29:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2227:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40,
+                  "name": "_gnosisSafeData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2266:28:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 39,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2266:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "_tokenHolderMasterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2304:30:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2304:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2344:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 43,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2344:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 46,
+                  "name": "_tokenRules",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2368:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 45,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2368:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 49,
+                  "name": "_sessionKeys",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2397:29:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 47,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2397:7:0",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 48,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2397:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "_sessionKeysSpendingLimits",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2436:43:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2436:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 51,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2436:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55,
+                  "name": "_sessionKeysExpirationHeights",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2489:46:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 53,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2489:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 54,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2489:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "_internalActors",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2545:32:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 56,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2545:7:0",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 57,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2545:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2217:366:0"
+            },
+            "returnParameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2622:0:0"
+            },
+            "scope": 84,
+            "src": "2197:1089:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 85,
+        "src": "602:2686:0"
+      }
+    ],
+    "src": "0:3288:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/OptimalWalletCreator.sol",
+    "exportedSymbols": {
+      "OptimalWalletCreator": [
+        84
+      ]
+    },
+    "id": 85,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/UtilityBrandedToken.sol",
+        "file": "./brandedtoken-contracts/contracts/UtilityBrandedToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 2105,
+        "src": "25:68:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/proxies/UserWalletFactory.sol",
+        "file": "./openst-contracts/contracts/proxies/UserWalletFactory.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 5599,
+        "src": "94:68:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
+        "file": "./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 3619,
+        "src": "163:116:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol",
+        "file": "./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol",
+        "id": 5,
+        "nodeType": "ImportDirective",
+        "scope": 85,
+        "sourceUnit": 3672,
+        "src": "280:104:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "Organized",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3671,
+              "src": "635:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Organized_$3671",
+                "typeString": "contract Organized"
+              }
+            },
+            "id": 7,
+            "nodeType": "InheritanceSpecifier",
+            "src": "635:9:0"
+          }
+        ],
+        "contractDependencies": [
+          3671
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Allows to call function createUserWallet from UserWalletFactory\n       Allows to call function registerInternalActors from UtilityBrandedToken\n       Two methods called in single transaction",
+        "fullyImplemented": true,
+        "id": 84,
+        "linearizedBaseContracts": [
+          84,
+          3671
+        ],
+        "name": "OptimalWalletCreator",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 9,
+            "name": "userWalletFactory",
+            "nodeType": "VariableDeclaration",
+            "scope": 84,
+            "src": "652:35:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+              "typeString": "contract UserWalletFactory"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 8,
+              "name": "UserWalletFactory",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5598,
+              "src": "652:17:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                "typeString": "contract UserWalletFactory"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 11,
+            "name": "utilityBrandedToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 84,
+            "src": "693:39:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+              "typeString": "contract UtilityBrandedToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 10,
+              "name": "UtilityBrandedToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2104,
+              "src": "693:19:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                "typeString": "contract UtilityBrandedToken"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 35,
+              "nodeType": "Block",
+              "src": "932:151:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 23,
+                      "name": "userWalletFactory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "942:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                        "typeString": "contract UserWalletFactory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 25,
+                          "name": "_walletFactoryContractAddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 15,
+                          "src": "980:26:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "UserWalletFactory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5598,
+                        "src": "962:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_UserWalletFactory_$5598_$",
+                          "typeString": "type(contract UserWalletFactory)"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "962:45:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                        "typeString": "contract UserWalletFactory"
+                      }
+                    },
+                    "src": "942:65:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                      "typeString": "contract UserWalletFactory"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "942:65:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 33,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 29,
+                      "name": "utilityBrandedToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "1017:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                        "typeString": "contract UtilityBrandedToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 31,
+                          "name": "_ubtContractAddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13,
+                          "src": "1059:16:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 30,
+                        "name": "UtilityBrandedToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2104,
+                        "src": "1039:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_UtilityBrandedToken_$2104_$",
+                          "typeString": "type(contract UtilityBrandedToken)"
+                        }
+                      },
+                      "id": 32,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1039:37:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                        "typeString": "contract UtilityBrandedToken"
+                      }
+                    },
+                    "src": "1017:59:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                      "typeString": "contract UtilityBrandedToken"
+                    }
+                  },
+                  "id": 34,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1017:59:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 36,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 20,
+                    "name": "_organization",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 17,
+                    "src": "913:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  }
+                ],
+                "id": 21,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 19,
+                  "name": "Organized",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3671,
+                  "src": "903:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Organized_$3671_$",
+                    "typeString": "type(contract Organized)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "903:24:0"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13,
+                  "name": "_ubtContractAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "760:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "760:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15,
+                  "name": "_walletFactoryContractAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "794:34:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 17,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "838:35:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                    "typeString": "contract OrganizationInterface"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 16,
+                    "name": "OrganizationInterface",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3618,
+                    "src": "838:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "750:129:0"
+            },
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "932:0:0"
+            },
+            "scope": 84,
+            "src": "739:344:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 82,
+              "nodeType": "Block",
+              "src": "2622:664:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "_gnosisSafeMasterCopy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "2681:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 67,
+                        "name": "_gnosisSafeData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 40,
+                        "src": "2716:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 68,
+                        "name": "_tokenHolderMasterCopy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42,
+                        "src": "2745:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "_token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 44,
+                        "src": "2781:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "_tokenRules",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 46,
+                        "src": "2801:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "_sessionKeys",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 49,
+                        "src": "2826:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "_sessionKeysSpendingLimits",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "2852:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 73,
+                        "name": "_sessionKeysExpirationHeights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "2892:29:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "userWalletFactory",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9,
+                        "src": "2633:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UserWalletFactory_$5598",
+                          "typeString": "contract UserWalletFactory"
+                        }
+                      },
+                      "id": 65,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "createUserWallet",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5582,
+                      "src": "2633:34:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_address_$_t_address_$_t_address_$_t_array$_t_address_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$_t_contract$_Proxy_$5453_$_t_contract$_Proxy_$5453_$",
+                        "typeString": "function (address,bytes memory,address,address,address,address[] memory,uint256[] memory,uint256[] memory) external returns (contract Proxy,contract Proxy)"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2633:298:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_contract$_Proxy_$5453_$_t_contract$_Proxy_$5453_$",
+                      "typeString": "tuple(contract Proxy,contract Proxy)"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2633:298:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "_internalActors",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "3076:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "utilityBrandedToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "3033:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UtilityBrandedToken_$2104",
+                          "typeString": "contract UtilityBrandedToken"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "registerInternalActors",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1990,
+                      "src": "3033:42:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_array$_t_address_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (address[] memory) external"
+                      }
+                    },
+                    "id": 80,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3033:59:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 81,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3033:59:0"
+                }
+              ]
+            },
+            "documentation": "@notice Create a new gnosis safe proxy and executes a\n        message call to the newly created proxy. Afterwards, in the same\n        transaction, creates a new token holder proxy by specifying\n        as an owner the newly created gnosis safe proxy contract.\n        Registers internal actors.\n    * @param _gnosisSafeMasterCopy The address of a master copy of gnosis safe.\n@param _gnosisSafeData The message data to be called on a newly created\n                       gnosis safe proxy.\n@param _tokenHolderMasterCopy The address of a master copy of token\n                              holder.\n@param _token The address of the economy token.\n@param _tokenRules The address of the token rules.\n@param _sessionKeys Session key addresses to authorize.\n@param _sessionKeysSpendingLimits Session keys' spending limits.\n@param _sessionKeysExpirationHeights Session keys' expiration heights.\n@param _internalActors Array of addresses of the internal actors to register.",
+            "id": 83,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 61,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 60,
+                  "name": "onlyWorker",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3649,
+                  "src": "2607:10:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2607:10:0"
+              }
+            ],
+            "name": "optimalCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38,
+                  "name": "_gnosisSafeMasterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2227:29:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2227:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40,
+                  "name": "_gnosisSafeData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2266:28:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 39,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2266:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "_tokenHolderMasterCopy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2304:30:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2304:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2344:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 43,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2344:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 46,
+                  "name": "_tokenRules",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2368:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 45,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2368:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 49,
+                  "name": "_sessionKeys",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2397:29:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 47,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2397:7:0",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 48,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2397:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "_sessionKeysSpendingLimits",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2436:43:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2436:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 51,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2436:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55,
+                  "name": "_sessionKeysExpirationHeights",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2489:46:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 53,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2489:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 54,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2489:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "_internalActors",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 83,
+                  "src": "2545:32:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 56,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2545:7:0",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 57,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2545:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2217:366:0"
+            },
+            "returnParameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2622:0:0"
+            },
+            "scope": 84,
+            "src": "2197:1089:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 85,
+        "src": "602:2686:0"
+      }
+    ],
+    "src": "0:3288:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:25.890Z",
+  "devdoc": {
+    "methods": {
+      "optimalCall(address,bytes,address,address,address,address[],uint256[],uint256[],address[])": {
+        "params": {
+          "_gnosisSafeData": "The message data to be called on a newly created                       gnosis safe proxy.",
+          "_gnosisSafeMasterCopy": "The address of a master copy of gnosis safe.",
+          "_internalActors": "Array of addresses of the internal actors to register.",
+          "_sessionKeys": "Session key addresses to authorize.",
+          "_sessionKeysExpirationHeights": "Session keys' expiration heights.",
+          "_sessionKeysSpendingLimits": "Session keys' spending limits.",
+          "_token": "The address of the economy token.",
+          "_tokenHolderMasterCopy": "The address of a master copy of token                              holder.",
+          "_tokenRules": "The address of the token rules."
+        }
+      }
+    },
+    "title": "Allows to call function createUserWallet from UserWalletFactory       Allows to call function registerInternalActors from UtilityBrandedToken       Two methods called in single transaction"
+  },
+  "userdoc": {
+    "methods": {
+      "optimalCall(address,bytes,address,address,address,address[],uint256[],uint256[],address[])": {
+        "notice": "Create a new gnosis safe proxy and executes a        message call to the newly created proxy. Afterwards, in the same        transaction, creates a new token holder proxy by specifying        as an owner the newly created gnosis safe proxy contract.        Registers internal actors."
+      }
+    }
+  }
+}

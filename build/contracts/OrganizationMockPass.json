@@ -1,0 +1,613 @@
+{
+  "contractName": "OrganizationMockPass",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isOrganization",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isWorker",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"isOrganization\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"isWorker\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOrganization(address)\":{\"return\":\"bool True.\"},\"isWorker(address)\":{\"return\":\"bool True.\"}},\"title\":\"Organization Mock Pass.\"},\"userdoc\":{\"methods\":{\"isOrganization(address)\":{\"notice\":\"Mocks passing isOrganization.\"},\"isWorker(address)\":{\"notice\":\"Mocks passing isWorker.\"}},\"notice\":\"Mocks Organization functions as passing.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol\":\"OrganizationMockPass\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol\":{\"keccak256\":\"0xba2a22e4c59cbd86d159c7e8070c4754381613b60625ab17c5a682c27b61f797\",\"urls\":[\"bzz-raw://ca0041d41cc70fe7fd0b9a678671548f28d14a0278c2b03c85dd24809af17a93\",\"dweb:/ipfs/QmVYw41wZkrGRbLhinc7BVtWuPx7FprrwHK5oEvjaj5P1y\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060a98061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c8063aa156645146037578063b1ce8eab146037575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b0316606e565b604080519115158252519081900360200190f35b5060019056fea265627a7a723158202ce330682da874c9a30d015f285fae046b39522c8815655d4068adb87f9f0ccf64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c8063aa156645146037578063b1ce8eab146037575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b0316606e565b604080519115158252519081900360200190f35b5060019056fea265627a7a723158202ce330682da874c9a30d015f285fae046b39522c8815655d4068adb87f9f0ccf64736f6c63430005100032",
+  "sourceMap": "714:487:17:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;714:487:17;;;;;;;",
+  "deployedSourceMap": "714:487:17:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;714:487:17;;;;;;;;;;;;;;;;;;;;;;;;1087:112;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1087:112:17;-1:-1:-1;;;;;1087:112:17;;:::i;:::-;;;;;;;;;;;;;;;;;;;-1:-1:-1;1188:4:17;;1087:112::o",
+  "source": "pragma solidity ^0.5.0;\n\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n\n/**\n *  @title Organization Mock Pass.\n *\n *  @notice Mocks Organization functions as passing.\n */\ncontract OrganizationMockPass {\n\n    /* External Functions */\n\n    /**\n     * @notice Mocks passing isOrganization.\n     *\n     * @return bool True.\n     */\n    function isOrganization(address)\n        external\n        pure\n        returns (bool)\n    {\n        return true;\n    }\n\n    /**\n     * @notice Mocks passing isWorker.\n     *\n     * @return bool True.\n     */\n    function isWorker(address)\n        external\n        pure\n        returns (bool)\n    {\n        return true;\n    }\n}",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol",
+    "exportedSymbols": {
+      "OrganizationMockPass": [
+        2524
+      ]
+    },
+    "id": 2525,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2503,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:17"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title Organization Mock Pass.\n *  @notice Mocks Organization functions as passing.",
+        "fullyImplemented": true,
+        "id": 2524,
+        "linearizedBaseContracts": [
+          2524
+        ],
+        "name": "OrganizationMockPass",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2512,
+              "nodeType": "Block",
+              "src": "965:28:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2510,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "982:4:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2509,
+                  "id": 2511,
+                  "nodeType": "Return",
+                  "src": "975:11:17"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks passing isOrganization.\n     * @return bool True.",
+            "id": 2513,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOrganization",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2506,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2505,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2513,
+                  "src": "899:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2504,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "898:9:17"
+            },
+            "returnParameters": {
+              "id": 2509,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2508,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2513,
+                  "src": "955:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2507,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:6:17"
+            },
+            "scope": 2524,
+            "src": "875:118:17",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2522,
+              "nodeType": "Block",
+              "src": "1171:28:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2520,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1188:4:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2519,
+                  "id": 2521,
+                  "nodeType": "Return",
+                  "src": "1181:11:17"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks passing isWorker.\n     * @return bool True.",
+            "id": 2523,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWorker",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2515,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2523,
+                  "src": "1105:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1105:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1104:9:17"
+            },
+            "returnParameters": {
+              "id": 2519,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2518,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2523,
+                  "src": "1161:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2517,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1161:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1160:6:17"
+            },
+            "scope": 2524,
+            "src": "1087:112:17",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2525,
+        "src": "714:487:17"
+      }
+    ],
+    "src": "0:1201:17"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol",
+    "exportedSymbols": {
+      "OrganizationMockPass": [
+        2524
+      ]
+    },
+    "id": 2525,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2503,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:17"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title Organization Mock Pass.\n *  @notice Mocks Organization functions as passing.",
+        "fullyImplemented": true,
+        "id": 2524,
+        "linearizedBaseContracts": [
+          2524
+        ],
+        "name": "OrganizationMockPass",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2512,
+              "nodeType": "Block",
+              "src": "965:28:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2510,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "982:4:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2509,
+                  "id": 2511,
+                  "nodeType": "Return",
+                  "src": "975:11:17"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks passing isOrganization.\n     * @return bool True.",
+            "id": 2513,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOrganization",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2506,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2505,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2513,
+                  "src": "899:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2504,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "898:9:17"
+            },
+            "returnParameters": {
+              "id": 2509,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2508,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2513,
+                  "src": "955:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2507,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:6:17"
+            },
+            "scope": 2524,
+            "src": "875:118:17",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2522,
+              "nodeType": "Block",
+              "src": "1171:28:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2520,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1188:4:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2519,
+                  "id": 2521,
+                  "nodeType": "Return",
+                  "src": "1181:11:17"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks passing isWorker.\n     * @return bool True.",
+            "id": 2523,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWorker",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2515,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2523,
+                  "src": "1105:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1105:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1104:9:17"
+            },
+            "returnParameters": {
+              "id": 2519,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2518,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2523,
+                  "src": "1161:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2517,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1161:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1160:6:17"
+            },
+            "scope": 2524,
+            "src": "1087:112:17",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2525,
+        "src": "714:487:17"
+      }
+    ],
+    "src": "0:1201:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.038Z",
+  "devdoc": {
+    "methods": {
+      "isOrganization(address)": {
+        "return": "bool True."
+      },
+      "isWorker(address)": {
+        "return": "bool True."
+      }
+    },
+    "title": "Organization Mock Pass."
+  },
+  "userdoc": {
+    "methods": {
+      "isOrganization(address)": {
+        "notice": "Mocks passing isOrganization."
+      },
+      "isWorker(address)": {
+        "notice": "Mocks passing isWorker."
+      }
+    },
+    "notice": "Mocks Organization functions as passing."
+  }
+}

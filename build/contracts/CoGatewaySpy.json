@@ -1,0 +1,2285 @@
+{
+  "contractName": "CoGatewaySpy",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "failRedemption",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recoerdedHashLock",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordedAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordedBeneficiary",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordedGasLimit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordedGasPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordedNonce",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "recordedPayedAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "makeRedemptionToFail",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_gasPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_gasLimit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_nonce",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_hashLock",
+          "type": "bytes32"
+        }
+      ],
+      "name": "redeem",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"failRedemption\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"makeRedemptionToFail\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recoerdedHashLock\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recordedAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recordedBeneficiary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recordedGasLimit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recordedGasPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recordedNonce\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"recordedPayedAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_gasPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_gasLimit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_nonce\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"_hashLock\",\"type\":\"bytes32\"}],\"name\":\"redeem\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"makeRedemptionToFail()\":{\"details\":\"Calling this function makes mocked redeem() function to fail     by throwing an exception.\"}}},\"userdoc\":{\"methods\":{},\"notice\":\"Spy test double to catch inputs to verify.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/token_holder/execute_redeem/CoGatewaySpy.sol\":\"CoGatewaySpy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/token_holder/execute_redeem/CoGatewaySpy.sol\":{\"keccak256\":\"0x2a605801e07b2c377b19777f5e93987abbfb0f7d81cd1842d9ff765fc91a66de\",\"urls\":[\"bzz-raw://cb4a701501e10d0cca1feefc209ab1af2104a4a106ed27a20fe4db34b91cffd8\",\"dweb:/ipfs/QmXBTVainLhccCGAGbr6HjFSWsqyCEKLoheaq7eqPAenfR\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610300806100206000396000f3fe6080604052600436106100905760003560e01c80634dd98f15116100595780634dd98f15146101405780636f4a9a34146101575780638dd4f87a1461016c578063bf41b9d914610181578063ecc5fed1146101c557610090565b80627d527e146100955780630756bb34146100c65780631cbb95c2146100ed57806341c0cad4146101025780634c56766514610117575b600080fd5b3480156100a157600080fd5b506100aa6101da565b604080516001600160a01b039092168252519081900360200190f35b3480156100d257600080fd5b506100db6101e9565b60408051918252519081900360200190f35b3480156100f957600080fd5b506100db6101ef565b34801561010e57600080fd5b506100db6101f5565b34801561012357600080fd5b5061012c6101fb565b604080519115158252519081900360200190f35b34801561014c57600080fd5b50610155610204565b005b34801561016357600080fd5b506100db610213565b34801561017857600080fd5b506100db610219565b6100db600480360360c081101561019757600080fd5b508035906001600160a01b036020820135169060408101359060608101359060808101359060a0013561021f565b3480156101d157600080fd5b506100db6102a4565b6002546001600160a01b031681565b60055481565b60045481565b60015481565b60075460ff1681565b6007805460ff19166001179055565b60005481565b60065481565b60075460009060ff16156102645760405162461bcd60e51b81526004018080602001828103825260218152602001806102ab6021913960400191505060405180910390fd5b50346000908155600196909655600280546001600160a01b0319166001600160a01b03969096169590951790945560039290925560045560055560065590565b6003548156fe43616c6c7320746f2072656465656d20617265206d61646520746f206661696c2ea265627a7a72315820a0b025f9548588a84250b418a3c7cff7a9de42e76bf8072ffc6f37dec696028e64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600436106100905760003560e01c80634dd98f15116100595780634dd98f15146101405780636f4a9a34146101575780638dd4f87a1461016c578063bf41b9d914610181578063ecc5fed1146101c557610090565b80627d527e146100955780630756bb34146100c65780631cbb95c2146100ed57806341c0cad4146101025780634c56766514610117575b600080fd5b3480156100a157600080fd5b506100aa6101da565b604080516001600160a01b039092168252519081900360200190f35b3480156100d257600080fd5b506100db6101e9565b60408051918252519081900360200190f35b3480156100f957600080fd5b506100db6101ef565b34801561010e57600080fd5b506100db6101f5565b34801561012357600080fd5b5061012c6101fb565b604080519115158252519081900360200190f35b34801561014c57600080fd5b50610155610204565b005b34801561016357600080fd5b506100db610213565b34801561017857600080fd5b506100db610219565b6100db600480360360c081101561019757600080fd5b508035906001600160a01b036020820135169060408101359060608101359060808101359060a0013561021f565b3480156101d157600080fd5b506100db6102a4565b6002546001600160a01b031681565b60055481565b60045481565b60015481565b60075460ff1681565b6007805460ff19166001179055565b60005481565b60065481565b60075460009060ff16156102645760405162461bcd60e51b81526004018080602001828103825260218152602001806102ab6021913960400191505060405180910390fd5b50346000908155600196909655600280546001600160a01b0319166001600160a01b03969096169590951790945560039290925560045560055560065590565b6003548156fe43616c6c7320746f2072656465656d20617265206d61646520746f206661696c2ea265627a7a72315820a0b025f9548588a84250b418a3c7cff7a9de42e76bf8072ffc6f37dec696028e64736f6c63430005100032",
+  "sourceMap": "676:1330:61:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;676:1330:61;;;;;;;",
+  "deployedSourceMap": "676:1330:61:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;801:34;;8:9:-1;5:2;;;30:1;27;20:12;5:2;801:34:61;;;:::i;:::-;;;;-1:-1:-1;;;;;801:34:61;;;;;;;;;;;;;;918:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;918:28:61;;;:::i;:::-;;;;;;;;;;;;;;;;880:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;880:31:61;;;:::i;765:29::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;765:29:61;;;:::i;1066:26::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1066:26:61;;;:::i;:::-;;;;;;;;;;;;;;;;;;1257:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1257:91:61;;;:::i;:::-;;724:34;;8:9:-1;5:2;;;30:1;27;20:12;5:2;724:34:61;;;:::i;953:32::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;953:32:61;;;:::i;1354:650::-;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;1354:650:61;;;-1:-1:-1;;;;;1354:650:61;;;;;;;;;;;;;;;;;;;;;;;;;:::i;842:31::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;842:31:61;;;:::i;801:34::-;;;-1:-1:-1;;;;;801:34:61;;:::o;918:28::-;;;;:::o;880:31::-;;;;:::o;765:29::-;;;;:::o;1066:26::-;;;;;;:::o;1257:91::-;1320:14;:21;;-1:-1:-1;;1320:21:61;1337:4;1320:21;;;1257:91::o;724:34::-;;;;:::o;953:32::-;;;;:::o;1354:650::-;1613:14;;1586:7;;1613:14;;1609:88;;;1643:43;;-1:-1:-1;;;1643:43:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1609:88;-1:-1:-1;1729:9:61;1707:19;:31;;;1749:14;:24;;;;1784:19;:34;;-1:-1:-1;;;;;;1784:34:61;-1:-1:-1;;;;;1784:34:61;;;;;;;;;;;1829:16;:28;;;;1868:16;:28;1907:13;:22;1940:17;:29;1707:19;1354:650::o;842:31::-;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n/**\n * @notice Spy test double to catch inputs to verify.\n */\ncontract CoGatewaySpy {\n\n    /* Storage */\n\n    uint256 public recordedPayedAmount;\n\n    uint256 public recordedAmount;\n\n    address public recordedBeneficiary;\n\n    uint256 public recordedGasPrice;\n\n    uint256 public recordedGasLimit;\n\n    uint256 public recordedNonce;\n\n    bytes32 public recoerdedHashLock;\n\n    /** @dev If true, redeem() function fails by throwing an exception */\n    bool public failRedemption;\n\n\n    /* External Functions */\n\n    /**\n     * @dev Calling this function makes mocked redeem() function to fail\n     *      by throwing an exception.\n     */\n    function makeRedemptionToFail()\n        external\n    {\n        failRedemption = true;\n    }\n\n    function redeem(\n        uint256 _amount,\n        address _beneficiary,\n        uint256 _gasPrice,\n        uint256 _gasLimit,\n        uint256 _nonce,\n        bytes32 _hashLock\n    )\n        external\n        payable\n        returns (bytes32)\n    {\n        if (failRedemption) {\n            revert(\"Calls to redeem are made to fail.\");\n        }\n\n        recordedPayedAmount = msg.value;\n\n        recordedAmount = _amount;\n\n        recordedBeneficiary = _beneficiary;\n\n        recordedGasPrice = _gasPrice;\n\n        recordedGasLimit = _gasLimit;\n\n        recordedNonce = _nonce;\n\n        recoerdedHashLock = _hashLock;\n\n        return bytes32(0);\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/token_holder/execute_redeem/CoGatewaySpy.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/token_holder/execute_redeem/CoGatewaySpy.sol",
+    "exportedSymbols": {
+      "CoGatewaySpy": [
+        7111
+      ]
+    },
+    "id": 7112,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7028,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:61"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@notice Spy test double to catch inputs to verify.",
+        "fullyImplemented": true,
+        "id": 7111,
+        "linearizedBaseContracts": [
+          7111
+        ],
+        "name": "CoGatewaySpy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7030,
+            "name": "recordedPayedAmount",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "724:34:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7029,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "724:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7032,
+            "name": "recordedAmount",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "765:29:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7031,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "765:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7034,
+            "name": "recordedBeneficiary",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "801:34:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7033,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "801:7:61",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7036,
+            "name": "recordedGasPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "842:31:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7035,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "842:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7038,
+            "name": "recordedGasLimit",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "880:31:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7037,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "880:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7040,
+            "name": "recordedNonce",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "918:28:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7039,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "918:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7042,
+            "name": "recoerdedHashLock",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "953:32:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 7041,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "953:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7044,
+            "name": "failRedemption",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "1066:26:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 7043,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1066:4:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7051,
+              "nodeType": "Block",
+              "src": "1310:38:61",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7049,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7047,
+                      "name": "failRedemption",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7044,
+                      "src": "1320:14:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 7048,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1337:4:61",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1320:21:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7050,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1320:21:61"
+                }
+              ]
+            },
+            "documentation": "@dev Calling this function makes mocked redeem() function to fail\n     by throwing an exception.",
+            "id": 7052,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "makeRedemptionToFail",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7045,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1286:2:61"
+            },
+            "returnParameters": {
+              "id": 7046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1310:0:61"
+            },
+            "scope": 7111,
+            "src": "1257:91:61",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 7109,
+              "nodeType": "Block",
+              "src": "1599:405:61",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 7069,
+                    "name": "failRedemption",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7044,
+                    "src": "1613:14:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 7075,
+                  "nodeType": "IfStatement",
+                  "src": "1609:88:61",
+                  "trueBody": {
+                    "id": 7074,
+                    "nodeType": "Block",
+                    "src": "1629:68:61",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "43616c6c7320746f2072656465656d20617265206d61646520746f206661696c2e",
+                              "id": 7071,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1650:35:61",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_e13f7882a61909fe924cd4311e2d0112c5157d8530c5497b1db9fa20edfb4416",
+                                "typeString": "literal_string \"Calls to redeem are made to fail.\""
+                              },
+                              "value": "Calls to redeem are made to fail."
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_e13f7882a61909fe924cd4311e2d0112c5157d8530c5497b1db9fa20edfb4416",
+                                "typeString": "literal_string \"Calls to redeem are made to fail.\""
+                              }
+                            ],
+                            "id": 7070,
+                            "name": "revert",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              12886,
+                              12887
+                            ],
+                            "referencedDeclaration": 12887,
+                            "src": "1643:6:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory) pure"
+                            }
+                          },
+                          "id": 7072,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1643:43:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 7073,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1643:43:61"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7079,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7076,
+                      "name": "recordedPayedAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7030,
+                      "src": "1707:19:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7077,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12881,
+                        "src": "1729:3:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 7078,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1729:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1707:31:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7080,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1707:31:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7083,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7081,
+                      "name": "recordedAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7032,
+                      "src": "1749:14:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7082,
+                      "name": "_amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7054,
+                      "src": "1766:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1749:24:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7084,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1749:24:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7087,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7085,
+                      "name": "recordedBeneficiary",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7034,
+                      "src": "1784:19:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7086,
+                      "name": "_beneficiary",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7056,
+                      "src": "1806:12:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1784:34:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 7088,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1784:34:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7091,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7089,
+                      "name": "recordedGasPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7036,
+                      "src": "1829:16:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7090,
+                      "name": "_gasPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7058,
+                      "src": "1848:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1829:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7092,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1829:28:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7095,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7093,
+                      "name": "recordedGasLimit",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7038,
+                      "src": "1868:16:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7094,
+                      "name": "_gasLimit",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7060,
+                      "src": "1887:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1868:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7096,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1868:28:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7099,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7097,
+                      "name": "recordedNonce",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7040,
+                      "src": "1907:13:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7098,
+                      "name": "_nonce",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7062,
+                      "src": "1923:6:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1907:22:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1907:22:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7101,
+                      "name": "recoerdedHashLock",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7042,
+                      "src": "1940:17:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7102,
+                      "name": "_hashLock",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7064,
+                      "src": "1960:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1940:29:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 7104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1940:29:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 7106,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1995:1:61",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 7105,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1987:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes32_$",
+                        "typeString": "type(bytes32)"
+                      },
+                      "typeName": "bytes32"
+                    },
+                    "id": 7107,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1987:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 7068,
+                  "id": 7108,
+                  "nodeType": "Return",
+                  "src": "1980:17:61"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7065,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7054,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1379:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7053,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1379:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7056,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1404:20:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1404:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7058,
+                  "name": "_gasPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1434:17:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7057,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1434:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7060,
+                  "name": "_gasLimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1461:17:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7059,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1461:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7062,
+                  "name": "_nonce",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1488:14:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1488:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7064,
+                  "name": "_hashLock",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1512:17:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7063,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1512:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1369:166:61"
+            },
+            "returnParameters": {
+              "id": 7068,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7067,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1586:7:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7066,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1586:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1585:9:61"
+            },
+            "scope": 7111,
+            "src": "1354:650:61",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7112,
+        "src": "676:1330:61"
+      }
+    ],
+    "src": "0:2007:61"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/token_holder/execute_redeem/CoGatewaySpy.sol",
+    "exportedSymbols": {
+      "CoGatewaySpy": [
+        7111
+      ]
+    },
+    "id": 7112,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7028,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:61"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@notice Spy test double to catch inputs to verify.",
+        "fullyImplemented": true,
+        "id": 7111,
+        "linearizedBaseContracts": [
+          7111
+        ],
+        "name": "CoGatewaySpy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7030,
+            "name": "recordedPayedAmount",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "724:34:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7029,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "724:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7032,
+            "name": "recordedAmount",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "765:29:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7031,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "765:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7034,
+            "name": "recordedBeneficiary",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "801:34:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7033,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "801:7:61",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7036,
+            "name": "recordedGasPrice",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "842:31:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7035,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "842:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7038,
+            "name": "recordedGasLimit",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "880:31:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7037,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "880:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7040,
+            "name": "recordedNonce",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "918:28:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7039,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "918:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7042,
+            "name": "recoerdedHashLock",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "953:32:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 7041,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "953:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7044,
+            "name": "failRedemption",
+            "nodeType": "VariableDeclaration",
+            "scope": 7111,
+            "src": "1066:26:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 7043,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1066:4:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7051,
+              "nodeType": "Block",
+              "src": "1310:38:61",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7049,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7047,
+                      "name": "failRedemption",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7044,
+                      "src": "1320:14:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 7048,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1337:4:61",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1320:21:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7050,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1320:21:61"
+                }
+              ]
+            },
+            "documentation": "@dev Calling this function makes mocked redeem() function to fail\n     by throwing an exception.",
+            "id": 7052,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "makeRedemptionToFail",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7045,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1286:2:61"
+            },
+            "returnParameters": {
+              "id": 7046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1310:0:61"
+            },
+            "scope": 7111,
+            "src": "1257:91:61",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 7109,
+              "nodeType": "Block",
+              "src": "1599:405:61",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 7069,
+                    "name": "failRedemption",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7044,
+                    "src": "1613:14:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 7075,
+                  "nodeType": "IfStatement",
+                  "src": "1609:88:61",
+                  "trueBody": {
+                    "id": 7074,
+                    "nodeType": "Block",
+                    "src": "1629:68:61",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "43616c6c7320746f2072656465656d20617265206d61646520746f206661696c2e",
+                              "id": 7071,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1650:35:61",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_e13f7882a61909fe924cd4311e2d0112c5157d8530c5497b1db9fa20edfb4416",
+                                "typeString": "literal_string \"Calls to redeem are made to fail.\""
+                              },
+                              "value": "Calls to redeem are made to fail."
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_e13f7882a61909fe924cd4311e2d0112c5157d8530c5497b1db9fa20edfb4416",
+                                "typeString": "literal_string \"Calls to redeem are made to fail.\""
+                              }
+                            ],
+                            "id": 7070,
+                            "name": "revert",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              12886,
+                              12887
+                            ],
+                            "referencedDeclaration": 12887,
+                            "src": "1643:6:61",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory) pure"
+                            }
+                          },
+                          "id": 7072,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1643:43:61",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 7073,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1643:43:61"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7079,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7076,
+                      "name": "recordedPayedAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7030,
+                      "src": "1707:19:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7077,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12881,
+                        "src": "1729:3:61",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 7078,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1729:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1707:31:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7080,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1707:31:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7083,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7081,
+                      "name": "recordedAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7032,
+                      "src": "1749:14:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7082,
+                      "name": "_amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7054,
+                      "src": "1766:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1749:24:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7084,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1749:24:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7087,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7085,
+                      "name": "recordedBeneficiary",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7034,
+                      "src": "1784:19:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7086,
+                      "name": "_beneficiary",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7056,
+                      "src": "1806:12:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1784:34:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 7088,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1784:34:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7091,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7089,
+                      "name": "recordedGasPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7036,
+                      "src": "1829:16:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7090,
+                      "name": "_gasPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7058,
+                      "src": "1848:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1829:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7092,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1829:28:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7095,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7093,
+                      "name": "recordedGasLimit",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7038,
+                      "src": "1868:16:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7094,
+                      "name": "_gasLimit",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7060,
+                      "src": "1887:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1868:28:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7096,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1868:28:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7099,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7097,
+                      "name": "recordedNonce",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7040,
+                      "src": "1907:13:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7098,
+                      "name": "_nonce",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7062,
+                      "src": "1923:6:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1907:22:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1907:22:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7101,
+                      "name": "recoerdedHashLock",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7042,
+                      "src": "1940:17:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 7102,
+                      "name": "_hashLock",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7064,
+                      "src": "1960:9:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1940:29:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 7104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1940:29:61"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 7106,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1995:1:61",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 7105,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1987:7:61",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes32_$",
+                        "typeString": "type(bytes32)"
+                      },
+                      "typeName": "bytes32"
+                    },
+                    "id": 7107,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1987:10:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 7068,
+                  "id": 7108,
+                  "nodeType": "Return",
+                  "src": "1980:17:61"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7065,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7054,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1379:15:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7053,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1379:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7056,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1404:20:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1404:7:61",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7058,
+                  "name": "_gasPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1434:17:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7057,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1434:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7060,
+                  "name": "_gasLimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1461:17:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7059,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1461:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7062,
+                  "name": "_nonce",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1488:14:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1488:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7064,
+                  "name": "_hashLock",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1512:17:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7063,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1512:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1369:166:61"
+            },
+            "returnParameters": {
+              "id": 7068,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7067,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7110,
+                  "src": "1586:7:61",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7066,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1586:7:61",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1585:9:61"
+            },
+            "scope": 7111,
+            "src": "1354:650:61",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7112,
+        "src": "676:1330:61"
+      }
+    ],
+    "src": "0:2007:61"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.151Z",
+  "devdoc": {
+    "methods": {
+      "makeRedemptionToFail()": {
+        "details": "Calling this function makes mocked redeem() function to fail     by throwing an exception."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Spy test double to catch inputs to verify."
+  }
+}

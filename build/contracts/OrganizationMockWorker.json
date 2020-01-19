@@ -1,0 +1,779 @@
+{
+  "contractName": "OrganizationMockWorker",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "worker",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_worker",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "setWorker",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_worker",
+          "type": "address"
+        }
+      ],
+      "name": "isWorker",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_worker\",\"type\":\"address\"}],\"name\":\"isWorker\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_worker\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"setWorker\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"worker\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isWorker(address)\":{\"return\":\"bool True if worker == _worker, false if not.\"},\"setWorker(address,uint256)\":{\"params\":{\"_worker\":\"The value to which worker is set.\"}}},\"title\":\"Organization Mock Worker.\"},\"userdoc\":{\"methods\":{\"isWorker(address)\":{\"notice\":\"Mocks isWorker.\"},\"setWorker(address,uint256)\":{\"notice\":\"Mocks setWorker.\"}},\"notice\":\"Mocks Organization setWorker and isWorker functions.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockWorker.sol\":\"OrganizationMockWorker\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockWorker.sol\":{\"keccak256\":\"0x10f4d9176ce88ac4e9acc523004802f16b47b751c7a3693f5d8d711ef41b81ff\",\"urls\":[\"bzz-raw://5961ae512765ea7cb54299cd976c4522a3e74c1c0203509ce9f13005809369ed\",\"dweb:/ipfs/QmZEKvkResPVXsGe5LR1AeJxZGPLNNVnbHDff9btkKYbq9\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061014d806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80634d547ada14610046578063aa1566451461006a578063ea6790cf146100a4575b600080fd5b61004e6100d2565b604080516001600160a01b039092168252519081900360200190f35b6100906004803603602081101561008057600080fd5b50356001600160a01b03166100e1565b604080519115158252519081900360200190f35b6100d0600480360360408110156100ba57600080fd5b506001600160a01b0381351690602001356100f5565b005b6000546001600160a01b031681565b6000546001600160a01b0391821691161490565b50600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a723158201e8003591b6bc2fdf2288d48a57fa7f86ad3f365600d9a2bd544e2d58e0cab1264736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80634d547ada14610046578063aa1566451461006a578063ea6790cf146100a4575b600080fd5b61004e6100d2565b604080516001600160a01b039092168252519081900360200190f35b6100906004803603602081101561008057600080fd5b50356001600160a01b03166100e1565b604080519115158252519081900360200190f35b6100d0600480360360408110156100ba57600080fd5b506001600160a01b0381351690602001356100f5565b005b6000546001600160a01b031681565b6000546001600160a01b0391821691161490565b50600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a723158201e8003591b6bc2fdf2288d48a57fa7f86ad3f365600d9a2bd544e2d58e0cab1264736f6c63430005100032",
+  "sourceMap": "728:599:18:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;728:599:18;;;;;;;",
+  "deployedSourceMap": "728:599:18:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;728:599:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;767:21;;;:::i;:::-;;;;-1:-1:-1;;;;;767:21:18;;;;;;;;;;;;;;1178:147;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1178:147:18;-1:-1:-1;;;;;1178:147:18;;:::i;:::-;;;;;;;;;;;;;;;;;;936:121;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;936:121:18;;;;;;;;:::i;:::-;;767:21;;;-1:-1:-1;;;;;767:21:18;;:::o;1178:147::-;1274:4;1301:6;-1:-1:-1;;;;;1301:17:18;;;:6;;:17;;1178:147::o;936:121::-;-1:-1:-1;1034:6:18;:16;;-1:-1:-1;;;;;;1034:16:18;-1:-1:-1;;;;;1034:16:18;;;;;;;;;;936:121::o",
+  "source": "pragma solidity ^0.5.0;\n\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n\n/**\n *  @title Organization Mock Worker.\n *\n *  @notice Mocks Organization setWorker and isWorker functions.\n */\ncontract OrganizationMockWorker {\n\n    address public worker;\n\n    /* External Functions */\n\n    /**\n     * @notice Mocks setWorker.\n     *\n     * @param _worker The value to which worker is set.\n     */\n    function setWorker(\n        address _worker,\n        uint256\n    )\n        external\n    {\n        worker = _worker;\n    }\n\n    /**\n     * @notice Mocks isWorker.\n     *\n     * @return bool True if worker == _worker, false if not.\n     */\n    function isWorker(\n        address _worker\n    )\n        external\n        view\n        returns (bool)\n    {\n        return worker == _worker;\n    }\n}",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockWorker.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockWorker.sol",
+    "exportedSymbols": {
+      "OrganizationMockWorker": [
+        2553
+      ]
+    },
+    "id": 2554,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2526,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title Organization Mock Worker.\n *  @notice Mocks Organization setWorker and isWorker functions.",
+        "fullyImplemented": true,
+        "id": 2553,
+        "linearizedBaseContracts": [
+          2553
+        ],
+        "name": "OrganizationMockWorker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2528,
+            "name": "worker",
+            "nodeType": "VariableDeclaration",
+            "scope": 2553,
+            "src": "767:21:18",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2527,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "767:7:18",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2539,
+              "nodeType": "Block",
+              "src": "1024:33:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2537,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2535,
+                      "name": "worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2528,
+                      "src": "1034:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2536,
+                      "name": "_worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2530,
+                      "src": "1043:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1034:16:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2538,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1034:16:18"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks setWorker.\n     * @param _worker The value to which worker is set.",
+            "id": 2540,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setWorker",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2530,
+                  "name": "_worker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2540,
+                  "src": "964:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2529,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "964:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2532,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2540,
+                  "src": "989:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "989:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:48:18"
+            },
+            "returnParameters": {
+              "id": 2534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1024:0:18"
+            },
+            "scope": 2553,
+            "src": "936:121:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2551,
+              "nodeType": "Block",
+              "src": "1284:41:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 2549,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2547,
+                      "name": "worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2528,
+                      "src": "1301:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2548,
+                      "name": "_worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2542,
+                      "src": "1311:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1301:17:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2546,
+                  "id": 2550,
+                  "nodeType": "Return",
+                  "src": "1294:24:18"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks isWorker.\n     * @return bool True if worker == _worker, false if not.",
+            "id": 2552,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWorker",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2543,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2542,
+                  "name": "_worker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2552,
+                  "src": "1205:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2541,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1205:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1195:31:18"
+            },
+            "returnParameters": {
+              "id": 2546,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2545,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2552,
+                  "src": "1274:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2544,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1274:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1273:6:18"
+            },
+            "scope": 2553,
+            "src": "1178:147:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2554,
+        "src": "728:599:18"
+      }
+    ],
+    "src": "0:1327:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockWorker.sol",
+    "exportedSymbols": {
+      "OrganizationMockWorker": [
+        2553
+      ]
+    },
+    "id": 2554,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2526,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": " @title Organization Mock Worker.\n *  @notice Mocks Organization setWorker and isWorker functions.",
+        "fullyImplemented": true,
+        "id": 2553,
+        "linearizedBaseContracts": [
+          2553
+        ],
+        "name": "OrganizationMockWorker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2528,
+            "name": "worker",
+            "nodeType": "VariableDeclaration",
+            "scope": 2553,
+            "src": "767:21:18",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2527,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "767:7:18",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2539,
+              "nodeType": "Block",
+              "src": "1024:33:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2537,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2535,
+                      "name": "worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2528,
+                      "src": "1034:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2536,
+                      "name": "_worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2530,
+                      "src": "1043:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1034:16:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2538,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1034:16:18"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks setWorker.\n     * @param _worker The value to which worker is set.",
+            "id": 2540,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setWorker",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2530,
+                  "name": "_worker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2540,
+                  "src": "964:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2529,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "964:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2532,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2540,
+                  "src": "989:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "989:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:48:18"
+            },
+            "returnParameters": {
+              "id": 2534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1024:0:18"
+            },
+            "scope": 2553,
+            "src": "936:121:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2551,
+              "nodeType": "Block",
+              "src": "1284:41:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 2549,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2547,
+                      "name": "worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2528,
+                      "src": "1301:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2548,
+                      "name": "_worker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2542,
+                      "src": "1311:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1301:17:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2546,
+                  "id": 2550,
+                  "nodeType": "Return",
+                  "src": "1294:24:18"
+                }
+              ]
+            },
+            "documentation": "@notice Mocks isWorker.\n     * @return bool True if worker == _worker, false if not.",
+            "id": 2552,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWorker",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2543,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2542,
+                  "name": "_worker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2552,
+                  "src": "1205:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2541,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1205:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1195:31:18"
+            },
+            "returnParameters": {
+              "id": 2546,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2545,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2552,
+                  "src": "1274:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2544,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1274:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1273:6:18"
+            },
+            "scope": 2553,
+            "src": "1178:147:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2554,
+        "src": "728:599:18"
+      }
+    ],
+    "src": "0:1327:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.042Z",
+  "devdoc": {
+    "methods": {
+      "isWorker(address)": {
+        "return": "bool True if worker == _worker, false if not."
+      },
+      "setWorker(address,uint256)": {
+        "params": {
+          "_worker": "The value to which worker is set."
+        }
+      }
+    },
+    "title": "Organization Mock Worker."
+  },
+  "userdoc": {
+    "methods": {
+      "isWorker(address)": {
+        "notice": "Mocks isWorker."
+      },
+      "setWorker(address,uint256)": {
+        "notice": "Mocks setWorker."
+      }
+    },
+    "notice": "Mocks Organization setWorker and isWorker functions."
+  }
+}

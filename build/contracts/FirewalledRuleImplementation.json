@@ -1,0 +1,543 @@
+{
+  "contractName": "FirewalledRuleImplementation",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract OrganizationInterface",
+          "name": "_organization",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "FirewallDisabled",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "disableFirewall",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "firewallEnabled",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "organization",
+      "outputs": [
+        {
+          "internalType": "contract OrganizationInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "firewalledFn",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract OrganizationInterface\",\"name\":\"_organization\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"FirewallDisabled\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"disableFirewall\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"firewallEnabled\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"firewalledFn\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"organization\",\"outputs\":[{\"internalType\":\"contract OrganizationInterface\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Implementation that actually has a firewalled method.\"},\"userdoc\":{\"methods\":{\"disableFirewall()\":{\"notice\":\"Disables the firewall so that anyone can use firewalled methods.        Disabling the firewall cannot be done undone. There is no method        to enable the firewall again.        Emits a `FirewallDisabled` event.\"}},\"notice\":\"As the firewall itself doesn't have any firewalled methods, another        contract that provides a firewalled method is required in order to        test the modifier.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol\":\"FirewalledRuleImplementation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/OrganizationInterface.sol\":{\"keccak256\":\"0xac45d29a498c6531778e0a0cdb31c0d0c2fa6f090dfe9ff99e5ee056657e1962\",\"urls\":[\"bzz-raw://c1269e9993d4f7562855faefbc64f15e7bbe7468777a99611ddfcb4c980c22e1\",\"dweb:/ipfs/QmNRV39vV9RCyovb7EyxWakL2CcMXgoTpToxrfDp9wwQbq\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/Organized.sol\":{\"keccak256\":\"0x16d60f305a592f262b1603bb0b3b50596a91910bf1ea7de4f9642f01dce01356\",\"urls\":[\"bzz-raw://b7e8bc23f708ba7a0dc2cd1e7c48c8a4248a19260a4052b97fdd18be5f4dd352\",\"dweb:/ipfs/QmWPgpQafZXVAnHPEx9awFircyn2NRfdt7rdqPwv4qqVso\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol\":{\"keccak256\":\"0xb56e5264d5b5eaf1fc193ca16ce9207db58d6829279f725aaadc5dac240e97f7\",\"urls\":[\"bzz-raw://055c82f965433e9e551920fc934dcdaac6a491a22fdef1434bf98239c5609e17\",\"dweb:/ipfs/QmdNNxukPsK7X9x1sg4jDejikNHSzmiyPTDrAChBZo8pwV\"]},\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol\":{\"keccak256\":\"0xa9ed958756941cf3b1cc8abc9b71fa15a4b6514789f75176323364d633b9a407\",\"urls\":[\"bzz-raw://256e221a5bb61c420a7fabc3d0f2d1f89e24024d4d0c4e5cc57e90267e86d0bb\",\"dweb:/ipfs/QmPTmcEwrsrjCozBSLXRz2q8rsbtZrjwN2VGLAeWU8t41q\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516104163803806104168339818101604052602081101561003357600080fd5b505180806001600160a01b03811661007c5760405162461bcd60e51b815260040180806020018281038252602f8152602001806103e7602f913960400191505060405180910390fd5b6000805460ff60a01b196001600160a01b039093166001600160a01b03199091161791909116600160a01b179055505061032c806100bb6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063090ee9691461005157806323bd4d7a1461005b5780635c220ba21461007f57806397732d6c14610087575b600080fd5b6100596100a3565b005b61006361018b565b604080516001600160a01b039092168252519081900360200190f35b61005961019a565b61008f610260565b604080519115158252519081900360200190f35b6000546040805163b1ce8eab60e01b815233600482015290516001600160a01b039092169163b1ce8eab91602480820192602092909190829003018186803b1580156100ee57600080fd5b505afa158015610102573d6000803e3d6000fd5b505050506040513d602081101561011857600080fd5b50516101555760405162461bcd60e51b81526004018080602001828103825260358152602001806102c36035913960400191505060405180910390fd5b6000805460ff60a01b191681556040517f8c61b806d365933201f6956f3187a13394061c3da1c6c8bad5ec88d7ee0112a39190a1565b6000546001600160a01b031681565b600054600160a01b900460ff161561025e576000546040805163aa15664560e01b815232600482015290516001600160a01b039092169163aa15664591602480820192602092909190829003018186803b1580156101f757600080fd5b505afa15801561020b573d6000803e3d6000fd5b505050506040513d602081101561022157600080fd5b505161025e5760405162461bcd60e51b81526004018080602001828103825260528152602001806102716052913960600191505060405180910390fd5b565b600054600160a01b900460ff168156fe54686973206d6574686f64206973206669726577616c6c65642e205472616e73616374696f6e206d757374206f726967696e6174652066726f6d20616e206f7267616e697a6174696f6e20776f726b65722e4f6e6c7920746865206f7267616e697a6174696f6e20697320616c6c6f77656420746f2063616c6c2074686973206d6574686f642ea265627a7a723158206ebc1c7352c8a2d07380935a283857617d1cd7cac6cdab2a4a9611aa965a185e64736f6c634300051000324f7267616e697a6174696f6e20636f6e74726163742061646472657373206d757374206e6f74206265207a65726f2e",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063090ee9691461005157806323bd4d7a1461005b5780635c220ba21461007f57806397732d6c14610087575b600080fd5b6100596100a3565b005b61006361018b565b604080516001600160a01b039092168252519081900360200190f35b61005961019a565b61008f610260565b604080519115158252519081900360200190f35b6000546040805163b1ce8eab60e01b815233600482015290516001600160a01b039092169163b1ce8eab91602480820192602092909190829003018186803b1580156100ee57600080fd5b505afa158015610102573d6000803e3d6000fd5b505050506040513d602081101561011857600080fd5b50516101555760405162461bcd60e51b81526004018080602001828103825260358152602001806102c36035913960400191505060405180910390fd5b6000805460ff60a01b191681556040517f8c61b806d365933201f6956f3187a13394061c3da1c6c8bad5ec88d7ee0112a39190a1565b6000546001600160a01b031681565b600054600160a01b900460ff161561025e576000546040805163aa15664560e01b815232600482015290516001600160a01b039092169163aa15664591602480820192602092909190829003018186803b1580156101f757600080fd5b505afa15801561020b573d6000803e3d6000fd5b505050506040513d602081101561022157600080fd5b505161025e5760405162461bcd60e51b81526004018080602001828103825260528152602001806102716052913960600191505060405180910390fd5b565b600054600160a01b900460ff168156fe54686973206d6574686f64206973206669726577616c6c65642e205472616e73616374696f6e206d757374206f726967696e6174652066726f6d20616e206f7267616e697a6174696f6e20776f726b65722e4f6e6c7920746865206f7267616e697a6174696f6e20697320616c6c6f77656420746f2063616c6c2074686973206d6574686f642ea265627a7a723158206ebc1c7352c8a2d07380935a283857617d1cd7cac6cdab2a4a9611aa965a185e64736f6c63430005100032",
+  "sourceMap": "920:401:57:-;;;1012:170;8:9:-1;5:2;;;30:1;27;20:12;5:2;1012:170:57;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1012:170:57;;;-1:-1:-1;;;;;1888:36:41;;1867:130;;;;-1:-1:-1;;;1867:130:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2008:12;:28;;-1:-1:-1;;;;;;;;;2008:28:41;;;-1:-1:-1;;;;;;2008:28:41;;;;2970:22:49;;;;-1:-1:-1;;;2970:22:49;;;-1:-1:-1;;920:401:57;;;;;;",
+  "deployedSourceMap": "920:401:57:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;920:401:57;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3306:126:49;;;:::i;:::-;;1153:41:41;;;:::i;:::-;;;;-1:-1:-1;;;;;1153:41:41;;;;;;;;;;;;;;1268:51:57;;;:::i;1622:27:49:-;;;:::i;:::-;;;;;;;;;;;;;;;;;;3306:126;1286:12:41;;:39;;;-1:-1:-1;;;1286:39:41;;1314:10;1286:39;;;;;;-1:-1:-1;;;;;1286:12:41;;;;:27;;:39;;;;;;;;;;;;;;;:12;:39;;;5:2:-1;;;;30:1;27;20:12;5:2;1286:39:41;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1286:39:41;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1286:39:41;1265:139;;;;-1:-1:-1;;;1265:139:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3387:5:49;3369:23;;-1:-1:-1;;;;3369:23:49;;;3407:18;;;;3387:5;3407:18;3306:126::o;1153:41:41:-;;;-1:-1:-1;;;;;1153:41:41;;:::o;1268:51:57:-;2168:15:49;;-1:-1:-1;;;2168:15:49;;;;2164:424;;;2429:12;;:32;;;-1:-1:-1;;;2429:32:49;;2451:9;2429:32;;;;;;-1:-1:-1;;;;;2429:12:49;;;;:21;;:32;;;;;;;;;;;;;;;:12;:32;;;5:2:-1;;;;30:1;27;20:12;5:2;2429:32:49;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2429:32:49;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2429:32:49;2199:378;;;;-1:-1:-1;;;2199:378:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1268:51:57:o;1622:27:49:-;;;-1:-1:-1;;;1622:27:49;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\nimport \"../../../rules/FirewalledRule.sol\";\n\n/**\n * @title Implementation that actually has a firewalled method.\n *\n * @notice As the firewall itself doesn't have any firewalled methods, another\n *         contract that provides a firewalled method is required in order to\n *         test the modifier.\n */\ncontract FirewalledRuleImplementation is FirewalledRule {\n\n    /* Special Functions */\n\n    constructor(\n        OrganizationInterface _organization\n    )\n        FirewalledRule(_organization)\n        public\n    // solium-disable-next-line no-empty-blocks\n    {}\n\n\n    /* External Functions */\n\n\n    // solium-disable-next-line no-empty-blocks\n    function firewalledFn() external view firewalled {}\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
+  "ast": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
+    "exportedSymbols": {
+      "FirewalledRuleImplementation": [
+        6713
+      ]
+    },
+    "id": 6714,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6694,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:57"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
+        "file": "../../../rules/FirewalledRule.sol",
+        "id": 6695,
+        "nodeType": "ImportDirective",
+        "scope": 6714,
+        "sourceUnit": 5652,
+        "src": "613:43:57",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6696,
+              "name": "FirewalledRule",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5651,
+              "src": "961:14:57",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FirewalledRule_$5651",
+                "typeString": "contract FirewalledRule"
+              }
+            },
+            "id": 6697,
+            "nodeType": "InheritanceSpecifier",
+            "src": "961:14:57"
+          }
+        ],
+        "contractDependencies": [
+          5175,
+          5651
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Implementation that actually has a firewalled method.\n * @notice As the firewall itself doesn't have any firewalled methods, another\n        contract that provides a firewalled method is required in order to\n        test the modifier.",
+        "fullyImplemented": true,
+        "id": 6713,
+        "linearizedBaseContracts": [
+          6713,
+          5651,
+          5175
+        ],
+        "name": "FirewalledRuleImplementation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6705,
+              "nodeType": "Block",
+              "src": "1180:2:57",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 6706,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 6702,
+                    "name": "_organization",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6699,
+                    "src": "1098:13:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  }
+                ],
+                "id": 6703,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6701,
+                  "name": "FirewalledRule",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5651,
+                  "src": "1083:14:57",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_FirewalledRule_$5651_$",
+                    "typeString": "type(contract FirewalledRule)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1083:29:57"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6699,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6706,
+                  "src": "1033:35:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                    "typeString": "contract OrganizationInterface"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6698,
+                    "name": "OrganizationInterface",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5122,
+                    "src": "1033:21:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1023:51:57"
+            },
+            "returnParameters": {
+              "id": 6704,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1180:0:57"
+            },
+            "scope": 6713,
+            "src": "1012:170:57",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6711,
+              "nodeType": "Block",
+              "src": "1317:2:57",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 6712,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 6709,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6708,
+                  "name": "firewalled",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5624,
+                  "src": "1306:10:57",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1306:10:57"
+              }
+            ],
+            "name": "firewalledFn",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6707,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1289:2:57"
+            },
+            "returnParameters": {
+              "id": 6710,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1317:0:57"
+            },
+            "scope": 6713,
+            "src": "1268:51:57",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6714,
+        "src": "920:401:57"
+      }
+    ],
+    "src": "0:1322:57"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
+    "exportedSymbols": {
+      "FirewalledRuleImplementation": [
+        6713
+      ]
+    },
+    "id": 6714,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6694,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:57"
+      },
+      {
+        "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
+        "file": "../../../rules/FirewalledRule.sol",
+        "id": 6695,
+        "nodeType": "ImportDirective",
+        "scope": 6714,
+        "sourceUnit": 5652,
+        "src": "613:43:57",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6696,
+              "name": "FirewalledRule",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5651,
+              "src": "961:14:57",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FirewalledRule_$5651",
+                "typeString": "contract FirewalledRule"
+              }
+            },
+            "id": 6697,
+            "nodeType": "InheritanceSpecifier",
+            "src": "961:14:57"
+          }
+        ],
+        "contractDependencies": [
+          5175,
+          5651
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Implementation that actually has a firewalled method.\n * @notice As the firewall itself doesn't have any firewalled methods, another\n        contract that provides a firewalled method is required in order to\n        test the modifier.",
+        "fullyImplemented": true,
+        "id": 6713,
+        "linearizedBaseContracts": [
+          6713,
+          5651,
+          5175
+        ],
+        "name": "FirewalledRuleImplementation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6705,
+              "nodeType": "Block",
+              "src": "1180:2:57",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 6706,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 6702,
+                    "name": "_organization",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6699,
+                    "src": "1098:13:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  }
+                ],
+                "id": 6703,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6701,
+                  "name": "FirewalledRule",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5651,
+                  "src": "1083:14:57",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_FirewalledRule_$5651_$",
+                    "typeString": "type(contract FirewalledRule)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1083:29:57"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6699,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6706,
+                  "src": "1033:35:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                    "typeString": "contract OrganizationInterface"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6698,
+                    "name": "OrganizationInterface",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5122,
+                    "src": "1033:21:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeString": "contract OrganizationInterface"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1023:51:57"
+            },
+            "returnParameters": {
+              "id": 6704,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1180:0:57"
+            },
+            "scope": 6713,
+            "src": "1012:170:57",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6711,
+              "nodeType": "Block",
+              "src": "1317:2:57",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 6712,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 6709,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6708,
+                  "name": "firewalled",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 5624,
+                  "src": "1306:10:57",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1306:10:57"
+              }
+            ],
+            "name": "firewalledFn",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6707,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1289:2:57"
+            },
+            "returnParameters": {
+              "id": 6710,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1317:0:57"
+            },
+            "scope": 6713,
+            "src": "1268:51:57",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6714,
+        "src": "920:401:57"
+      }
+    ],
+    "src": "0:1322:57"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-19T09:48:26.146Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Implementation that actually has a firewalled method."
+  },
+  "userdoc": {
+    "methods": {
+      "disableFirewall()": {
+        "notice": "Disables the firewall so that anyone can use firewalled methods.        Disabling the firewall cannot be done undone. There is no method        to enable the firewall again.        Emits a `FirewallDisabled` event."
+      }
+    },
+    "notice": "As the firewall itself doesn't have any firewalled methods, another        contract that provides a firewalled method is required in order to        test the modifier."
+  }
+}

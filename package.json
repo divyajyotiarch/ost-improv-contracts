@@ -21,7 +21,6 @@
     "url": "https://github.com/divyajyotiuk/ost-improv-contracts/issues"
   },
   "files": [
-    "npm_package",
     "npm_package/dist"
   ],
   "main": "./npm_package/dist/index.js",
@@ -34,6 +33,8 @@
     "lint:sol:slither": "npm run compile && ./tools/docker_run_slither.sh",
     "test:contracts": "truffle test",
     "test:range": "./tools/test_range.sh",
+    "test:package": "./npm_package/test/run_npm_package_test.sh",
+    "make:package": "node ./npm_package/make_package.js",
     "make:all": "npm-run-all lint:sol:solium lint:js compile:all test:contracts make:package test:package",
     "ganache-cli": "./tools/run_ganache_cli.sh"
   },
