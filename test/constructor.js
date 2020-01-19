@@ -1,26 +1,60 @@
 'use strict';
 
+const config = require('./test_lib/config');
 const utils = require('./test_lib/utils');
 const { Event } = require('./test_lib/event_decoder');
 const { AccountProvider } = require('./test_lib/utils.js');
 const MockContract = artifacts.require("./MockContract.sol");
 const OptimalWalletCreator = artifacts.require('OptimalWalletCreator');
 
+const UtilityBrandedToken = artifacts.require('UtilityBrandedToken');
+const EIP20TokenMock = artifacts.require('EIP20TokenMock');
+const UserWalletFactory = artifacts.require('UserWalletFactory');
+
+
 contract('OptimalWalletCreator::constructor', async(accounts) => {
    
+    let ubtContract;
     let ubtContractAddr;
     let walletFactoryContractAddr;
+    let walletFactoryContract;
     let organizationAddr;
     let accountProvider;
     let mock;
+
+    let brandedToken;
+
+    const SYMBOL = 'MOCK';
+    const NAME = 'Mock Token';
+    const { decimals: DECIMALS } = config;
     
     beforeEach(async () => {
+
+      accountProvider = new utils.AccountProvider(accounts);
+
+      organizationAddr = accountProvider.get();
+
+      brandedToken = await EIP20TokenMock.new(
+        SYMBOL,
+        NAME,
+        DECIMALS,
+        { from: organizationAddr },
+      );
         
-        accountProvider = new utils.AccountProvider(accounts);
-        ubtContractAddr = accountProvider.get();
-        walletFactoryContractAddr = accountProvider.get();
-        organizationAddr = accountProvider.get();
-        mock = await MockContract.new();
+      walletFactoryContract = await UserWalletFactory.new();
+
+      ubtContract = UtilityBrandedToken.new(
+        brandedToken.address,
+        SYMBOL,
+        NAME,
+        DECIMALS,
+        utils.NULL_ADDRESS,
+        { from: organizationAddr },
+      )
+      ubtContractAddr = ubtContract.address;
+      walletFactoryContractAddr = walletFactoryContract.address;
+      mock = await MockContract.new();
+
       });
 
 
@@ -44,7 +78,7 @@ contract('OptimalWalletCreator::constructor', async(accounts) => {
             walletFactoryContractAddr,
             organizationAddr,
           ),
-          'Utility Brand Token contract address should not be zero',
+          'Utility Brand Token contract address should not be zero'+ walletFactoryContractAddr,
           'Utility Brand Token contract address must not be zero.');
         });
 

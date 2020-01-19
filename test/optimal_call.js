@@ -7,33 +7,80 @@ const { AccountProvider } = require('./test_lib/utils.js');
 const MockContract = artifacts.require("./MockContract.sol");
 const OptimalWalletCreator = artifacts.require('OptimalWalletCreator');
 
+const UtilityBrandedToken = artifacts.require('UtilityBrandedToken');
+const EIP20TokenMock = artifacts.require('EIP20TokenMock');
+const UserWalletFactory = artifacts.require('UserWalletFactory');
+const Organization = artifacts.require('Organization');
+
 contract('OptimalWalletCreator::optimalCall', async (accounts) => {
 
+    let ubtContract;
     let ubtContractAddr;
     let walletFactoryContractAddr;
+    let walletFactoryContract;
     let organizationAddr;
-    let accountProvider;
+
+    let brandedToken;
+
+    const SYMBOL = 'MOCK';
+    const NAME = 'Mock Token';
+    const { decimals: DECIMALS } = config;
+    
+
     let internalActors = [];
     let optimalWalletCreator;
     let mock;
-    let worker;
-    let mockOrganization;
-    let organization;
+
+    const owner = accountProvider.get();
+    const admin = accountProvider.get();
+    const worker = accountProvider.get();
+    const expirationHeightDelta = 10;
+
+    let organization = null;
+    let expirationHeight = 0;
+
+    const workers = [];
+
+    organization = await Organization.new(
+      owner,
+      admin,
+      workers,
+      expirationHeight,
+    );
+
+    const currentBlockNumber = await web3.eth.getBlockNumber();
+    expirationHeight = currentBlockNumber + expirationHeightDelta;
     
     beforeEach(async () => {
         
-        accountProvider = new Utils.AccountProvider(accounts);
-        ubtContractAddr = accountProvider.get();
-        walletFactoryContractAddr = accountProvider.get();
+        accountProvider = new utils.AccountProvider(accounts);
+
         organizationAddr = accountProvider.get();
-        internalActors.push(accountProvider.get());
+
+        brandedToken = await EIP20TokenMock.new(
+          SYMBOL,
+          NAME,
+          DECIMALS,
+          { from: organizationAddr },
+        );
+          
+        walletFactoryContract = await UserWalletFactory.new();
+
+        ubtContract = UtilityBrandedToken.new(
+          brandedToken.address,
+          SYMBOL,
+          NAME,
+          DECIMALS,
+          utils.NULL_ADDRESS,
+          { from: organizationAddr },
+        )
+        ubtContractAddr = ubtContract.address;
+        walletFactoryContractAddr = walletFactoryContract.address;
         mock = await MockContract.new();
+
         optimalWalletCreator = await OptimalWalletCreator.new(ubtContractAddr,walletFactoryContractAddr,organizationAddr);
-        ({
-          mockOrganization,
-          worker,
-          organization,
-        } = await Utils.setupOrganization(optimalWalletCreator.address,organizationAddr));
+
+        organization.setWorker(optimalWalletCreator.address, expirationHeight, { from: owner });
         
       });
    
@@ -53,7 +100,7 @@ contract('OptimalWalletCreator::optimalCall', async (accounts) => {
               [], // session keys' spending limits
               [], // session keys' expiration heights
               internalActors,
-              {from : worker},
+              {from : optimalWalletCreator.address},
             ),
             'Should revert as the master copy address is null.',
             'Master copy address is null.',
@@ -75,7 +122,7 @@ contract('OptimalWalletCreator::optimalCall', async (accounts) => {
               [], // session keys' spending limits
               [], // session keys' expiration heights
               internalActors,
-              {from : worker},
+              {from : optimalWalletCreator.address},
             ),
             'Should revert as the master copy address is null.',
             'Master copy address is null.',
