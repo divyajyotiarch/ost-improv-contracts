@@ -69,7 +69,6 @@ contract OptimalWalletCreator is Organized {
         onlyWorker
         returns (Proxy gnosisSafeProxy_, Proxy tokenHolderProxy_)
     {
-        address[] memory _internalActors;
 
         (gnosisSafeProxy_, tokenHolderProxy_) = userWalletFactory.createUserWallet(
             _gnosisSafeMasterCopy,
@@ -82,10 +81,11 @@ contract OptimalWalletCreator is Organized {
             _sessionKeysExpirationHeights
         );
 
+       address[] memory _internalActors = new address[](1);
        _internalActors[0] = address(tokenHolderProxy_);
-        /*
-         * first call to createWalletUser with all above parameters
-         */
+    //     /*
+    //      * first call to createWalletUser with all above parameters
+    //      */
         utilityBrandedToken.registerInternalActors(_internalActors);
     }
 }

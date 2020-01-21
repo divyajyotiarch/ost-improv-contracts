@@ -5315,7 +5315,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T06:45:53.842Z",
+  "updatedAt": "2020-01-21T06:50:59.683Z",
   "devdoc": {
     "details": "UtilityBrandedToken are designed to be used within a decentralised     application and support increaseSupply and decreaseSupply of tokens.",
     "methods": {

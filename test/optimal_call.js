@@ -199,28 +199,28 @@ contract('OptimalWalletCreator::optimalCall', async (accounts) => {
             console.log(`tx response  is worker: ${txresponse1}`);
             const txresponse2 = await organization.isWorker(optimalWalletCreator.address);
             console.log(`optimalContract is worker: ${txresponse2}`);
-            // TODO check contract isWorker
-            // transfer gas
-            console.log('deployer balance:', await web3.eth.getBalance(deployerAddress));
-            console.log('optimalWallet balance:', await web3.eth.getBalance(optimalWalletCreator.address));
 
-            const receipt = await web3.eth.sendTransaction({from: deployerAddress, to: optimalWalletCreator.address, value: '100000000'});
-            console.log(`receipt:`, receipt);
-            console.log('optimalWallet balance:', await web3.eth.getBalance(optimalWalletCreator.address));
-      
-              const txresponse = await optimalWalletCreator.optimalCall(
-                accountProvider.get(), // gnosis safe's master copy
-                '0x', // gnosis safe's setup data
-                accountProvider.get(), // token holder's master copy
-                accountProvider.get(), // token
-                accountProvider.get(), // token rules
-                [], // session key addresses
-                [], // session keys' spending limits
-                [], // session keys' expiration heights
-                { from: worker },
+            const gnosisSafeMasterCopy = accountProvider.get();
+            const tokenHolderMasterCopy = accountProvider.get();
+
+
+            const transactionResponse = await optimalWalletCreator.optimalCall(
+              gnosisSafeMasterCopy, // gnosis safe's master copy
+              '0x', // gnosis safe's setup data
+              tokenHolderMasterCopy, // token holder's master copy
+              accountProvider.get(), // token rules
+              [], // session key addresses
+              [], // session keys' spending limits
+              [], // session keys' expiration heights
+              { from: worker },
             );
            
-            console.log(`tx Response: ${txresponse}`);
+            const events = Event.decodeTransactionResponse(
+              transactionResponse,
+            );
+      
+            console.log('transactionResponse', JSON.stringify(transactionResponse, null, 2));
+            console.log('transactionResponse Events', JSON.stringify(events, null, 2));
 
           });
           
