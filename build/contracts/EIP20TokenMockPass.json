@@ -301,14 +301,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/eip20token/EIP20TokenMockPass.sol",
     "exportedSymbols": {
       "EIP20TokenMockPass": [
-        2365
+        2364
       ]
     },
-    "id": 2366,
+    "id": 2365,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2320,
+        "id": 2319,
         "literals": [
           "solidity",
           "^",
@@ -321,10 +321,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/EIP20TokenMock.sol",
         "file": "../../EIP20TokenMock.sol",
-        "id": 2321,
+        "id": 2320,
         "nodeType": "ImportDirective",
-        "scope": 2366,
-        "sourceUnit": 1287,
+        "scope": 2365,
+        "sourceUnit": 1286,
         "src": "615:34:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -335,48 +335,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2322,
+              "id": 2321,
               "name": "EIP20TokenMock",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1286,
+              "referencedDeclaration": 1285,
               "src": "780:14:12",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EIP20TokenMock_$1286",
+                "typeIdentifier": "t_contract$_EIP20TokenMock_$1285",
                 "typeString": "contract EIP20TokenMock"
               }
             },
-            "id": 2323,
+            "id": 2322,
             "nodeType": "InheritanceSpecifier",
             "src": "780:14:12"
           }
         ],
         "contractDependencies": [
-          995,
-          1239,
-          1286
+          994,
+          1238,
+          1285
         ],
         "contractKind": "contract",
         "documentation": " @title Mock EIP20 Token Pass.\n *  @notice Mocks EIP20 token functions as passing.",
         "fullyImplemented": true,
-        "id": 2365,
+        "id": 2364,
         "linearizedBaseContracts": [
-          2365,
-          1286,
-          1239,
-          995
+          2364,
+          1285,
+          1238,
+          994
         ],
         "name": "EIP20TokenMockPass",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2337,
+              "id": 2336,
               "nodeType": "Block",
               "src": "1334:3:12",
               "statements": []
             },
             "documentation": "@param _symbol The value to which tokenSymbol, defined in EIP20Token,\n               is set.\n@param _name The value to which tokenName, defined in EIP20Token,\n             is set.\n@param _decimals The value to which tokenDecimals, defined in EIP20Token,\n                 is set.",
-            "id": 2338,
+            "id": 2337,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -384,11 +384,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 2332,
+                    "id": 2331,
                     "name": "_symbol",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2325,
+                    "referencedDeclaration": 2324,
                     "src": "1288:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -397,11 +397,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2333,
+                    "id": 2332,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2327,
+                    "referencedDeclaration": 2326,
                     "src": "1297:5:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -410,11 +410,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2334,
+                    "id": 2333,
                     "name": "_decimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2329,
+                    "referencedDeclaration": 2328,
                     "src": "1304:9:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
@@ -422,17 +422,17 @@
                     }
                   }
                 ],
-                "id": 2335,
+                "id": 2334,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2331,
+                  "id": 2330,
                   "name": "EIP20TokenMock",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1286,
+                  "referencedDeclaration": 1285,
                   "src": "1273:14:12",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_EIP20TokenMock_$1286_$",
+                    "typeIdentifier": "t_type$_t_contract$_EIP20TokenMock_$1285_$",
                     "typeString": "type(contract EIP20TokenMock)"
                   }
                 },
@@ -443,15 +443,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2330,
+              "id": 2329,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2325,
+                  "id": 2324,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2338,
+                  "scope": 2337,
                   "src": "1183:21:12",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -460,7 +460,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2324,
+                    "id": 2323,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1183:6:12",
@@ -474,10 +474,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 2326,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2338,
+                  "scope": 2337,
                   "src": "1214:19:12",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -486,7 +486,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2326,
+                    "id": 2325,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1214:6:12",
@@ -500,10 +500,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2329,
+                  "id": 2328,
                   "name": "_decimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2338,
+                  "scope": 2337,
                   "src": "1243:15:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -512,7 +512,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2328,
+                    "id": 2327,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1243:5:12",
@@ -528,12 +528,12 @@
               "src": "1173:91:12"
             },
             "returnParameters": {
-              "id": 2336,
+              "id": 2335,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1334:0:12"
             },
-            "scope": 2365,
+            "scope": 2364,
             "src": "1162:175:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -541,7 +541,7 @@
           },
           {
             "body": {
-              "id": 2351,
+              "id": 2350,
               "nodeType": "Block",
               "src": "1587:28:12",
               "statements": [
@@ -549,7 +549,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2349,
+                    "id": 2348,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -564,30 +564,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2348,
-                  "id": 2350,
+                  "functionReturnParameters": 2347,
+                  "id": 2349,
                   "nodeType": "Return",
                   "src": "1597:11:12"
                 }
               ]
             },
             "documentation": "@notice Mocks passing transferFrom.\n     * @return bool True.",
-            "id": 2352,
+            "id": 2351,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferFrom",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2345,
+              "id": 2344,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2340,
+                  "id": 2339,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1497:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -596,7 +596,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2339,
+                    "id": 2338,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1497:7:12",
@@ -611,10 +611,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2342,
+                  "id": 2341,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1514:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -623,7 +623,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2341,
+                    "id": 2340,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1514:7:12",
@@ -638,10 +638,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2344,
+                  "id": 2343,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1531:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -650,7 +650,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2343,
+                    "id": 2342,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1531:7:12",
@@ -666,15 +666,15 @@
               "src": "1487:57:12"
             },
             "returnParameters": {
-              "id": 2348,
+              "id": 2347,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2347,
+                  "id": 2346,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1577:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -683,7 +683,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2346,
+                    "id": 2345,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1577:4:12",
@@ -698,15 +698,15 @@
               ],
               "src": "1576:6:12"
             },
-            "scope": 2365,
+            "scope": 2364,
             "src": "1466:149:12",
             "stateMutability": "nonpayable",
-            "superFunction": 1210,
+            "superFunction": 1209,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 2363,
+              "id": 2362,
               "nodeType": "Block",
               "src": "1809:28:12",
               "statements": [
@@ -714,7 +714,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2361,
+                    "id": 2360,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -729,30 +729,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2360,
-                  "id": 2362,
+                  "functionReturnParameters": 2359,
+                  "id": 2361,
                   "nodeType": "Return",
                   "src": "1819:11:12"
                 }
               ]
             },
             "documentation": "@notice Mocks passing transfer.\n     * @return bool True.",
-            "id": 2364,
+            "id": 2363,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transfer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2357,
+              "id": 2356,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2354,
+                  "id": 2353,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2364,
+                  "scope": 2363,
                   "src": "1736:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -761,7 +761,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2353,
+                    "id": 2352,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1736:7:12",
@@ -776,10 +776,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2356,
+                  "id": 2355,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2364,
+                  "scope": 2363,
                   "src": "1753:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -788,7 +788,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2355,
+                    "id": 2354,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1753:7:12",
@@ -804,15 +804,15 @@
               "src": "1726:40:12"
             },
             "returnParameters": {
-              "id": 2360,
+              "id": 2359,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2359,
+                  "id": 2358,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2364,
+                  "scope": 2363,
                   "src": "1799:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -821,7 +821,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2358,
+                    "id": 2357,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1799:4:12",
@@ -836,14 +836,14 @@
               ],
               "src": "1798:6:12"
             },
-            "scope": 2365,
+            "scope": 2364,
             "src": "1709:128:12",
             "stateMutability": "nonpayable",
-            "superFunction": 1151,
+            "superFunction": 1150,
             "visibility": "public"
           }
         ],
-        "scope": 2366,
+        "scope": 2365,
         "src": "749:1090:12"
       }
     ],
@@ -853,14 +853,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/eip20token/EIP20TokenMockPass.sol",
     "exportedSymbols": {
       "EIP20TokenMockPass": [
-        2365
+        2364
       ]
     },
-    "id": 2366,
+    "id": 2365,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2320,
+        "id": 2319,
         "literals": [
           "solidity",
           "^",
@@ -873,10 +873,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/EIP20TokenMock.sol",
         "file": "../../EIP20TokenMock.sol",
-        "id": 2321,
+        "id": 2320,
         "nodeType": "ImportDirective",
-        "scope": 2366,
-        "sourceUnit": 1287,
+        "scope": 2365,
+        "sourceUnit": 1286,
         "src": "615:34:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -887,48 +887,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2322,
+              "id": 2321,
               "name": "EIP20TokenMock",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1286,
+              "referencedDeclaration": 1285,
               "src": "780:14:12",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EIP20TokenMock_$1286",
+                "typeIdentifier": "t_contract$_EIP20TokenMock_$1285",
                 "typeString": "contract EIP20TokenMock"
               }
             },
-            "id": 2323,
+            "id": 2322,
             "nodeType": "InheritanceSpecifier",
             "src": "780:14:12"
           }
         ],
         "contractDependencies": [
-          995,
-          1239,
-          1286
+          994,
+          1238,
+          1285
         ],
         "contractKind": "contract",
         "documentation": " @title Mock EIP20 Token Pass.\n *  @notice Mocks EIP20 token functions as passing.",
         "fullyImplemented": true,
-        "id": 2365,
+        "id": 2364,
         "linearizedBaseContracts": [
-          2365,
-          1286,
-          1239,
-          995
+          2364,
+          1285,
+          1238,
+          994
         ],
         "name": "EIP20TokenMockPass",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2337,
+              "id": 2336,
               "nodeType": "Block",
               "src": "1334:3:12",
               "statements": []
             },
             "documentation": "@param _symbol The value to which tokenSymbol, defined in EIP20Token,\n               is set.\n@param _name The value to which tokenName, defined in EIP20Token,\n             is set.\n@param _decimals The value to which tokenDecimals, defined in EIP20Token,\n                 is set.",
-            "id": 2338,
+            "id": 2337,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -936,11 +936,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 2332,
+                    "id": 2331,
                     "name": "_symbol",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2325,
+                    "referencedDeclaration": 2324,
                     "src": "1288:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -949,11 +949,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2333,
+                    "id": 2332,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2327,
+                    "referencedDeclaration": 2326,
                     "src": "1297:5:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -962,11 +962,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2334,
+                    "id": 2333,
                     "name": "_decimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2329,
+                    "referencedDeclaration": 2328,
                     "src": "1304:9:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
@@ -974,17 +974,17 @@
                     }
                   }
                 ],
-                "id": 2335,
+                "id": 2334,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2331,
+                  "id": 2330,
                   "name": "EIP20TokenMock",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1286,
+                  "referencedDeclaration": 1285,
                   "src": "1273:14:12",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_EIP20TokenMock_$1286_$",
+                    "typeIdentifier": "t_type$_t_contract$_EIP20TokenMock_$1285_$",
                     "typeString": "type(contract EIP20TokenMock)"
                   }
                 },
@@ -995,15 +995,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2330,
+              "id": 2329,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2325,
+                  "id": 2324,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2338,
+                  "scope": 2337,
                   "src": "1183:21:12",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1012,7 +1012,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2324,
+                    "id": 2323,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1183:6:12",
@@ -1026,10 +1026,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 2326,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2338,
+                  "scope": 2337,
                   "src": "1214:19:12",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1038,7 +1038,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2326,
+                    "id": 2325,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1214:6:12",
@@ -1052,10 +1052,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2329,
+                  "id": 2328,
                   "name": "_decimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2338,
+                  "scope": 2337,
                   "src": "1243:15:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1064,7 +1064,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2328,
+                    "id": 2327,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1243:5:12",
@@ -1080,12 +1080,12 @@
               "src": "1173:91:12"
             },
             "returnParameters": {
-              "id": 2336,
+              "id": 2335,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1334:0:12"
             },
-            "scope": 2365,
+            "scope": 2364,
             "src": "1162:175:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1093,7 +1093,7 @@
           },
           {
             "body": {
-              "id": 2351,
+              "id": 2350,
               "nodeType": "Block",
               "src": "1587:28:12",
               "statements": [
@@ -1101,7 +1101,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2349,
+                    "id": 2348,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1116,30 +1116,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2348,
-                  "id": 2350,
+                  "functionReturnParameters": 2347,
+                  "id": 2349,
                   "nodeType": "Return",
                   "src": "1597:11:12"
                 }
               ]
             },
             "documentation": "@notice Mocks passing transferFrom.\n     * @return bool True.",
-            "id": 2352,
+            "id": 2351,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferFrom",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2345,
+              "id": 2344,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2340,
+                  "id": 2339,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1497:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1148,7 +1148,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2339,
+                    "id": 2338,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1497:7:12",
@@ -1163,10 +1163,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2342,
+                  "id": 2341,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1514:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1175,7 +1175,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2341,
+                    "id": 2340,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1514:7:12",
@@ -1190,10 +1190,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2344,
+                  "id": 2343,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1531:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1202,7 +1202,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2343,
+                    "id": 2342,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1531:7:12",
@@ -1218,15 +1218,15 @@
               "src": "1487:57:12"
             },
             "returnParameters": {
-              "id": 2348,
+              "id": 2347,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2347,
+                  "id": 2346,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2352,
+                  "scope": 2351,
                   "src": "1577:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1235,7 +1235,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2346,
+                    "id": 2345,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1577:4:12",
@@ -1250,15 +1250,15 @@
               ],
               "src": "1576:6:12"
             },
-            "scope": 2365,
+            "scope": 2364,
             "src": "1466:149:12",
             "stateMutability": "nonpayable",
-            "superFunction": 1210,
+            "superFunction": 1209,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 2363,
+              "id": 2362,
               "nodeType": "Block",
               "src": "1809:28:12",
               "statements": [
@@ -1266,7 +1266,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2361,
+                    "id": 2360,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1281,30 +1281,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2360,
-                  "id": 2362,
+                  "functionReturnParameters": 2359,
+                  "id": 2361,
                   "nodeType": "Return",
                   "src": "1819:11:12"
                 }
               ]
             },
             "documentation": "@notice Mocks passing transfer.\n     * @return bool True.",
-            "id": 2364,
+            "id": 2363,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transfer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2357,
+              "id": 2356,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2354,
+                  "id": 2353,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2364,
+                  "scope": 2363,
                   "src": "1736:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1313,7 +1313,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2353,
+                    "id": 2352,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1736:7:12",
@@ -1328,10 +1328,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2356,
+                  "id": 2355,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2364,
+                  "scope": 2363,
                   "src": "1753:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1340,7 +1340,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2355,
+                    "id": 2354,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1753:7:12",
@@ -1356,15 +1356,15 @@
               "src": "1726:40:12"
             },
             "returnParameters": {
-              "id": 2360,
+              "id": 2359,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2359,
+                  "id": 2358,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2364,
+                  "scope": 2363,
                   "src": "1799:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1373,7 +1373,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2358,
+                    "id": 2357,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1799:4:12",
@@ -1388,14 +1388,14 @@
               ],
               "src": "1798:6:12"
             },
-            "scope": 2365,
+            "scope": 2364,
             "src": "1709:128:12",
             "stateMutability": "nonpayable",
-            "superFunction": 1151,
+            "superFunction": 1150,
             "visibility": "public"
           }
         ],
-        "scope": 2366,
+        "scope": 2365,
         "src": "749:1090:12"
       }
     ],
@@ -1407,7 +1407,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T06:45:53.851Z",
+  "updatedAt": "2020-01-21T10:16:17.614Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
