@@ -80,14 +80,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/PayingProxy.sol",
     "exportedSymbols": {
       "PayingProxy": [
-        11451
+        11450
       ]
     },
-    "id": 11452,
+    "id": 11451,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11396,
+        "id": 11395,
         "literals": [
           "solidity",
           "^",
@@ -100,10 +100,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/SecuredTokenTransfer.sol",
         "file": "../common/SecuredTokenTransfer.sol",
-        "id": 11397,
+        "id": 11396,
         "nodeType": "ImportDirective",
-        "scope": 11452,
-        "sourceUnit": 10227,
+        "scope": 11451,
+        "sourceUnit": 10226,
         "src": "24:44:91",
         "symbolAliases": [],
         "unitAlias": ""
@@ -111,10 +111,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol",
         "file": "./DelegateConstructorProxy.sol",
-        "id": 11398,
+        "id": 11397,
         "nodeType": "ImportDirective",
-        "scope": 11452,
-        "sourceUnit": 11395,
+        "scope": 11451,
+        "sourceUnit": 11394,
         "src": "69:40:91",
         "symbolAliases": [],
         "unitAlias": ""
@@ -125,17 +125,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11399,
+              "id": 11398,
               "name": "DelegateConstructorProxy",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11394,
+              "referencedDeclaration": 11393,
               "src": "483:24:91",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DelegateConstructorProxy_$11394",
+                "typeIdentifier": "t_contract$_DelegateConstructorProxy_$11393",
                 "typeString": "contract DelegateConstructorProxy"
               }
             },
-            "id": 11400,
+            "id": 11399,
             "nodeType": "InheritanceSpecifier",
             "src": "483:24:91"
           },
@@ -143,42 +143,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11401,
+              "id": 11400,
               "name": "SecuredTokenTransfer",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 10226,
+              "referencedDeclaration": 10225,
               "src": "509:20:91",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SecuredTokenTransfer_$10226",
+                "typeIdentifier": "t_contract$_SecuredTokenTransfer_$10225",
                 "typeString": "contract SecuredTokenTransfer"
               }
             },
-            "id": 11402,
+            "id": 11401,
             "nodeType": "InheritanceSpecifier",
             "src": "509:20:91"
           }
         ],
         "contractDependencies": [
-          10226,
-          11394,
-          11496
+          10225,
+          11393,
+          11495
         ],
         "contractKind": "contract",
         "documentation": "@title Paying Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor. And sends funds after creation to a specified account.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 11451,
+        "id": 11450,
         "linearizedBaseContracts": [
-          11451,
-          10226,
-          11394,
-          11496
+          11450,
+          10225,
+          11393,
+          11495
         ],
         "name": "PayingProxy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 11449,
+              "id": 11448,
               "nodeType": "Block",
               "src": "1154:390:91",
               "statements": [
@@ -189,18 +189,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11421,
+                    "id": 11420,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 11419,
+                      "id": 11418,
                       "name": "payment",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11412,
+                      "referencedDeclaration": 11411,
                       "src": "1168:7:91",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -212,7 +212,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 11420,
+                      "id": 11419,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -234,11 +234,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 11448,
+                  "id": 11447,
                   "nodeType": "IfStatement",
                   "src": "1164:373:91",
                   "trueBody": {
-                    "id": 11447,
+                    "id": 11446,
                     "nodeType": "Block",
                     "src": "1181:356:91",
                     "statements": [
@@ -249,18 +249,18 @@
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           },
-                          "id": 11426,
+                          "id": 11425,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 11422,
+                            "id": 11421,
                             "name": "paymentToken",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11410,
+                            "referencedDeclaration": 11409,
                             "src": "1199:12:91",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -275,7 +275,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "30",
-                                "id": 11424,
+                                "id": 11423,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -298,7 +298,7 @@
                                   "typeString": "int_const 0"
                                 }
                               ],
-                              "id": 11423,
+                              "id": 11422,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -311,7 +311,7 @@
                               },
                               "typeName": "address"
                             },
-                            "id": 11425,
+                            "id": 11424,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -332,7 +332,7 @@
                           }
                         },
                         "falseBody": {
-                          "id": 11445,
+                          "id": 11444,
                           "nodeType": "Block",
                           "src": "1399:128:91",
                           "statements": [
@@ -345,11 +345,11 @@
                                     "arguments": [
                                       {
                                         "argumentTypes": null,
-                                        "id": 11438,
+                                        "id": 11437,
                                         "name": "paymentToken",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11410,
+                                        "referencedDeclaration": 11409,
                                         "src": "1439:12:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_address",
@@ -358,11 +358,11 @@
                                       },
                                       {
                                         "argumentTypes": null,
-                                        "id": 11439,
+                                        "id": 11438,
                                         "name": "funder",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11408,
+                                        "referencedDeclaration": 11407,
                                         "src": "1453:6:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_address_payable",
@@ -371,11 +371,11 @@
                                       },
                                       {
                                         "argumentTypes": null,
-                                        "id": 11440,
+                                        "id": 11439,
                                         "name": "payment",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11412,
+                                        "referencedDeclaration": 11411,
                                         "src": "1461:7:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_uint256",
@@ -398,18 +398,18 @@
                                           "typeString": "uint256"
                                         }
                                       ],
-                                      "id": 11437,
+                                      "id": 11436,
                                       "name": "transferToken",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 10225,
+                                      "referencedDeclaration": 10224,
                                       "src": "1425:13:91",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
                                         "typeString": "function (address,address,uint256) returns (bool)"
                                       }
                                     },
-                                    "id": 11441,
+                                    "id": 11440,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
@@ -426,7 +426,7 @@
                                   {
                                     "argumentTypes": null,
                                     "hexValue": "436f756c64206e6f74207061792073616665206372656174696f6e207769746820746f6b656e",
-                                    "id": 11442,
+                                    "id": 11441,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -453,21 +453,21 @@
                                       "typeString": "literal_string \"Could not pay safe creation with token\""
                                     }
                                   ],
-                                  "id": 11436,
+                                  "id": 11435,
                                   "name": "require",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [
-                                    12908,
-                                    12909
+                                    12907,
+                                    12908
                                   ],
-                                  "referencedDeclaration": 12909,
+                                  "referencedDeclaration": 12908,
                                   "src": "1417:7:91",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                                     "typeString": "function (bool,string memory) pure"
                                   }
                                 },
-                                "id": 11443,
+                                "id": 11442,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -481,17 +481,17 @@
                                   "typeString": "tuple()"
                                 }
                               },
-                              "id": 11444,
+                              "id": 11443,
                               "nodeType": "ExpressionStatement",
                               "src": "1417:95:91"
                             }
                           ]
                         },
-                        "id": 11446,
+                        "id": 11445,
                         "nodeType": "IfStatement",
                         "src": "1195:332:91",
                         "trueBody": {
-                          "id": 11435,
+                          "id": 11434,
                           "nodeType": "Block",
                           "src": "1227:166:91",
                           "statements": [
@@ -504,11 +504,11 @@
                                     "arguments": [
                                       {
                                         "argumentTypes": null,
-                                        "id": 11430,
+                                        "id": 11429,
                                         "name": "payment",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11412,
+                                        "referencedDeclaration": 11411,
                                         "src": "1327:7:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_uint256",
@@ -525,18 +525,18 @@
                                       ],
                                       "expression": {
                                         "argumentTypes": null,
-                                        "id": 11428,
+                                        "id": 11427,
                                         "name": "funder",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11408,
+                                        "referencedDeclaration": 11407,
                                         "src": "1315:6:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_address_payable",
                                           "typeString": "address payable"
                                         }
                                       },
-                                      "id": 11429,
+                                      "id": 11428,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": false,
@@ -550,7 +550,7 @@
                                         "typeString": "function (uint256) returns (bool)"
                                       }
                                     },
-                                    "id": 11431,
+                                    "id": 11430,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
@@ -567,7 +567,7 @@
                                   {
                                     "argumentTypes": null,
                                     "hexValue": "436f756c64206e6f74207061792073616665206372656174696f6e2077697468206574686572",
-                                    "id": 11432,
+                                    "id": 11431,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -594,21 +594,21 @@
                                       "typeString": "literal_string \"Could not pay safe creation with ether\""
                                     }
                                   ],
-                                  "id": 11427,
+                                  "id": 11426,
                                   "name": "require",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [
-                                    12908,
-                                    12909
+                                    12907,
+                                    12908
                                   ],
-                                  "referencedDeclaration": 12909,
+                                  "referencedDeclaration": 12908,
                                   "src": "1307:7:91",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                                     "typeString": "function (bool,string memory) pure"
                                   }
                                 },
-                                "id": 11433,
+                                "id": 11432,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -622,7 +622,7 @@
                                   "typeString": "tuple()"
                                 }
                               },
-                              "id": 11434,
+                              "id": 11433,
                               "nodeType": "ExpressionStatement",
                               "src": "1307:71:91"
                             }
@@ -635,7 +635,7 @@
               ]
             },
             "documentation": "@dev Constructor function sets address of master copy contract.\n @param _masterCopy Master copy address.\n @param initializer Data used for a delegate call to initialize the contract.\n @param funder Address that should be paid for the execution of this call\n @param paymentToken Token that should be used for the payment (0 is ETH)\n @param payment Value that should be paid",
-            "id": 11450,
+            "id": 11449,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -643,11 +643,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 11415,
+                    "id": 11414,
                     "name": "_masterCopy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11404,
+                    "referencedDeclaration": 11403,
                     "src": "1109:11:91",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -656,11 +656,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 11416,
+                    "id": 11415,
                     "name": "initializer",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11406,
+                    "referencedDeclaration": 11405,
                     "src": "1122:11:91",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_memory_ptr",
@@ -668,17 +668,17 @@
                     }
                   }
                 ],
-                "id": 11417,
+                "id": 11416,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 11414,
+                  "id": 11413,
                   "name": "DelegateConstructorProxy",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 11394,
+                  "referencedDeclaration": 11393,
                   "src": "1084:24:91",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DelegateConstructorProxy_$11394_$",
+                    "typeIdentifier": "t_type$_t_contract$_DelegateConstructorProxy_$11393_$",
                     "typeString": "type(contract DelegateConstructorProxy)"
                   }
                 },
@@ -689,15 +689,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11413,
+              "id": 11412,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11404,
+                  "id": 11403,
                   "name": "_masterCopy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "965:19:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -706,7 +706,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11403,
+                    "id": 11402,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "965:7:91",
@@ -721,10 +721,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11406,
+                  "id": 11405,
                   "name": "initializer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "986:24:91",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -733,7 +733,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11405,
+                    "id": 11404,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "986:5:91",
@@ -747,10 +747,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11408,
+                  "id": 11407,
                   "name": "funder",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "1012:22:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -759,7 +759,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 11407,
+                    "id": 11406,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1012:15:91",
@@ -774,10 +774,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11410,
+                  "id": 11409,
                   "name": "paymentToken",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "1036:20:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -786,7 +786,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11409,
+                    "id": 11408,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1036:7:91",
@@ -801,10 +801,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11412,
+                  "id": 11411,
                   "name": "payment",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "1058:15:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -813,7 +813,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11411,
+                    "id": 11410,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1058:7:91",
@@ -829,19 +829,19 @@
               "src": "964:110:91"
             },
             "returnParameters": {
-              "id": 11418,
+              "id": 11417,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1154:0:91"
             },
-            "scope": 11451,
+            "scope": 11450,
             "src": "953:591:91",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 11452,
+        "scope": 11451,
         "src": "459:1087:91"
       }
     ],
@@ -851,14 +851,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/PayingProxy.sol",
     "exportedSymbols": {
       "PayingProxy": [
-        11451
+        11450
       ]
     },
-    "id": 11452,
+    "id": 11451,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11396,
+        "id": 11395,
         "literals": [
           "solidity",
           "^",
@@ -871,10 +871,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/SecuredTokenTransfer.sol",
         "file": "../common/SecuredTokenTransfer.sol",
-        "id": 11397,
+        "id": 11396,
         "nodeType": "ImportDirective",
-        "scope": 11452,
-        "sourceUnit": 10227,
+        "scope": 11451,
+        "sourceUnit": 10226,
         "src": "24:44:91",
         "symbolAliases": [],
         "unitAlias": ""
@@ -882,10 +882,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/proxies/DelegateConstructorProxy.sol",
         "file": "./DelegateConstructorProxy.sol",
-        "id": 11398,
+        "id": 11397,
         "nodeType": "ImportDirective",
-        "scope": 11452,
-        "sourceUnit": 11395,
+        "scope": 11451,
+        "sourceUnit": 11394,
         "src": "69:40:91",
         "symbolAliases": [],
         "unitAlias": ""
@@ -896,17 +896,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11399,
+              "id": 11398,
               "name": "DelegateConstructorProxy",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11394,
+              "referencedDeclaration": 11393,
               "src": "483:24:91",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DelegateConstructorProxy_$11394",
+                "typeIdentifier": "t_contract$_DelegateConstructorProxy_$11393",
                 "typeString": "contract DelegateConstructorProxy"
               }
             },
-            "id": 11400,
+            "id": 11399,
             "nodeType": "InheritanceSpecifier",
             "src": "483:24:91"
           },
@@ -914,42 +914,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11401,
+              "id": 11400,
               "name": "SecuredTokenTransfer",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 10226,
+              "referencedDeclaration": 10225,
               "src": "509:20:91",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SecuredTokenTransfer_$10226",
+                "typeIdentifier": "t_contract$_SecuredTokenTransfer_$10225",
                 "typeString": "contract SecuredTokenTransfer"
               }
             },
-            "id": 11402,
+            "id": 11401,
             "nodeType": "InheritanceSpecifier",
             "src": "509:20:91"
           }
         ],
         "contractDependencies": [
-          10226,
-          11394,
-          11496
+          10225,
+          11393,
+          11495
         ],
         "contractKind": "contract",
         "documentation": "@title Paying Proxy - Generic proxy contract allows to execute all transactions applying the code of a master contract. It is possible to send along initialization data with the constructor. And sends funds after creation to a specified account.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 11451,
+        "id": 11450,
         "linearizedBaseContracts": [
-          11451,
-          10226,
-          11394,
-          11496
+          11450,
+          10225,
+          11393,
+          11495
         ],
         "name": "PayingProxy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 11449,
+              "id": 11448,
               "nodeType": "Block",
               "src": "1154:390:91",
               "statements": [
@@ -960,18 +960,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11421,
+                    "id": 11420,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 11419,
+                      "id": 11418,
                       "name": "payment",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11412,
+                      "referencedDeclaration": 11411,
                       "src": "1168:7:91",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -983,7 +983,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 11420,
+                      "id": 11419,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1005,11 +1005,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 11448,
+                  "id": 11447,
                   "nodeType": "IfStatement",
                   "src": "1164:373:91",
                   "trueBody": {
-                    "id": 11447,
+                    "id": 11446,
                     "nodeType": "Block",
                     "src": "1181:356:91",
                     "statements": [
@@ -1020,18 +1020,18 @@
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           },
-                          "id": 11426,
+                          "id": 11425,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 11422,
+                            "id": 11421,
                             "name": "paymentToken",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11410,
+                            "referencedDeclaration": 11409,
                             "src": "1199:12:91",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1046,7 +1046,7 @@
                               {
                                 "argumentTypes": null,
                                 "hexValue": "30",
-                                "id": 11424,
+                                "id": 11423,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1069,7 +1069,7 @@
                                   "typeString": "int_const 0"
                                 }
                               ],
-                              "id": 11423,
+                              "id": 11422,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1082,7 +1082,7 @@
                               },
                               "typeName": "address"
                             },
-                            "id": 11425,
+                            "id": 11424,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1103,7 +1103,7 @@
                           }
                         },
                         "falseBody": {
-                          "id": 11445,
+                          "id": 11444,
                           "nodeType": "Block",
                           "src": "1399:128:91",
                           "statements": [
@@ -1116,11 +1116,11 @@
                                     "arguments": [
                                       {
                                         "argumentTypes": null,
-                                        "id": 11438,
+                                        "id": 11437,
                                         "name": "paymentToken",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11410,
+                                        "referencedDeclaration": 11409,
                                         "src": "1439:12:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_address",
@@ -1129,11 +1129,11 @@
                                       },
                                       {
                                         "argumentTypes": null,
-                                        "id": 11439,
+                                        "id": 11438,
                                         "name": "funder",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11408,
+                                        "referencedDeclaration": 11407,
                                         "src": "1453:6:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_address_payable",
@@ -1142,11 +1142,11 @@
                                       },
                                       {
                                         "argumentTypes": null,
-                                        "id": 11440,
+                                        "id": 11439,
                                         "name": "payment",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11412,
+                                        "referencedDeclaration": 11411,
                                         "src": "1461:7:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_uint256",
@@ -1169,18 +1169,18 @@
                                           "typeString": "uint256"
                                         }
                                       ],
-                                      "id": 11437,
+                                      "id": 11436,
                                       "name": "transferToken",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 10225,
+                                      "referencedDeclaration": 10224,
                                       "src": "1425:13:91",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
                                         "typeString": "function (address,address,uint256) returns (bool)"
                                       }
                                     },
-                                    "id": 11441,
+                                    "id": 11440,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
@@ -1197,7 +1197,7 @@
                                   {
                                     "argumentTypes": null,
                                     "hexValue": "436f756c64206e6f74207061792073616665206372656174696f6e207769746820746f6b656e",
-                                    "id": 11442,
+                                    "id": 11441,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -1224,21 +1224,21 @@
                                       "typeString": "literal_string \"Could not pay safe creation with token\""
                                     }
                                   ],
-                                  "id": 11436,
+                                  "id": 11435,
                                   "name": "require",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [
-                                    12908,
-                                    12909
+                                    12907,
+                                    12908
                                   ],
-                                  "referencedDeclaration": 12909,
+                                  "referencedDeclaration": 12908,
                                   "src": "1417:7:91",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                                     "typeString": "function (bool,string memory) pure"
                                   }
                                 },
-                                "id": 11443,
+                                "id": 11442,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1252,17 +1252,17 @@
                                   "typeString": "tuple()"
                                 }
                               },
-                              "id": 11444,
+                              "id": 11443,
                               "nodeType": "ExpressionStatement",
                               "src": "1417:95:91"
                             }
                           ]
                         },
-                        "id": 11446,
+                        "id": 11445,
                         "nodeType": "IfStatement",
                         "src": "1195:332:91",
                         "trueBody": {
-                          "id": 11435,
+                          "id": 11434,
                           "nodeType": "Block",
                           "src": "1227:166:91",
                           "statements": [
@@ -1275,11 +1275,11 @@
                                     "arguments": [
                                       {
                                         "argumentTypes": null,
-                                        "id": 11430,
+                                        "id": 11429,
                                         "name": "payment",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11412,
+                                        "referencedDeclaration": 11411,
                                         "src": "1327:7:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_uint256",
@@ -1296,18 +1296,18 @@
                                       ],
                                       "expression": {
                                         "argumentTypes": null,
-                                        "id": 11428,
+                                        "id": 11427,
                                         "name": "funder",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 11408,
+                                        "referencedDeclaration": 11407,
                                         "src": "1315:6:91",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_address_payable",
                                           "typeString": "address payable"
                                         }
                                       },
-                                      "id": 11429,
+                                      "id": 11428,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": false,
@@ -1321,7 +1321,7 @@
                                         "typeString": "function (uint256) returns (bool)"
                                       }
                                     },
-                                    "id": 11431,
+                                    "id": 11430,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
@@ -1338,7 +1338,7 @@
                                   {
                                     "argumentTypes": null,
                                     "hexValue": "436f756c64206e6f74207061792073616665206372656174696f6e2077697468206574686572",
-                                    "id": 11432,
+                                    "id": 11431,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -1365,21 +1365,21 @@
                                       "typeString": "literal_string \"Could not pay safe creation with ether\""
                                     }
                                   ],
-                                  "id": 11427,
+                                  "id": 11426,
                                   "name": "require",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [
-                                    12908,
-                                    12909
+                                    12907,
+                                    12908
                                   ],
-                                  "referencedDeclaration": 12909,
+                                  "referencedDeclaration": 12908,
                                   "src": "1307:7:91",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                                     "typeString": "function (bool,string memory) pure"
                                   }
                                 },
-                                "id": 11433,
+                                "id": 11432,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1393,7 +1393,7 @@
                                   "typeString": "tuple()"
                                 }
                               },
-                              "id": 11434,
+                              "id": 11433,
                               "nodeType": "ExpressionStatement",
                               "src": "1307:71:91"
                             }
@@ -1406,7 +1406,7 @@
               ]
             },
             "documentation": "@dev Constructor function sets address of master copy contract.\n @param _masterCopy Master copy address.\n @param initializer Data used for a delegate call to initialize the contract.\n @param funder Address that should be paid for the execution of this call\n @param paymentToken Token that should be used for the payment (0 is ETH)\n @param payment Value that should be paid",
-            "id": 11450,
+            "id": 11449,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -1414,11 +1414,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 11415,
+                    "id": 11414,
                     "name": "_masterCopy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11404,
+                    "referencedDeclaration": 11403,
                     "src": "1109:11:91",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1427,11 +1427,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 11416,
+                    "id": 11415,
                     "name": "initializer",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11406,
+                    "referencedDeclaration": 11405,
                     "src": "1122:11:91",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_memory_ptr",
@@ -1439,17 +1439,17 @@
                     }
                   }
                 ],
-                "id": 11417,
+                "id": 11416,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 11414,
+                  "id": 11413,
                   "name": "DelegateConstructorProxy",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 11394,
+                  "referencedDeclaration": 11393,
                   "src": "1084:24:91",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DelegateConstructorProxy_$11394_$",
+                    "typeIdentifier": "t_type$_t_contract$_DelegateConstructorProxy_$11393_$",
                     "typeString": "type(contract DelegateConstructorProxy)"
                   }
                 },
@@ -1460,15 +1460,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11413,
+              "id": 11412,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11404,
+                  "id": 11403,
                   "name": "_masterCopy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "965:19:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1477,7 +1477,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11403,
+                    "id": 11402,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "965:7:91",
@@ -1492,10 +1492,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11406,
+                  "id": 11405,
                   "name": "initializer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "986:24:91",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1504,7 +1504,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11405,
+                    "id": 11404,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "986:5:91",
@@ -1518,10 +1518,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11408,
+                  "id": 11407,
                   "name": "funder",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "1012:22:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1530,7 +1530,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 11407,
+                    "id": 11406,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1012:15:91",
@@ -1545,10 +1545,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11410,
+                  "id": 11409,
                   "name": "paymentToken",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "1036:20:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1557,7 +1557,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11409,
+                    "id": 11408,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1036:7:91",
@@ -1572,10 +1572,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 11412,
+                  "id": 11411,
                   "name": "payment",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11450,
+                  "scope": 11449,
                   "src": "1058:15:91",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1584,7 +1584,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11411,
+                    "id": 11410,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1058:7:91",
@@ -1600,19 +1600,19 @@
               "src": "964:110:91"
             },
             "returnParameters": {
-              "id": 11418,
+              "id": 11417,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1154:0:91"
             },
-            "scope": 11451,
+            "scope": 11450,
             "src": "953:591:91",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 11452,
+        "scope": 11451,
         "src": "459:1087:91"
       }
     ],
@@ -1624,7 +1624,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T06:50:59.762Z",
+  "updatedAt": "2020-01-21T17:19:56.062Z",
   "devdoc": {
     "author": "Stefan George - <stefan@gnosis.pm>Richard Meissner - <richard@gnosis.pm>",
     "methods": {

@@ -34,14 +34,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleCaller.sol",
     "exportedSymbols": {
       "FirewalledRuleCaller": [
-        6716
+        6715
       ]
     },
-    "id": 6717,
+    "id": 6716,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6693,
+        "id": 6692,
         "literals": [
           "solidity",
           "^",
@@ -54,10 +54,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
         "file": "./FirewalledRuleImplementation.sol",
-        "id": 6694,
+        "id": 6693,
         "nodeType": "ImportDirective",
-        "scope": 6717,
-        "sourceUnit": 6738,
+        "scope": 6716,
+        "sourceUnit": 6737,
         "src": "613:44:56",
         "symbolAliases": [],
         "unitAlias": ""
@@ -68,35 +68,35 @@
         "contractKind": "contract",
         "documentation": "@title A contract that calls a method that is firewalled.\n * @notice The firewalled method explicitly checks for `tx.origin` as opposed to\n        `msg.sender`. In order to test the desired behavior, an indirection\n        is required. This contract provides exactly that indirection. It\n        calls a firewalled method to assert that the firewall works on\n        `tx.origin` and not `msg.sender`, as `msg.sender` is this contract.",
         "fullyImplemented": true,
-        "id": 6716,
+        "id": 6715,
         "linearizedBaseContracts": [
-          6716
+          6715
         ],
         "name": "FirewalledRuleCaller",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 6696,
+            "id": 6695,
             "name": "rule",
             "nodeType": "VariableDeclaration",
-            "scope": 6716,
+            "scope": 6715,
             "src": "1176:33:56",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+              "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
               "typeString": "contract FirewalledRuleImplementation"
             },
             "typeName": {
               "contractScope": null,
-              "id": 6695,
+              "id": 6694,
               "name": "FirewalledRuleImplementation",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6737,
+              "referencedDeclaration": 6736,
               "src": "1176:28:56",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                 "typeString": "contract FirewalledRuleImplementation"
               }
             },
@@ -105,28 +105,28 @@
           },
           {
             "body": {
-              "id": 6705,
+              "id": 6704,
               "nodeType": "Block",
               "src": "1301:29:56",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6703,
+                    "id": 6702,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6701,
+                      "id": 6700,
                       "name": "rule",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6696,
+                      "referencedDeclaration": 6695,
                       "src": "1311:4:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                         "typeString": "contract FirewalledRuleImplementation"
                       }
                     },
@@ -134,62 +134,62 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6702,
+                      "id": 6701,
                       "name": "_rule",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6698,
+                      "referencedDeclaration": 6697,
                       "src": "1318:5:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                         "typeString": "contract FirewalledRuleImplementation"
                       }
                     },
                     "src": "1311:12:56",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                       "typeString": "contract FirewalledRuleImplementation"
                     }
                   },
-                  "id": 6704,
+                  "id": 6703,
                   "nodeType": "ExpressionStatement",
                   "src": "1311:12:56"
                 }
               ]
             },
             "documentation": null,
-            "id": 6706,
+            "id": 6705,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6699,
+              "id": 6698,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6698,
+                  "id": 6697,
                   "name": "_rule",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6706,
+                  "scope": 6705,
                   "src": "1258:34:56",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                    "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                     "typeString": "contract FirewalledRuleImplementation"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6697,
+                    "id": 6696,
                     "name": "FirewalledRuleImplementation",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 6737,
+                    "referencedDeclaration": 6736,
                     "src": "1258:28:56",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                       "typeString": "contract FirewalledRuleImplementation"
                     }
                   },
@@ -200,12 +200,12 @@
               "src": "1257:36:56"
             },
             "returnParameters": {
-              "id": 6700,
+              "id": 6699,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1301:0:56"
             },
-            "scope": 6716,
+            "scope": 6715,
             "src": "1246:84:56",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -213,7 +213,7 @@
           },
           {
             "body": {
-              "id": 6714,
+              "id": 6713,
               "nodeType": "Block",
               "src": "1409:36:56",
               "statements": [
@@ -225,32 +225,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6709,
+                        "id": 6708,
                         "name": "rule",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6696,
+                        "referencedDeclaration": 6695,
                         "src": "1419:4:56",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                          "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                           "typeString": "contract FirewalledRuleImplementation"
                         }
                       },
-                      "id": 6711,
+                      "id": 6710,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "firewalledFn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6736,
+                      "referencedDeclaration": 6735,
                       "src": "1419:17:56",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$__$",
                         "typeString": "function () view external"
                       }
                     },
-                    "id": 6712,
+                    "id": 6711,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -264,39 +264,39 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6713,
+                  "id": 6712,
                   "nodeType": "ExpressionStatement",
                   "src": "1419:19:56"
                 }
               ]
             },
             "documentation": null,
-            "id": 6715,
+            "id": 6714,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "callFirewalledFn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6707,
+              "id": 6706,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1392:2:56"
             },
             "returnParameters": {
-              "id": 6708,
+              "id": 6707,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1409:0:56"
             },
-            "scope": 6716,
+            "scope": 6715,
             "src": "1367:78:56",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 6717,
+        "scope": 6716,
         "src": "1120:327:56"
       }
     ],
@@ -306,14 +306,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleCaller.sol",
     "exportedSymbols": {
       "FirewalledRuleCaller": [
-        6716
+        6715
       ]
     },
-    "id": 6717,
+    "id": 6716,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6693,
+        "id": 6692,
         "literals": [
           "solidity",
           "^",
@@ -326,10 +326,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
         "file": "./FirewalledRuleImplementation.sol",
-        "id": 6694,
+        "id": 6693,
         "nodeType": "ImportDirective",
-        "scope": 6717,
-        "sourceUnit": 6738,
+        "scope": 6716,
+        "sourceUnit": 6737,
         "src": "613:44:56",
         "symbolAliases": [],
         "unitAlias": ""
@@ -340,35 +340,35 @@
         "contractKind": "contract",
         "documentation": "@title A contract that calls a method that is firewalled.\n * @notice The firewalled method explicitly checks for `tx.origin` as opposed to\n        `msg.sender`. In order to test the desired behavior, an indirection\n        is required. This contract provides exactly that indirection. It\n        calls a firewalled method to assert that the firewall works on\n        `tx.origin` and not `msg.sender`, as `msg.sender` is this contract.",
         "fullyImplemented": true,
-        "id": 6716,
+        "id": 6715,
         "linearizedBaseContracts": [
-          6716
+          6715
         ],
         "name": "FirewalledRuleCaller",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 6696,
+            "id": 6695,
             "name": "rule",
             "nodeType": "VariableDeclaration",
-            "scope": 6716,
+            "scope": 6715,
             "src": "1176:33:56",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+              "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
               "typeString": "contract FirewalledRuleImplementation"
             },
             "typeName": {
               "contractScope": null,
-              "id": 6695,
+              "id": 6694,
               "name": "FirewalledRuleImplementation",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6737,
+              "referencedDeclaration": 6736,
               "src": "1176:28:56",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                 "typeString": "contract FirewalledRuleImplementation"
               }
             },
@@ -377,28 +377,28 @@
           },
           {
             "body": {
-              "id": 6705,
+              "id": 6704,
               "nodeType": "Block",
               "src": "1301:29:56",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6703,
+                    "id": 6702,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6701,
+                      "id": 6700,
                       "name": "rule",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6696,
+                      "referencedDeclaration": 6695,
                       "src": "1311:4:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                         "typeString": "contract FirewalledRuleImplementation"
                       }
                     },
@@ -406,62 +406,62 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6702,
+                      "id": 6701,
                       "name": "_rule",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6698,
+                      "referencedDeclaration": 6697,
                       "src": "1318:5:56",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                        "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                         "typeString": "contract FirewalledRuleImplementation"
                       }
                     },
                     "src": "1311:12:56",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                       "typeString": "contract FirewalledRuleImplementation"
                     }
                   },
-                  "id": 6704,
+                  "id": 6703,
                   "nodeType": "ExpressionStatement",
                   "src": "1311:12:56"
                 }
               ]
             },
             "documentation": null,
-            "id": 6706,
+            "id": 6705,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6699,
+              "id": 6698,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6698,
+                  "id": 6697,
                   "name": "_rule",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6706,
+                  "scope": 6705,
                   "src": "1258:34:56",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                    "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                     "typeString": "contract FirewalledRuleImplementation"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6697,
+                    "id": 6696,
                     "name": "FirewalledRuleImplementation",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 6737,
+                    "referencedDeclaration": 6736,
                     "src": "1258:28:56",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                      "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                       "typeString": "contract FirewalledRuleImplementation"
                     }
                   },
@@ -472,12 +472,12 @@
               "src": "1257:36:56"
             },
             "returnParameters": {
-              "id": 6700,
+              "id": 6699,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1301:0:56"
             },
-            "scope": 6716,
+            "scope": 6715,
             "src": "1246:84:56",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -485,7 +485,7 @@
           },
           {
             "body": {
-              "id": 6714,
+              "id": 6713,
               "nodeType": "Block",
               "src": "1409:36:56",
               "statements": [
@@ -497,32 +497,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6709,
+                        "id": 6708,
                         "name": "rule",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6696,
+                        "referencedDeclaration": 6695,
                         "src": "1419:4:56",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6737",
+                          "typeIdentifier": "t_contract$_FirewalledRuleImplementation_$6736",
                           "typeString": "contract FirewalledRuleImplementation"
                         }
                       },
-                      "id": 6711,
+                      "id": 6710,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "firewalledFn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6736,
+                      "referencedDeclaration": 6735,
                       "src": "1419:17:56",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$__$",
                         "typeString": "function () view external"
                       }
                     },
-                    "id": 6712,
+                    "id": 6711,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -536,39 +536,39 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6713,
+                  "id": 6712,
                   "nodeType": "ExpressionStatement",
                   "src": "1419:19:56"
                 }
               ]
             },
             "documentation": null,
-            "id": 6715,
+            "id": 6714,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "callFirewalledFn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6707,
+              "id": 6706,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1392:2:56"
             },
             "returnParameters": {
-              "id": 6708,
+              "id": 6707,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1409:0:56"
             },
-            "scope": 6716,
+            "scope": 6715,
             "src": "1367:78:56",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 6717,
+        "scope": 6716,
         "src": "1120:327:56"
       }
     ],
@@ -580,7 +580,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T06:50:59.730Z",
+  "updatedAt": "2020-01-21T17:19:56.031Z",
   "devdoc": {
     "methods": {},
     "title": "A contract that calls a method that is firewalled."

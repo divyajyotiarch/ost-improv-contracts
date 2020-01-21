@@ -79,14 +79,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
     "exportedSymbols": {
       "FirewalledRuleImplementation": [
-        6737
+        6736
       ]
     },
-    "id": 6738,
+    "id": 6737,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6718,
+        "id": 6717,
         "literals": [
           "solidity",
           "^",
@@ -99,10 +99,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
         "file": "../../../rules/FirewalledRule.sol",
-        "id": 6719,
+        "id": 6718,
         "nodeType": "ImportDirective",
-        "scope": 6738,
-        "sourceUnit": 5676,
+        "scope": 6737,
+        "sourceUnit": 5675,
         "src": "613:43:57",
         "symbolAliases": [],
         "unitAlias": ""
@@ -113,46 +113,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6720,
+              "id": 6719,
               "name": "FirewalledRule",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5675,
+              "referencedDeclaration": 5674,
               "src": "961:14:57",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FirewalledRule_$5675",
+                "typeIdentifier": "t_contract$_FirewalledRule_$5674",
                 "typeString": "contract FirewalledRule"
               }
             },
-            "id": 6721,
+            "id": 6720,
             "nodeType": "InheritanceSpecifier",
             "src": "961:14:57"
           }
         ],
         "contractDependencies": [
-          5199,
-          5675
+          5198,
+          5674
         ],
         "contractKind": "contract",
         "documentation": "@title Implementation that actually has a firewalled method.\n * @notice As the firewall itself doesn't have any firewalled methods, another\n        contract that provides a firewalled method is required in order to\n        test the modifier.",
         "fullyImplemented": true,
-        "id": 6737,
+        "id": 6736,
         "linearizedBaseContracts": [
-          6737,
-          5675,
-          5199
+          6736,
+          5674,
+          5198
         ],
         "name": "FirewalledRuleImplementation",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 6729,
+              "id": 6728,
               "nodeType": "Block",
               "src": "1180:2:57",
               "statements": []
             },
             "documentation": null,
-            "id": 6730,
+            "id": 6729,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -160,29 +160,29 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 6726,
+                    "id": 6725,
                     "name": "_organization",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6723,
+                    "referencedDeclaration": 6722,
                     "src": "1098:13:57",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5146",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5145",
                       "typeString": "contract OrganizationInterface"
                     }
                   }
                 ],
-                "id": 6727,
+                "id": 6726,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 6725,
+                  "id": 6724,
                   "name": "FirewalledRule",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5675,
+                  "referencedDeclaration": 5674,
                   "src": "1083:14:57",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_FirewalledRule_$5675_$",
+                    "typeIdentifier": "t_type$_t_contract$_FirewalledRule_$5674_$",
                     "typeString": "type(contract FirewalledRule)"
                   }
                 },
@@ -193,31 +193,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6724,
+              "id": 6723,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6723,
+                  "id": 6722,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6730,
+                  "scope": 6729,
                   "src": "1033:35:57",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OrganizationInterface_$5146",
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5145",
                     "typeString": "contract OrganizationInterface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6722,
+                    "id": 6721,
                     "name": "OrganizationInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 5146,
+                    "referencedDeclaration": 5145,
                     "src": "1033:21:57",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5146",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5145",
                       "typeString": "contract OrganizationInterface"
                     }
                   },
@@ -228,12 +228,12 @@
               "src": "1023:51:57"
             },
             "returnParameters": {
-              "id": 6728,
+              "id": 6727,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1180:0:57"
             },
-            "scope": 6737,
+            "scope": 6736,
             "src": "1012:170:57",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -241,26 +241,26 @@
           },
           {
             "body": {
-              "id": 6735,
+              "id": 6734,
               "nodeType": "Block",
               "src": "1317:2:57",
               "statements": []
             },
             "documentation": null,
-            "id": 6736,
+            "id": 6735,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 6733,
+                "id": 6732,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 6732,
+                  "id": 6731,
                   "name": "firewalled",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5648,
+                  "referencedDeclaration": 5647,
                   "src": "1306:10:57",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -274,25 +274,25 @@
             "name": "firewalledFn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6731,
+              "id": 6730,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1289:2:57"
             },
             "returnParameters": {
-              "id": 6734,
+              "id": 6733,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1317:0:57"
             },
-            "scope": 6737,
+            "scope": 6736,
             "src": "1268:51:57",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 6738,
+        "scope": 6737,
         "src": "920:401:57"
       }
     ],
@@ -302,14 +302,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/firewalled_rule/FirewalledRuleImplementation.sol",
     "exportedSymbols": {
       "FirewalledRuleImplementation": [
-        6737
+        6736
       ]
     },
-    "id": 6738,
+    "id": 6737,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6718,
+        "id": 6717,
         "literals": [
           "solidity",
           "^",
@@ -322,10 +322,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
         "file": "../../../rules/FirewalledRule.sol",
-        "id": 6719,
+        "id": 6718,
         "nodeType": "ImportDirective",
-        "scope": 6738,
-        "sourceUnit": 5676,
+        "scope": 6737,
+        "sourceUnit": 5675,
         "src": "613:43:57",
         "symbolAliases": [],
         "unitAlias": ""
@@ -336,46 +336,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6720,
+              "id": 6719,
               "name": "FirewalledRule",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5675,
+              "referencedDeclaration": 5674,
               "src": "961:14:57",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FirewalledRule_$5675",
+                "typeIdentifier": "t_contract$_FirewalledRule_$5674",
                 "typeString": "contract FirewalledRule"
               }
             },
-            "id": 6721,
+            "id": 6720,
             "nodeType": "InheritanceSpecifier",
             "src": "961:14:57"
           }
         ],
         "contractDependencies": [
-          5199,
-          5675
+          5198,
+          5674
         ],
         "contractKind": "contract",
         "documentation": "@title Implementation that actually has a firewalled method.\n * @notice As the firewall itself doesn't have any firewalled methods, another\n        contract that provides a firewalled method is required in order to\n        test the modifier.",
         "fullyImplemented": true,
-        "id": 6737,
+        "id": 6736,
         "linearizedBaseContracts": [
-          6737,
-          5675,
-          5199
+          6736,
+          5674,
+          5198
         ],
         "name": "FirewalledRuleImplementation",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 6729,
+              "id": 6728,
               "nodeType": "Block",
               "src": "1180:2:57",
               "statements": []
             },
             "documentation": null,
-            "id": 6730,
+            "id": 6729,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -383,29 +383,29 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 6726,
+                    "id": 6725,
                     "name": "_organization",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6723,
+                    "referencedDeclaration": 6722,
                     "src": "1098:13:57",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5146",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5145",
                       "typeString": "contract OrganizationInterface"
                     }
                   }
                 ],
-                "id": 6727,
+                "id": 6726,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 6725,
+                  "id": 6724,
                   "name": "FirewalledRule",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5675,
+                  "referencedDeclaration": 5674,
                   "src": "1083:14:57",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_FirewalledRule_$5675_$",
+                    "typeIdentifier": "t_type$_t_contract$_FirewalledRule_$5674_$",
                     "typeString": "type(contract FirewalledRule)"
                   }
                 },
@@ -416,31 +416,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6724,
+              "id": 6723,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6723,
+                  "id": 6722,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6730,
+                  "scope": 6729,
                   "src": "1033:35:57",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OrganizationInterface_$5146",
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5145",
                     "typeString": "contract OrganizationInterface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6722,
+                    "id": 6721,
                     "name": "OrganizationInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 5146,
+                    "referencedDeclaration": 5145,
                     "src": "1033:21:57",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5146",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5145",
                       "typeString": "contract OrganizationInterface"
                     }
                   },
@@ -451,12 +451,12 @@
               "src": "1023:51:57"
             },
             "returnParameters": {
-              "id": 6728,
+              "id": 6727,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1180:0:57"
             },
-            "scope": 6737,
+            "scope": 6736,
             "src": "1012:170:57",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -464,26 +464,26 @@
           },
           {
             "body": {
-              "id": 6735,
+              "id": 6734,
               "nodeType": "Block",
               "src": "1317:2:57",
               "statements": []
             },
             "documentation": null,
-            "id": 6736,
+            "id": 6735,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 6733,
+                "id": 6732,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 6732,
+                  "id": 6731,
                   "name": "firewalled",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5648,
+                  "referencedDeclaration": 5647,
                   "src": "1306:10:57",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -497,25 +497,25 @@
             "name": "firewalledFn",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6731,
+              "id": 6730,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1289:2:57"
             },
             "returnParameters": {
-              "id": 6734,
+              "id": 6733,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1317:0:57"
             },
-            "scope": 6737,
+            "scope": 6736,
             "src": "1268:51:57",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 6738,
+        "scope": 6737,
         "src": "920:401:57"
       }
     ],
@@ -527,7 +527,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T06:50:59.731Z",
+  "updatedAt": "2020-01-21T17:19:56.032Z",
   "devdoc": {
     "methods": {},
     "title": "Implementation that actually has a firewalled method."
