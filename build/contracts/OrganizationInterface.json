@@ -55,14 +55,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
     "exportedSymbols": {
       "OrganizationInterface": [
-        3618
+        3642
       ]
     },
-    "id": 3619,
+    "id": 3643,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3603,
+        "id": 3627,
         "literals": [
           "solidity",
           "^",
@@ -78,9 +78,9 @@
         "contractKind": "interface",
         "documentation": " @title OrganizationInterface provides methods to check if an address is\n        currently registered as an active participant in the organization.",
         "fullyImplemented": false,
-        "id": 3618,
+        "id": 3642,
         "linearizedBaseContracts": [
-          3618
+          3642
         ],
         "name": "OrganizationInterface",
         "nodeType": "ContractDefinition",
@@ -88,22 +88,22 @@
           {
             "body": null,
             "documentation": "@notice Checks if an address is currently registered as the organization.\n     * @param _organization Address to check.\n     * @return isOrganization_ True if the given address represents the\n                        organization. Returns false otherwise.",
-            "id": 3610,
+            "id": 3634,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isOrganization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3606,
+              "id": 3630,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3605,
+                  "id": 3629,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3610,
+                  "scope": 3634,
                   "src": "1346:21:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -112,7 +112,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3604,
+                    "id": 3628,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1346:7:26",
@@ -129,15 +129,15 @@
               "src": "1336:37:26"
             },
             "returnParameters": {
-              "id": 3609,
+              "id": 3633,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3608,
+                  "id": 3632,
                   "name": "isOrganization_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3610,
+                  "scope": 3634,
                   "src": "1421:20:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -146,7 +146,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3607,
+                    "id": 3631,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1421:4:26",
@@ -161,7 +161,7 @@
               ],
               "src": "1420:22:26"
             },
-            "scope": 3618,
+            "scope": 3642,
             "src": "1313:130:26",
             "stateMutability": "view",
             "superFunction": null,
@@ -170,22 +170,22 @@
           {
             "body": null,
             "documentation": "@notice Checks if an address is currently registered as an active worker.\n     * @param _worker Address to check.\n     * @return isWorker_ True if the given address is a registered, active\n                  worker. Returns false otherwise.",
-            "id": 3617,
+            "id": 3641,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isWorker",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3613,
+              "id": 3637,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3612,
+                  "id": 3636,
                   "name": "_worker",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3617,
+                  "scope": 3641,
                   "src": "1751:15:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -194,7 +194,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3611,
+                    "id": 3635,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1751:7:26",
@@ -211,15 +211,15 @@
               "src": "1750:17:26"
             },
             "returnParameters": {
-              "id": 3616,
+              "id": 3640,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3615,
+                  "id": 3639,
                   "name": "isWorker_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3617,
+                  "scope": 3641,
                   "src": "1791:14:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -228,7 +228,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3614,
+                    "id": 3638,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1791:4:26",
@@ -243,14 +243,14 @@
               ],
               "src": "1790:16:26"
             },
-            "scope": 3618,
+            "scope": 3642,
             "src": "1733:74:26",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3619,
+        "scope": 3643,
         "src": "975:835:26"
       }
     ],
@@ -260,14 +260,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
     "exportedSymbols": {
       "OrganizationInterface": [
-        3618
+        3642
       ]
     },
-    "id": 3619,
+    "id": 3643,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3603,
+        "id": 3627,
         "literals": [
           "solidity",
           "^",
@@ -283,9 +283,9 @@
         "contractKind": "interface",
         "documentation": " @title OrganizationInterface provides methods to check if an address is\n        currently registered as an active participant in the organization.",
         "fullyImplemented": false,
-        "id": 3618,
+        "id": 3642,
         "linearizedBaseContracts": [
-          3618
+          3642
         ],
         "name": "OrganizationInterface",
         "nodeType": "ContractDefinition",
@@ -293,22 +293,22 @@
           {
             "body": null,
             "documentation": "@notice Checks if an address is currently registered as the organization.\n     * @param _organization Address to check.\n     * @return isOrganization_ True if the given address represents the\n                        organization. Returns false otherwise.",
-            "id": 3610,
+            "id": 3634,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isOrganization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3606,
+              "id": 3630,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3605,
+                  "id": 3629,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3610,
+                  "scope": 3634,
                   "src": "1346:21:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -317,7 +317,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3604,
+                    "id": 3628,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1346:7:26",
@@ -334,15 +334,15 @@
               "src": "1336:37:26"
             },
             "returnParameters": {
-              "id": 3609,
+              "id": 3633,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3608,
+                  "id": 3632,
                   "name": "isOrganization_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3610,
+                  "scope": 3634,
                   "src": "1421:20:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -351,7 +351,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3607,
+                    "id": 3631,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1421:4:26",
@@ -366,7 +366,7 @@
               ],
               "src": "1420:22:26"
             },
-            "scope": 3618,
+            "scope": 3642,
             "src": "1313:130:26",
             "stateMutability": "view",
             "superFunction": null,
@@ -375,22 +375,22 @@
           {
             "body": null,
             "documentation": "@notice Checks if an address is currently registered as an active worker.\n     * @param _worker Address to check.\n     * @return isWorker_ True if the given address is a registered, active\n                  worker. Returns false otherwise.",
-            "id": 3617,
+            "id": 3641,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isWorker",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3613,
+              "id": 3637,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3612,
+                  "id": 3636,
                   "name": "_worker",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3617,
+                  "scope": 3641,
                   "src": "1751:15:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -399,7 +399,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3611,
+                    "id": 3635,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1751:7:26",
@@ -416,15 +416,15 @@
               "src": "1750:17:26"
             },
             "returnParameters": {
-              "id": 3616,
+              "id": 3640,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3615,
+                  "id": 3639,
                   "name": "isWorker_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3617,
+                  "scope": 3641,
                   "src": "1791:14:26",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -433,7 +433,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3614,
+                    "id": 3638,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1791:4:26",
@@ -448,14 +448,14 @@
               ],
               "src": "1790:16:26"
             },
-            "scope": 3618,
+            "scope": 3642,
             "src": "1733:74:26",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3619,
+        "scope": 3643,
         "src": "975:835:26"
       }
     ],
@@ -467,7 +467,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T12:15:30.147Z",
+  "updatedAt": "2020-01-21T06:45:53.870Z",
   "devdoc": {
     "methods": {
       "isOrganization(address)": {

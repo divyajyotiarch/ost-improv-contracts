@@ -70,14 +70,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
     "exportedSymbols": {
       "FirewalledRule": [
-        5651
+        5686
       ]
     },
-    "id": 5652,
+    "id": 5687,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5600,
+        "id": 5635,
         "literals": [
           "solidity",
           "^",
@@ -90,10 +90,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/Organized.sol",
         "file": "../organization/contracts/Organized.sol",
-        "id": 5601,
+        "id": 5636,
         "nodeType": "ImportDirective",
-        "scope": 5652,
-        "sourceUnit": 5176,
+        "scope": 5687,
+        "sourceUnit": 5211,
         "src": "613:49:49",
         "symbolAliases": [],
         "unitAlias": ""
@@ -101,10 +101,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/OrganizationInterface.sol",
         "file": "../organization/contracts/OrganizationInterface.sol",
-        "id": 5602,
+        "id": 5637,
         "nodeType": "ImportDirective",
-        "scope": 5652,
-        "sourceUnit": 5123,
+        "scope": 5687,
+        "sourceUnit": 5158,
         "src": "663:61:49",
         "symbolAliases": [],
         "unitAlias": ""
@@ -115,31 +115,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 5603,
+              "id": 5638,
               "name": "Organized",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5175,
+              "referencedDeclaration": 5210,
               "src": "1254:9:49",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Organized_$5175",
+                "typeIdentifier": "t_contract$_Organized_$5210",
                 "typeString": "contract Organized"
               }
             },
-            "id": 5604,
+            "id": 5639,
             "nodeType": "InheritanceSpecifier",
             "src": "1254:9:49"
           }
         ],
         "contractDependencies": [
-          5175
+          5210
         ],
         "contractKind": "contract",
         "documentation": "@title Extend this rule in order to restrict relayers of a meta-transaction.\n * @notice If you want to restrict the relayers that can relay meta-transactions\n        to your rule, you can extend this contract with your rule. Your rule\n        has to include the modifier `firewalled` for all functions that\n        should be restricted.\n        The firewall can be disabled, but not enabled again. When it is\n        disabled, the modifier basically does nothing anymore.",
         "fullyImplemented": true,
-        "id": 5651,
+        "id": 5686,
         "linearizedBaseContracts": [
-          5651,
-          5175
+          5686,
+          5210
         ],
         "name": "FirewalledRule",
         "nodeType": "ContractDefinition",
@@ -147,11 +147,11 @@
           {
             "anonymous": false,
             "documentation": "Emitted when the firewall gets disabled.\nIt is the only event, because a firewall cannot get re-enabled.",
-            "id": 5606,
+            "id": 5641,
             "name": "FirewallDisabled",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 5605,
+              "id": 5640,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1446:2:49"
@@ -160,10 +160,10 @@
           },
           {
             "constant": false,
-            "id": 5608,
+            "id": 5643,
             "name": "firewallEnabled",
             "nodeType": "VariableDeclaration",
-            "scope": 5651,
+            "scope": 5686,
             "src": "1622:27:49",
             "stateVariable": true,
             "storageLocation": "default",
@@ -172,7 +172,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 5607,
+              "id": 5642,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1622:4:49",
@@ -186,18 +186,18 @@
           },
           {
             "body": {
-              "id": 5623,
+              "id": 5658,
               "nodeType": "Block",
               "src": "2154:452:49",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 5610,
+                    "id": 5645,
                     "name": "firewallEnabled",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 5608,
+                    "referencedDeclaration": 5643,
                     "src": "2168:15:49",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -205,11 +205,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 5621,
+                  "id": 5656,
                   "nodeType": "IfStatement",
                   "src": "2164:424:49",
                   "trueBody": {
-                    "id": 5620,
+                    "id": 5655,
                     "nodeType": "Block",
                     "src": "2185:403:49",
                     "statements": [
@@ -224,18 +224,18 @@
                                   "argumentTypes": null,
                                   "expression": {
                                     "argumentTypes": null,
-                                    "id": 5614,
+                                    "id": 5649,
                                     "name": "tx",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 12893,
+                                    "referencedDeclaration": 12928,
                                     "src": "2451:2:49",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_transaction",
                                       "typeString": "tx"
                                     }
                                   },
-                                  "id": 5615,
+                                  "id": 5650,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -259,32 +259,32 @@
                                 ],
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 5612,
+                                  "id": 5647,
                                   "name": "organization",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 5127,
+                                  "referencedDeclaration": 5162,
                                   "src": "2429:12:49",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                                    "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                                     "typeString": "contract OrganizationInterface"
                                   }
                                 },
-                                "id": 5613,
+                                "id": 5648,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "isWorker",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 5121,
+                                "referencedDeclaration": 5156,
                                 "src": "2429:21:49",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                                   "typeString": "function (address) view external returns (bool)"
                                 }
                               },
-                              "id": 5616,
+                              "id": 5651,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -301,7 +301,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "54686973206d6574686f64206973206669726577616c6c65642e205472616e73616374696f6e206d757374206f726967696e6174652066726f6d20616e206f7267616e697a6174696f6e20776f726b65722e",
-                              "id": 5617,
+                              "id": 5652,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -328,21 +328,21 @@
                                 "typeString": "literal_string \"This method is firewalled. Transaction must originate from an organization worker.\""
                               }
                             ],
-                            "id": 5611,
+                            "id": 5646,
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              12884,
-                              12885
+                              12919,
+                              12920
                             ],
-                            "referencedDeclaration": 12885,
+                            "referencedDeclaration": 12920,
                             "src": "2199:7:49",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                               "typeString": "function (bool,string memory) pure"
                             }
                           },
-                          "id": 5618,
+                          "id": 5653,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -356,7 +356,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 5619,
+                        "id": 5654,
                         "nodeType": "ExpressionStatement",
                         "src": "2199:378:49"
                       }
@@ -364,18 +364,18 @@
                   }
                 },
                 {
-                  "id": 5622,
+                  "id": 5657,
                   "nodeType": "PlaceholderStatement",
                   "src": "2598:1:49"
                 }
               ]
             },
             "documentation": "Requires that `tx.origin` is an organization worker, if the firewall is\nenabled. Once the firewall has been disabled, this modifier will not\nenforce any checks anymore.\nThe modifier checks `tx.origin` and not `msg.sender`, because\n`msg.sender` can be another contract. However, what the firewall is\nsupposed to check is who relayed the meta-transaction. The relayer is\nalways `tx.origin`.",
-            "id": 5624,
+            "id": 5659,
             "name": "firewalled",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 5609,
+              "id": 5644,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2151:2:49"
@@ -385,25 +385,25 @@
           },
           {
             "body": {
-              "id": 5636,
+              "id": 5671,
               "nodeType": "Block",
               "src": "2842:157:49",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 5634,
+                    "id": 5669,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 5632,
+                      "id": 5667,
                       "name": "firewallEnabled",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5608,
+                      "referencedDeclaration": 5643,
                       "src": "2970:15:49",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -415,7 +415,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 5633,
+                      "id": 5668,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -436,14 +436,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 5635,
+                  "id": 5670,
                   "nodeType": "ExpressionStatement",
                   "src": "2970:22:49"
                 }
               ]
             },
             "documentation": "@param _organization The address of an organization contract.",
-            "id": 5637,
+            "id": 5672,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -451,29 +451,29 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 5629,
+                    "id": 5664,
                     "name": "_organization",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 5626,
+                    "referencedDeclaration": 5661,
                     "src": "2808:13:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                       "typeString": "contract OrganizationInterface"
                     }
                   }
                 ],
-                "id": 5630,
+                "id": 5665,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 5628,
+                  "id": 5663,
                   "name": "Organized",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5175,
+                  "referencedDeclaration": 5210,
                   "src": "2798:9:49",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_Organized_$5175_$",
+                    "typeIdentifier": "t_type$_t_contract$_Organized_$5210_$",
                     "typeString": "type(contract Organized)"
                   }
                 },
@@ -484,31 +484,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5627,
+              "id": 5662,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5626,
+                  "id": 5661,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5637,
+                  "scope": 5672,
                   "src": "2748:35:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                     "typeString": "contract OrganizationInterface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 5625,
+                    "id": 5660,
                     "name": "OrganizationInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 5122,
+                    "referencedDeclaration": 5157,
                     "src": "2748:21:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                       "typeString": "contract OrganizationInterface"
                     }
                   },
@@ -519,12 +519,12 @@
               "src": "2738:51:49"
             },
             "returnParameters": {
-              "id": 5631,
+              "id": 5666,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2842:0:49"
             },
-            "scope": 5651,
+            "scope": 5686,
             "src": "2727:272:49",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -532,25 +532,25 @@
           },
           {
             "body": {
-              "id": 5649,
+              "id": 5684,
               "nodeType": "Block",
               "src": "3359:73:49",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 5644,
+                    "id": 5679,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 5642,
+                      "id": 5677,
                       "name": "firewallEnabled",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5608,
+                      "referencedDeclaration": 5643,
                       "src": "3369:15:49",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -562,7 +562,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 5643,
+                      "id": 5678,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -583,7 +583,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 5645,
+                  "id": 5680,
                   "nodeType": "ExpressionStatement",
                   "src": "3369:23:49"
                 },
@@ -593,18 +593,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 5646,
+                      "id": 5681,
                       "name": "FirewallDisabled",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5606,
+                      "referencedDeclaration": 5641,
                       "src": "3407:16:49",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 5647,
+                    "id": 5682,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -618,27 +618,27 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 5648,
+                  "id": 5683,
                   "nodeType": "EmitStatement",
                   "src": "3402:23:49"
                 }
               ]
             },
             "documentation": "@notice Disables the firewall so that anyone can use firewalled methods.\n        Disabling the firewall cannot be done undone. There is no method\n        to enable the firewall again.\n        Emits a `FirewallDisabled` event.",
-            "id": 5650,
+            "id": 5685,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 5640,
+                "id": 5675,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 5639,
+                  "id": 5674,
                   "name": "onlyOrganization",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5140,
+                  "referencedDeclaration": 5175,
                   "src": "3342:16:49",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -652,25 +652,25 @@
             "name": "disableFirewall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5638,
+              "id": 5673,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3330:2:49"
             },
             "returnParameters": {
-              "id": 5641,
+              "id": 5676,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3359:0:49"
             },
-            "scope": 5651,
+            "scope": 5686,
             "src": "3306:126:49",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 5652,
+        "scope": 5687,
         "src": "1227:2207:49"
       }
     ],
@@ -680,14 +680,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/FirewalledRule.sol",
     "exportedSymbols": {
       "FirewalledRule": [
-        5651
+        5686
       ]
     },
-    "id": 5652,
+    "id": 5687,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5600,
+        "id": 5635,
         "literals": [
           "solidity",
           "^",
@@ -700,10 +700,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/Organized.sol",
         "file": "../organization/contracts/Organized.sol",
-        "id": 5601,
+        "id": 5636,
         "nodeType": "ImportDirective",
-        "scope": 5652,
-        "sourceUnit": 5176,
+        "scope": 5687,
+        "sourceUnit": 5211,
         "src": "613:49:49",
         "symbolAliases": [],
         "unitAlias": ""
@@ -711,10 +711,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/organization/contracts/OrganizationInterface.sol",
         "file": "../organization/contracts/OrganizationInterface.sol",
-        "id": 5602,
+        "id": 5637,
         "nodeType": "ImportDirective",
-        "scope": 5652,
-        "sourceUnit": 5123,
+        "scope": 5687,
+        "sourceUnit": 5158,
         "src": "663:61:49",
         "symbolAliases": [],
         "unitAlias": ""
@@ -725,31 +725,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 5603,
+              "id": 5638,
               "name": "Organized",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5175,
+              "referencedDeclaration": 5210,
               "src": "1254:9:49",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Organized_$5175",
+                "typeIdentifier": "t_contract$_Organized_$5210",
                 "typeString": "contract Organized"
               }
             },
-            "id": 5604,
+            "id": 5639,
             "nodeType": "InheritanceSpecifier",
             "src": "1254:9:49"
           }
         ],
         "contractDependencies": [
-          5175
+          5210
         ],
         "contractKind": "contract",
         "documentation": "@title Extend this rule in order to restrict relayers of a meta-transaction.\n * @notice If you want to restrict the relayers that can relay meta-transactions\n        to your rule, you can extend this contract with your rule. Your rule\n        has to include the modifier `firewalled` for all functions that\n        should be restricted.\n        The firewall can be disabled, but not enabled again. When it is\n        disabled, the modifier basically does nothing anymore.",
         "fullyImplemented": true,
-        "id": 5651,
+        "id": 5686,
         "linearizedBaseContracts": [
-          5651,
-          5175
+          5686,
+          5210
         ],
         "name": "FirewalledRule",
         "nodeType": "ContractDefinition",
@@ -757,11 +757,11 @@
           {
             "anonymous": false,
             "documentation": "Emitted when the firewall gets disabled.\nIt is the only event, because a firewall cannot get re-enabled.",
-            "id": 5606,
+            "id": 5641,
             "name": "FirewallDisabled",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 5605,
+              "id": 5640,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1446:2:49"
@@ -770,10 +770,10 @@
           },
           {
             "constant": false,
-            "id": 5608,
+            "id": 5643,
             "name": "firewallEnabled",
             "nodeType": "VariableDeclaration",
-            "scope": 5651,
+            "scope": 5686,
             "src": "1622:27:49",
             "stateVariable": true,
             "storageLocation": "default",
@@ -782,7 +782,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 5607,
+              "id": 5642,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1622:4:49",
@@ -796,18 +796,18 @@
           },
           {
             "body": {
-              "id": 5623,
+              "id": 5658,
               "nodeType": "Block",
               "src": "2154:452:49",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 5610,
+                    "id": 5645,
                     "name": "firewallEnabled",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 5608,
+                    "referencedDeclaration": 5643,
                     "src": "2168:15:49",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -815,11 +815,11 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 5621,
+                  "id": 5656,
                   "nodeType": "IfStatement",
                   "src": "2164:424:49",
                   "trueBody": {
-                    "id": 5620,
+                    "id": 5655,
                     "nodeType": "Block",
                     "src": "2185:403:49",
                     "statements": [
@@ -834,18 +834,18 @@
                                   "argumentTypes": null,
                                   "expression": {
                                     "argumentTypes": null,
-                                    "id": 5614,
+                                    "id": 5649,
                                     "name": "tx",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 12893,
+                                    "referencedDeclaration": 12928,
                                     "src": "2451:2:49",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_transaction",
                                       "typeString": "tx"
                                     }
                                   },
-                                  "id": 5615,
+                                  "id": 5650,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -869,32 +869,32 @@
                                 ],
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 5612,
+                                  "id": 5647,
                                   "name": "organization",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 5127,
+                                  "referencedDeclaration": 5162,
                                   "src": "2429:12:49",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                                    "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                                     "typeString": "contract OrganizationInterface"
                                   }
                                 },
-                                "id": 5613,
+                                "id": 5648,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "isWorker",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 5121,
+                                "referencedDeclaration": 5156,
                                 "src": "2429:21:49",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                                   "typeString": "function (address) view external returns (bool)"
                                 }
                               },
-                              "id": 5616,
+                              "id": 5651,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -911,7 +911,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "54686973206d6574686f64206973206669726577616c6c65642e205472616e73616374696f6e206d757374206f726967696e6174652066726f6d20616e206f7267616e697a6174696f6e20776f726b65722e",
-                              "id": 5617,
+                              "id": 5652,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -938,21 +938,21 @@
                                 "typeString": "literal_string \"This method is firewalled. Transaction must originate from an organization worker.\""
                               }
                             ],
-                            "id": 5611,
+                            "id": 5646,
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              12884,
-                              12885
+                              12919,
+                              12920
                             ],
-                            "referencedDeclaration": 12885,
+                            "referencedDeclaration": 12920,
                             "src": "2199:7:49",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                               "typeString": "function (bool,string memory) pure"
                             }
                           },
-                          "id": 5618,
+                          "id": 5653,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -966,7 +966,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 5619,
+                        "id": 5654,
                         "nodeType": "ExpressionStatement",
                         "src": "2199:378:49"
                       }
@@ -974,18 +974,18 @@
                   }
                 },
                 {
-                  "id": 5622,
+                  "id": 5657,
                   "nodeType": "PlaceholderStatement",
                   "src": "2598:1:49"
                 }
               ]
             },
             "documentation": "Requires that `tx.origin` is an organization worker, if the firewall is\nenabled. Once the firewall has been disabled, this modifier will not\nenforce any checks anymore.\nThe modifier checks `tx.origin` and not `msg.sender`, because\n`msg.sender` can be another contract. However, what the firewall is\nsupposed to check is who relayed the meta-transaction. The relayer is\nalways `tx.origin`.",
-            "id": 5624,
+            "id": 5659,
             "name": "firewalled",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 5609,
+              "id": 5644,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2151:2:49"
@@ -995,25 +995,25 @@
           },
           {
             "body": {
-              "id": 5636,
+              "id": 5671,
               "nodeType": "Block",
               "src": "2842:157:49",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 5634,
+                    "id": 5669,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 5632,
+                      "id": 5667,
                       "name": "firewallEnabled",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5608,
+                      "referencedDeclaration": 5643,
                       "src": "2970:15:49",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1025,7 +1025,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 5633,
+                      "id": 5668,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1046,14 +1046,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 5635,
+                  "id": 5670,
                   "nodeType": "ExpressionStatement",
                   "src": "2970:22:49"
                 }
               ]
             },
             "documentation": "@param _organization The address of an organization contract.",
-            "id": 5637,
+            "id": 5672,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -1061,29 +1061,29 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 5629,
+                    "id": 5664,
                     "name": "_organization",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 5626,
+                    "referencedDeclaration": 5661,
                     "src": "2808:13:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                       "typeString": "contract OrganizationInterface"
                     }
                   }
                 ],
-                "id": 5630,
+                "id": 5665,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 5628,
+                  "id": 5663,
                   "name": "Organized",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5175,
+                  "referencedDeclaration": 5210,
                   "src": "2798:9:49",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_Organized_$5175_$",
+                    "typeIdentifier": "t_type$_t_contract$_Organized_$5210_$",
                     "typeString": "type(contract Organized)"
                   }
                 },
@@ -1094,31 +1094,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5627,
+              "id": 5662,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5626,
+                  "id": 5661,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5637,
+                  "scope": 5672,
                   "src": "2748:35:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                     "typeString": "contract OrganizationInterface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 5625,
+                    "id": 5660,
                     "name": "OrganizationInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 5122,
+                    "referencedDeclaration": 5157,
                     "src": "2748:21:49",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$5122",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$5157",
                       "typeString": "contract OrganizationInterface"
                     }
                   },
@@ -1129,12 +1129,12 @@
               "src": "2738:51:49"
             },
             "returnParameters": {
-              "id": 5631,
+              "id": 5666,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2842:0:49"
             },
-            "scope": 5651,
+            "scope": 5686,
             "src": "2727:272:49",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1142,25 +1142,25 @@
           },
           {
             "body": {
-              "id": 5649,
+              "id": 5684,
               "nodeType": "Block",
               "src": "3359:73:49",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 5644,
+                    "id": 5679,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 5642,
+                      "id": 5677,
                       "name": "firewallEnabled",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5608,
+                      "referencedDeclaration": 5643,
                       "src": "3369:15:49",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1172,7 +1172,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 5643,
+                      "id": 5678,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1193,7 +1193,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 5645,
+                  "id": 5680,
                   "nodeType": "ExpressionStatement",
                   "src": "3369:23:49"
                 },
@@ -1203,18 +1203,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 5646,
+                      "id": 5681,
                       "name": "FirewallDisabled",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5606,
+                      "referencedDeclaration": 5641,
                       "src": "3407:16:49",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 5647,
+                    "id": 5682,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1228,27 +1228,27 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 5648,
+                  "id": 5683,
                   "nodeType": "EmitStatement",
                   "src": "3402:23:49"
                 }
               ]
             },
             "documentation": "@notice Disables the firewall so that anyone can use firewalled methods.\n        Disabling the firewall cannot be done undone. There is no method\n        to enable the firewall again.\n        Emits a `FirewallDisabled` event.",
-            "id": 5650,
+            "id": 5685,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 5640,
+                "id": 5675,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 5639,
+                  "id": 5674,
                   "name": "onlyOrganization",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 5140,
+                  "referencedDeclaration": 5175,
                   "src": "3342:16:49",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1262,25 +1262,25 @@
             "name": "disableFirewall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5638,
+              "id": 5673,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3330:2:49"
             },
             "returnParameters": {
-              "id": 5641,
+              "id": 5676,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3359:0:49"
             },
-            "scope": 5651,
+            "scope": 5686,
             "src": "3306:126:49",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 5652,
+        "scope": 5687,
         "src": "1227:2207:49"
       }
     ],
@@ -1292,7 +1292,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.129Z",
+  "updatedAt": "2020-01-21T06:41:35.277Z",
   "devdoc": {
     "methods": {
       "constructor": {

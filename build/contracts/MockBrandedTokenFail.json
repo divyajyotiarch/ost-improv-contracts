@@ -854,14 +854,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/branded_token/MockBrandedTokenFail.sol",
     "exportedSymbols": {
       "MockBrandedTokenFail": [
-        2259
+        2283
       ]
     },
-    "id": 2260,
+    "id": 2284,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2185,
+        "id": 2209,
         "literals": [
           "solidity",
           "^",
@@ -874,10 +874,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/BrandedToken.sol",
         "file": "./../../BrandedToken.sol",
-        "id": 2186,
+        "id": 2210,
         "nodeType": "ImportDirective",
-        "scope": 2260,
-        "sourceUnit": 888,
+        "scope": 2284,
+        "sourceUnit": 912,
         "src": "613:34:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -888,50 +888,50 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2187,
+              "id": 2211,
               "name": "BrandedToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 887,
+              "referencedDeclaration": 911,
               "src": "789:12:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BrandedToken_$887",
+                "typeIdentifier": "t_contract$_BrandedToken_$911",
                 "typeString": "contract BrandedToken"
               }
             },
-            "id": 2188,
+            "id": 2212,
             "nodeType": "InheritanceSpecifier",
             "src": "789:12:10"
           }
         ],
         "contractDependencies": [
-          887,
-          971,
-          1215,
-          3671
+          911,
+          995,
+          1239,
+          3695
         ],
         "contractKind": "contract",
         "documentation": "@title MockBrandedTokenFail.\n * @notice Supports testing of BrandedToken(BT) failure cases.",
         "fullyImplemented": true,
-        "id": 2259,
+        "id": 2283,
         "linearizedBaseContracts": [
-          2259,
-          887,
-          1215,
-          971,
-          3671
+          2283,
+          911,
+          1239,
+          995,
+          3695
         ],
         "name": "MockBrandedTokenFail",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2214,
+              "id": 2238,
               "nodeType": "Block",
               "src": "2188:2:10",
               "statements": []
             },
             "documentation": "@dev Conversion parameters provide the conversion rate and its scale.\n     For example, if 1 value token is equivalent to 3.5 branded\n     tokens (1:3.5), _conversionRate == 35 and _conversionRateDecimals == 1.\n     * @param _valueToken The value to which valueToken is set.\n@param _symbol The value to which tokenSymbol, defined in EIP20Token, is set.\n@param _name The value to which tokenName, defined in EIP20Token, is set.\n@param _decimals The value to which tokenDecimals, defined in EIP20Token, is set.\n@param _conversionRate The value to which conversionRate is set.\n@param _conversionRateDecimals The value to which conversionRateDecimals\n                               is set.\n@param _organization The value to which organization, defined in Organized, is set.",
-            "id": 2215,
+            "id": 2239,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -939,24 +939,24 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 2205,
+                    "id": 2229,
                     "name": "_valueToken",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2190,
+                    "referencedDeclaration": 2214,
                     "src": "1991:11:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_EIP20Interface_$971",
+                      "typeIdentifier": "t_contract$_EIP20Interface_$995",
                       "typeString": "contract EIP20Interface"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2206,
+                    "id": 2230,
                     "name": "_symbol",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2192,
+                    "referencedDeclaration": 2216,
                     "src": "2016:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -965,11 +965,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2207,
+                    "id": 2231,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2194,
+                    "referencedDeclaration": 2218,
                     "src": "2037:5:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -978,11 +978,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2208,
+                    "id": 2232,
                     "name": "_decimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2196,
+                    "referencedDeclaration": 2220,
                     "src": "2056:9:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
@@ -991,11 +991,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2209,
+                    "id": 2233,
                     "name": "_conversionRate",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2198,
+                    "referencedDeclaration": 2222,
                     "src": "2079:15:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -1004,11 +1004,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2210,
+                    "id": 2234,
                     "name": "_conversionRateDecimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2200,
+                    "referencedDeclaration": 2224,
                     "src": "2108:23:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
@@ -1017,29 +1017,29 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2211,
+                    "id": 2235,
                     "name": "_organization",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2202,
+                    "referencedDeclaration": 2226,
                     "src": "2145:13:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3642",
                       "typeString": "contract OrganizationInterface"
                     }
                   }
                 ],
-                "id": 2212,
+                "id": 2236,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2204,
+                  "id": 2228,
                   "name": "BrandedToken",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 887,
+                  "referencedDeclaration": 911,
                   "src": "1965:12:10",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_BrandedToken_$887_$",
+                    "typeIdentifier": "t_type$_t_contract$_BrandedToken_$911_$",
                     "typeString": "type(contract BrandedToken)"
                   }
                 },
@@ -1050,31 +1050,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2203,
+              "id": 2227,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2190,
+                  "id": 2214,
                   "name": "_valueToken",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1722:26:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_EIP20Interface_$971",
+                    "typeIdentifier": "t_contract$_EIP20Interface_$995",
                     "typeString": "contract EIP20Interface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 2189,
+                    "id": 2213,
                     "name": "EIP20Interface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 971,
+                    "referencedDeclaration": 995,
                     "src": "1722:14:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_EIP20Interface_$971",
+                      "typeIdentifier": "t_contract$_EIP20Interface_$995",
                       "typeString": "contract EIP20Interface"
                     }
                   },
@@ -1083,10 +1083,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2192,
+                  "id": 2216,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1758:21:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1095,7 +1095,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2191,
+                    "id": 2215,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1758:6:10",
@@ -1109,10 +1109,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2194,
+                  "id": 2218,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1789:19:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1121,7 +1121,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2193,
+                    "id": 2217,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1789:6:10",
@@ -1135,10 +1135,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2196,
+                  "id": 2220,
                   "name": "_decimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1818:15:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1147,7 +1147,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2195,
+                    "id": 2219,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1818:5:10",
@@ -1161,10 +1161,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2198,
+                  "id": 2222,
                   "name": "_conversionRate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1843:23:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1173,7 +1173,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2197,
+                    "id": 2221,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1843:7:10",
@@ -1187,10 +1187,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2200,
+                  "id": 2224,
                   "name": "_conversionRateDecimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1876:29:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1199,7 +1199,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2199,
+                    "id": 2223,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1876:5:10",
@@ -1213,26 +1213,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 2202,
+                  "id": 2226,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1915:35:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$3642",
                     "typeString": "contract OrganizationInterface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 2201,
+                    "id": 2225,
                     "name": "OrganizationInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 3618,
+                    "referencedDeclaration": 3642,
                     "src": "1915:21:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3642",
                       "typeString": "contract OrganizationInterface"
                     }
                   },
@@ -1243,12 +1243,12 @@
               "src": "1712:244:10"
             },
             "returnParameters": {
-              "id": 2213,
+              "id": 2237,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2188:0:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "1701:489:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1256,7 +1256,7 @@
           },
           {
             "body": {
-              "id": 2228,
+              "id": 2252,
               "nodeType": "Block",
               "src": "2581:35:10",
               "statements": [
@@ -1267,7 +1267,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 2225,
+                        "id": 2249,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1290,7 +1290,7 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 2224,
+                      "id": 2248,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1303,7 +1303,7 @@
                       },
                       "typeName": "bytes32"
                     },
-                    "id": 2226,
+                    "id": 2250,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1317,30 +1317,30 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 2223,
-                  "id": 2227,
+                  "functionReturnParameters": 2247,
+                  "id": 2251,
                   "nodeType": "Return",
                   "src": "2592:17:10"
                 }
               ]
             },
             "documentation": "@notice Mocks BrandedToken requestStake function.\n     * @dev It takes below parameters in order:\n     - amount to stake\n     - amount to mint\n     * @return Unique hash for each stake request.",
-            "id": 2229,
+            "id": 2253,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "requestStake",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2220,
+              "id": 2244,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2217,
+                  "id": 2241,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2253,
                   "src": "2503:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1349,7 +1349,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2216,
+                    "id": 2240,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2503:7:10",
@@ -1363,10 +1363,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2219,
+                  "id": 2243,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2253,
                   "src": "2520:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1375,7 +1375,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2218,
+                    "id": 2242,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2520:7:10",
@@ -1391,15 +1391,15 @@
               "src": "2493:40:10"
             },
             "returnParameters": {
-              "id": 2223,
+              "id": 2247,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2222,
+                  "id": 2246,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2253,
                   "src": "2568:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1408,7 +1408,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2221,
+                    "id": 2245,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2568:7:10",
@@ -1423,15 +1423,15 @@
               ],
               "src": "2567:9:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "2472:144:10",
             "stateMutability": "nonpayable",
-            "superFunction": 366,
+            "superFunction": 390,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2247,
+              "id": 2271,
               "nodeType": "Block",
               "src": "3113:82:10",
               "statements": [
@@ -1442,7 +1442,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "66616c7365",
-                        "id": 2243,
+                        "id": 2267,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1460,7 +1460,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4272616e646564546f6b656e206163636570745374616b65526571756573742072657475726e65642066616c73652e",
-                        "id": 2244,
+                        "id": 2268,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1487,21 +1487,21 @@
                           "typeString": "literal_string \"BrandedToken acceptStakeRequest returned false.\""
                         }
                       ],
-                      "id": 2242,
+                      "id": 2266,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12908,
+                        12909
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12909,
                       "src": "3123:7:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2245,
+                    "id": 2269,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1515,29 +1515,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2246,
+                  "id": 2270,
                   "nodeType": "ExpressionStatement",
                   "src": "3123:65:10"
                 }
               ]
             },
             "documentation": "@notice Mocks BrandedToken acceptStakeRequest function. It fails the execution.\n     * @dev It takes below parameters in order:\n     - stake request hash\n     - r is the actual signature\n     - s is the second point on the curve in order to ecrecover\n     - v selects the final public key",
-            "id": 2248,
+            "id": 2272,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "acceptStakeRequest",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2238,
+              "id": 2262,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2231,
+                  "id": 2255,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3006:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1546,7 +1546,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2230,
+                    "id": 2254,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3006:7:10",
@@ -1560,10 +1560,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2233,
+                  "id": 2257,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3023:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1572,7 +1572,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2232,
+                    "id": 2256,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3023:7:10",
@@ -1586,10 +1586,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2235,
+                  "id": 2259,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3040:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1598,7 +1598,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2234,
+                    "id": 2258,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3040:7:10",
@@ -1612,10 +1612,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2237,
+                  "id": 2261,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3057:5:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1624,7 +1624,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2236,
+                    "id": 2260,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "3057:5:10",
@@ -1640,15 +1640,15 @@
               "src": "2996:72:10"
             },
             "returnParameters": {
-              "id": 2241,
+              "id": 2265,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2240,
+                  "id": 2264,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3103:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1657,7 +1657,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2239,
+                    "id": 2263,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3103:4:10",
@@ -1672,15 +1672,15 @@
               ],
               "src": "3102:6:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "2969:226:10",
             "stateMutability": "nonpayable",
-            "superFunction": 465,
+            "superFunction": 489,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2257,
+              "id": 2281,
               "nodeType": "Block",
               "src": "3521:29:10",
               "statements": [
@@ -1688,7 +1688,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "66616c7365",
-                    "id": 2255,
+                    "id": 2279,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1703,30 +1703,30 @@
                     },
                     "value": "false"
                   },
-                  "functionReturnParameters": 2254,
-                  "id": 2256,
+                  "functionReturnParameters": 2278,
+                  "id": 2280,
                   "nodeType": "Return",
                   "src": "3531:12:10"
                 }
               ]
             },
             "documentation": "@notice Mocks BrandedToken.revokeStakeRequest() function.\n     * @dev It takes below parameters in order:\n     - stake request hash\n     * @return False to replicate failure cases.",
-            "id": 2258,
+            "id": 2282,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "revokeStakeRequest",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2251,
+              "id": 2275,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2250,
+                  "id": 2274,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2258,
+                  "scope": 2282,
                   "src": "3463:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1735,7 +1735,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2249,
+                    "id": 2273,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3463:7:10",
@@ -1751,15 +1751,15 @@
               "src": "3453:23:10"
             },
             "returnParameters": {
-              "id": 2254,
+              "id": 2278,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2253,
+                  "id": 2277,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2258,
+                  "scope": 2282,
                   "src": "3511:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1768,7 +1768,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2252,
+                    "id": 2276,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3511:4:10",
@@ -1783,14 +1783,14 @@
               ],
               "src": "3510:6:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "3426:124:10",
             "stateMutability": "nonpayable",
-            "superFunction": 581,
+            "superFunction": 605,
             "visibility": "external"
           }
         ],
-        "scope": 2260,
+        "scope": 2284,
         "src": "756:2797:10"
       }
     ],
@@ -1800,14 +1800,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/branded_token/MockBrandedTokenFail.sol",
     "exportedSymbols": {
       "MockBrandedTokenFail": [
-        2259
+        2283
       ]
     },
-    "id": 2260,
+    "id": 2284,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2185,
+        "id": 2209,
         "literals": [
           "solidity",
           "^",
@@ -1820,10 +1820,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/BrandedToken.sol",
         "file": "./../../BrandedToken.sol",
-        "id": 2186,
+        "id": 2210,
         "nodeType": "ImportDirective",
-        "scope": 2260,
-        "sourceUnit": 888,
+        "scope": 2284,
+        "sourceUnit": 912,
         "src": "613:34:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1834,50 +1834,50 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2187,
+              "id": 2211,
               "name": "BrandedToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 887,
+              "referencedDeclaration": 911,
               "src": "789:12:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BrandedToken_$887",
+                "typeIdentifier": "t_contract$_BrandedToken_$911",
                 "typeString": "contract BrandedToken"
               }
             },
-            "id": 2188,
+            "id": 2212,
             "nodeType": "InheritanceSpecifier",
             "src": "789:12:10"
           }
         ],
         "contractDependencies": [
-          887,
-          971,
-          1215,
-          3671
+          911,
+          995,
+          1239,
+          3695
         ],
         "contractKind": "contract",
         "documentation": "@title MockBrandedTokenFail.\n * @notice Supports testing of BrandedToken(BT) failure cases.",
         "fullyImplemented": true,
-        "id": 2259,
+        "id": 2283,
         "linearizedBaseContracts": [
-          2259,
-          887,
-          1215,
-          971,
-          3671
+          2283,
+          911,
+          1239,
+          995,
+          3695
         ],
         "name": "MockBrandedTokenFail",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2214,
+              "id": 2238,
               "nodeType": "Block",
               "src": "2188:2:10",
               "statements": []
             },
             "documentation": "@dev Conversion parameters provide the conversion rate and its scale.\n     For example, if 1 value token is equivalent to 3.5 branded\n     tokens (1:3.5), _conversionRate == 35 and _conversionRateDecimals == 1.\n     * @param _valueToken The value to which valueToken is set.\n@param _symbol The value to which tokenSymbol, defined in EIP20Token, is set.\n@param _name The value to which tokenName, defined in EIP20Token, is set.\n@param _decimals The value to which tokenDecimals, defined in EIP20Token, is set.\n@param _conversionRate The value to which conversionRate is set.\n@param _conversionRateDecimals The value to which conversionRateDecimals\n                               is set.\n@param _organization The value to which organization, defined in Organized, is set.",
-            "id": 2215,
+            "id": 2239,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -1885,24 +1885,24 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 2205,
+                    "id": 2229,
                     "name": "_valueToken",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2190,
+                    "referencedDeclaration": 2214,
                     "src": "1991:11:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_EIP20Interface_$971",
+                      "typeIdentifier": "t_contract$_EIP20Interface_$995",
                       "typeString": "contract EIP20Interface"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2206,
+                    "id": 2230,
                     "name": "_symbol",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2192,
+                    "referencedDeclaration": 2216,
                     "src": "2016:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -1911,11 +1911,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2207,
+                    "id": 2231,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2194,
+                    "referencedDeclaration": 2218,
                     "src": "2037:5:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -1924,11 +1924,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2208,
+                    "id": 2232,
                     "name": "_decimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2196,
+                    "referencedDeclaration": 2220,
                     "src": "2056:9:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
@@ -1937,11 +1937,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2209,
+                    "id": 2233,
                     "name": "_conversionRate",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2198,
+                    "referencedDeclaration": 2222,
                     "src": "2079:15:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -1950,11 +1950,11 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2210,
+                    "id": 2234,
                     "name": "_conversionRateDecimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2200,
+                    "referencedDeclaration": 2224,
                     "src": "2108:23:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
@@ -1963,29 +1963,29 @@
                   },
                   {
                     "argumentTypes": null,
-                    "id": 2211,
+                    "id": 2235,
                     "name": "_organization",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2202,
+                    "referencedDeclaration": 2226,
                     "src": "2145:13:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3642",
                       "typeString": "contract OrganizationInterface"
                     }
                   }
                 ],
-                "id": 2212,
+                "id": 2236,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 2204,
+                  "id": 2228,
                   "name": "BrandedToken",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 887,
+                  "referencedDeclaration": 911,
                   "src": "1965:12:10",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_BrandedToken_$887_$",
+                    "typeIdentifier": "t_type$_t_contract$_BrandedToken_$911_$",
                     "typeString": "type(contract BrandedToken)"
                   }
                 },
@@ -1996,31 +1996,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2203,
+              "id": 2227,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2190,
+                  "id": 2214,
                   "name": "_valueToken",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1722:26:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_EIP20Interface_$971",
+                    "typeIdentifier": "t_contract$_EIP20Interface_$995",
                     "typeString": "contract EIP20Interface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 2189,
+                    "id": 2213,
                     "name": "EIP20Interface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 971,
+                    "referencedDeclaration": 995,
                     "src": "1722:14:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_EIP20Interface_$971",
+                      "typeIdentifier": "t_contract$_EIP20Interface_$995",
                       "typeString": "contract EIP20Interface"
                     }
                   },
@@ -2029,10 +2029,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2192,
+                  "id": 2216,
                   "name": "_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1758:21:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2041,7 +2041,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2191,
+                    "id": 2215,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1758:6:10",
@@ -2055,10 +2055,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2194,
+                  "id": 2218,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1789:19:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2067,7 +2067,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2193,
+                    "id": 2217,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1789:6:10",
@@ -2081,10 +2081,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2196,
+                  "id": 2220,
                   "name": "_decimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1818:15:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2093,7 +2093,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2195,
+                    "id": 2219,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1818:5:10",
@@ -2107,10 +2107,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2198,
+                  "id": 2222,
                   "name": "_conversionRate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1843:23:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2119,7 +2119,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2197,
+                    "id": 2221,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1843:7:10",
@@ -2133,10 +2133,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2200,
+                  "id": 2224,
                   "name": "_conversionRateDecimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1876:29:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2145,7 +2145,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2199,
+                    "id": 2223,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1876:5:10",
@@ -2159,26 +2159,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 2202,
+                  "id": 2226,
                   "name": "_organization",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2215,
+                  "scope": 2239,
                   "src": "1915:35:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                    "typeIdentifier": "t_contract$_OrganizationInterface_$3642",
                     "typeString": "contract OrganizationInterface"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 2201,
+                    "id": 2225,
                     "name": "OrganizationInterface",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 3618,
+                    "referencedDeclaration": 3642,
                     "src": "1915:21:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OrganizationInterface_$3618",
+                      "typeIdentifier": "t_contract$_OrganizationInterface_$3642",
                       "typeString": "contract OrganizationInterface"
                     }
                   },
@@ -2189,12 +2189,12 @@
               "src": "1712:244:10"
             },
             "returnParameters": {
-              "id": 2213,
+              "id": 2237,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2188:0:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "1701:489:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2202,7 +2202,7 @@
           },
           {
             "body": {
-              "id": 2228,
+              "id": 2252,
               "nodeType": "Block",
               "src": "2581:35:10",
               "statements": [
@@ -2213,7 +2213,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 2225,
+                        "id": 2249,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2236,7 +2236,7 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 2224,
+                      "id": 2248,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2249,7 +2249,7 @@
                       },
                       "typeName": "bytes32"
                     },
-                    "id": 2226,
+                    "id": 2250,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2263,30 +2263,30 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 2223,
-                  "id": 2227,
+                  "functionReturnParameters": 2247,
+                  "id": 2251,
                   "nodeType": "Return",
                   "src": "2592:17:10"
                 }
               ]
             },
             "documentation": "@notice Mocks BrandedToken requestStake function.\n     * @dev It takes below parameters in order:\n     - amount to stake\n     - amount to mint\n     * @return Unique hash for each stake request.",
-            "id": 2229,
+            "id": 2253,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "requestStake",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2220,
+              "id": 2244,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2217,
+                  "id": 2241,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2253,
                   "src": "2503:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2295,7 +2295,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2216,
+                    "id": 2240,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2503:7:10",
@@ -2309,10 +2309,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2219,
+                  "id": 2243,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2253,
                   "src": "2520:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2321,7 +2321,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2218,
+                    "id": 2242,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2520:7:10",
@@ -2337,15 +2337,15 @@
               "src": "2493:40:10"
             },
             "returnParameters": {
-              "id": 2223,
+              "id": 2247,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2222,
+                  "id": 2246,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2229,
+                  "scope": 2253,
                   "src": "2568:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2354,7 +2354,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2221,
+                    "id": 2245,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2568:7:10",
@@ -2369,15 +2369,15 @@
               ],
               "src": "2567:9:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "2472:144:10",
             "stateMutability": "nonpayable",
-            "superFunction": 366,
+            "superFunction": 390,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2247,
+              "id": 2271,
               "nodeType": "Block",
               "src": "3113:82:10",
               "statements": [
@@ -2388,7 +2388,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "66616c7365",
-                        "id": 2243,
+                        "id": 2267,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2406,7 +2406,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4272616e646564546f6b656e206163636570745374616b65526571756573742072657475726e65642066616c73652e",
-                        "id": 2244,
+                        "id": 2268,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2433,21 +2433,21 @@
                           "typeString": "literal_string \"BrandedToken acceptStakeRequest returned false.\""
                         }
                       ],
-                      "id": 2242,
+                      "id": 2266,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12908,
+                        12909
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12909,
                       "src": "3123:7:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2245,
+                    "id": 2269,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2461,29 +2461,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2246,
+                  "id": 2270,
                   "nodeType": "ExpressionStatement",
                   "src": "3123:65:10"
                 }
               ]
             },
             "documentation": "@notice Mocks BrandedToken acceptStakeRequest function. It fails the execution.\n     * @dev It takes below parameters in order:\n     - stake request hash\n     - r is the actual signature\n     - s is the second point on the curve in order to ecrecover\n     - v selects the final public key",
-            "id": 2248,
+            "id": 2272,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "acceptStakeRequest",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2238,
+              "id": 2262,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2231,
+                  "id": 2255,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3006:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2492,7 +2492,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2230,
+                    "id": 2254,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3006:7:10",
@@ -2506,10 +2506,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2233,
+                  "id": 2257,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3023:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2518,7 +2518,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2232,
+                    "id": 2256,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3023:7:10",
@@ -2532,10 +2532,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2235,
+                  "id": 2259,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3040:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2544,7 +2544,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2234,
+                    "id": 2258,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3040:7:10",
@@ -2558,10 +2558,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2237,
+                  "id": 2261,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3057:5:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2570,7 +2570,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2236,
+                    "id": 2260,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "3057:5:10",
@@ -2586,15 +2586,15 @@
               "src": "2996:72:10"
             },
             "returnParameters": {
-              "id": 2241,
+              "id": 2265,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2240,
+                  "id": 2264,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2248,
+                  "scope": 2272,
                   "src": "3103:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2603,7 +2603,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2239,
+                    "id": 2263,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3103:4:10",
@@ -2618,15 +2618,15 @@
               ],
               "src": "3102:6:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "2969:226:10",
             "stateMutability": "nonpayable",
-            "superFunction": 465,
+            "superFunction": 489,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2257,
+              "id": 2281,
               "nodeType": "Block",
               "src": "3521:29:10",
               "statements": [
@@ -2634,7 +2634,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "66616c7365",
-                    "id": 2255,
+                    "id": 2279,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2649,30 +2649,30 @@
                     },
                     "value": "false"
                   },
-                  "functionReturnParameters": 2254,
-                  "id": 2256,
+                  "functionReturnParameters": 2278,
+                  "id": 2280,
                   "nodeType": "Return",
                   "src": "3531:12:10"
                 }
               ]
             },
             "documentation": "@notice Mocks BrandedToken.revokeStakeRequest() function.\n     * @dev It takes below parameters in order:\n     - stake request hash\n     * @return False to replicate failure cases.",
-            "id": 2258,
+            "id": 2282,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "revokeStakeRequest",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2251,
+              "id": 2275,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2250,
+                  "id": 2274,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2258,
+                  "scope": 2282,
                   "src": "3463:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2681,7 +2681,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2249,
+                    "id": 2273,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3463:7:10",
@@ -2697,15 +2697,15 @@
               "src": "3453:23:10"
             },
             "returnParameters": {
-              "id": 2254,
+              "id": 2278,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2253,
+                  "id": 2277,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2258,
+                  "scope": 2282,
                   "src": "3511:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2714,7 +2714,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2252,
+                    "id": 2276,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3511:4:10",
@@ -2729,14 +2729,14 @@
               ],
               "src": "3510:6:10"
             },
-            "scope": 2259,
+            "scope": 2283,
             "src": "3426:124:10",
             "stateMutability": "nonpayable",
-            "superFunction": 581,
+            "superFunction": 605,
             "visibility": "external"
           }
         ],
-        "scope": 2260,
+        "scope": 2284,
         "src": "756:2797:10"
       }
     ],
@@ -2748,7 +2748,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T12:15:30.109Z",
+  "updatedAt": "2020-01-21T06:45:53.848Z",
   "devdoc": {
     "methods": {
       "acceptStakeRequest(bytes32,bytes32,bytes32,uint8)": {

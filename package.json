@@ -39,6 +39,7 @@
     "ganache-cli": "./tools/run_ganache_cli.sh"
   },
   "devDependencies": {
+    "@gnosis.pm/mock-contract": "github:gnosis/mock-contract#sol_0_5_0",
     "abi-decoder": "1.2.0",
     "assert": "2.0.0",
     "bn.js": "4.11.8",
@@ -47,16 +48,14 @@
     "eslint-plugin-import": "2.17.2",
     "ethereumjs-util": "6.1.0",
     "ethlint": "1.2.4",
-    "ganache-cli": "6.4.3",
+    "ganache-cli": "^6.8.2",
     "npm-run-all": "4.1.5",
     "openzeppelin-solidity": "2.1.1",
     "solc": "0.5.8",
     "solium": "1.2.4",
     "truffle": "5.0.19",
     "web3": "^1.2.4",
-    "websocket": "1.0.28",
-    "@gnosis.pm/mock-contract": "github:gnosis/mock-contract#sol_0_5_0",
-    "eth-gas-reporter": "^0.2.14"
+    "websocket": "1.0.28"
   },
   "dependencies": {
     "@openst/openst.js": "^0.10.0",

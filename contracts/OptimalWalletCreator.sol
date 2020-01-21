@@ -1,5 +1,6 @@
 pragma solidity ^0.5.0;
 
+import "./openst-contracts/contracts/proxies/Proxy.sol";
 import "./brandedtoken-contracts/contracts/UtilityBrandedToken.sol";
 import "./openst-contracts/contracts/proxies/UserWalletFactory.sol";
 import "./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol";
@@ -15,6 +16,11 @@ contract OptimalWalletCreator is Organized {
 
     UserWalletFactory userWalletFactory;
     UtilityBrandedToken utilityBrandedToken;
+
+    event TuppleEmitted(
+        address _gnosisSafeProxy,
+        address _tokenHolderProxy
+    );
 
     constructor(
         address _ubtContractAddr,
@@ -42,48 +48,44 @@ contract OptimalWalletCreator is Organized {
     *                        gnosis safe proxy.
     * @param _tokenHolderMasterCopy The address of a master copy of token
     *                               holder.
-    * @param _token The address of the economy token.
     * @param _tokenRules The address of the token rules.
     * @param _sessionKeys Session key addresses to authorize.
     * @param _sessionKeysSpendingLimits Session keys' spending limits.
     * @param _sessionKeysExpirationHeights Session keys' expiration heights.
-    * @param _internalActors Array of addresses of the internal actors to register.
+    *
     */
 
     function optimalCall(
         address _gnosisSafeMasterCopy,
         bytes memory _gnosisSafeData,
         address _tokenHolderMasterCopy,
-        address _token,
         address _tokenRules,
         address[] memory _sessionKeys,
         uint256[] memory _sessionKeysSpendingLimits,
-        uint256[] memory _sessionKeysExpirationHeights,
-        address[] memory _internalActors
+        uint256[] memory _sessionKeysExpirationHeights
+      //  address[] memory _internalActors
     )
         public
         onlyWorker
+        returns (Proxy gnosisSafeProxy_, Proxy tokenHolderProxy_)
     {
+        address[] memory _internalActors;
 
-        userWalletFactory.createUserWallet(
+        (gnosisSafeProxy_, tokenHolderProxy_) = userWalletFactory.createUserWallet(
             _gnosisSafeMasterCopy,
             _gnosisSafeData,
             _tokenHolderMasterCopy,
-            _token,
+            address(utilityBrandedToken),  //_token
             _tokenRules,
             _sessionKeys,
             _sessionKeysSpendingLimits,
             _sessionKeysExpirationHeights
         );
 
+       _internalActors[0] = address(tokenHolderProxy_);
         /*
          * first call to createWalletUser with all above parameters
          */
         utilityBrandedToken.registerInternalActors(_internalActors);
-
-        /*
-         * second call to registerInternalActors from UtilityBrandedToken
-         * considering that this contract is set as a worker already by the organization
-         */
     }
 }

@@ -8,21 +8,6 @@ module.exports = {
       gasPrice: 0x01,
     },
   },
-mocha: {
-reporter: "eth-gas-reporter",
-reporterOptions: {
-currency: "chf",
-gasPrice: 21,
-onlyCalledMethods: false,
-noColors: true,
-rst: true,
-rstTitle: "Gas Usage",
-showTimeSpent: true,
-excludeContracts: ["Migrations"],
-proxyResolver: "EtherRouter",
-codechecks: true
-}
-},
   compilers: {
     solc: {
       settings: {

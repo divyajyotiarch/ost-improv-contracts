@@ -1,0 +1,1529 @@
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol
+
+/* solhint-disable-next-line compiler-fixed */
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// ----------------------------------------------------------------------------
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+
+/**
+ *  @title UtilityTokenInterface contract.
+ *
+ *  @notice Provides the interface to utility token contract.
+ */
+contract UtilityTokenInterface {
+
+    /* External functions */
+
+    /**
+     * @notice Increases the total token supply.
+     *
+     * @dev Adds number of tokens to beneficiary balance and increases the
+     *      total token supply.
+     *
+     * @param _account Account address for which the balance will be increased.
+     *                 This is payable so that it provides flexibility of
+     *                 transferring base token to account on increase supply.
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if increase supply is successful, false otherwise.
+     */
+    function increaseSupply(
+        address payable _account,
+        uint256 _amount
+    )
+        external
+        returns (bool success_);
+
+    /**
+     * @notice Decreases the token supply.
+     *
+     * @dev Decreases the token balance from the msg.sender address and
+     *      decreases the total token supply count.
+     *
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if decrease supply is successful, false otherwise.
+     */
+    function decreaseSupply(uint256 _amount) external returns (bool success_);
+
+    /**
+     * @notice Sets the CoGateway contract address.
+     *
+     * @dev Function requires:
+     *          - It is called by whitelisted workers.
+     *          - coGateway address is set only once.
+     *          - coGateway.utilityToken must match this contract.
+     *
+     * @param _coGateway CoGateway contract address.
+     *
+     */
+    function setCoGateway(address _coGateway) external returns (bool);
+
+    /**
+     * @notice  Checks if an address exists.
+     *
+     * @param _actor Address that needs to be checked
+     *
+     * @return exists_ `true` if the address is allowed otherwise `false`
+     */
+    function exists(address _actor) external returns (bool exists_);
+}
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/EIP20Interface.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// 
+// ----------------------------------------------------------------------------
+// Common: Standard EIP20 Interface
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// Based on the 'final' EIP20 token standard as specified at:
+// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+// ----------------------------------------------------------------------------
+
+/**
+ * @title EIP20Interface.
+ *
+ * @notice Provides EIP20 token interface.
+ */
+contract EIP20Interface {
+
+    /* Events */
+
+    event Transfer(
+        address indexed _from,
+        address indexed _to,
+        uint256 _value
+    );
+
+    event Approval(
+        address indexed _owner,
+        address indexed _spender,
+        uint256 _value
+    );
+
+
+    /* Public functions */
+
+    /**
+     * @notice Public function to get the name of the token.
+     *
+     * @return tokenName_ Name of the token.
+     */
+    function name() public view returns (string memory tokenName_);
+
+    /**
+     * @notice Public function to get the symbol of the token.
+     *
+     * @return tokenSymbol_ Symbol of the token.
+     */
+    function symbol() public view returns (string memory tokenSymbol_);
+
+    /**
+     * @notice Public function to get the decimals of the token.
+     *
+     * @return tokenDecimals Decimals of the token.
+     */
+    function decimals() public view returns (uint8 tokenDecimals_);
+
+    /**
+     * @notice Public function to get the total supply of the tokens.
+     *
+     * @return totalTokenSupply_ Total token supply.
+     */
+    function totalSupply()
+        public
+        view
+        returns (uint256 totalTokenSupply_);
+
+    /**
+     * @notice Get the balance of an account.
+     *
+     * @param _owner Address of the owner account.
+     *
+     * @return balance_ Account balance of the owner account.
+     */
+    function balanceOf(address _owner) public view returns (uint256 balance_);
+
+    /**
+     * @notice Public function to get the allowance.
+     *
+     * @param _owner Address of the owner account.
+     * @param _spender Address of the spender account.
+     *
+     * @return allowance_ Remaining allowance for the spender to spend from
+     *                    owner's account.
+     */
+    function allowance(
+        address _owner,
+        address _spender
+    )
+        public
+        view
+        returns (uint256 allowance_);
+
+
+    /**
+     * @notice Public function to transfer the token.
+     *
+     * @param _to Address to which tokens are transferred.
+     * @param _value Amount of tokens to be transferred.
+     *
+     * @return success_ `true` for a successful transfer, `false` otherwise.
+     */
+    function transfer(
+        address _to,
+        uint256 _value
+    )
+        public
+        returns (bool success_);
+
+    /**
+     * @notice Public function transferFrom.
+     *
+     * @param _from Address from which tokens are transferred.
+     * @param _to Address to which tokens are transferred.
+     * @param _value Amount of tokens transferred.
+     *
+     * @return success_ `true` for a successful transfer, `false` otherwise.
+     */
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _value
+    )
+        public
+        returns (bool success_);
+
+    /**
+     * @notice Public function to approve an account for transfer.
+     *
+     * @param _spender Address authorized to spend from the function caller's
+     *                 address.
+     * @param _value Amount up to which spender is authorized to spend.
+     *
+     * @return bool `true` for a successful approval, `false` otherwise.
+     */
+    function approve(
+        address _spender,
+        uint256 _value
+    )
+        public
+        returns (bool success_);
+
+}
+
+// File: openzeppelin-solidity/contracts/math/SafeMath.sol
+
+pragma solidity ^0.5.0;
+
+/**
+ * @title SafeMath
+ * @dev Unsigned math operations with safety checks that revert on error
+ */
+library SafeMath {
+    /**
+    * @dev Multiplies two unsigned integers, reverts on overflow.
+    */
+    function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the
+        // benefit is lost if 'b' is also tested.
+        // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522
+        if (a == 0) {
+            return 0;
+        }
+
+        uint256 c = a * b;
+        require(c / a == b);
+
+        return c;
+    }
+
+    /**
+    * @dev Integer division of two unsigned integers truncating the quotient, reverts on division by zero.
+    */
+    function div(uint256 a, uint256 b) internal pure returns (uint256) {
+        // Solidity only automatically asserts when dividing by 0
+        require(b > 0);
+        uint256 c = a / b;
+        // assert(a == b * c + a % b); // There is no case in which this doesn't hold
+
+        return c;
+    }
+
+    /**
+    * @dev Subtracts two unsigned integers, reverts on overflow (i.e. if subtrahend is greater than minuend).
+    */
+    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(b <= a);
+        uint256 c = a - b;
+
+        return c;
+    }
+
+    /**
+    * @dev Adds two unsigned integers, reverts on overflow.
+    */
+    function add(uint256 a, uint256 b) internal pure returns (uint256) {
+        uint256 c = a + b;
+        require(c >= a);
+
+        return c;
+    }
+
+    /**
+    * @dev Divides two unsigned integers and returns the remainder (unsigned integer modulo),
+    * reverts when dividing by zero.
+    */
+    function mod(uint256 a, uint256 b) internal pure returns (uint256) {
+        require(b != 0);
+        return a % b;
+    }
+}
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/EIP20Token.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// 
+// ----------------------------------------------------------------------------
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+
+
+
+/**
+ * @title EIP20Token contract.
+ *
+ * @notice EIP20Token implements EIP20Interface.
+ */
+contract EIP20Token is EIP20Interface {
+
+    /* Usings */
+
+    using SafeMath for uint256;
+
+    /** Name of the token. */
+    string private tokenName;
+
+    /** Symbol of the token. */
+    string private tokenSymbol;
+
+    /** Decimals used by the token. */
+    uint8  private tokenDecimals;
+
+    /** Total supply of the token. */
+    uint256 internal totalTokenSupply;
+
+    /** Stores the token balance of the accounts. */
+    mapping(address => uint256) balances;
+
+    /** Stores the authorization information. */
+    mapping(address => mapping (address => uint256)) allowed;
+
+
+    /* Constructor */
+
+    /**
+     * @notice Contract constructor.
+     *
+     * @param _symbol Symbol of the token.
+     * @param _name Name of the token.
+     * @param _decimals Decimal places of the token.
+     */
+    constructor(
+        string memory _symbol,
+        string memory _name,
+        uint8 _decimals
+    )
+        public
+    {
+        tokenSymbol = _symbol;
+        tokenName = _name;
+        tokenDecimals = _decimals;
+        totalTokenSupply = 0;
+    }
+
+
+    /* Public functions. */
+
+    /**
+     * @notice Public function to get the name of the token.
+     *
+     * @return tokenName_ Name of the token.
+     */
+    function name() public view returns (string memory tokenName_) {
+        tokenName_ = tokenName;
+    }
+
+    /**
+     * @notice Public function to get the symbol of the token.
+     *
+     * @return tokenSymbol_ Symbol of the token.
+     */
+    function symbol() public view returns (string memory tokenSymbol_) {
+        tokenSymbol_ = tokenSymbol;
+    }
+
+    /**
+     * @notice Public function to get the decimals of the token.
+     *
+     * @return tokenDecimals Decimals of the token.
+     */
+    function decimals() public view returns (uint8 tokenDecimals_) {
+        tokenDecimals_ = tokenDecimals;
+    }
+
+    /**
+     * @notice Get the balance of an account.
+     *
+     * @param _owner Address of the owner account.
+     *
+     * @return balance_ Account balance of the owner account.
+     */
+    function balanceOf(address _owner) public view returns (uint256 balance_) {
+        balance_ = balances[_owner];
+    }
+
+    /**
+     * @notice Public function to get the total supply of the tokens.
+     *
+     * @dev Get totalTokenSupply as view so that child cannot edit.
+     *
+     * @return totalTokenSupply_ Total token supply.
+     */
+    function totalSupply()
+        public
+        view
+        returns (uint256 totalTokenSupply_)
+    {
+        totalTokenSupply_ = totalTokenSupply;
+    }
+
+    /**
+     * @notice Public function to get the allowance.
+     *
+     * @param _owner Address of the owner account.
+     * @param _spender Address of the spender account.
+     *
+     * @return allowance_ Remaining allowance for the spender to spend from
+     *                    owner's account.
+     */
+    function allowance(
+        address _owner,
+        address _spender
+    )
+        public
+        view
+        returns (uint256 allowance_)
+    {
+        allowance_ = allowed[_owner][_spender];
+    }
+
+    /**
+     * @notice Public function to transfer the token.
+     *
+     * @dev Fires the transfer event, throws if, _from account does not have
+     *      enough tokens to spend.
+     *
+     * @param _to Address to which tokens are transferred.
+     * @param _value Amount of tokens to be transferred.
+     *
+     * @return success_ `true` for a successful transfer, `false` otherwise.
+     */
+    function transfer(
+        address _to,
+        uint256 _value
+    )
+        public
+        returns (bool success_)
+    {
+        success_ = transferBalance(msg.sender, _to, _value);
+    }
+
+    /**
+     * @notice Public function transferFrom.
+     *
+     * @dev Allows a contract to transfer tokens on behalf of _from address
+     *      to _to address, the function caller has to be pre-authorized for
+     *      multiple transfers up to the total of _value amount by the _from
+     *      address.
+     *
+     * @param _from Address from which tokens are transferred.
+     * @param _to Address to which tokens are transferred.
+     * @param _value Amount of tokens transferred.
+     *
+     * @return success_ `true` for a successful transfer, `false` otherwise.
+     */
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _value
+    )
+        public
+        returns (bool success_)
+    {
+        allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value);
+        success_ = transferBalance(_from, _to, _value);
+    }
+
+    /**
+     * @notice Public function to approve an account for transfer.
+     *
+     * @dev Allows _spender address to withdraw from function caller's account,
+     *      multiple times up to the _value amount, if this function is called
+     *      again it overwrites the current allowance with _value.
+     *
+     * @param _spender Address authorized to spend from the function caller's
+     *                  address.
+     * @param _value Amount up to which spender is authorized to spend.
+     *
+     * @return bool `true` for a successful approval, `false` otherwise.
+     */
+    function approve(
+        address _spender,
+        uint256 _value
+    )
+        public
+        returns (bool success_)
+    {
+
+        allowed[msg.sender][_spender] = _value;
+
+        emit Approval(msg.sender, _spender, _value);
+
+        success_ = true;
+    }
+
+
+    /* Internal functions. */
+
+    /**
+     * @notice Internal function to transfer the tokens.
+     *
+     * @dev This is an internal functions that transfers the token. This
+     *      function is called from transfer and transferFrom functions.
+     *
+     * @param _from Address from which tokens are transferred.
+     * @param _to Address to which tokens are transferred.
+     * @param _value Amount of tokens transferred.
+     *
+     * @return success_ `true` for a successful transfer, `false` otherwise.
+     */
+    function transferBalance(
+        address _from,
+        address _to,
+        uint256 _value
+    )
+        internal
+        returns (bool success_)
+    {
+        /**
+         * According to the EIP20 spec, "transfers of 0 values MUST be treated
+         * as normal transfers and fire the Transfer event".
+         * Also, should throw if not enough balance. This is taken care of by
+         * SafeMath.
+         */
+        balances[_from] = balances[_from].sub(_value);
+        balances[_to] = balances[_to].add(_value);
+
+        emit Transfer(_from, _to, _value);
+
+        success_ = true;
+    }
+}
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// ----------------------------------------------------------------------------
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+
+contract CoGatewayUtilityTokenInterface {
+
+    /**
+     * @notice Get the utility token address.
+     *
+     * @return utilityToken_ Address of utility token.
+     */
+    function utilityToken()
+        public
+        returns (address utilityToken_);
+}
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// ----------------------------------------------------------------------------
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+
+/**
+ *  @title OrganizationInterface provides methods to check if an address is
+ *         currently registered as an active participant in the organization.
+ */
+interface OrganizationInterface {
+
+    /**
+     * @notice Checks if an address is currently registered as the organization.
+     *
+     * @param _organization Address to check.
+     *
+     * @return isOrganization_ True if the given address represents the
+     *                         organization. Returns false otherwise.
+     */
+    function isOrganization(
+        address _organization
+    )
+        external
+        view
+        returns (bool isOrganization_);
+
+    /**
+     * @notice Checks if an address is currently registered as an active worker.
+     *
+     * @param _worker Address to check.
+     *
+     * @return isWorker_ True if the given address is a registered, active
+     *                   worker. Returns false otherwise.
+     */
+    function isWorker(address _worker) external view returns (bool isWorker_);
+
+}
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/Organized.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// ----------------------------------------------------------------------------
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+
+
+/**
+ * @title Organized contract.
+ *
+ * @notice The Organized contract facilitates integration of
+ *         organization administration keys with different contracts.
+ */
+contract Organized {
+
+
+    /* Storage */
+
+    /** Organization which holds all the keys needed to administer the economy. */
+    OrganizationInterface public organization;
+
+
+    /* Modifiers */
+
+    modifier onlyOrganization()
+    {
+        require(
+            organization.isOrganization(msg.sender),
+            "Only the organization is allowed to call this method."
+        );
+
+        _;
+    }
+
+    modifier onlyWorker()
+    {
+        require(
+            organization.isWorker(msg.sender),
+            "Only whitelisted workers are allowed to call this method."
+        );
+
+        _;
+    }
+
+
+    /* Constructor */
+
+    /**
+     * @notice Sets the address of the organization contract.
+     *
+     * @param _organization A contract that manages worker keys.
+     */
+    constructor(OrganizationInterface _organization) public {
+        require(
+            address(_organization) != address(0),
+            "Organization contract address must not be zero."
+        );
+
+        organization = _organization;
+    }
+
+}
+
+// File: contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityToken.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// ----------------------------------------------------------------------------
+//
+// http://www.simpletoken.org/
+//
+// ----------------------------------------------------------------------------
+
+
+
+
+
+
+/**
+ *  @title UtilityToken is an EIP20Token and implements UtilityTokenInterface.
+ *
+ *  @notice This contract has increaseSupply and decreaseSupply functions that
+ *          can be called only by CoGateway.
+ *
+ */
+contract UtilityToken is EIP20Token, Organized, UtilityTokenInterface {
+
+    /* events */
+
+    /** Emitted whenever a CoGateway address is set */
+    event CoGatewaySet(address _coGateway);
+
+
+    /* Storage */
+
+    /** Address of the EIP20 token (branded token) in origin chain. */
+    address public token;
+
+    /** Address of CoGateway contract. */
+    address public coGateway;
+
+
+    /* Modifiers */
+
+    /** Checks that only CoGateway can call a particular function. */
+    modifier onlyCoGateway() {
+
+        require(
+            msg.sender == address(coGateway),
+            "Only CoGateway can call the function."
+        );
+
+        _;
+    }
+
+
+    /* Constructor */
+
+    /**
+     * @notice Contract constructor.
+     *
+     * @param _token Address of branded token.
+     * @param _symbol Symbol of token.
+     * @param _name Name of token.
+     * @param _decimals Decimal of token.
+     * @param _organization Address of a contract that manages organization.
+     */
+    constructor(
+        address _token,
+        string memory _symbol,
+        string memory _name,
+        uint8 _decimals,
+        OrganizationInterface _organization
+    )
+        public
+        Organized(_organization)
+        EIP20Token(_symbol, _name, _decimals)
+    {
+        require(
+            _token != address(0),
+            "Token address should not be zero."
+        );
+
+        token = _token;
+    }
+
+
+    /* External functions */
+
+    /**
+     * @notice Sets the CoGateway contract address. This can be called only by
+     *         an organization address. This can be set only once.
+     *
+     * @param _coGatewayAddress CoGateway contract address
+     *
+     * @return success_ `true` if CoGateway address was set
+     */
+    function setCoGateway(
+        address _coGatewayAddress
+    )
+        external
+        onlyOrganization
+        returns (bool success_)
+    {
+        success_ = setCoGatewayInternal(_coGatewayAddress);
+    }
+
+    /**
+     * @notice Increases the total token supply. Also, adds the number of
+     *         tokens to the beneficiary balance.
+     *
+     * @param _account Account address for which the balance will be increased.
+                       This is payable so that it provides flexibility of
+     *                 transferring base token to account on increase supply.
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if increase supply is successful, false otherwise.
+     */
+    function increaseSupply(
+        address payable _account,
+        uint256 _amount
+    )
+        external
+        onlyCoGateway
+        returns (bool success_)
+    {
+        success_ = increaseSupplyInternal(_account, _amount);
+    }
+
+    /**
+     * @notice Decreases the token supply.
+     *
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if decrease supply is successful, false otherwise.
+     */
+    function decreaseSupply(
+        uint256 _amount
+    )
+        external
+        onlyCoGateway
+        returns (bool success_)
+    {
+        success_ = decreaseSupplyInternal(_amount);
+    }
+
+    /**
+     * @notice Checks if an address exists.
+     *
+     * @dev For standard ethereum all account addresses exist by default,
+     *      so it returns true for all addresses.
+     *
+     * @return exists_ `true` for all given address
+     */
+    function exists(address) external returns (bool exists_) {
+        exists_ = true;
+    }
+
+
+    /* Internal functions. */
+
+    /**
+     * @notice Sets the CoGateway contract address. This can be called by
+     *         UtilityToken contract or contract inheriting it. This can be
+     *         set only once.
+     * @param _coGateway CoGateway contract address
+     *
+     * @return success_ `true` if CoGateway address was set
+     */
+    function setCoGatewayInternal(
+        address _coGateway
+    )
+        internal
+        returns (bool success_)
+    {
+        require(
+            coGateway == address(0),
+            "CoGateway address is already set."
+        );
+
+        require(
+            _coGateway != address(0),
+            "CoGateway address should not be zero."
+        );
+
+        // protect against reentrancy by setting the coGateway
+        // before querying the contract.
+        coGateway = _coGateway;
+
+        require(
+            CoGatewayUtilityTokenInterface(_coGateway).utilityToken()
+                == address(this),
+            "CoGateway should be linked with this utility token."
+        );
+
+        emit CoGatewaySet(coGateway);
+
+        success_ = true;
+    }
+
+    /**
+     * @notice Internal function to increase the total token supply.
+     *
+     * @dev Adds number of tokens to beneficiary balance and increases the
+     *      total token supply.
+     *
+     * @param _account Account address for which the balance will be increased.
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if increase supply is successful, false otherwise.
+     */
+    function increaseSupplyInternal(
+        address _account,
+        uint256 _amount
+    )
+        internal
+        returns (bool success_)
+    {
+        // Increase the balance of the _account
+        balances[_account] = balances[_account].add(_amount);
+        totalTokenSupply = totalTokenSupply.add(_amount);
+
+        /*
+         * Creation of the new tokens should trigger a Transfer event with
+         * _from as 0x0.
+         */
+        emit Transfer(address(0), _account, _amount);
+
+        success_ = true;
+    }
+
+    /**
+     * @notice Internal function to decrease the token supply.
+     *
+     * @dev Decreases the token balance from the msg.sender address and
+     *      decreases the total token supply count.
+     *
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if decrease supply is successful, false otherwise.
+     */
+    function decreaseSupplyInternal(
+        uint256 _amount
+    )
+        internal
+        returns (bool success_)
+    {
+        require(
+            balances[msg.sender] >= _amount,
+            "Insufficient balance."
+        );
+
+        // Decrease the balance of the msg.sender account.
+        balances[msg.sender] = balances[msg.sender].sub(_amount);
+        totalTokenSupply = totalTokenSupply.sub(_amount);
+
+        /*
+         * Burning of the tokens should trigger a Transfer event with _to
+         * as 0x0.
+         */
+        emit Transfer(msg.sender, address(0), _amount);
+
+        success_ = true;
+    }
+}
+
+// File: contracts/brandedtoken-contracts/contracts/UtilityBrandedToken.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2018 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
+
+/**
+ * @title UtilityBrandedToken contract.
+ *
+ * @notice UtilityBrandedToken is an EIP20 token which implements
+ *         UtilityTokenInterface.
+ *
+ * @dev UtilityBrandedToken are designed to be used within a decentralised
+ *      application and support increaseSupply and decreaseSupply of tokens.
+ */
+contract UtilityBrandedToken is UtilityToken {
+
+    /* Events */
+
+    event InternalActorRegistered(
+        address _actor
+    );
+
+
+    /* Storage */
+
+    /** Mapping stores addresses which are registered as internal actor. */
+    mapping (address /* internal actor */ => bool) public isInternalActor;
+
+
+    /* Special Functions */
+
+    /**
+     * @notice Contract constructor.
+     *
+     * @dev Creates an utility branded token contract with arguments passed
+     *      in the contract constructor.
+     *
+     * @param _token Address of branded token on origin chain.
+     *               It acts as an identifier.
+     * @param _symbol Symbol of the token.
+     * @param _name Name of the token.
+     * @param _decimals Decimal places of the token.
+     * @param _organization Address of the Organization contract.
+     */
+    constructor(
+        address _token,
+        string memory _symbol,
+        string memory _name,
+        uint8 _decimals,
+        OrganizationInterface _organization
+    )
+        public
+        UtilityToken(_token, _symbol, _name, _decimals, _organization)
+    {
+    }
+
+
+    /* External functions */
+
+    /**
+     * @notice Registers internal actors.
+     *
+     * @param _internalActors Array of addresses of the internal actors
+     *        to register.
+     */
+    function registerInternalActors(address[] calldata _internalActors)
+        external
+        onlyWorker
+    {
+        for (uint256 i = 0; i < _internalActors.length; i++) {
+            if (!isInternalActor[_internalActors[i]]) {
+                isInternalActor[_internalActors[i]] = true;
+                emit InternalActorRegistered(_internalActors[i]);
+            }
+        }
+    }
+
+    /**
+     * @notice Sets the CoGateway contract address.
+     *
+     * @dev Function requires:
+     *          - Caller is organization.
+     *          - coGateway address is not set.
+     *          - coGateway.utilityToken is equal to this contract address.
+     *
+     * @param _coGateway CoGateway contract address.
+     */
+    function setCoGateway(address _coGateway)
+        external
+        onlyOrganization
+        returns (bool success_)
+    {
+        success_ = super.setCoGatewayInternal(_coGateway);
+
+        // Registers co-gateway as an internal actor.
+        isInternalActor[coGateway] = true;
+    }
+
+    /**
+     * @notice Increases the total token supply. Also, adds the number of
+     *         tokens to the beneficiary balance.
+     *
+     * @param _beneficiary Account address for which the balance will be
+     *                     increased. This is payable so that it provides
+     *                     flexibility of transferring base token to account
+     *                     on increase supply.
+     * @param _amount Amount of tokens.
+     *
+     * @return success_ `true` if increase supply is successful, false otherwise.
+     */
+    function increaseSupply(
+        address payable _beneficiary,
+        uint256 _amount
+    )
+        external
+        onlyCoGateway
+        returns (bool success_)
+    {
+        require(
+            isInternalActor[_beneficiary],
+            "Beneficiary is not an internal actor."
+        );
+
+        success_ = super.increaseSupplyInternal(_beneficiary, _amount);
+    }
+
+    /**
+     * @notice Checks if an address is an internal actor.
+     *
+     * @return exists_ `true` if the specified account is an internal actor,
+     *                 otherwise `false`.
+     */
+    function exists(address account) external returns (bool exists_) {
+        exists_ = isInternalActor[account];
+    }
+
+
+    /* Public functions */
+
+    /**
+     * @notice Public function transfer.
+     *
+     * @dev Function requires:
+     *         - _to address is an internal actor
+     *
+     * @param _to Address to which BT needs to transfer.
+     * @param _value Number of BTs that needs to transfer.
+     *
+     * @return Success/failure status of transfer.
+     */
+    function transfer(
+        address _to,
+        uint256 _value
+    )
+        public
+        returns (bool)
+    {
+        require(
+            isInternalActor[_to],
+            "To address is not an internal actor."
+        );
+
+        return super.transfer(_to, _value);
+    }
+
+    /**
+     * @notice Public function transferFrom.
+     *
+     * @dev Function requires:
+     *         - _to address is an internal actor
+     *
+     * @param _from Address from which BT needs to transfer.
+     * @param _to Address to which BT needs to transfer.
+     * @param _value Number of BTs that needs to transfer.
+     *
+     * @return Success/failure status of transferFrom.
+     */
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _value
+    )
+        public
+        returns (bool)
+    {
+        require(
+            isInternalActor[_to],
+            "To address is not an internal actor."
+        );
+
+        return super.transferFrom(_from, _to, _value);
+    }
+}
+
+// File: contracts/openst-contracts/contracts/proxies/Proxy.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @title Proxy contract that delegates calls to the master contract.
+ *
+ * @notice Allows to create a proxy from a master copy of any contract.
+ *         An important requirement on a master contract is to have a reserved
+ *         slot of an address type, within its storage, in a first position.
+ *         For an example, please, see TokenHolder contract.
+ */
+contract Proxy {
+
+    /**
+     * @dev THIS STORAGE VARIABLE *MUST* BE ALWAYS THE FIRST STORAGE
+     *      ELEMENT FOR THIS CONTRACT.
+     */
+    address public masterCopy;
+
+    constructor(address _masterCopy)
+        public
+    {
+        require(
+            _masterCopy != address(0),
+            "Master copy address is null."
+        );
+
+        masterCopy = _masterCopy;
+    }
+
+    /**
+     * @dev Fallback function allowing to perform a delegatecall to the given
+     *      implementation. The function will return whatever the
+     *      implementation call returns.
+     */
+    function ()
+        external
+        payable
+    {
+        // solium-disable-next-line security/no-inline-assembly
+        assembly {
+            let masterCopy := and(sload(0), 0xffffffffffffffffffffffffffffffffffffffff)
+            calldatacopy(0, 0, calldatasize())
+            let success := delegatecall(gas, masterCopy, 0, calldatasize(), 0, 0)
+            returndatacopy(0, 0, returndatasize())
+            if eq(success, 0) { revert(0, returndatasize()) }
+            return(0, returndatasize())
+        }
+    }
+}
+
+// File: contracts/openst-contracts/contracts/proxies/UserWalletFactory.sol
+
+pragma solidity ^0.5.0;
+
+// Copyright 2019 OpenST Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
+
+/**
+ * @title Allows to create a new gnosis safe proxy and executes a
+ *        message call to the newly created proxy. Afterwards, in the same
+ *        transaction, creates a new token holder proxy by specifying
+ *        as an owner the newly created gnosis safe proxy contract.
+ */
+contract UserWalletFactory {
+
+    /* Events */
+
+    /**
+     * @notice The event is emitted the from UserWalletFactory::createUserWallet
+     *         function on success.
+     *
+     * @param _gnosisSafeProxy A newly created gnosis safe's proxy.
+     * @param _tokenHolderProxy A newly created token holder's proxy.
+     */
+    event UserWalletCreated(
+        Proxy _gnosisSafeProxy,
+        Proxy _tokenHolderProxy
+    );
+
+
+    /* Constants */
+
+    /** The callprefix of the TokenHolder::setup function. */
+    bytes4 public constant TOKENHOLDER_SETUP_CALLPREFIX = bytes4(
+        keccak256(
+            "setup(address,address,address,address[],uint256[],uint256[])"
+        )
+    );
+
+
+    /* External Functions  */
+
+    /**
+    * @notice Create a new gnosis safe proxy and executes a
+    *         message call to the newly created proxy. Afterwards, in the same
+    *         transaction, creates a new token holder proxy by specifying
+    *         as an owner the newly created gnosis safe proxy contract.
+    *
+    * @param _gnosisSafeMasterCopy The address of a master copy of gnosis safe.
+    * @param _gnosisSafeData The message data to be called on a newly created
+    *                        gnosis safe proxy.
+    * @param _tokenHolderMasterCopy The address of a master copy of token
+    *                               holder.
+    * @param _token The address of the economy token.
+    * @param _tokenRules The address of the token rules.
+    * @param _sessionKeys Session key addresses to authorize.
+    * @param _sessionKeysSpendingLimits Session keys' spending limits.
+    * @param _sessionKeysExpirationHeights Session keys' expiration heights.
+    *
+    * @return gnosisSafeProxy_ A newly created gnosis safe's proxy address.
+    * @return tokenHolderProxy_ A newly created token holder's proxy address.
+    */
+    function createUserWallet(
+        address _gnosisSafeMasterCopy,
+        bytes calldata _gnosisSafeData,
+        address _tokenHolderMasterCopy,
+        address _token,
+        address _tokenRules,
+        address[] calldata _sessionKeys,
+        uint256[] calldata _sessionKeysSpendingLimits,
+        uint256[] calldata _sessionKeysExpirationHeights
+    )
+        external
+        returns (Proxy gnosisSafeProxy_, Proxy tokenHolderProxy_)
+    {
+        gnosisSafeProxy_ = new Proxy(_gnosisSafeMasterCopy);
+        callProxyData(gnosisSafeProxy_, _gnosisSafeData);
+
+        tokenHolderProxy_ = new Proxy(_tokenHolderMasterCopy);
+
+        bytes memory tokenHolderData = abi.encodeWithSelector(
+            TOKENHOLDER_SETUP_CALLPREFIX,
+            _token,
+            _tokenRules,
+            gnosisSafeProxy_,
+            _sessionKeys,
+            _sessionKeysSpendingLimits,
+            _sessionKeysExpirationHeights
+        );
+        callProxyData(tokenHolderProxy_, tokenHolderData);
+
+        emit UserWalletCreated(gnosisSafeProxy_, tokenHolderProxy_);
+    }
+
+
+    /* Private Functions */
+
+    function callProxyData(
+        Proxy _proxy,
+        bytes memory _data
+    )
+        private
+    {
+        if (_data.length > 0) {
+            // solium-disable-next-line security/no-inline-assembly
+            assembly {
+                if eq(call(gas, _proxy, 0, add(_data, 0x20), mload(_data), 0, 0), 0) {
+                    revert(0, 0)
+                }
+            }
+        }
+    }
+}
+
+// File: contracts/OptimalWalleTCreator.sol
+
+pragma solidity ^0.5.0;
+
+
+
+
+
+/**
+ * @title Allows to call function createUserWallet from UserWalletFactory
+ *        Allows to call function registerInternalActors from UtilityBrandedToken
+ *        Two methods called in single transaction
+ */
+
+contract OptimalWalletCreator is Organized {
+
+    UserWalletFactory userWalletFactory;
+    UtilityBrandedToken utilityBrandedToken;
+
+    constructor(
+        address _ubtContractAddr,
+        address _walletFactoryContractAddr,
+        OrganizationInterface _organization
+    )
+        public
+        Organized(_organization)
+    {
+        userWalletFactory = UserWalletFactory(_walletFactoryContractAddr);
+        utilityBrandedToken = UtilityBrandedToken(_ubtContractAddr);
+    }
+
+    /* External Functions  */
+
+    /**
+    * @notice Create a new gnosis safe proxy and executes a
+    *         message call to the newly created proxy. Afterwards, in the same
+    *         transaction, creates a new token holder proxy by specifying
+    *         as an owner the newly created gnosis safe proxy contract.
+    *         Registers internal actors.
+    *
+    * @param _gnosisSafeMasterCopy The address of a master copy of gnosis safe.
+    * @param _gnosisSafeData The message data to be called on a newly created
+    *                        gnosis safe proxy.
+    * @param _tokenHolderMasterCopy The address of a master copy of token
+    *                               holder.
+    * @param _token The address of the economy token.
+    * @param _tokenRules The address of the token rules.
+    * @param _sessionKeys Session key addresses to authorize.
+    * @param _sessionKeysSpendingLimits Session keys' spending limits.
+    * @param _sessionKeysExpirationHeights Session keys' expiration heights.
+    * @param _internalActors Array of addresses of the internal actors to register.
+    */
+
+    function optimalCall(
+        address _gnosisSafeMasterCopy,
+        bytes memory _gnosisSafeData,
+        address _tokenHolderMasterCopy,
+        address _token,
+        address _tokenRules,
+        address[] memory _sessionKeys,
+        uint256[] memory _sessionKeysSpendingLimits,
+        uint256[] memory _sessionKeysExpirationHeights,
+        address[] memory _internalActors
+    )
+        public
+        onlyWorker
+    {
+
+        userWalletFactory.createUserWallet(
+            _gnosisSafeMasterCopy,
+            _gnosisSafeData,
+            _tokenHolderMasterCopy,
+            _token,
+            _tokenRules,
+            _sessionKeys,
+            _sessionKeysSpendingLimits,
+            _sessionKeysExpirationHeights
+        );
+
+        /*
+         * first call to createWalletUser with all above parameters
+         */
+        utilityBrandedToken.registerInternalActors(_internalActors);
+
+        /*
+         * second call to registerInternalActors from UtilityBrandedToken
+         * considering that this contract is set as a worker already by the organization
+         */
+    }
+}
