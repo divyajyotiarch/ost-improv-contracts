@@ -17,11 +17,6 @@ contract OptimalWalletCreator is Organized {
     UserWalletFactory userWalletFactory;
     UtilityBrandedToken utilityBrandedToken;
 
-    event TuppleEmitted(
-        address _gnosisSafeProxy,
-        address _tokenHolderProxy
-    );
-
     constructor(
         address _ubtContractAddr,
         address _walletFactoryContractAddr,
@@ -63,7 +58,6 @@ contract OptimalWalletCreator is Organized {
         address[] memory _sessionKeys,
         uint256[] memory _sessionKeysSpendingLimits,
         uint256[] memory _sessionKeysExpirationHeights
-      //  address[] memory _internalActors
     )
         public
         onlyWorker
