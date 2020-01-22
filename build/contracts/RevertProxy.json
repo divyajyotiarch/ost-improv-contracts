@@ -84,25 +84,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"data\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"execute\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"target\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newTarget\",\"type\":\"address\"}],\"name\":\"updateTarget\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"An important caveat here is to recognize the contract caller,     msg.sender. If you add a proxy in between, then msg.sender will be the     proxy, which could break authorization and permissioning algorithms. If     your authorization system allows you to change the owner, you can get     around this constraint by setting the proxy to be the contract owner.     It\\u2019s also important to know that this only tests throw's at this     particular level.     It would be prudent to also ensure there isn\\u2019t anything faulty in the     proxy by creating a second test as a control. This test should be     called with the appropriate gas and use the proxy to test a function     where _no_ throw occurs, just to make sure the proxy is setup and     working as intended.     Because a throw essentially uses up all gas, one must make doubly sure     they catch the throw and not a legitimate out-of-gas (OOG) error. As     well, take care to manage sending Ether through the proxy (for tests     that require it) as that can be difficult as well. *      See also test/core/TestAuxiliaryStake.sol *      Usage:     contract TestThrower {         function testThrow() {             Thrower thrower = new Thrower();             // Set Thrower as the contract to forward requests to the target.             RevertProxy revertProxy = new RevertProxy(address(thrower)); *              // Prime the proxy.             Thrower(address(revertProxy)).doThrow();             // Execute the call that is supposed to revert.             // r will be false if it reverted. r will be true if it didn't.             // Make sure you send enough gas for your contract method.             bool r = revertProxy.execute.gas(200000)(); *              Assert.isFalse(r, \\u201cShould be false, as it should revert\\\");         }     } *      Inspired by:     https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.\",\"methods\":{\"constructor\":{\"params\":{\"_target\":\"The address where the executed calls will be sent to.\"}},\"execute()\":{\"return\":\"`true` if the call was successful and did not revert, `false` if        it reverted.\"},\"updateTarget(address)\":{\"params\":{\"_newTarget\":\"The address of the contract where to send all execute                  calls to.\"}}},\"title\":\"A proxy contract to catch and test for reverts in other contracts.\"},\"userdoc\":{\"methods\":{\"execute()\":{\"notice\":\"This will make the call to the target with the call data primed        in the fallback function.\"},\"updateTarget(address)\":{\"notice\":\"Updates the target of the proxy so that all subsequent execute        calls will be made to the new target.\"}},\"notice\":\"Use this contract as a proxy between the test contract and the        contract under test. It will catch reverts and return false if it        caught one.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/test/test_lib/RevertProxy.sol\":\"RevertProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/test/test_lib/RevertProxy.sol\":{\"keccak256\":\"0xa3abeadf207860bb00d92f8e0fdd77e935408178e178df2a9c946cea5cde583e\",\"urls\":[\"bzz-raw://7a86add900272fbb3526e2940e6fe868bef06972bf7eda8a56a2af42fb1da6b1\",\"dweb:/ipfs/QmW8UpTGxS6fErBvFMvJid4AjKcpxvN3mHTx24Hr4HrgNx\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060405161048c38038061048c8339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b0319909216919091179055610427806100656000396000f3fe60806040526004361061003f5760003560e01c8063614619541461004f57806373d4a13a146100e7578063d4b8399214610171578063ea1b495f146101a2575b61004c6001600036610357565b50005b34801561005b57600080fd5b506100646101d7565b604051808315151515815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100ab578181015183820152602001610093565b50505050905090810190601f1680156100d85780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b3480156100f357600080fd5b506100fc610299565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561013657818101518382015260200161011e565b50505050905090810190601f1680156101635780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017d57600080fd5b50610186610326565b604080516001600160a01b039092168252519081900360200190f35b3480156101ae57600080fd5b506101d5600480360360208110156101c557600080fd5b50356001600160a01b0316610335565b005b60008054604051600180546060936001600160a01b031692908190839060026000198284161561010002019091160480156102495780601f10610227576101008083540402835291820191610249565b820191906000526020600020905b815481529060010190602001808311610235575b50509150506000604051808303816000865af19150503d806000811461028b576040519150601f19603f3d011682016040523d82523d6000602084013e610290565b606091505b50915091509091565b60018054604080516020600284861615610100026000190190941693909304601f8101849004840282018401909252818152929183018282801561031e5780601f106102f35761010080835404028352916020019161031e565b820191906000526020600020905b81548152906001019060200180831161030157829003601f168201915b505050505081565b6000546001600160a01b031681565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103985782800160ff198235161785556103c5565b828001600101855582156103c5579182015b828111156103c55782358255916020019190600101906103aa565b506103d19291506103d5565b5090565b6103ef91905b808211156103d157600081556001016103db565b9056fea265627a7a72315820d42564a64b3fd50fdd9e02fb56d1d28f217437be6a7fc52afabc412d4852726e64736f6c63430005100032",
-  "deployedBytecode": "0x60806040526004361061003f5760003560e01c8063614619541461004f57806373d4a13a146100e7578063d4b8399214610171578063ea1b495f146101a2575b61004c6001600036610357565b50005b34801561005b57600080fd5b506100646101d7565b604051808315151515815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100ab578181015183820152602001610093565b50505050905090810190601f1680156100d85780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b3480156100f357600080fd5b506100fc610299565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561013657818101518382015260200161011e565b50505050905090810190601f1680156101635780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017d57600080fd5b50610186610326565b604080516001600160a01b039092168252519081900360200190f35b3480156101ae57600080fd5b506101d5600480360360208110156101c557600080fd5b50356001600160a01b0316610335565b005b60008054604051600180546060936001600160a01b031692908190839060026000198284161561010002019091160480156102495780601f10610227576101008083540402835291820191610249565b820191906000526020600020905b815481529060010190602001808311610235575b50509150506000604051808303816000865af19150503d806000811461028b576040519150601f19603f3d011682016040523d82523d6000602084013e610290565b606091505b50915091509091565b60018054604080516020600284861615610100026000190190941693909304601f8101849004840282018401909252818152929183018282801561031e5780601f106102f35761010080835404028352916020019161031e565b820191906000526020600020905b81548152906001019060200180831161030157829003601f168201915b505050505081565b6000546001600160a01b031681565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103985782800160ff198235161785556103c5565b828001600101855582156103c5579182015b828111156103c55782358255916020019190600101906103aa565b506103d19291506103d5565b5090565b6103ef91905b808211156103d157600081556001016103db565b9056fea265627a7a72315820d42564a64b3fd50fdd9e02fb56d1d28f217437be6a7fc52afabc412d4852726e64736f6c63430005100032",
-  "sourceMap": "2997:1469:94:-;;;3362:70;8:9:-1;5:2;;;30:1;27;20:12;5:2;3362:70:94;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3362:70:94;3409:6;:16;;-1:-1:-1;;;;;3409:16:94;;;-1:-1:-1;;;;;;3409:16:94;;;;;;;;;2997:1469;;;;;;",
-  "deployedSourceMap": "2997:1469:94:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4023:15;:4;4030:8;;4023:15;:::i;:::-;;2997:1469;4302:162;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4302:162:94;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;4302:162:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3223:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3223:17:94;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;3223:17:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3114:21;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3114:21:94;;;:::i;:::-;;;;-1:-1:-1;;;;;3114:21:94;;;;;;;;;;;;;;3734:85;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3734:85:94;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3734:85:94;-1:-1:-1;;;;;3734:85:94;;:::i;:::-;;4302:162;4339:4;4440:6;;:17;;:6;:17;;4345:12;;-1:-1:-1;;;;;4440:6:94;;:17;;;:6;;:17;-1:-1:-1;;4440:17:94;;;;:6;:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;4433:24:94;;;;4302:162;;:::o;3223:17::-;;;;;;;;;;;;;;;-1:-1:-1;;3223:17:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;3114:21::-;;;-1:-1:-1;;;;;3114:21:94;;:::o;3734:85::-;3793:6;:19;;-1:-1:-1;;;;;;3793:19:94;-1:-1:-1;;;;;3793:19:94;;;;;;;;;;3734:85::o;2997:1469::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;2997:1469:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2997:1469:94;;;-1:-1:-1;2997:1469:94;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n//import \"truffle/Assert.sol\";\n//import \"truffle/DeployedAddresses.sol\";\n\n/**\n * @title A proxy contract to catch and test for reverts in other contracts.\n *\n * @notice Use this contract as a proxy between the test contract and the\n *         contract under test. It will catch reverts and return false if it\n *         caught one.\n *\n * @dev An important caveat here is to recognize the contract caller,\n *      msg.sender. If you add a proxy in between, then msg.sender will be the\n *      proxy, which could break authorization and permissioning algorithms. If\n *      your authorization system allows you to change the owner, you can get\n *      around this constraint by setting the proxy to be the contract owner.\n *      It’s also important to know that this only tests throw's at this\n *      particular level.\n *      It would be prudent to also ensure there isn’t anything faulty in the\n *      proxy by creating a second test as a control. This test should be\n *      called with the appropriate gas and use the proxy to test a function\n *      where _no_ throw occurs, just to make sure the proxy is setup and\n *      working as intended.\n *      Because a throw essentially uses up all gas, one must make doubly sure\n *      they catch the throw and not a legitimate out-of-gas (OOG) error. As\n *      well, take care to manage sending Ether through the proxy (for tests\n *      that require it) as that can be difficult as well.\n *\n *      See also test/core/TestAuxiliaryStake.sol\n *\n *      Usage:\n *      contract TestThrower {\n *          function testThrow() {\n *              Thrower thrower = new Thrower();\n *              // Set Thrower as the contract to forward requests to the target.\n *              RevertProxy revertProxy = new RevertProxy(address(thrower));\n *\n *              // Prime the proxy.\n *              Thrower(address(revertProxy)).doThrow();\n *              // Execute the call that is supposed to revert.\n *              // r will be false if it reverted. r will be true if it didn't.\n *              // Make sure you send enough gas for your contract method.\n *              bool r = revertProxy.execute.gas(200000)();\n *\n *              Assert.isFalse(r, “Should be false, as it should revert\");\n *          }\n *      }\n *\n *      Inspired by:\n *      https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.\n */\ncontract RevertProxy {\n\n    /* Public Variables */\n\n    /** target is the address of the contract under test. */\n    address public target;\n\n    /** data stores the call data that will be sent to the method under test. */\n    bytes public data;\n\n    /* Constructor */\n\n    /**\n     * @param _target The address where the executed calls will be sent to.\n     */\n    constructor (address _target) public {\n        target = _target;\n    }\n\n    /* Public Functions */\n\n    /**\n     * @notice Updates the target of the proxy so that all subsequent execute\n     *         calls will be made to the new target.\n     *\n     * @param _newTarget The address of the contract where to send all execute\n     *                   calls to.\n     */\n    function updateTarget(address _newTarget) public {\n        target = _newTarget;\n    }\n\n    /**\n     * @notice The fallback function stores the call data so that a call to the\n     *         execute function will use the correct call data.\n     */\n    function() external payable {\n        data = msg.data;\n    }\n\n    /**\n     * @notice This will make the call to the target with the call data primed\n     *         in the fallback function.\n     *\n     * @return `true` if the call was successful and did not revert, `false` if\n     *         it reverted.\n     */\n    function execute() external returns (bool, bytes memory) {\n        // solium-disable-next-line security/no-low-level-calls\n        return target.call(data);\n    }\n}\n",
-  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/test/test_lib/RevertProxy.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"data\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"execute\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"target\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newTarget\",\"type\":\"address\"}],\"name\":\"updateTarget\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"An important caveat here is to recognize the contract caller,     msg.sender. If you add a proxy in between, then msg.sender will be the     proxy, which could break authorization and permissioning algorithms. If     your authorization system allows you to change the owner, you can get     around this constraint by setting the proxy to be the contract owner.     It\\u2019s also important to know that this only tests throw's at this     particular level.     It would be prudent to also ensure there isn\\u2019t anything faulty in the     proxy by creating a second test as a control. This test should be     called with the appropriate gas and use the proxy to test a function     where _no_ throw occurs, just to make sure the proxy is setup and     working as intended.     Because a throw essentially uses up all gas, one must make doubly sure     they catch the throw and not a legitimate out-of-gas (OOG) error. As     well, take care to manage sending Ether through the proxy (for tests     that require it) as that can be difficult as well. *      See also test/core/TestAuxiliaryStake.sol *      Usage:     contract TestThrower {         function testThrow() {             Thrower thrower = new Thrower();             // Set Thrower as the contract to forward requests to the target.             RevertProxy revertProxy = new RevertProxy(address(thrower)); *              // Prime the proxy.             Thrower(address(revertProxy)).doThrow();             // Execute the call that is supposed to revert.             // r will be false if it reverted. r will be true if it didn't.             // Make sure you send enough gas for your contract method.             bool r = revertProxy.execute.gas(200000)(); *              Assert.isFalse(r, \\u201cShould be false, as it should revert\\\");         }     } *      Inspired by:     https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.\",\"methods\":{\"constructor\":{\"params\":{\"_target\":\"The address where the executed calls will be sent to.\"}},\"execute()\":{\"return\":\"`true` if the call was successful and did not revert, `false` if        it reverted.\"},\"updateTarget(address)\":{\"params\":{\"_newTarget\":\"The address of the contract where to send all execute                  calls to.\"}}},\"title\":\"A proxy contract to catch and test for reverts in other contracts.\"},\"userdoc\":{\"methods\":{\"execute()\":{\"notice\":\"This will make the call to the target with the call data primed        in the fallback function.\"},\"updateTarget(address)\":{\"notice\":\"Updates the target of the proxy so that all subsequent execute        calls will be made to the new target.\"}},\"notice\":\"Use this contract as a proxy between the test contract and the        contract under test. It will catch reverts and return false if it        caught one.\"}},\"settings\":{\"compilationTarget\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/test/test_lib/RevertProxy.sol\":\"RevertProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/test/test_lib/RevertProxy.sol\":{\"keccak256\":\"0x94b486bb7bf075752f82d040fe63b2c2ec52b5cdd225b5262911d7205df1cbcd\",\"urls\":[\"bzz-raw://77d722df99e43535272a83b0b08401f54756404d1ab8a0ef556a0ab886076825\",\"dweb:/ipfs/QmR4GSaKsQvXarmbtXbAjLQpq6H1esteoFeKsh5WVJEob9\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161048c38038061048c8339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b0319909216919091179055610427806100656000396000f3fe60806040526004361061003f5760003560e01c8063614619541461004f57806373d4a13a146100e7578063d4b8399214610171578063ea1b495f146101a2575b61004c6001600036610357565b50005b34801561005b57600080fd5b506100646101d7565b604051808315151515815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100ab578181015183820152602001610093565b50505050905090810190601f1680156100d85780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b3480156100f357600080fd5b506100fc610299565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561013657818101518382015260200161011e565b50505050905090810190601f1680156101635780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017d57600080fd5b50610186610326565b604080516001600160a01b039092168252519081900360200190f35b3480156101ae57600080fd5b506101d5600480360360208110156101c557600080fd5b50356001600160a01b0316610335565b005b60008054604051600180546060936001600160a01b031692908190839060026000198284161561010002019091160480156102495780601f10610227576101008083540402835291820191610249565b820191906000526020600020905b815481529060010190602001808311610235575b50509150506000604051808303816000865af19150503d806000811461028b576040519150601f19603f3d011682016040523d82523d6000602084013e610290565b606091505b50915091509091565b60018054604080516020600284861615610100026000190190941693909304601f8101849004840282018401909252818152929183018282801561031e5780601f106102f35761010080835404028352916020019161031e565b820191906000526020600020905b81548152906001019060200180831161030157829003601f168201915b505050505081565b6000546001600160a01b031681565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103985782800160ff198235161785556103c5565b828001600101855582156103c5579182015b828111156103c55782358255916020019190600101906103aa565b506103d19291506103d5565b5090565b6103ef91905b808211156103d157600081556001016103db565b9056fea265627a7a7231582076cd51a04475e03fdfd48d4f560d2a5954989838d48df2b6efe77cb5b525aea164736f6c63430005100032",
+  "deployedBytecode": "0x60806040526004361061003f5760003560e01c8063614619541461004f57806373d4a13a146100e7578063d4b8399214610171578063ea1b495f146101a2575b61004c6001600036610357565b50005b34801561005b57600080fd5b506100646101d7565b604051808315151515815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100ab578181015183820152602001610093565b50505050905090810190601f1680156100d85780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b3480156100f357600080fd5b506100fc610299565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561013657818101518382015260200161011e565b50505050905090810190601f1680156101635780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017d57600080fd5b50610186610326565b604080516001600160a01b039092168252519081900360200190f35b3480156101ae57600080fd5b506101d5600480360360208110156101c557600080fd5b50356001600160a01b0316610335565b005b60008054604051600180546060936001600160a01b031692908190839060026000198284161561010002019091160480156102495780601f10610227576101008083540402835291820191610249565b820191906000526020600020905b815481529060010190602001808311610235575b50509150506000604051808303816000865af19150503d806000811461028b576040519150601f19603f3d011682016040523d82523d6000602084013e610290565b606091505b50915091509091565b60018054604080516020600284861615610100026000190190941693909304601f8101849004840282018401909252818152929183018282801561031e5780601f106102f35761010080835404028352916020019161031e565b820191906000526020600020905b81548152906001019060200180831161030157829003601f168201915b505050505081565b6000546001600160a01b031681565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103985782800160ff198235161785556103c5565b828001600101855582156103c5579182015b828111156103c55782358255916020019190600101906103aa565b506103d19291506103d5565b5090565b6103ef91905b808211156103d157600081556001016103db565b9056fea265627a7a7231582076cd51a04475e03fdfd48d4f560d2a5954989838d48df2b6efe77cb5b525aea164736f6c63430005100032",
+  "sourceMap": "2997:1469:35:-;;;3362:70;8:9:-1;5:2;;;30:1;27;20:12;5:2;3362:70:35;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3362:70:35;3409:6;:16;;-1:-1:-1;;;;;3409:16:35;;;-1:-1:-1;;;;;;3409:16:35;;;;;;;;;2997:1469;;;;;;",
+  "deployedSourceMap": "2997:1469:35:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4023:15;:4;4030:8;;4023:15;:::i;:::-;;2997:1469;4302:162;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4302:162:35;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;4302:162:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3223:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3223:17:35;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;3223:17:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3114:21;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3114:21:35;;;:::i;:::-;;;;-1:-1:-1;;;;;3114:21:35;;;;;;;;;;;;;;3734:85;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3734:85:35;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3734:85:35;-1:-1:-1;;;;;3734:85:35;;:::i;:::-;;4302:162;4339:4;4440:6;;:17;;:6;:17;;4345:12;;-1:-1:-1;;;;;4440:6:35;;:17;;;:6;;:17;-1:-1:-1;;4440:17:35;;;;:6;:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;4433:24:35;;;;4302:162;;:::o;3223:17::-;;;;;;;;;;;;;;;-1:-1:-1;;3223:17:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;3114:21::-;;;-1:-1:-1;;;;;3114:21:35;;:::o;3734:85::-;3793:6;:19;;-1:-1:-1;;;;;;3793:19:35;-1:-1:-1;;;;;3793:19:35;;;;;;;;;;3734:85::o;2997:1469::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;2997:1469:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;2997:1469:35;;;-1:-1:-1;2997:1469:35;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\n// Copyright 2018 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n//import \"truffle/Assert.sol\";\n//import \"truffle/DeployedAddresses.sol\";\n\n/**\n * @title A proxy contract to catch and test for reverts in other contracts.\n *\n * @notice Use this contract as a proxy between the test contract and the\n *         contract under test. It will catch reverts and return false if it\n *         caught one.\n *\n * @dev An important caveat here is to recognize the contract caller,\n *      msg.sender. If you add a proxy in between, then msg.sender will be the\n *      proxy, which could break authorization and permissioning algorithms. If\n *      your authorization system allows you to change the owner, you can get\n *      around this constraint by setting the proxy to be the contract owner.\n *      It’s also important to know that this only tests throw's at this\n *      particular level.\n *      It would be prudent to also ensure there isn’t anything faulty in the\n *      proxy by creating a second test as a control. This test should be\n *      called with the appropriate gas and use the proxy to test a function\n *      where _no_ throw occurs, just to make sure the proxy is setup and\n *      working as intended.\n *      Because a throw essentially uses up all gas, one must make doubly sure\n *      they catch the throw and not a legitimate out-of-gas (OOG) error. As\n *      well, take care to manage sending Ether through the proxy (for tests\n *      that require it) as that can be difficult as well.\n *\n *      See also test/core/TestAuxiliaryStake.sol\n *\n *      Usage:\n *      contract TestThrower {\n *          function testThrow() {\n *              Thrower thrower = new Thrower();\n *              // Set Thrower as the contract to forward requests to the target.\n *              RevertProxy revertProxy = new RevertProxy(address(thrower));\n *\n *              // Prime the proxy.\n *              Thrower(address(revertProxy)).doThrow();\n *              // Execute the call that is supposed to revert.\n *              // r will be false if it reverted. r will be true if it didn't.\n *              // Make sure you send enough gas for your contract method.\n *              bool r = revertProxy.execute.gas(200000)();\n *\n *              Assert.isFalse(r, “Should be false, as it should revert\");\n *          }\n *      }\n *\n *      Inspired by:\n *      https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.\n */\ncontract RevertProxy {\n\n    /* Public Variables */\n\n    /** target is the address of the contract under test. */\n    address public target;\n\n    /** data stores the call data that will be sent to the method under test. */\n    bytes public data;\n\n    /* Constructor */\n\n    /**\n     * @param _target The address where the executed calls will be sent to.\n     */\n    constructor (address _target) public {\n        target = _target;\n    }\n\n    /* Public Functions */\n\n    /**\n     * @notice Updates the target of the proxy so that all subsequent execute\n     *         calls will be made to the new target.\n     *\n     * @param _newTarget The address of the contract where to send all execute\n     *                   calls to.\n     */\n    function updateTarget(address _newTarget) public {\n        target = _newTarget;\n    }\n\n    /**\n     * @notice The fallback function stores the call data so that a call to the\n     *         execute function will use the correct call data.\n     */\n    function() external payable {\n        data = msg.data;\n    }\n\n    /**\n     * @notice This will make the call to the target with the call data primed\n     *         in the fallback function.\n     *\n     * @return `true` if the call was successful and did not revert, `false` if\n     *         it reverted.\n     */\n    function execute() external returns (bool, bytes memory) {\n        // solium-disable-next-line security/no-low-level-calls\n        return target.call(data);\n    }\n}\n",
+  "sourcePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/test/test_lib/RevertProxy.sol",
   "ast": {
-    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/test/test_lib/RevertProxy.sol",
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/test/test_lib/RevertProxy.sol",
     "exportedSymbols": {
       "RevertProxy": [
-        11579
+        4187
       ]
     },
-    "id": 11580,
+    "id": 4188,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11532,
+        "id": 4140,
         "literals": [
           "solidity",
           "^",
@@ -110,7 +110,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:94"
+        "src": "0:23:35"
       },
       {
         "baseContracts": [],
@@ -118,20 +118,20 @@
         "contractKind": "contract",
         "documentation": "@title A proxy contract to catch and test for reverts in other contracts.\n * @notice Use this contract as a proxy between the test contract and the\n        contract under test. It will catch reverts and return false if it\n        caught one.\n * @dev An important caveat here is to recognize the contract caller,\n     msg.sender. If you add a proxy in between, then msg.sender will be the\n     proxy, which could break authorization and permissioning algorithms. If\n     your authorization system allows you to change the owner, you can get\n     around this constraint by setting the proxy to be the contract owner.\n     It’s also important to know that this only tests throw's at this\n     particular level.\n     It would be prudent to also ensure there isn’t anything faulty in the\n     proxy by creating a second test as a control. This test should be\n     called with the appropriate gas and use the proxy to test a function\n     where _no_ throw occurs, just to make sure the proxy is setup and\n     working as intended.\n     Because a throw essentially uses up all gas, one must make doubly sure\n     they catch the throw and not a legitimate out-of-gas (OOG) error. As\n     well, take care to manage sending Ether through the proxy (for tests\n     that require it) as that can be difficult as well.\n *      See also test/core/TestAuxiliaryStake.sol\n *      Usage:\n     contract TestThrower {\n         function testThrow() {\n             Thrower thrower = new Thrower();\n             // Set Thrower as the contract to forward requests to the target.\n             RevertProxy revertProxy = new RevertProxy(address(thrower));\n *              // Prime the proxy.\n             Thrower(address(revertProxy)).doThrow();\n             // Execute the call that is supposed to revert.\n             // r will be false if it reverted. r will be true if it didn't.\n             // Make sure you send enough gas for your contract method.\n             bool r = revertProxy.execute.gas(200000)();\n *              Assert.isFalse(r, “Should be false, as it should revert\");\n         }\n     }\n *      Inspired by:\n     https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.",
         "fullyImplemented": true,
-        "id": 11579,
+        "id": 4187,
         "linearizedBaseContracts": [
-          11579
+          4187
         ],
         "name": "RevertProxy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 11534,
+            "id": 4142,
             "name": "target",
             "nodeType": "VariableDeclaration",
-            "scope": 11579,
-            "src": "3114:21:94",
+            "scope": 4187,
+            "src": "3114:21:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -139,10 +139,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11533,
+              "id": 4141,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "3114:7:94",
+              "src": "3114:7:35",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -154,11 +154,11 @@
           },
           {
             "constant": false,
-            "id": 11536,
+            "id": 4144,
             "name": "data",
             "nodeType": "VariableDeclaration",
-            "scope": 11579,
-            "src": "3223:17:94",
+            "scope": 4187,
+            "src": "3223:17:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -166,10 +166,10 @@
               "typeString": "bytes"
             },
             "typeName": {
-              "id": 11535,
+              "id": 4143,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
-              "src": "3223:5:94",
+              "src": "3223:5:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_bytes_storage_ptr",
                 "typeString": "bytes"
@@ -180,26 +180,26 @@
           },
           {
             "body": {
-              "id": 11545,
+              "id": 4153,
               "nodeType": "Block",
-              "src": "3399:33:94",
+              "src": "3399:33:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11543,
+                    "id": 4151,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11541,
+                      "id": 4149,
                       "name": "target",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11534,
-                      "src": "3409:6:94",
+                      "referencedDeclaration": 4142,
+                      "src": "3409:6:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -209,47 +209,47 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 11542,
+                      "id": 4150,
                       "name": "_target",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11538,
-                      "src": "3418:7:94",
+                      "referencedDeclaration": 4146,
+                      "src": "3418:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "3409:16:94",
+                    "src": "3409:16:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 11544,
+                  "id": 4152,
                   "nodeType": "ExpressionStatement",
-                  "src": "3409:16:94"
+                  "src": "3409:16:35"
                 }
               ]
             },
             "documentation": "@param _target The address where the executed calls will be sent to.",
-            "id": 11546,
+            "id": 4154,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11539,
+              "id": 4147,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11538,
+                  "id": 4146,
                   "name": "_target",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11546,
-                  "src": "3375:15:94",
+                  "scope": 4154,
+                  "src": "3375:15:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -257,10 +257,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11537,
+                    "id": 4145,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3375:7:94",
+                    "src": "3375:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -271,42 +271,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3374:17:94"
+              "src": "3374:17:35"
             },
             "returnParameters": {
-              "id": 11540,
+              "id": 4148,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3399:0:94"
+              "src": "3399:0:35"
             },
-            "scope": 11579,
-            "src": "3362:70:94",
+            "scope": 4187,
+            "src": "3362:70:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 11555,
+              "id": 4163,
               "nodeType": "Block",
-              "src": "3783:36:94",
+              "src": "3783:36:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11553,
+                    "id": 4161,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11551,
+                      "id": 4159,
                       "name": "target",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11534,
-                      "src": "3793:6:94",
+                      "referencedDeclaration": 4142,
+                      "src": "3793:6:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -316,47 +316,47 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 11552,
+                      "id": 4160,
                       "name": "_newTarget",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11548,
-                      "src": "3802:10:94",
+                      "referencedDeclaration": 4156,
+                      "src": "3802:10:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "3793:19:94",
+                    "src": "3793:19:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 11554,
+                  "id": 4162,
                   "nodeType": "ExpressionStatement",
-                  "src": "3793:19:94"
+                  "src": "3793:19:35"
                 }
               ]
             },
             "documentation": "@notice Updates the target of the proxy so that all subsequent execute\n        calls will be made to the new target.\n     * @param _newTarget The address of the contract where to send all execute\n                  calls to.",
-            "id": 11556,
+            "id": 4164,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "updateTarget",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11549,
+              "id": 4157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11548,
+                  "id": 4156,
                   "name": "_newTarget",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11556,
-                  "src": "3756:18:94",
+                  "scope": 4164,
+                  "src": "3756:18:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -364,10 +364,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11547,
+                    "id": 4155,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3756:7:94",
+                    "src": "3756:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -378,42 +378,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3755:20:94"
+              "src": "3755:20:35"
             },
             "returnParameters": {
-              "id": 11550,
+              "id": 4158,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3783:0:94"
+              "src": "3783:0:35"
             },
-            "scope": 11579,
-            "src": "3734:85:94",
+            "scope": 4187,
+            "src": "3734:85:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 11564,
+              "id": 4172,
               "nodeType": "Block",
-              "src": "4013:32:94",
+              "src": "4013:32:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11562,
+                    "id": 4170,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11559,
+                      "id": 4167,
                       "name": "data",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11536,
-                      "src": "4023:4:94",
+                      "referencedDeclaration": 4144,
+                      "src": "4023:4:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_storage",
                         "typeString": "bytes storage ref"
@@ -425,18 +425,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11560,
+                        "id": 4168,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 12904,
-                        "src": "4030:3:94",
+                        "src": "4030:3:35",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 11561,
+                      "id": 4169,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -444,54 +444,54 @@
                       "memberName": "data",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "4030:8:94",
+                      "src": "4030:8:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_calldata_ptr",
                         "typeString": "bytes calldata"
                       }
                     },
-                    "src": "4023:15:94",
+                    "src": "4023:15:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage",
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "id": 11563,
+                  "id": 4171,
                   "nodeType": "ExpressionStatement",
-                  "src": "4023:15:94"
+                  "src": "4023:15:35"
                 }
               ]
             },
             "documentation": "@notice The fallback function stores the call data so that a call to the\n        execute function will use the correct call data.",
-            "id": 11565,
+            "id": 4173,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11557,
+              "id": 4165,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3993:2:94"
+              "src": "3993:2:35"
             },
             "returnParameters": {
-              "id": 11558,
+              "id": 4166,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4013:0:94"
+              "src": "4013:0:35"
             },
-            "scope": 11579,
-            "src": "3985:60:94",
+            "scope": 4187,
+            "src": "3985:60:35",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 11577,
+              "id": 4185,
               "nodeType": "Block",
-              "src": "4359:105:94",
+              "src": "4359:105:35",
               "statements": [
                 {
                   "expression": {
@@ -499,12 +499,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 11574,
+                        "id": 4182,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11536,
-                        "src": "4452:4:94",
+                        "referencedDeclaration": 4144,
+                        "src": "4452:4:35",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage",
                           "typeString": "bytes storage ref"
@@ -520,18 +520,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11572,
+                        "id": 4180,
                         "name": "target",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11534,
-                        "src": "4440:6:94",
+                        "referencedDeclaration": 4142,
+                        "src": "4440:6:35",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "id": 11573,
+                      "id": 4181,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -539,13 +539,13 @@
                       "memberName": "call",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "4440:11:94",
+                      "src": "4440:11:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
                         "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
                       }
                     },
-                    "id": 11575,
+                    "id": 4183,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -553,43 +553,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4440:17:94",
+                    "src": "4440:17:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
                       "typeString": "tuple(bool,bytes memory)"
                     }
                   },
-                  "functionReturnParameters": 11571,
-                  "id": 11576,
+                  "functionReturnParameters": 4179,
+                  "id": 4184,
                   "nodeType": "Return",
-                  "src": "4433:24:94"
+                  "src": "4433:24:35"
                 }
               ]
             },
             "documentation": "@notice This will make the call to the target with the call data primed\n        in the fallback function.\n     * @return `true` if the call was successful and did not revert, `false` if\n        it reverted.",
-            "id": 11578,
+            "id": 4186,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "execute",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11566,
+              "id": 4174,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4318:2:94"
+              "src": "4318:2:35"
             },
             "returnParameters": {
-              "id": 11571,
+              "id": 4179,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11568,
+                  "id": 4176,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11578,
-                  "src": "4339:4:94",
+                  "scope": 4186,
+                  "src": "4339:4:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -597,10 +597,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 11567,
+                    "id": 4175,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4339:4:94",
+                    "src": "4339:4:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -611,11 +611,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 11570,
+                  "id": 4178,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11578,
-                  "src": "4345:12:94",
+                  "scope": 4186,
+                  "src": "4345:12:35",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -623,10 +623,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11569,
+                    "id": 4177,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4345:5:94",
+                    "src": "4345:5:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -636,33 +636,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4338:20:94"
+              "src": "4338:20:35"
             },
-            "scope": 11579,
-            "src": "4302:162:94",
+            "scope": 4187,
+            "src": "4302:162:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 11580,
-        "src": "2997:1469:94"
+        "scope": 4188,
+        "src": "2997:1469:35"
       }
     ],
-    "src": "0:4467:94"
+    "src": "0:4467:35"
   },
   "legacyAST": {
-    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/test/test_lib/RevertProxy.sol",
+    "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/test/test_lib/RevertProxy.sol",
     "exportedSymbols": {
       "RevertProxy": [
-        11579
+        4187
       ]
     },
-    "id": 11580,
+    "id": 4188,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11532,
+        "id": 4140,
         "literals": [
           "solidity",
           "^",
@@ -670,7 +670,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:94"
+        "src": "0:23:35"
       },
       {
         "baseContracts": [],
@@ -678,20 +678,20 @@
         "contractKind": "contract",
         "documentation": "@title A proxy contract to catch and test for reverts in other contracts.\n * @notice Use this contract as a proxy between the test contract and the\n        contract under test. It will catch reverts and return false if it\n        caught one.\n * @dev An important caveat here is to recognize the contract caller,\n     msg.sender. If you add a proxy in between, then msg.sender will be the\n     proxy, which could break authorization and permissioning algorithms. If\n     your authorization system allows you to change the owner, you can get\n     around this constraint by setting the proxy to be the contract owner.\n     It’s also important to know that this only tests throw's at this\n     particular level.\n     It would be prudent to also ensure there isn’t anything faulty in the\n     proxy by creating a second test as a control. This test should be\n     called with the appropriate gas and use the proxy to test a function\n     where _no_ throw occurs, just to make sure the proxy is setup and\n     working as intended.\n     Because a throw essentially uses up all gas, one must make doubly sure\n     they catch the throw and not a legitimate out-of-gas (OOG) error. As\n     well, take care to manage sending Ether through the proxy (for tests\n     that require it) as that can be difficult as well.\n *      See also test/core/TestAuxiliaryStake.sol\n *      Usage:\n     contract TestThrower {\n         function testThrow() {\n             Thrower thrower = new Thrower();\n             // Set Thrower as the contract to forward requests to the target.\n             RevertProxy revertProxy = new RevertProxy(address(thrower));\n *              // Prime the proxy.\n             Thrower(address(revertProxy)).doThrow();\n             // Execute the call that is supposed to revert.\n             // r will be false if it reverted. r will be true if it didn't.\n             // Make sure you send enough gas for your contract method.\n             bool r = revertProxy.execute.gas(200000)();\n *              Assert.isFalse(r, “Should be false, as it should revert\");\n         }\n     }\n *      Inspired by:\n     https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.",
         "fullyImplemented": true,
-        "id": 11579,
+        "id": 4187,
         "linearizedBaseContracts": [
-          11579
+          4187
         ],
         "name": "RevertProxy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 11534,
+            "id": 4142,
             "name": "target",
             "nodeType": "VariableDeclaration",
-            "scope": 11579,
-            "src": "3114:21:94",
+            "scope": 4187,
+            "src": "3114:21:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -699,10 +699,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11533,
+              "id": 4141,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "3114:7:94",
+              "src": "3114:7:35",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -714,11 +714,11 @@
           },
           {
             "constant": false,
-            "id": 11536,
+            "id": 4144,
             "name": "data",
             "nodeType": "VariableDeclaration",
-            "scope": 11579,
-            "src": "3223:17:94",
+            "scope": 4187,
+            "src": "3223:17:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -726,10 +726,10 @@
               "typeString": "bytes"
             },
             "typeName": {
-              "id": 11535,
+              "id": 4143,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
-              "src": "3223:5:94",
+              "src": "3223:5:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_bytes_storage_ptr",
                 "typeString": "bytes"
@@ -740,26 +740,26 @@
           },
           {
             "body": {
-              "id": 11545,
+              "id": 4153,
               "nodeType": "Block",
-              "src": "3399:33:94",
+              "src": "3399:33:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11543,
+                    "id": 4151,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11541,
+                      "id": 4149,
                       "name": "target",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11534,
-                      "src": "3409:6:94",
+                      "referencedDeclaration": 4142,
+                      "src": "3409:6:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -769,47 +769,47 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 11542,
+                      "id": 4150,
                       "name": "_target",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11538,
-                      "src": "3418:7:94",
+                      "referencedDeclaration": 4146,
+                      "src": "3418:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "3409:16:94",
+                    "src": "3409:16:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 11544,
+                  "id": 4152,
                   "nodeType": "ExpressionStatement",
-                  "src": "3409:16:94"
+                  "src": "3409:16:35"
                 }
               ]
             },
             "documentation": "@param _target The address where the executed calls will be sent to.",
-            "id": 11546,
+            "id": 4154,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11539,
+              "id": 4147,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11538,
+                  "id": 4146,
                   "name": "_target",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11546,
-                  "src": "3375:15:94",
+                  "scope": 4154,
+                  "src": "3375:15:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -817,10 +817,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11537,
+                    "id": 4145,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3375:7:94",
+                    "src": "3375:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -831,42 +831,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3374:17:94"
+              "src": "3374:17:35"
             },
             "returnParameters": {
-              "id": 11540,
+              "id": 4148,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3399:0:94"
+              "src": "3399:0:35"
             },
-            "scope": 11579,
-            "src": "3362:70:94",
+            "scope": 4187,
+            "src": "3362:70:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 11555,
+              "id": 4163,
               "nodeType": "Block",
-              "src": "3783:36:94",
+              "src": "3783:36:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11553,
+                    "id": 4161,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11551,
+                      "id": 4159,
                       "name": "target",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11534,
-                      "src": "3793:6:94",
+                      "referencedDeclaration": 4142,
+                      "src": "3793:6:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -876,47 +876,47 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 11552,
+                      "id": 4160,
                       "name": "_newTarget",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11548,
-                      "src": "3802:10:94",
+                      "referencedDeclaration": 4156,
+                      "src": "3802:10:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "3793:19:94",
+                    "src": "3793:19:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 11554,
+                  "id": 4162,
                   "nodeType": "ExpressionStatement",
-                  "src": "3793:19:94"
+                  "src": "3793:19:35"
                 }
               ]
             },
             "documentation": "@notice Updates the target of the proxy so that all subsequent execute\n        calls will be made to the new target.\n     * @param _newTarget The address of the contract where to send all execute\n                  calls to.",
-            "id": 11556,
+            "id": 4164,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "updateTarget",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11549,
+              "id": 4157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11548,
+                  "id": 4156,
                   "name": "_newTarget",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11556,
-                  "src": "3756:18:94",
+                  "scope": 4164,
+                  "src": "3756:18:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -924,10 +924,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11547,
+                    "id": 4155,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3756:7:94",
+                    "src": "3756:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -938,42 +938,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3755:20:94"
+              "src": "3755:20:35"
             },
             "returnParameters": {
-              "id": 11550,
+              "id": 4158,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3783:0:94"
+              "src": "3783:0:35"
             },
-            "scope": 11579,
-            "src": "3734:85:94",
+            "scope": 4187,
+            "src": "3734:85:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 11564,
+              "id": 4172,
               "nodeType": "Block",
-              "src": "4013:32:94",
+              "src": "4013:32:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 11562,
+                    "id": 4170,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 11559,
+                      "id": 4167,
                       "name": "data",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11536,
-                      "src": "4023:4:94",
+                      "referencedDeclaration": 4144,
+                      "src": "4023:4:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_storage",
                         "typeString": "bytes storage ref"
@@ -985,18 +985,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11560,
+                        "id": 4168,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 12904,
-                        "src": "4030:3:94",
+                        "src": "4030:3:35",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 11561,
+                      "id": 4169,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1004,54 +1004,54 @@
                       "memberName": "data",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "4030:8:94",
+                      "src": "4030:8:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_calldata_ptr",
                         "typeString": "bytes calldata"
                       }
                     },
-                    "src": "4023:15:94",
+                    "src": "4023:15:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage",
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "id": 11563,
+                  "id": 4171,
                   "nodeType": "ExpressionStatement",
-                  "src": "4023:15:94"
+                  "src": "4023:15:35"
                 }
               ]
             },
             "documentation": "@notice The fallback function stores the call data so that a call to the\n        execute function will use the correct call data.",
-            "id": 11565,
+            "id": 4173,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11557,
+              "id": 4165,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3993:2:94"
+              "src": "3993:2:35"
             },
             "returnParameters": {
-              "id": 11558,
+              "id": 4166,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4013:0:94"
+              "src": "4013:0:35"
             },
-            "scope": 11579,
-            "src": "3985:60:94",
+            "scope": 4187,
+            "src": "3985:60:35",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 11577,
+              "id": 4185,
               "nodeType": "Block",
-              "src": "4359:105:94",
+              "src": "4359:105:35",
               "statements": [
                 {
                   "expression": {
@@ -1059,12 +1059,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 11574,
+                        "id": 4182,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11536,
-                        "src": "4452:4:94",
+                        "referencedDeclaration": 4144,
+                        "src": "4452:4:35",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage",
                           "typeString": "bytes storage ref"
@@ -1080,18 +1080,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 11572,
+                        "id": 4180,
                         "name": "target",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11534,
-                        "src": "4440:6:94",
+                        "referencedDeclaration": 4142,
+                        "src": "4440:6:35",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "id": 11573,
+                      "id": 4181,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1099,13 +1099,13 @@
                       "memberName": "call",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "4440:11:94",
+                      "src": "4440:11:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
                         "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
                       }
                     },
-                    "id": 11575,
+                    "id": 4183,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1113,43 +1113,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4440:17:94",
+                    "src": "4440:17:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
                       "typeString": "tuple(bool,bytes memory)"
                     }
                   },
-                  "functionReturnParameters": 11571,
-                  "id": 11576,
+                  "functionReturnParameters": 4179,
+                  "id": 4184,
                   "nodeType": "Return",
-                  "src": "4433:24:94"
+                  "src": "4433:24:35"
                 }
               ]
             },
             "documentation": "@notice This will make the call to the target with the call data primed\n        in the fallback function.\n     * @return `true` if the call was successful and did not revert, `false` if\n        it reverted.",
-            "id": 11578,
+            "id": 4186,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "execute",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11566,
+              "id": 4174,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4318:2:94"
+              "src": "4318:2:35"
             },
             "returnParameters": {
-              "id": 11571,
+              "id": 4179,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11568,
+                  "id": 4176,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11578,
-                  "src": "4339:4:94",
+                  "scope": 4186,
+                  "src": "4339:4:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1157,10 +1157,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 11567,
+                    "id": 4175,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4339:4:94",
+                    "src": "4339:4:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1171,11 +1171,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 11570,
+                  "id": 4178,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11578,
-                  "src": "4345:12:94",
+                  "scope": 4186,
+                  "src": "4345:12:35",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1183,10 +1183,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11569,
+                    "id": 4177,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4345:5:94",
+                    "src": "4345:5:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -1196,20 +1196,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4338:20:94"
+              "src": "4338:20:35"
             },
-            "scope": 11579,
-            "src": "4302:162:94",
+            "scope": 4187,
+            "src": "4302:162:35",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 11580,
-        "src": "2997:1469:94"
+        "scope": 4188,
+        "src": "2997:1469:35"
       }
     ],
-    "src": "0:4467:94"
+    "src": "0:4467:35"
   },
   "compiler": {
     "name": "solc",
@@ -1217,7 +1217,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T17:19:56.066Z",
+  "updatedAt": "2020-01-22T07:47:25.355Z",
   "devdoc": {
     "details": "An important caveat here is to recognize the contract caller,     msg.sender. If you add a proxy in between, then msg.sender will be the     proxy, which could break authorization and permissioning algorithms. If     your authorization system allows you to change the owner, you can get     around this constraint by setting the proxy to be the contract owner.     It’s also important to know that this only tests throw's at this     particular level.     It would be prudent to also ensure there isn’t anything faulty in the     proxy by creating a second test as a control. This test should be     called with the appropriate gas and use the proxy to test a function     where _no_ throw occurs, just to make sure the proxy is setup and     working as intended.     Because a throw essentially uses up all gas, one must make doubly sure     they catch the throw and not a legitimate out-of-gas (OOG) error. As     well, take care to manage sending Ether through the proxy (for tests     that require it) as that can be difficult as well. *      See also test/core/TestAuxiliaryStake.sol *      Usage:     contract TestThrower {         function testThrow() {             Thrower thrower = new Thrower();             // Set Thrower as the contract to forward requests to the target.             RevertProxy revertProxy = new RevertProxy(address(thrower)); *              // Prime the proxy.             Thrower(address(revertProxy)).doThrow();             // Execute the call that is supposed to revert.             // r will be false if it reverted. r will be true if it didn't.             // Make sure you send enough gas for your contract method.             bool r = revertProxy.execute.gas(200000)(); *              Assert.isFalse(r, “Should be false, as it should revert\");         }     } *      Inspired by:     https://truffleframework.com/tutorials/testing-for-throws-in-solidity-tests.",
     "methods": {
