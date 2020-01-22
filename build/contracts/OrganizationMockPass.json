@@ -55,14 +55,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol",
     "exportedSymbols": {
       "OrganizationMockPass": [
-        2524
+        2547
       ]
     },
-    "id": 2525,
+    "id": 2548,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2503,
+        "id": 2526,
         "literals": [
           "solidity",
           "^",
@@ -78,16 +78,16 @@
         "contractKind": "contract",
         "documentation": " @title Organization Mock Pass.\n *  @notice Mocks Organization functions as passing.",
         "fullyImplemented": true,
-        "id": 2524,
+        "id": 2547,
         "linearizedBaseContracts": [
-          2524
+          2547
         ],
         "name": "OrganizationMockPass",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2512,
+              "id": 2535,
               "nodeType": "Block",
               "src": "965:28:17",
               "statements": [
@@ -95,7 +95,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2510,
+                    "id": 2533,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -110,30 +110,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2509,
-                  "id": 2511,
+                  "functionReturnParameters": 2532,
+                  "id": 2534,
                   "nodeType": "Return",
                   "src": "975:11:17"
                 }
               ]
             },
             "documentation": "@notice Mocks passing isOrganization.\n     * @return bool True.",
-            "id": 2513,
+            "id": 2536,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isOrganization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2506,
+              "id": 2529,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2505,
+                  "id": 2528,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2513,
+                  "scope": 2536,
                   "src": "899:7:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -142,7 +142,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2504,
+                    "id": 2527,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "899:7:17",
@@ -159,15 +159,15 @@
               "src": "898:9:17"
             },
             "returnParameters": {
-              "id": 2509,
+              "id": 2532,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2508,
+                  "id": 2531,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2513,
+                  "scope": 2536,
                   "src": "955:4:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -176,7 +176,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2507,
+                    "id": 2530,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "955:4:17",
@@ -191,7 +191,7 @@
               ],
               "src": "954:6:17"
             },
-            "scope": 2524,
+            "scope": 2547,
             "src": "875:118:17",
             "stateMutability": "pure",
             "superFunction": null,
@@ -199,7 +199,7 @@
           },
           {
             "body": {
-              "id": 2522,
+              "id": 2545,
               "nodeType": "Block",
               "src": "1171:28:17",
               "statements": [
@@ -207,7 +207,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2520,
+                    "id": 2543,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -222,30 +222,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2519,
-                  "id": 2521,
+                  "functionReturnParameters": 2542,
+                  "id": 2544,
                   "nodeType": "Return",
                   "src": "1181:11:17"
                 }
               ]
             },
             "documentation": "@notice Mocks passing isWorker.\n     * @return bool True.",
-            "id": 2523,
+            "id": 2546,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isWorker",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2516,
+              "id": 2539,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2515,
+                  "id": 2538,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2523,
+                  "scope": 2546,
                   "src": "1105:7:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -254,7 +254,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2514,
+                    "id": 2537,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1105:7:17",
@@ -271,15 +271,15 @@
               "src": "1104:9:17"
             },
             "returnParameters": {
-              "id": 2519,
+              "id": 2542,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2518,
+                  "id": 2541,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2523,
+                  "scope": 2546,
                   "src": "1161:4:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -288,7 +288,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2517,
+                    "id": 2540,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1161:4:17",
@@ -303,14 +303,14 @@
               ],
               "src": "1160:6:17"
             },
-            "scope": 2524,
+            "scope": 2547,
             "src": "1087:112:17",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2525,
+        "scope": 2548,
         "src": "714:487:17"
       }
     ],
@@ -320,14 +320,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/organization/OrganizationMockPass.sol",
     "exportedSymbols": {
       "OrganizationMockPass": [
-        2524
+        2547
       ]
     },
-    "id": 2525,
+    "id": 2548,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2503,
+        "id": 2526,
         "literals": [
           "solidity",
           "^",
@@ -343,16 +343,16 @@
         "contractKind": "contract",
         "documentation": " @title Organization Mock Pass.\n *  @notice Mocks Organization functions as passing.",
         "fullyImplemented": true,
-        "id": 2524,
+        "id": 2547,
         "linearizedBaseContracts": [
-          2524
+          2547
         ],
         "name": "OrganizationMockPass",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2512,
+              "id": 2535,
               "nodeType": "Block",
               "src": "965:28:17",
               "statements": [
@@ -360,7 +360,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2510,
+                    "id": 2533,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -375,30 +375,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2509,
-                  "id": 2511,
+                  "functionReturnParameters": 2532,
+                  "id": 2534,
                   "nodeType": "Return",
                   "src": "975:11:17"
                 }
               ]
             },
             "documentation": "@notice Mocks passing isOrganization.\n     * @return bool True.",
-            "id": 2513,
+            "id": 2536,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isOrganization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2506,
+              "id": 2529,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2505,
+                  "id": 2528,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2513,
+                  "scope": 2536,
                   "src": "899:7:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -407,7 +407,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2504,
+                    "id": 2527,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "899:7:17",
@@ -424,15 +424,15 @@
               "src": "898:9:17"
             },
             "returnParameters": {
-              "id": 2509,
+              "id": 2532,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2508,
+                  "id": 2531,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2513,
+                  "scope": 2536,
                   "src": "955:4:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -441,7 +441,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2507,
+                    "id": 2530,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "955:4:17",
@@ -456,7 +456,7 @@
               ],
               "src": "954:6:17"
             },
-            "scope": 2524,
+            "scope": 2547,
             "src": "875:118:17",
             "stateMutability": "pure",
             "superFunction": null,
@@ -464,7 +464,7 @@
           },
           {
             "body": {
-              "id": 2522,
+              "id": 2545,
               "nodeType": "Block",
               "src": "1171:28:17",
               "statements": [
@@ -472,7 +472,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2520,
+                    "id": 2543,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -487,30 +487,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2519,
-                  "id": 2521,
+                  "functionReturnParameters": 2542,
+                  "id": 2544,
                   "nodeType": "Return",
                   "src": "1181:11:17"
                 }
               ]
             },
             "documentation": "@notice Mocks passing isWorker.\n     * @return bool True.",
-            "id": 2523,
+            "id": 2546,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isWorker",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2516,
+              "id": 2539,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2515,
+                  "id": 2538,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2523,
+                  "scope": 2546,
                   "src": "1105:7:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -519,7 +519,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2514,
+                    "id": 2537,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1105:7:17",
@@ -536,15 +536,15 @@
               "src": "1104:9:17"
             },
             "returnParameters": {
-              "id": 2519,
+              "id": 2542,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2518,
+                  "id": 2541,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2523,
+                  "scope": 2546,
                   "src": "1161:4:17",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -553,7 +553,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2517,
+                    "id": 2540,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1161:4:17",
@@ -568,14 +568,14 @@
               ],
               "src": "1160:6:17"
             },
-            "scope": 2524,
+            "scope": 2547,
             "src": "1087:112:17",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2525,
+        "scope": 2548,
         "src": "714:487:17"
       }
     ],
@@ -587,7 +587,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.038Z",
+  "updatedAt": "2020-01-22T10:54:09.774Z",
   "devdoc": {
     "methods": {
       "isOrganization(address)": {

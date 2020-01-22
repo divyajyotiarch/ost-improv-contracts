@@ -18,14 +18,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/EtherPaymentFallback.sol",
     "exportedSymbols": {
       "EtherPaymentFallback": [
-        10148
+        10171
       ]
     },
-    "id": 10149,
+    "id": 10172,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10143,
+        "id": 10166,
         "literals": [
           "solidity",
           "^",
@@ -41,47 +41,47 @@
         "contractKind": "contract",
         "documentation": "@title EtherPaymentFallback - A contract that has a fallback to accept ether payments\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 10148,
+        "id": 10171,
         "linearizedBaseContracts": [
-          10148
+          10171
         ],
         "name": "EtherPaymentFallback",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10146,
+              "id": 10169,
               "nodeType": "Block",
               "src": "312:8:76",
               "statements": []
             },
             "documentation": "@dev Fallback function accepts Ether transactions.",
-            "id": 10147,
+            "id": 10170,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10144,
+              "id": 10167,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "272:2:76"
             },
             "returnParameters": {
-              "id": 10145,
+              "id": 10168,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "312:0:76"
             },
-            "scope": 10148,
+            "scope": 10171,
             "src": "263:57:76",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 10149,
+        "scope": 10172,
         "src": "167:155:76"
       }
     ],
@@ -91,14 +91,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/EtherPaymentFallback.sol",
     "exportedSymbols": {
       "EtherPaymentFallback": [
-        10148
+        10171
       ]
     },
-    "id": 10149,
+    "id": 10172,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10143,
+        "id": 10166,
         "literals": [
           "solidity",
           "^",
@@ -114,47 +114,47 @@
         "contractKind": "contract",
         "documentation": "@title EtherPaymentFallback - A contract that has a fallback to accept ether payments\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 10148,
+        "id": 10171,
         "linearizedBaseContracts": [
-          10148
+          10171
         ],
         "name": "EtherPaymentFallback",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10146,
+              "id": 10169,
               "nodeType": "Block",
               "src": "312:8:76",
               "statements": []
             },
             "documentation": "@dev Fallback function accepts Ether transactions.",
-            "id": 10147,
+            "id": 10170,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10144,
+              "id": 10167,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "272:2:76"
             },
             "returnParameters": {
-              "id": 10145,
+              "id": 10168,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "312:0:76"
             },
-            "scope": 10148,
+            "scope": 10171,
             "src": "263:57:76",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 10149,
+        "scope": 10172,
         "src": "167:155:76"
       }
     ],
@@ -166,7 +166,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.191Z",
+  "updatedAt": "2020-01-22T10:54:09.866Z",
   "devdoc": {
     "author": "Richard Meissner - <richard@gnosis.pm>",
     "methods": {},

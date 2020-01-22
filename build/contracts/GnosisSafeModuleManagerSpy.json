@@ -162,14 +162,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/gnosis_safe/GnosisSafeModuleManagerSpy.sol",
     "exportedSymbols": {
       "GnosisSafeModuleManagerSpy": [
-        6809
+        6832
       ]
     },
-    "id": 6810,
+    "id": 6833,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6715,
+        "id": 6738,
         "literals": [
           "solidity",
           "^",
@@ -182,10 +182,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/gnosis_safe_modules/GnosisSafeModuleManagerInterface.sol",
         "file": "../../../gnosis_safe_modules/GnosisSafeModuleManagerInterface.sol",
-        "id": 6716,
+        "id": 6739,
         "nodeType": "ImportDirective",
-        "scope": 6810,
-        "sourceUnit": 4772,
+        "scope": 6833,
+        "sourceUnit": 4795,
         "src": "613:75:58",
         "symbolAliases": [],
         "unitAlias": ""
@@ -193,10 +193,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/gnosis_safe_modules/DelayedRecoveryModule.sol",
         "file": "../../../gnosis_safe_modules/DelayedRecoveryModule.sol",
-        "id": 6717,
+        "id": 6740,
         "nodeType": "ImportDirective",
-        "scope": 6810,
-        "sourceUnit": 4729,
+        "scope": 6833,
+        "sourceUnit": 4752,
         "src": "689:64:58",
         "symbolAliases": [],
         "unitAlias": ""
@@ -207,32 +207,32 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6718,
+              "id": 6741,
               "name": "GnosisSafeModuleManagerInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4771,
+              "referencedDeclaration": 4794,
               "src": "794:32:58",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_GnosisSafeModuleManagerInterface_$4771",
+                "typeIdentifier": "t_contract$_GnosisSafeModuleManagerInterface_$4794",
                 "typeString": "contract GnosisSafeModuleManagerInterface"
               }
             },
-            "id": 6719,
+            "id": 6742,
             "nodeType": "InheritanceSpecifier",
             "src": "794:32:58"
           }
         ],
         "contractDependencies": [
-          4728,
-          4771
+          4751,
+          4794
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6809,
+        "id": 6832,
         "linearizedBaseContracts": [
-          6809,
-          4771
+          6832,
+          4794
         ],
         "name": "GnosisSafeModuleManagerSpy",
         "nodeType": "ContractDefinition",
@@ -240,20 +240,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 6723,
+            "id": 6746,
             "name": "DelayedRecoveryModuleCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 6722,
+              "id": 6745,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6721,
+                  "id": 6744,
                   "indexed": false,
                   "name": "_contractAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6723,
+                  "scope": 6746,
                   "src": "886:24:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -262,7 +262,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6720,
+                    "id": 6743,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "886:7:58",
@@ -282,10 +282,10 @@
           },
           {
             "constant": false,
-            "id": 6725,
+            "id": 6748,
             "name": "shouldExecutionFail",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "938:24:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -294,7 +294,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 6724,
+              "id": 6747,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "938:4:58",
@@ -308,10 +308,10 @@
           },
           {
             "constant": false,
-            "id": 6727,
+            "id": 6750,
             "name": "recordedTo",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "969:25:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -320,7 +320,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 6726,
+              "id": 6749,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "969:7:58",
@@ -335,10 +335,10 @@
           },
           {
             "constant": false,
-            "id": 6729,
+            "id": 6752,
             "name": "recordedValue",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "1001:28:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -347,7 +347,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 6728,
+              "id": 6751,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1001:7:58",
@@ -361,10 +361,10 @@
           },
           {
             "constant": false,
-            "id": 6731,
+            "id": 6754,
             "name": "recordedData",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "1036:25:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -373,7 +373,7 @@
               "typeString": "bytes"
             },
             "typeName": {
-              "id": 6730,
+              "id": 6753,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "1036:5:58",
@@ -387,26 +387,26 @@
           },
           {
             "constant": false,
-            "id": 6733,
+            "id": 6756,
             "name": "recordedOperation",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "1068:34:58",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Operation_$4757",
+              "typeIdentifier": "t_enum$_Operation_$4780",
               "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
             },
             "typeName": {
               "contractScope": null,
-              "id": 6732,
+              "id": 6755,
               "name": "Operation",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4757,
+              "referencedDeclaration": 4780,
               "src": "1068:9:58",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Operation_$4757",
+                "typeIdentifier": "t_enum$_Operation_$4780",
                 "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
               }
             },
@@ -415,25 +415,25 @@
           },
           {
             "body": {
-              "id": 6740,
+              "id": 6763,
               "nodeType": "Block",
               "src": "1181:43:58",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6738,
+                    "id": 6761,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6736,
+                      "id": 6759,
                       "name": "shouldExecutionFail",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6725,
+                      "referencedDeclaration": 6748,
                       "src": "1191:19:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -445,7 +445,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 6737,
+                      "id": 6760,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -466,32 +466,32 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 6739,
+                  "id": 6762,
                   "nodeType": "ExpressionStatement",
                   "src": "1191:26:58"
                 }
               ]
             },
             "documentation": null,
-            "id": 6741,
+            "id": 6764,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "makeFail",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6734,
+              "id": 6757,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1157:2:58"
             },
             "returnParameters": {
-              "id": 6735,
+              "id": 6758,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1181:0:58"
             },
-            "scope": 6809,
+            "scope": 6832,
             "src": "1140:84:58",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -499,37 +499,37 @@
           },
           {
             "body": {
-              "id": 6774,
+              "id": 6797,
               "nodeType": "Block",
               "src": "1440:286:58",
               "statements": [
                 {
                   "assignments": [
-                    6753
+                    6776
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 6753,
+                      "id": 6776,
                       "name": "module",
                       "nodeType": "VariableDeclaration",
-                      "scope": 6774,
+                      "scope": 6797,
                       "src": "1450:28:58",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                        "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                         "typeString": "contract DelayedRecoveryModule"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 6752,
+                        "id": 6775,
                         "name": "DelayedRecoveryModule",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 4728,
+                        "referencedDeclaration": 4751,
                         "src": "1450:21:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                           "typeString": "contract DelayedRecoveryModule"
                         }
                       },
@@ -537,13 +537,13 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 6757,
+                  "id": 6780,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 6755,
+                      "id": 6778,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -551,23 +551,23 @@
                       "nodeType": "NewExpression",
                       "src": "1481:25:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_DelayedRecoveryModule_$4728_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_DelayedRecoveryModule_$4751_$",
                         "typeString": "function () returns (contract DelayedRecoveryModule)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 6754,
+                        "id": 6777,
                         "name": "DelayedRecoveryModule",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 4728,
+                        "referencedDeclaration": 4751,
                         "src": "1485:21:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                           "typeString": "contract DelayedRecoveryModule"
                         }
                       }
                     },
-                    "id": 6756,
+                    "id": 6779,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -577,7 +577,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1481:27:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                       "typeString": "contract DelayedRecoveryModule"
                     }
                   },
@@ -590,11 +590,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6761,
+                        "id": 6784,
                         "name": "_recoveryOwner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6743,
+                        "referencedDeclaration": 6766,
                         "src": "1544:14:58",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -603,11 +603,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6762,
+                        "id": 6785,
                         "name": "_recoveryController",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6745,
+                        "referencedDeclaration": 6768,
                         "src": "1572:19:58",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -616,11 +616,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6763,
+                        "id": 6786,
                         "name": "_recoveryBlockDelay",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6747,
+                        "referencedDeclaration": 6770,
                         "src": "1605:19:58",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -645,32 +645,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6758,
+                        "id": 6781,
                         "name": "module",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6753,
+                        "referencedDeclaration": 6776,
                         "src": "1518:6:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                           "typeString": "contract DelayedRecoveryModule"
                         }
                       },
-                      "id": 6760,
+                      "id": 6783,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "setup",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4382,
+                      "referencedDeclaration": 4405,
                       "src": "1518:12:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256) external"
                       }
                     },
-                    "id": 6764,
+                    "id": 6787,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -684,7 +684,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6765,
+                  "id": 6788,
                   "nodeType": "ExpressionStatement",
                   "src": "1518:116:58"
                 },
@@ -697,14 +697,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 6768,
+                            "id": 6791,
                             "name": "module",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6753,
+                            "referencedDeclaration": 6776,
                             "src": "1687:6:58",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                               "typeString": "contract DelayedRecoveryModule"
                             }
                           }
@@ -712,11 +712,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                               "typeString": "contract DelayedRecoveryModule"
                             }
                           ],
-                          "id": 6767,
+                          "id": 6790,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -729,7 +729,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 6769,
+                        "id": 6792,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -751,18 +751,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 6766,
+                      "id": 6789,
                       "name": "DelayedRecoveryModuleCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6723,
+                      "referencedDeclaration": 6746,
                       "src": "1650:28:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 6770,
+                    "id": 6793,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -776,48 +776,48 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6771,
+                  "id": 6794,
                   "nodeType": "EmitStatement",
                   "src": "1645:50:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6772,
+                    "id": 6795,
                     "name": "module",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6753,
+                    "referencedDeclaration": 6776,
                     "src": "1713:6:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                       "typeString": "contract DelayedRecoveryModule"
                     }
                   },
-                  "functionReturnParameters": 6751,
-                  "id": 6773,
+                  "functionReturnParameters": 6774,
+                  "id": 6796,
                   "nodeType": "Return",
                   "src": "1706:13:58"
                 }
               ]
             },
             "documentation": null,
-            "id": 6775,
+            "id": 6798,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createDelayedRecoveryModule",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6748,
+              "id": 6771,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6743,
+                  "id": 6766,
                   "name": "_recoveryOwner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1276:22:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -826,7 +826,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6742,
+                    "id": 6765,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1276:7:58",
@@ -841,10 +841,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6745,
+                  "id": 6768,
                   "name": "_recoveryController",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1308:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -853,7 +853,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6744,
+                    "id": 6767,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1308:7:58",
@@ -868,10 +868,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6747,
+                  "id": 6770,
                   "name": "_recoveryBlockDelay",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1345:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -880,7 +880,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6746,
+                    "id": 6769,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1345:7:58",
@@ -896,31 +896,31 @@
               "src": "1266:112:58"
             },
             "returnParameters": {
-              "id": 6751,
+              "id": 6774,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6750,
+                  "id": 6773,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1413:21:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                    "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                     "typeString": "contract DelayedRecoveryModule"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6749,
+                    "id": 6772,
                     "name": "DelayedRecoveryModule",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 4728,
+                    "referencedDeclaration": 4751,
                     "src": "1413:21:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                       "typeString": "contract DelayedRecoveryModule"
                     }
                   },
@@ -930,7 +930,7 @@
               ],
               "src": "1412:23:58"
             },
-            "scope": 6809,
+            "scope": 6832,
             "src": "1230:496:58",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -938,25 +938,25 @@
           },
           {
             "body": {
-              "id": 6807,
+              "id": 6830,
               "nodeType": "Block",
               "src": "2295:173:58",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6790,
+                    "id": 6813,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6788,
+                      "id": 6811,
                       "name": "recordedTo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6727,
+                      "referencedDeclaration": 6750,
                       "src": "2305:10:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -967,11 +967,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6789,
+                      "id": 6812,
                       "name": "_to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6777,
+                      "referencedDeclaration": 6800,
                       "src": "2318:3:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -984,25 +984,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 6791,
+                  "id": 6814,
                   "nodeType": "ExpressionStatement",
                   "src": "2305:16:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6794,
+                    "id": 6817,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6792,
+                      "id": 6815,
                       "name": "recordedValue",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6729,
+                      "referencedDeclaration": 6752,
                       "src": "2331:13:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1013,11 +1013,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6793,
+                      "id": 6816,
                       "name": "_value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6779,
+                      "referencedDeclaration": 6802,
                       "src": "2347:6:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1030,25 +1030,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 6795,
+                  "id": 6818,
                   "nodeType": "ExpressionStatement",
                   "src": "2331:22:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6798,
+                    "id": 6821,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6796,
+                      "id": 6819,
                       "name": "recordedData",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6731,
+                      "referencedDeclaration": 6754,
                       "src": "2363:12:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_storage",
@@ -1059,11 +1059,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6797,
+                      "id": 6820,
                       "name": "_data",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6781,
+                      "referencedDeclaration": 6804,
                       "src": "2378:5:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_calldata_ptr",
@@ -1076,28 +1076,28 @@
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "id": 6799,
+                  "id": 6822,
                   "nodeType": "ExpressionStatement",
                   "src": "2363:20:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6802,
+                    "id": 6825,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6800,
+                      "id": 6823,
                       "name": "recordedOperation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6733,
+                      "referencedDeclaration": 6756,
                       "src": "2393:17:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$4757",
+                        "typeIdentifier": "t_enum$_Operation_$4780",
                         "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                       }
                     },
@@ -1105,31 +1105,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6801,
+                      "id": 6824,
                       "name": "_operation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6783,
+                      "referencedDeclaration": 6806,
                       "src": "2413:10:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$4757",
+                        "typeIdentifier": "t_enum$_Operation_$4780",
                         "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                       }
                     },
                     "src": "2393:30:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Operation_$4757",
+                      "typeIdentifier": "t_enum$_Operation_$4780",
                       "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                     }
                   },
-                  "id": 6803,
+                  "id": 6826,
                   "nodeType": "ExpressionStatement",
                   "src": "2393:30:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6805,
+                    "id": 6828,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1140,11 +1140,11 @@
                     "src": "2441:20:58",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 6804,
+                      "id": 6827,
                       "name": "shouldExecutionFail",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6725,
+                      "referencedDeclaration": 6748,
                       "src": "2442:19:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1156,30 +1156,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 6787,
-                  "id": 6806,
+                  "functionReturnParameters": 6810,
+                  "id": 6829,
                   "nodeType": "Return",
                   "src": "2434:27:58"
                 }
               ]
             },
             "documentation": "@dev Allows a module to execute a Safe transaction without any\n     further confirmations.\n     * @param _to Destination address of module transaction.\n@param _value Ether value of module transaction.\n@param _data Data payload of module transaction.\n@param _operation Operation type of module transaction.",
-            "id": 6808,
+            "id": 6831,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "execTransactionFromModule",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6784,
+              "id": 6807,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6777,
+                  "id": 6800,
                   "name": "_to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2140:11:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1188,7 +1188,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6776,
+                    "id": 6799,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2140:7:58",
@@ -1203,10 +1203,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6779,
+                  "id": 6802,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2161:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1215,7 +1215,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6778,
+                    "id": 6801,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2161:7:58",
@@ -1229,10 +1229,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6781,
+                  "id": 6804,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2185:20:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -1241,7 +1241,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 6780,
+                    "id": 6803,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2185:5:58",
@@ -1255,26 +1255,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 6783,
+                  "id": 6806,
                   "name": "_operation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2215:20:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Operation_$4757",
+                    "typeIdentifier": "t_enum$_Operation_$4780",
                     "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6782,
+                    "id": 6805,
                     "name": "Operation",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 4757,
+                    "referencedDeclaration": 4780,
                     "src": "2215:9:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Operation_$4757",
+                      "typeIdentifier": "t_enum$_Operation_$4780",
                       "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                     }
                   },
@@ -1285,15 +1285,15 @@
               "src": "2130:111:58"
             },
             "returnParameters": {
-              "id": 6787,
+              "id": 6810,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6786,
+                  "id": 6809,
                   "name": "success_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2276:13:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1302,7 +1302,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 6785,
+                    "id": 6808,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2276:4:58",
@@ -1317,14 +1317,14 @@
               ],
               "src": "2275:15:58"
             },
-            "scope": 6809,
+            "scope": 6832,
             "src": "2096:372:58",
             "stateMutability": "nonpayable",
-            "superFunction": 4770,
+            "superFunction": 4793,
             "visibility": "external"
           }
         ],
-        "scope": 6810,
+        "scope": 6833,
         "src": "755:1715:58"
       }
     ],
@@ -1334,14 +1334,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/gnosis_safe/GnosisSafeModuleManagerSpy.sol",
     "exportedSymbols": {
       "GnosisSafeModuleManagerSpy": [
-        6809
+        6832
       ]
     },
-    "id": 6810,
+    "id": 6833,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6715,
+        "id": 6738,
         "literals": [
           "solidity",
           "^",
@@ -1354,10 +1354,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/gnosis_safe_modules/GnosisSafeModuleManagerInterface.sol",
         "file": "../../../gnosis_safe_modules/GnosisSafeModuleManagerInterface.sol",
-        "id": 6716,
+        "id": 6739,
         "nodeType": "ImportDirective",
-        "scope": 6810,
-        "sourceUnit": 4772,
+        "scope": 6833,
+        "sourceUnit": 4795,
         "src": "613:75:58",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1365,10 +1365,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/gnosis_safe_modules/DelayedRecoveryModule.sol",
         "file": "../../../gnosis_safe_modules/DelayedRecoveryModule.sol",
-        "id": 6717,
+        "id": 6740,
         "nodeType": "ImportDirective",
-        "scope": 6810,
-        "sourceUnit": 4729,
+        "scope": 6833,
+        "sourceUnit": 4752,
         "src": "689:64:58",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1379,32 +1379,32 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6718,
+              "id": 6741,
               "name": "GnosisSafeModuleManagerInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4771,
+              "referencedDeclaration": 4794,
               "src": "794:32:58",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_GnosisSafeModuleManagerInterface_$4771",
+                "typeIdentifier": "t_contract$_GnosisSafeModuleManagerInterface_$4794",
                 "typeString": "contract GnosisSafeModuleManagerInterface"
               }
             },
-            "id": 6719,
+            "id": 6742,
             "nodeType": "InheritanceSpecifier",
             "src": "794:32:58"
           }
         ],
         "contractDependencies": [
-          4728,
-          4771
+          4751,
+          4794
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6809,
+        "id": 6832,
         "linearizedBaseContracts": [
-          6809,
-          4771
+          6832,
+          4794
         ],
         "name": "GnosisSafeModuleManagerSpy",
         "nodeType": "ContractDefinition",
@@ -1412,20 +1412,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 6723,
+            "id": 6746,
             "name": "DelayedRecoveryModuleCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 6722,
+              "id": 6745,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6721,
+                  "id": 6744,
                   "indexed": false,
                   "name": "_contractAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6723,
+                  "scope": 6746,
                   "src": "886:24:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1434,7 +1434,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6720,
+                    "id": 6743,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "886:7:58",
@@ -1454,10 +1454,10 @@
           },
           {
             "constant": false,
-            "id": 6725,
+            "id": 6748,
             "name": "shouldExecutionFail",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "938:24:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1466,7 +1466,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 6724,
+              "id": 6747,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "938:4:58",
@@ -1480,10 +1480,10 @@
           },
           {
             "constant": false,
-            "id": 6727,
+            "id": 6750,
             "name": "recordedTo",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "969:25:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1492,7 +1492,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 6726,
+              "id": 6749,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "969:7:58",
@@ -1507,10 +1507,10 @@
           },
           {
             "constant": false,
-            "id": 6729,
+            "id": 6752,
             "name": "recordedValue",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "1001:28:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1519,7 +1519,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 6728,
+              "id": 6751,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1001:7:58",
@@ -1533,10 +1533,10 @@
           },
           {
             "constant": false,
-            "id": 6731,
+            "id": 6754,
             "name": "recordedData",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "1036:25:58",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1545,7 +1545,7 @@
               "typeString": "bytes"
             },
             "typeName": {
-              "id": 6730,
+              "id": 6753,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "1036:5:58",
@@ -1559,26 +1559,26 @@
           },
           {
             "constant": false,
-            "id": 6733,
+            "id": 6756,
             "name": "recordedOperation",
             "nodeType": "VariableDeclaration",
-            "scope": 6809,
+            "scope": 6832,
             "src": "1068:34:58",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Operation_$4757",
+              "typeIdentifier": "t_enum$_Operation_$4780",
               "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
             },
             "typeName": {
               "contractScope": null,
-              "id": 6732,
+              "id": 6755,
               "name": "Operation",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4757,
+              "referencedDeclaration": 4780,
               "src": "1068:9:58",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Operation_$4757",
+                "typeIdentifier": "t_enum$_Operation_$4780",
                 "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
               }
             },
@@ -1587,25 +1587,25 @@
           },
           {
             "body": {
-              "id": 6740,
+              "id": 6763,
               "nodeType": "Block",
               "src": "1181:43:58",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6738,
+                    "id": 6761,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6736,
+                      "id": 6759,
                       "name": "shouldExecutionFail",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6725,
+                      "referencedDeclaration": 6748,
                       "src": "1191:19:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1617,7 +1617,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 6737,
+                      "id": 6760,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1638,32 +1638,32 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 6739,
+                  "id": 6762,
                   "nodeType": "ExpressionStatement",
                   "src": "1191:26:58"
                 }
               ]
             },
             "documentation": null,
-            "id": 6741,
+            "id": 6764,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "makeFail",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6734,
+              "id": 6757,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1157:2:58"
             },
             "returnParameters": {
-              "id": 6735,
+              "id": 6758,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1181:0:58"
             },
-            "scope": 6809,
+            "scope": 6832,
             "src": "1140:84:58",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1671,37 +1671,37 @@
           },
           {
             "body": {
-              "id": 6774,
+              "id": 6797,
               "nodeType": "Block",
               "src": "1440:286:58",
               "statements": [
                 {
                   "assignments": [
-                    6753
+                    6776
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 6753,
+                      "id": 6776,
                       "name": "module",
                       "nodeType": "VariableDeclaration",
-                      "scope": 6774,
+                      "scope": 6797,
                       "src": "1450:28:58",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                        "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                         "typeString": "contract DelayedRecoveryModule"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 6752,
+                        "id": 6775,
                         "name": "DelayedRecoveryModule",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 4728,
+                        "referencedDeclaration": 4751,
                         "src": "1450:21:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                           "typeString": "contract DelayedRecoveryModule"
                         }
                       },
@@ -1709,13 +1709,13 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 6757,
+                  "id": 6780,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 6755,
+                      "id": 6778,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1723,23 +1723,23 @@
                       "nodeType": "NewExpression",
                       "src": "1481:25:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_DelayedRecoveryModule_$4728_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_DelayedRecoveryModule_$4751_$",
                         "typeString": "function () returns (contract DelayedRecoveryModule)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 6754,
+                        "id": 6777,
                         "name": "DelayedRecoveryModule",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 4728,
+                        "referencedDeclaration": 4751,
                         "src": "1485:21:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                           "typeString": "contract DelayedRecoveryModule"
                         }
                       }
                     },
-                    "id": 6756,
+                    "id": 6779,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1749,7 +1749,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1481:27:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                       "typeString": "contract DelayedRecoveryModule"
                     }
                   },
@@ -1762,11 +1762,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6761,
+                        "id": 6784,
                         "name": "_recoveryOwner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6743,
+                        "referencedDeclaration": 6766,
                         "src": "1544:14:58",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1775,11 +1775,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6762,
+                        "id": 6785,
                         "name": "_recoveryController",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6745,
+                        "referencedDeclaration": 6768,
                         "src": "1572:19:58",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1788,11 +1788,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6763,
+                        "id": 6786,
                         "name": "_recoveryBlockDelay",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6747,
+                        "referencedDeclaration": 6770,
                         "src": "1605:19:58",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1817,32 +1817,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 6758,
+                        "id": 6781,
                         "name": "module",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6753,
+                        "referencedDeclaration": 6776,
                         "src": "1518:6:58",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                          "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                           "typeString": "contract DelayedRecoveryModule"
                         }
                       },
-                      "id": 6760,
+                      "id": 6783,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "setup",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4382,
+                      "referencedDeclaration": 4405,
                       "src": "1518:12:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256) external"
                       }
                     },
-                    "id": 6764,
+                    "id": 6787,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1856,7 +1856,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6765,
+                  "id": 6788,
                   "nodeType": "ExpressionStatement",
                   "src": "1518:116:58"
                 },
@@ -1869,14 +1869,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 6768,
+                            "id": 6791,
                             "name": "module",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6753,
+                            "referencedDeclaration": 6776,
                             "src": "1687:6:58",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                               "typeString": "contract DelayedRecoveryModule"
                             }
                           }
@@ -1884,11 +1884,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                              "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                               "typeString": "contract DelayedRecoveryModule"
                             }
                           ],
-                          "id": 6767,
+                          "id": 6790,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1901,7 +1901,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 6769,
+                        "id": 6792,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1923,18 +1923,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 6766,
+                      "id": 6789,
                       "name": "DelayedRecoveryModuleCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6723,
+                      "referencedDeclaration": 6746,
                       "src": "1650:28:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 6770,
+                    "id": 6793,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1948,48 +1948,48 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6771,
+                  "id": 6794,
                   "nodeType": "EmitStatement",
                   "src": "1645:50:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6772,
+                    "id": 6795,
                     "name": "module",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6753,
+                    "referencedDeclaration": 6776,
                     "src": "1713:6:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                       "typeString": "contract DelayedRecoveryModule"
                     }
                   },
-                  "functionReturnParameters": 6751,
-                  "id": 6773,
+                  "functionReturnParameters": 6774,
+                  "id": 6796,
                   "nodeType": "Return",
                   "src": "1706:13:58"
                 }
               ]
             },
             "documentation": null,
-            "id": 6775,
+            "id": 6798,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createDelayedRecoveryModule",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6748,
+              "id": 6771,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6743,
+                  "id": 6766,
                   "name": "_recoveryOwner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1276:22:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1998,7 +1998,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6742,
+                    "id": 6765,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1276:7:58",
@@ -2013,10 +2013,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6745,
+                  "id": 6768,
                   "name": "_recoveryController",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1308:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2025,7 +2025,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6744,
+                    "id": 6767,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1308:7:58",
@@ -2040,10 +2040,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6747,
+                  "id": 6770,
                   "name": "_recoveryBlockDelay",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1345:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2052,7 +2052,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6746,
+                    "id": 6769,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1345:7:58",
@@ -2068,31 +2068,31 @@
               "src": "1266:112:58"
             },
             "returnParameters": {
-              "id": 6751,
+              "id": 6774,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6750,
+                  "id": 6773,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6775,
+                  "scope": 6798,
                   "src": "1413:21:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                    "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                     "typeString": "contract DelayedRecoveryModule"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6749,
+                    "id": 6772,
                     "name": "DelayedRecoveryModule",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 4728,
+                    "referencedDeclaration": 4751,
                     "src": "1413:21:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4728",
+                      "typeIdentifier": "t_contract$_DelayedRecoveryModule_$4751",
                       "typeString": "contract DelayedRecoveryModule"
                     }
                   },
@@ -2102,7 +2102,7 @@
               ],
               "src": "1412:23:58"
             },
-            "scope": 6809,
+            "scope": 6832,
             "src": "1230:496:58",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2110,25 +2110,25 @@
           },
           {
             "body": {
-              "id": 6807,
+              "id": 6830,
               "nodeType": "Block",
               "src": "2295:173:58",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6790,
+                    "id": 6813,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6788,
+                      "id": 6811,
                       "name": "recordedTo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6727,
+                      "referencedDeclaration": 6750,
                       "src": "2305:10:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2139,11 +2139,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6789,
+                      "id": 6812,
                       "name": "_to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6777,
+                      "referencedDeclaration": 6800,
                       "src": "2318:3:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2156,25 +2156,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 6791,
+                  "id": 6814,
                   "nodeType": "ExpressionStatement",
                   "src": "2305:16:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6794,
+                    "id": 6817,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6792,
+                      "id": 6815,
                       "name": "recordedValue",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6729,
+                      "referencedDeclaration": 6752,
                       "src": "2331:13:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2185,11 +2185,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6793,
+                      "id": 6816,
                       "name": "_value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6779,
+                      "referencedDeclaration": 6802,
                       "src": "2347:6:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2202,25 +2202,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 6795,
+                  "id": 6818,
                   "nodeType": "ExpressionStatement",
                   "src": "2331:22:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6798,
+                    "id": 6821,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6796,
+                      "id": 6819,
                       "name": "recordedData",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6731,
+                      "referencedDeclaration": 6754,
                       "src": "2363:12:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_storage",
@@ -2231,11 +2231,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6797,
+                      "id": 6820,
                       "name": "_data",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6781,
+                      "referencedDeclaration": 6804,
                       "src": "2378:5:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_calldata_ptr",
@@ -2248,28 +2248,28 @@
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "id": 6799,
+                  "id": 6822,
                   "nodeType": "ExpressionStatement",
                   "src": "2363:20:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6802,
+                    "id": 6825,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6800,
+                      "id": 6823,
                       "name": "recordedOperation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6733,
+                      "referencedDeclaration": 6756,
                       "src": "2393:17:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$4757",
+                        "typeIdentifier": "t_enum$_Operation_$4780",
                         "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                       }
                     },
@@ -2277,31 +2277,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6801,
+                      "id": 6824,
                       "name": "_operation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6783,
+                      "referencedDeclaration": 6806,
                       "src": "2413:10:58",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$4757",
+                        "typeIdentifier": "t_enum$_Operation_$4780",
                         "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                       }
                     },
                     "src": "2393:30:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Operation_$4757",
+                      "typeIdentifier": "t_enum$_Operation_$4780",
                       "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                     }
                   },
-                  "id": 6803,
+                  "id": 6826,
                   "nodeType": "ExpressionStatement",
                   "src": "2393:30:58"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6805,
+                    "id": 6828,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2312,11 +2312,11 @@
                     "src": "2441:20:58",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 6804,
+                      "id": 6827,
                       "name": "shouldExecutionFail",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6725,
+                      "referencedDeclaration": 6748,
                       "src": "2442:19:58",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -2328,30 +2328,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 6787,
-                  "id": 6806,
+                  "functionReturnParameters": 6810,
+                  "id": 6829,
                   "nodeType": "Return",
                   "src": "2434:27:58"
                 }
               ]
             },
             "documentation": "@dev Allows a module to execute a Safe transaction without any\n     further confirmations.\n     * @param _to Destination address of module transaction.\n@param _value Ether value of module transaction.\n@param _data Data payload of module transaction.\n@param _operation Operation type of module transaction.",
-            "id": 6808,
+            "id": 6831,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "execTransactionFromModule",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6784,
+              "id": 6807,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6777,
+                  "id": 6800,
                   "name": "_to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2140:11:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2360,7 +2360,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6776,
+                    "id": 6799,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2140:7:58",
@@ -2375,10 +2375,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6779,
+                  "id": 6802,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2161:14:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2387,7 +2387,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6778,
+                    "id": 6801,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2161:7:58",
@@ -2401,10 +2401,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6781,
+                  "id": 6804,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2185:20:58",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -2413,7 +2413,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 6780,
+                    "id": 6803,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2185:5:58",
@@ -2427,26 +2427,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 6783,
+                  "id": 6806,
                   "name": "_operation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2215:20:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Operation_$4757",
+                    "typeIdentifier": "t_enum$_Operation_$4780",
                     "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 6782,
+                    "id": 6805,
                     "name": "Operation",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 4757,
+                    "referencedDeclaration": 4780,
                     "src": "2215:9:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Operation_$4757",
+                      "typeIdentifier": "t_enum$_Operation_$4780",
                       "typeString": "enum GnosisSafeModuleManagerInterface.Operation"
                     }
                   },
@@ -2457,15 +2457,15 @@
               "src": "2130:111:58"
             },
             "returnParameters": {
-              "id": 6787,
+              "id": 6810,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6786,
+                  "id": 6809,
                   "name": "success_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6808,
+                  "scope": 6831,
                   "src": "2276:13:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2474,7 +2474,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 6785,
+                    "id": 6808,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2276:4:58",
@@ -2489,14 +2489,14 @@
               ],
               "src": "2275:15:58"
             },
-            "scope": 6809,
+            "scope": 6832,
             "src": "2096:372:58",
             "stateMutability": "nonpayable",
-            "superFunction": 4770,
+            "superFunction": 4793,
             "visibility": "external"
           }
         ],
-        "scope": 6810,
+        "scope": 6833,
         "src": "755:1715:58"
       }
     ],
@@ -2508,7 +2508,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.146Z",
+  "updatedAt": "2020-01-22T10:54:09.822Z",
   "devdoc": {
     "methods": {
       "execTransactionFromModule(address,uint256,bytes,uint8)": {

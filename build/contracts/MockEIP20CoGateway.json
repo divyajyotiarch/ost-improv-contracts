@@ -43,14 +43,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol",
     "exportedSymbols": {
       "MockEIP20CoGateway": [
-        3943
+        3966
       ]
     },
-    "id": 3944,
+    "id": 3967,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3917,
+        "id": 3940,
         "literals": [
           "solidity",
           "^",
@@ -63,10 +63,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
         "file": "../CoGatewayUtilityTokenInterface.sol",
-        "id": 3918,
+        "id": 3941,
         "nodeType": "ImportDirective",
-        "scope": 3944,
-        "sourceUnit": 2619,
+        "scope": 3967,
+        "sourceUnit": 2642,
         "src": "813:47:31",
         "symbolAliases": [],
         "unitAlias": ""
@@ -77,41 +77,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3919,
+              "id": 3942,
               "name": "CoGatewayUtilityTokenInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2618,
+              "referencedDeclaration": 2641,
               "src": "1025:30:31",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CoGatewayUtilityTokenInterface_$2618",
+                "typeIdentifier": "t_contract$_CoGatewayUtilityTokenInterface_$2641",
                 "typeString": "contract CoGatewayUtilityTokenInterface"
               }
             },
-            "id": 3920,
+            "id": 3943,
             "nodeType": "InheritanceSpecifier",
             "src": "1025:30:31"
           }
         ],
         "contractDependencies": [
-          2618
+          2641
         ],
         "contractKind": "contract",
         "documentation": "@title MockEIP20CoGateway contract.\n * @notice This contract mocks the EIP20CoGateway. This is used only for testing.",
         "fullyImplemented": true,
-        "id": 3943,
+        "id": 3966,
         "linearizedBaseContracts": [
-          3943,
-          2618
+          3966,
+          2641
         ],
         "name": "MockEIP20CoGateway",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3922,
+            "id": 3945,
             "name": "utilityTokenAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 3943,
+            "scope": 3966,
             "src": "1120:35:31",
             "stateVariable": true,
             "storageLocation": "default",
@@ -120,7 +120,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3921,
+              "id": 3944,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1120:7:31",
@@ -135,25 +135,25 @@
           },
           {
             "body": {
-              "id": 3931,
+              "id": 3954,
               "nodeType": "Block",
               "src": "1351:52:31",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3929,
+                    "id": 3952,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3927,
+                      "id": 3950,
                       "name": "utilityTokenAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3922,
+                      "referencedDeclaration": 3945,
                       "src": "1361:19:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -164,11 +164,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3928,
+                      "id": 3951,
                       "name": "_utilityToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3924,
+                      "referencedDeclaration": 3947,
                       "src": "1383:13:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -181,29 +181,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3930,
+                  "id": 3953,
                   "nodeType": "ExpressionStatement",
                   "src": "1361:35:31"
                 }
               ]
             },
             "documentation": "@notice Set the utility token address for testing.\n     * @param _utilityToken Utility token address.",
-            "id": 3932,
+            "id": 3955,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setUtilityToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3925,
+              "id": 3948,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3924,
+                  "id": 3947,
                   "name": "_utilityToken",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3932,
+                  "scope": 3955,
                   "src": "1319:21:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -212,7 +212,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3923,
+                    "id": 3946,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1319:7:31",
@@ -229,12 +229,12 @@
               "src": "1318:23:31"
             },
             "returnParameters": {
-              "id": 3926,
+              "id": 3949,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1351:0:31"
             },
-            "scope": 3943,
+            "scope": 3966,
             "src": "1294:109:31",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -242,25 +242,25 @@
           },
           {
             "body": {
-              "id": 3941,
+              "id": 3964,
               "nodeType": "Block",
               "src": "1654:52:31",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3939,
+                    "id": 3962,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3937,
+                      "id": 3960,
                       "name": "utilityToken_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3935,
+                      "referencedDeclaration": 3958,
                       "src": "1664:13:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -271,11 +271,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3938,
+                      "id": 3961,
                       "name": "utilityTokenAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3922,
+                      "referencedDeclaration": 3945,
                       "src": "1680:19:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -288,35 +288,35 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3940,
+                  "id": 3963,
                   "nodeType": "ExpressionStatement",
                   "src": "1664:35:31"
                 }
               ]
             },
             "documentation": "@notice Get the utility token address. This is mock function for testing.\n     * @return utilityToken_ Mocked utility token address",
-            "id": 3942,
+            "id": 3965,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "utilityToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3933,
+              "id": 3956,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1592:2:31"
             },
             "returnParameters": {
-              "id": 3936,
+              "id": 3959,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3935,
+                  "id": 3958,
                   "name": "utilityToken_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3942,
+                  "scope": 3965,
                   "src": "1627:21:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -325,7 +325,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3934,
+                    "id": 3957,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1627:7:31",
@@ -341,14 +341,14 @@
               ],
               "src": "1626:23:31"
             },
-            "scope": 3943,
+            "scope": 3966,
             "src": "1571:135:31",
             "stateMutability": "nonpayable",
-            "superFunction": 2617,
+            "superFunction": 2640,
             "visibility": "public"
           }
         ],
-        "scope": 3944,
+        "scope": 3967,
         "src": "994:714:31"
       }
     ],
@@ -358,14 +358,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockEIP20CoGateway.sol",
     "exportedSymbols": {
       "MockEIP20CoGateway": [
-        3943
+        3966
       ]
     },
-    "id": 3944,
+    "id": 3967,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3917,
+        "id": 3940,
         "literals": [
           "solidity",
           "^",
@@ -378,10 +378,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
         "file": "../CoGatewayUtilityTokenInterface.sol",
-        "id": 3918,
+        "id": 3941,
         "nodeType": "ImportDirective",
-        "scope": 3944,
-        "sourceUnit": 2619,
+        "scope": 3967,
+        "sourceUnit": 2642,
         "src": "813:47:31",
         "symbolAliases": [],
         "unitAlias": ""
@@ -392,41 +392,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3919,
+              "id": 3942,
               "name": "CoGatewayUtilityTokenInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2618,
+              "referencedDeclaration": 2641,
               "src": "1025:30:31",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CoGatewayUtilityTokenInterface_$2618",
+                "typeIdentifier": "t_contract$_CoGatewayUtilityTokenInterface_$2641",
                 "typeString": "contract CoGatewayUtilityTokenInterface"
               }
             },
-            "id": 3920,
+            "id": 3943,
             "nodeType": "InheritanceSpecifier",
             "src": "1025:30:31"
           }
         ],
         "contractDependencies": [
-          2618
+          2641
         ],
         "contractKind": "contract",
         "documentation": "@title MockEIP20CoGateway contract.\n * @notice This contract mocks the EIP20CoGateway. This is used only for testing.",
         "fullyImplemented": true,
-        "id": 3943,
+        "id": 3966,
         "linearizedBaseContracts": [
-          3943,
-          2618
+          3966,
+          2641
         ],
         "name": "MockEIP20CoGateway",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3922,
+            "id": 3945,
             "name": "utilityTokenAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 3943,
+            "scope": 3966,
             "src": "1120:35:31",
             "stateVariable": true,
             "storageLocation": "default",
@@ -435,7 +435,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3921,
+              "id": 3944,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1120:7:31",
@@ -450,25 +450,25 @@
           },
           {
             "body": {
-              "id": 3931,
+              "id": 3954,
               "nodeType": "Block",
               "src": "1351:52:31",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3929,
+                    "id": 3952,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3927,
+                      "id": 3950,
                       "name": "utilityTokenAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3922,
+                      "referencedDeclaration": 3945,
                       "src": "1361:19:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -479,11 +479,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3928,
+                      "id": 3951,
                       "name": "_utilityToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3924,
+                      "referencedDeclaration": 3947,
                       "src": "1383:13:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -496,29 +496,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3930,
+                  "id": 3953,
                   "nodeType": "ExpressionStatement",
                   "src": "1361:35:31"
                 }
               ]
             },
             "documentation": "@notice Set the utility token address for testing.\n     * @param _utilityToken Utility token address.",
-            "id": 3932,
+            "id": 3955,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setUtilityToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3925,
+              "id": 3948,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3924,
+                  "id": 3947,
                   "name": "_utilityToken",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3932,
+                  "scope": 3955,
                   "src": "1319:21:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -527,7 +527,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3923,
+                    "id": 3946,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1319:7:31",
@@ -544,12 +544,12 @@
               "src": "1318:23:31"
             },
             "returnParameters": {
-              "id": 3926,
+              "id": 3949,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1351:0:31"
             },
-            "scope": 3943,
+            "scope": 3966,
             "src": "1294:109:31",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -557,25 +557,25 @@
           },
           {
             "body": {
-              "id": 3941,
+              "id": 3964,
               "nodeType": "Block",
               "src": "1654:52:31",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3939,
+                    "id": 3962,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3937,
+                      "id": 3960,
                       "name": "utilityToken_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3935,
+                      "referencedDeclaration": 3958,
                       "src": "1664:13:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -586,11 +586,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3938,
+                      "id": 3961,
                       "name": "utilityTokenAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3922,
+                      "referencedDeclaration": 3945,
                       "src": "1680:19:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -603,35 +603,35 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3940,
+                  "id": 3963,
                   "nodeType": "ExpressionStatement",
                   "src": "1664:35:31"
                 }
               ]
             },
             "documentation": "@notice Get the utility token address. This is mock function for testing.\n     * @return utilityToken_ Mocked utility token address",
-            "id": 3942,
+            "id": 3965,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "utilityToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3933,
+              "id": 3956,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1592:2:31"
             },
             "returnParameters": {
-              "id": 3936,
+              "id": 3959,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3935,
+                  "id": 3958,
                   "name": "utilityToken_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3942,
+                  "scope": 3965,
                   "src": "1627:21:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -640,7 +640,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3934,
+                    "id": 3957,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1627:7:31",
@@ -656,14 +656,14 @@
               ],
               "src": "1626:23:31"
             },
-            "scope": 3943,
+            "scope": 3966,
             "src": "1571:135:31",
             "stateMutability": "nonpayable",
-            "superFunction": 2617,
+            "superFunction": 2640,
             "visibility": "public"
           }
         ],
-        "scope": 3944,
+        "scope": 3967,
         "src": "994:714:31"
       }
     ],
@@ -675,7 +675,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.105Z",
+  "updatedAt": "2020-01-22T10:54:09.791Z",
   "devdoc": {
     "methods": {
       "setUtilityToken(address)": {

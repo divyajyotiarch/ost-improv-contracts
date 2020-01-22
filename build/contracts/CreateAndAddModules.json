@@ -48,14 +48,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/libraries/CreateAndAddModules.sol",
     "exportedSymbols": {
       "CreateAndAddModules": [
-        10460
+        10483
       ]
     },
-    "id": 10461,
+    "id": 10484,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10417,
+        "id": 10440,
         "literals": [
           "solidity",
           "^",
@@ -68,10 +68,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/Module.sol",
         "file": "../base/Module.sol",
-        "id": 10418,
+        "id": 10441,
         "nodeType": "ImportDirective",
-        "scope": 10461,
-        "sourceUnit": 9368,
+        "scope": 10484,
+        "sourceUnit": 9391,
         "src": "24:28:83",
         "symbolAliases": [],
         "unitAlias": ""
@@ -82,16 +82,16 @@
         "contractKind": "contract",
         "documentation": "@title Create and Add Modules - Allows to create and add multiple module in one transaction.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 10460,
+        "id": 10483,
         "linearizedBaseContracts": [
-          10460
+          10483
         ],
         "name": "CreateAndAddModules",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10426,
+              "id": 10449,
               "nodeType": "Block",
               "src": "466:25:83",
               "statements": [
@@ -101,21 +101,21 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 10423,
+                      "id": 10446,
                       "name": "revert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12886,
-                        12887
+                        12909,
+                        12910
                       ],
-                      "referencedDeclaration": 12886,
+                      "referencedDeclaration": 12909,
                       "src": "476:6:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_revert_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 10424,
+                    "id": 10447,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -129,45 +129,45 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 10425,
+                  "id": 10448,
                   "nodeType": "ExpressionStatement",
                   "src": "476:8:83"
                 }
               ]
             },
             "documentation": "@dev Function required to compile contract. Gnosis Safe function is called instead.\n @param module Not used.",
-            "id": 10427,
+            "id": 10450,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "enableModule",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10421,
+              "id": 10444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10420,
+                  "id": 10443,
                   "name": "module",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10427,
+                  "scope": 10450,
                   "src": "432:13:83",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_Module_$9367",
+                    "typeIdentifier": "t_contract$_Module_$9390",
                     "typeString": "contract Module"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 10419,
+                    "id": 10442,
                     "name": "Module",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9367,
+                    "referencedDeclaration": 9390,
                     "src": "432:6:83",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Module_$9367",
+                      "typeIdentifier": "t_contract$_Module_$9390",
                       "typeString": "contract Module"
                     }
                   },
@@ -178,12 +178,12 @@
               "src": "431:15:83"
             },
             "returnParameters": {
-              "id": 10422,
+              "id": 10445,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "466:0:83"
             },
-            "scope": 10460,
+            "scope": 10483,
             "src": "410:81:83",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -191,21 +191,21 @@
           },
           {
             "body": {
-              "id": 10458,
+              "id": 10481,
               "nodeType": "Block",
               "src": "909:803:83",
               "statements": [
                 {
                   "assignments": [
-                    10435
+                    10458
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10435,
+                      "id": 10458,
                       "name": "length",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10458,
+                      "scope": 10481,
                       "src": "919:14:83",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -214,7 +214,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 10434,
+                        "id": 10457,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "919:7:83",
@@ -227,23 +227,23 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10438,
+                  "id": 10461,
                   "initialValue": {
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 10436,
+                      "id": 10459,
                       "name": "data",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10431,
+                      "referencedDeclaration": 10454,
                       "src": "936:4:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_memory_ptr",
                         "typeString": "bytes memory"
                       }
                     },
-                    "id": 10437,
+                    "id": 10460,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -262,31 +262,31 @@
                 },
                 {
                   "assignments": [
-                    10440
+                    10463
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10440,
+                      "id": 10463,
                       "name": "module",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10458,
+                      "scope": 10481,
                       "src": "957:13:83",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Module_$9367",
+                        "typeIdentifier": "t_contract$_Module_$9390",
                         "typeString": "contract Module"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 10439,
+                        "id": 10462,
                         "name": "Module",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9367,
+                        "referencedDeclaration": 9390,
                         "src": "957:6:83",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Module_$9367",
+                          "typeIdentifier": "t_contract$_Module_$9390",
                           "typeString": "contract Module"
                         }
                       },
@@ -294,22 +294,22 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10441,
+                  "id": 10464,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "957:13:83"
                 },
                 {
                   "assignments": [
-                    10443
+                    10466
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10443,
+                      "id": 10466,
                       "name": "i",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10458,
+                      "scope": 10481,
                       "src": "980:9:83",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -318,7 +318,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 10442,
+                        "id": 10465,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "980:7:83",
@@ -331,11 +331,11 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10445,
+                  "id": 10468,
                   "initialValue": {
                     "argumentTypes": null,
                     "hexValue": "30",
-                    "id": 10444,
+                    "id": 10467,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -355,7 +355,7 @@
                 },
                 {
                   "body": {
-                    "id": 10456,
+                    "id": 10479,
                     "nodeType": "Block",
                     "src": "1022:684:83",
                     "statements": [
@@ -363,7 +363,7 @@
                         "externalReferences": [
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1569:1:83",
@@ -372,7 +372,7 @@
                           },
                           {
                             "data": {
-                              "declaration": 10431,
+                              "declaration": 10454,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1176:4:83",
@@ -381,7 +381,7 @@
                           },
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1182:1:83",
@@ -390,7 +390,7 @@
                           },
                           {
                             "data": {
-                              "declaration": 10431,
+                              "declaration": 10454,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1236:4:83",
@@ -399,7 +399,7 @@
                           },
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1242:1:83",
@@ -408,7 +408,7 @@
                           },
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1578:1:83",
@@ -417,7 +417,7 @@
                           },
                           {
                             "module": {
-                              "declaration": 10440,
+                              "declaration": 10463,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1426:6:83",
@@ -426,7 +426,7 @@
                           },
                           {
                             "proxyFactory": {
-                              "declaration": 10429,
+                              "declaration": 10452,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1329:12:83",
@@ -434,7 +434,7 @@
                             }
                           }
                         ],
-                        "id": 10449,
+                        "id": 10472,
                         "nodeType": "InlineAssembly",
                         "operations": "{\n    let createBytesLength := mload(add(0x20, add(data, i)))\n    let createBytes := add(0x40, add(data, i))\n    let output := mload(0x40)\n    if eq(delegatecall(gas(), proxyFactory, createBytes, createBytesLength, output, 0x20), 0) { revert(0, 0) }\n    module := and(mload(output), 0xffffffffffffffffffffffffffffffffffffffff)\n    i := add(i, add(0x20, mul(div(add(createBytesLength, 0x1f), 0x20), 0x20)))\n}",
                         "src": "1104:553:83"
@@ -445,14 +445,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 10453,
+                              "id": 10476,
                               "name": "module",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 10440,
+                              "referencedDeclaration": 10463,
                               "src": "1688:6:83",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Module_$9367",
+                                "typeIdentifier": "t_contract$_Module_$9390",
                                 "typeString": "contract Module"
                               }
                             }
@@ -460,38 +460,38 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_Module_$9367",
+                                "typeIdentifier": "t_contract$_Module_$9390",
                                 "typeString": "contract Module"
                               }
                             ],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 10450,
+                              "id": 10473,
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 13063,
+                              "referencedDeclaration": 13086,
                               "src": "1670:4:83",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_CreateAndAddModules_$10460",
+                                "typeIdentifier": "t_contract$_CreateAndAddModules_$10483",
                                 "typeString": "contract CreateAndAddModules"
                               }
                             },
-                            "id": 10452,
+                            "id": 10475,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "enableModule",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 10427,
+                            "referencedDeclaration": 10450,
                             "src": "1670:17:83",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_external_nonpayable$_t_contract$_Module_$9367_$returns$__$",
+                              "typeIdentifier": "t_function_external_nonpayable$_t_contract$_Module_$9390_$returns$__$",
                               "typeString": "function (contract Module) external"
                             }
                           },
-                          "id": 10454,
+                          "id": 10477,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -505,7 +505,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 10455,
+                        "id": 10478,
                         "nodeType": "ExpressionStatement",
                         "src": "1670:25:83"
                       }
@@ -517,18 +517,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 10448,
+                    "id": 10471,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 10446,
+                      "id": 10469,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10443,
+                      "referencedDeclaration": 10466,
                       "src": "1010:1:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -539,11 +539,11 @@
                     "operator": "<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 10447,
+                      "id": 10470,
                       "name": "length",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10435,
+                      "referencedDeclaration": 10458,
                       "src": "1014:6:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -556,29 +556,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 10457,
+                  "id": 10480,
                   "nodeType": "WhileStatement",
                   "src": "1003:703:83"
                 }
               ]
             },
             "documentation": "@dev Allows to create and add multiple module in one transaction.\n @param proxyFactory Module proxy factory contract.\n @param data Modules constructor payload. This is the data for each proxy factory call concatinated. (e.g. <byte_array_len_1><byte_array_data_1><byte_array_len_2><byte_array_data_2>)",
-            "id": 10459,
+            "id": 10482,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createAndAddModules",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10432,
+              "id": 10455,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10429,
+                  "id": 10452,
                   "name": "proxyFactory",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10459,
+                  "scope": 10482,
                   "src": "849:20:83",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -587,7 +587,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10428,
+                    "id": 10451,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "849:7:83",
@@ -602,10 +602,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10431,
+                  "id": 10454,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10459,
+                  "scope": 10482,
                   "src": "871:17:83",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -614,7 +614,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10430,
+                    "id": 10453,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "871:5:83",
@@ -630,19 +630,19 @@
               "src": "848:41:83"
             },
             "returnParameters": {
-              "id": 10433,
+              "id": 10456,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "909:0:83"
             },
-            "scope": 10460,
+            "scope": 10483,
             "src": "820:892:83",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 10461,
+        "scope": 10484,
         "src": "250:1464:83"
       }
     ],
@@ -652,14 +652,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/libraries/CreateAndAddModules.sol",
     "exportedSymbols": {
       "CreateAndAddModules": [
-        10460
+        10483
       ]
     },
-    "id": 10461,
+    "id": 10484,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10417,
+        "id": 10440,
         "literals": [
           "solidity",
           "^",
@@ -672,10 +672,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/Module.sol",
         "file": "../base/Module.sol",
-        "id": 10418,
+        "id": 10441,
         "nodeType": "ImportDirective",
-        "scope": 10461,
-        "sourceUnit": 9368,
+        "scope": 10484,
+        "sourceUnit": 9391,
         "src": "24:28:83",
         "symbolAliases": [],
         "unitAlias": ""
@@ -686,16 +686,16 @@
         "contractKind": "contract",
         "documentation": "@title Create and Add Modules - Allows to create and add multiple module in one transaction.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 10460,
+        "id": 10483,
         "linearizedBaseContracts": [
-          10460
+          10483
         ],
         "name": "CreateAndAddModules",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10426,
+              "id": 10449,
               "nodeType": "Block",
               "src": "466:25:83",
               "statements": [
@@ -705,21 +705,21 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 10423,
+                      "id": 10446,
                       "name": "revert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12886,
-                        12887
+                        12909,
+                        12910
                       ],
-                      "referencedDeclaration": 12886,
+                      "referencedDeclaration": 12909,
                       "src": "476:6:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_revert_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 10424,
+                    "id": 10447,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -733,45 +733,45 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 10425,
+                  "id": 10448,
                   "nodeType": "ExpressionStatement",
                   "src": "476:8:83"
                 }
               ]
             },
             "documentation": "@dev Function required to compile contract. Gnosis Safe function is called instead.\n @param module Not used.",
-            "id": 10427,
+            "id": 10450,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "enableModule",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10421,
+              "id": 10444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10420,
+                  "id": 10443,
                   "name": "module",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10427,
+                  "scope": 10450,
                   "src": "432:13:83",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_Module_$9367",
+                    "typeIdentifier": "t_contract$_Module_$9390",
                     "typeString": "contract Module"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 10419,
+                    "id": 10442,
                     "name": "Module",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9367,
+                    "referencedDeclaration": 9390,
                     "src": "432:6:83",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Module_$9367",
+                      "typeIdentifier": "t_contract$_Module_$9390",
                       "typeString": "contract Module"
                     }
                   },
@@ -782,12 +782,12 @@
               "src": "431:15:83"
             },
             "returnParameters": {
-              "id": 10422,
+              "id": 10445,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "466:0:83"
             },
-            "scope": 10460,
+            "scope": 10483,
             "src": "410:81:83",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -795,21 +795,21 @@
           },
           {
             "body": {
-              "id": 10458,
+              "id": 10481,
               "nodeType": "Block",
               "src": "909:803:83",
               "statements": [
                 {
                   "assignments": [
-                    10435
+                    10458
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10435,
+                      "id": 10458,
                       "name": "length",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10458,
+                      "scope": 10481,
                       "src": "919:14:83",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -818,7 +818,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 10434,
+                        "id": 10457,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "919:7:83",
@@ -831,23 +831,23 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10438,
+                  "id": 10461,
                   "initialValue": {
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 10436,
+                      "id": 10459,
                       "name": "data",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10431,
+                      "referencedDeclaration": 10454,
                       "src": "936:4:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_memory_ptr",
                         "typeString": "bytes memory"
                       }
                     },
-                    "id": 10437,
+                    "id": 10460,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -866,31 +866,31 @@
                 },
                 {
                   "assignments": [
-                    10440
+                    10463
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10440,
+                      "id": 10463,
                       "name": "module",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10458,
+                      "scope": 10481,
                       "src": "957:13:83",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Module_$9367",
+                        "typeIdentifier": "t_contract$_Module_$9390",
                         "typeString": "contract Module"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 10439,
+                        "id": 10462,
                         "name": "Module",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9367,
+                        "referencedDeclaration": 9390,
                         "src": "957:6:83",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Module_$9367",
+                          "typeIdentifier": "t_contract$_Module_$9390",
                           "typeString": "contract Module"
                         }
                       },
@@ -898,22 +898,22 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10441,
+                  "id": 10464,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "957:13:83"
                 },
                 {
                   "assignments": [
-                    10443
+                    10466
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10443,
+                      "id": 10466,
                       "name": "i",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10458,
+                      "scope": 10481,
                       "src": "980:9:83",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -922,7 +922,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 10442,
+                        "id": 10465,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "980:7:83",
@@ -935,11 +935,11 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10445,
+                  "id": 10468,
                   "initialValue": {
                     "argumentTypes": null,
                     "hexValue": "30",
-                    "id": 10444,
+                    "id": 10467,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -959,7 +959,7 @@
                 },
                 {
                   "body": {
-                    "id": 10456,
+                    "id": 10479,
                     "nodeType": "Block",
                     "src": "1022:684:83",
                     "statements": [
@@ -967,7 +967,7 @@
                         "externalReferences": [
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1569:1:83",
@@ -976,7 +976,7 @@
                           },
                           {
                             "data": {
-                              "declaration": 10431,
+                              "declaration": 10454,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1176:4:83",
@@ -985,7 +985,7 @@
                           },
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1182:1:83",
@@ -994,7 +994,7 @@
                           },
                           {
                             "data": {
-                              "declaration": 10431,
+                              "declaration": 10454,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1236:4:83",
@@ -1003,7 +1003,7 @@
                           },
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1242:1:83",
@@ -1012,7 +1012,7 @@
                           },
                           {
                             "i": {
-                              "declaration": 10443,
+                              "declaration": 10466,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1578:1:83",
@@ -1021,7 +1021,7 @@
                           },
                           {
                             "module": {
-                              "declaration": 10440,
+                              "declaration": 10463,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1426:6:83",
@@ -1030,7 +1030,7 @@
                           },
                           {
                             "proxyFactory": {
-                              "declaration": 10429,
+                              "declaration": 10452,
                               "isOffset": false,
                               "isSlot": false,
                               "src": "1329:12:83",
@@ -1038,7 +1038,7 @@
                             }
                           }
                         ],
-                        "id": 10449,
+                        "id": 10472,
                         "nodeType": "InlineAssembly",
                         "operations": "{\n    let createBytesLength := mload(add(0x20, add(data, i)))\n    let createBytes := add(0x40, add(data, i))\n    let output := mload(0x40)\n    if eq(delegatecall(gas(), proxyFactory, createBytes, createBytesLength, output, 0x20), 0) { revert(0, 0) }\n    module := and(mload(output), 0xffffffffffffffffffffffffffffffffffffffff)\n    i := add(i, add(0x20, mul(div(add(createBytesLength, 0x1f), 0x20), 0x20)))\n}",
                         "src": "1104:553:83"
@@ -1049,14 +1049,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 10453,
+                              "id": 10476,
                               "name": "module",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 10440,
+                              "referencedDeclaration": 10463,
                               "src": "1688:6:83",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Module_$9367",
+                                "typeIdentifier": "t_contract$_Module_$9390",
                                 "typeString": "contract Module"
                               }
                             }
@@ -1064,38 +1064,38 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_Module_$9367",
+                                "typeIdentifier": "t_contract$_Module_$9390",
                                 "typeString": "contract Module"
                               }
                             ],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 10450,
+                              "id": 10473,
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 13063,
+                              "referencedDeclaration": 13086,
                               "src": "1670:4:83",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_CreateAndAddModules_$10460",
+                                "typeIdentifier": "t_contract$_CreateAndAddModules_$10483",
                                 "typeString": "contract CreateAndAddModules"
                               }
                             },
-                            "id": 10452,
+                            "id": 10475,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "enableModule",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 10427,
+                            "referencedDeclaration": 10450,
                             "src": "1670:17:83",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_external_nonpayable$_t_contract$_Module_$9367_$returns$__$",
+                              "typeIdentifier": "t_function_external_nonpayable$_t_contract$_Module_$9390_$returns$__$",
                               "typeString": "function (contract Module) external"
                             }
                           },
-                          "id": 10454,
+                          "id": 10477,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1109,7 +1109,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 10455,
+                        "id": 10478,
                         "nodeType": "ExpressionStatement",
                         "src": "1670:25:83"
                       }
@@ -1121,18 +1121,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 10448,
+                    "id": 10471,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 10446,
+                      "id": 10469,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10443,
+                      "referencedDeclaration": 10466,
                       "src": "1010:1:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1143,11 +1143,11 @@
                     "operator": "<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 10447,
+                      "id": 10470,
                       "name": "length",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10435,
+                      "referencedDeclaration": 10458,
                       "src": "1014:6:83",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1160,29 +1160,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 10457,
+                  "id": 10480,
                   "nodeType": "WhileStatement",
                   "src": "1003:703:83"
                 }
               ]
             },
             "documentation": "@dev Allows to create and add multiple module in one transaction.\n @param proxyFactory Module proxy factory contract.\n @param data Modules constructor payload. This is the data for each proxy factory call concatinated. (e.g. <byte_array_len_1><byte_array_data_1><byte_array_len_2><byte_array_data_2>)",
-            "id": 10459,
+            "id": 10482,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createAndAddModules",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10432,
+              "id": 10455,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10429,
+                  "id": 10452,
                   "name": "proxyFactory",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10459,
+                  "scope": 10482,
                   "src": "849:20:83",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1191,7 +1191,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10428,
+                    "id": 10451,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "849:7:83",
@@ -1206,10 +1206,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10431,
+                  "id": 10454,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10459,
+                  "scope": 10482,
                   "src": "871:17:83",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1218,7 +1218,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10430,
+                    "id": 10453,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "871:5:83",
@@ -1234,19 +1234,19 @@
               "src": "848:41:83"
             },
             "returnParameters": {
-              "id": 10433,
+              "id": 10456,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "909:0:83"
             },
-            "scope": 10460,
+            "scope": 10483,
             "src": "820:892:83",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 10461,
+        "scope": 10484,
         "src": "250:1464:83"
       }
     ],
@@ -1258,7 +1258,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.195Z",
+  "updatedAt": "2020-01-22T10:54:09.869Z",
   "devdoc": {
     "author": "Stefan George - <stefan@gnosis.pm>Richard Meissner - <richard@gnosis.pm>",
     "methods": {

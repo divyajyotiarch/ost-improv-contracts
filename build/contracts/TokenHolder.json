@@ -5155,7 +5155,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 12988,
+                              "referencedDeclaration": 13052,
                               "src": "9641:4:64",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_TokenHolder_$8027",
@@ -9996,7 +9996,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 12988,
+                                  "referencedDeclaration": 13052,
                                   "src": "14785:4:64",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_TokenHolder_$8027",
@@ -15495,7 +15495,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 12988,
+                              "referencedDeclaration": 13052,
                               "src": "9641:4:64",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_TokenHolder_$8027",
@@ -20336,7 +20336,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 12988,
+                                  "referencedDeclaration": 13052,
                                   "src": "14785:4:64",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_TokenHolder_$8027",
@@ -21079,7 +21079,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T17:19:56.041Z",
+  "updatedAt": "2020-01-22T10:54:09.833Z",
   "devdoc": {
     "methods": {
       "authorizeSession(address,uint256,uint256)": {

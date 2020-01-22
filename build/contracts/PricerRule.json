@@ -14475,7 +14475,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-21T17:19:56.024Z",
+  "updatedAt": "2020-01-22T10:54:09.808Z",
   "devdoc": {
     "methods": {
       "addPriceOracle(address)": {

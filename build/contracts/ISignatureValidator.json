@@ -39,14 +39,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol",
     "exportedSymbols": {
       "ISignatureValidator": [
-        10415
+        10438
       ]
     },
-    "id": 10416,
+    "id": 10439,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10405,
+        "id": 10428,
         "literals": [
           "solidity",
           "^",
@@ -62,9 +62,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 10415,
+        "id": 10438,
         "linearizedBaseContracts": [
-          10415
+          10438
         ],
         "name": "ISignatureValidator",
         "nodeType": "ContractDefinition",
@@ -72,22 +72,22 @@
           {
             "body": null,
             "documentation": "@dev Should return whether the signature provided is valid for the provided data\n@param _data Arbitrary length data signed on the behalf of address(this)\n@param _signature Signature byte array associated with _data\n    * MUST return a bool upon valid or invalid signature with corresponding _data\nMUST take (bytes, bytes) as arguments",
-            "id": 10414,
+            "id": 10437,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isValidSignature",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10410,
+              "id": 10433,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10407,
+                  "id": 10430,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10414,
+                  "scope": 10437,
                   "src": "476:20:82",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -96,7 +96,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10406,
+                    "id": 10429,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "476:5:82",
@@ -110,10 +110,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10409,
+                  "id": 10432,
                   "name": "_signature",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10414,
+                  "scope": 10437,
                   "src": "507:25:82",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -122,7 +122,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10408,
+                    "id": 10431,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "507:5:82",
@@ -138,15 +138,15 @@
               "src": "466:67:82"
             },
             "returnParameters": {
-              "id": 10413,
+              "id": 10436,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10412,
+                  "id": 10435,
                   "name": "isValid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10414,
+                  "scope": 10437,
                   "src": "568:12:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -155,7 +155,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 10411,
+                    "id": 10434,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "568:4:82",
@@ -170,14 +170,14 @@
               ],
               "src": "567:14:82"
             },
-            "scope": 10415,
+            "scope": 10438,
             "src": "441:141:82",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 10416,
+        "scope": 10439,
         "src": "25:560:82"
       }
     ],
@@ -187,14 +187,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/interfaces/ISignatureValidator.sol",
     "exportedSymbols": {
       "ISignatureValidator": [
-        10415
+        10438
       ]
     },
-    "id": 10416,
+    "id": 10439,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10405,
+        "id": 10428,
         "literals": [
           "solidity",
           "^",
@@ -210,9 +210,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 10415,
+        "id": 10438,
         "linearizedBaseContracts": [
-          10415
+          10438
         ],
         "name": "ISignatureValidator",
         "nodeType": "ContractDefinition",
@@ -220,22 +220,22 @@
           {
             "body": null,
             "documentation": "@dev Should return whether the signature provided is valid for the provided data\n@param _data Arbitrary length data signed on the behalf of address(this)\n@param _signature Signature byte array associated with _data\n    * MUST return a bool upon valid or invalid signature with corresponding _data\nMUST take (bytes, bytes) as arguments",
-            "id": 10414,
+            "id": 10437,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isValidSignature",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10410,
+              "id": 10433,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10407,
+                  "id": 10430,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10414,
+                  "scope": 10437,
                   "src": "476:20:82",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -244,7 +244,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10406,
+                    "id": 10429,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "476:5:82",
@@ -258,10 +258,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10409,
+                  "id": 10432,
                   "name": "_signature",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10414,
+                  "scope": 10437,
                   "src": "507:25:82",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -270,7 +270,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 10408,
+                    "id": 10431,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "507:5:82",
@@ -286,15 +286,15 @@
               "src": "466:67:82"
             },
             "returnParameters": {
-              "id": 10413,
+              "id": 10436,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10412,
+                  "id": 10435,
                   "name": "isValid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10414,
+                  "scope": 10437,
                   "src": "568:12:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -303,7 +303,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 10411,
+                    "id": 10434,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "568:4:82",
@@ -318,14 +318,14 @@
               ],
               "src": "567:14:82"
             },
-            "scope": 10415,
+            "scope": 10438,
             "src": "441:141:82",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 10416,
+        "scope": 10439,
         "src": "25:560:82"
       }
     ],
@@ -337,7 +337,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.194Z",
+  "updatedAt": "2020-01-22T10:54:09.868Z",
   "devdoc": {
     "methods": {
       "isValidSignature(bytes,bytes)": {

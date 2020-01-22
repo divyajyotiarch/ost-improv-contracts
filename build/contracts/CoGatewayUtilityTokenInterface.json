@@ -28,14 +28,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
     "exportedSymbols": {
       "CoGatewayUtilityTokenInterface": [
-        2618
+        2641
       ]
     },
-    "id": 2619,
+    "id": 2642,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2612,
+        "id": 2635,
         "literals": [
           "solidity",
           "^",
@@ -51,9 +51,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2618,
+        "id": 2641,
         "linearizedBaseContracts": [
-          2618
+          2641
         ],
         "name": "CoGatewayUtilityTokenInterface",
         "nodeType": "ContractDefinition",
@@ -61,28 +61,28 @@
           {
             "body": null,
             "documentation": "@notice Get the utility token address.\n     * @return utilityToken_ Address of utility token.",
-            "id": 2617,
+            "id": 2640,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "utilityToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2613,
+              "id": 2636,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1005:2:20"
             },
             "returnParameters": {
-              "id": 2616,
+              "id": 2639,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2615,
+                  "id": 2638,
                   "name": "utilityToken_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2617,
+                  "scope": 2640,
                   "src": "1040:21:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -91,7 +91,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2614,
+                    "id": 2637,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1040:7:20",
@@ -107,14 +107,14 @@
               ],
               "src": "1039:23:20"
             },
-            "scope": 2618,
+            "scope": 2641,
             "src": "984:79:20",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2619,
+        "scope": 2642,
         "src": "813:252:20"
       }
     ],
@@ -124,14 +124,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/CoGatewayUtilityTokenInterface.sol",
     "exportedSymbols": {
       "CoGatewayUtilityTokenInterface": [
-        2618
+        2641
       ]
     },
-    "id": 2619,
+    "id": 2642,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2612,
+        "id": 2635,
         "literals": [
           "solidity",
           "^",
@@ -147,9 +147,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2618,
+        "id": 2641,
         "linearizedBaseContracts": [
-          2618
+          2641
         ],
         "name": "CoGatewayUtilityTokenInterface",
         "nodeType": "ContractDefinition",
@@ -157,28 +157,28 @@
           {
             "body": null,
             "documentation": "@notice Get the utility token address.\n     * @return utilityToken_ Address of utility token.",
-            "id": 2617,
+            "id": 2640,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "utilityToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2613,
+              "id": 2636,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1005:2:20"
             },
             "returnParameters": {
-              "id": 2616,
+              "id": 2639,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2615,
+                  "id": 2638,
                   "name": "utilityToken_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2617,
+                  "scope": 2640,
                   "src": "1040:21:20",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -187,7 +187,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2614,
+                    "id": 2637,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1040:7:20",
@@ -203,14 +203,14 @@
               ],
               "src": "1039:23:20"
             },
-            "scope": 2618,
+            "scope": 2641,
             "src": "984:79:20",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2619,
+        "scope": 2642,
         "src": "813:252:20"
       }
     ],
@@ -222,7 +222,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.080Z",
+  "updatedAt": "2020-01-22T10:54:09.780Z",
   "devdoc": {
     "methods": {
       "utilityToken()": {

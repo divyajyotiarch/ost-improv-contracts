@@ -12,14 +12,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/SecuredTokenTransfer.sol",
     "exportedSymbols": {
       "SecuredTokenTransfer": [
-        10202
+        10225
       ]
     },
-    "id": 10203,
+    "id": 10226,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10179,
+        "id": 10202,
         "literals": [
           "solidity",
           "^",
@@ -35,30 +35,30 @@
         "contractKind": "contract",
         "documentation": "@title SecuredTokenTransfer - Secure token transfer\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 10202,
+        "id": 10225,
         "linearizedBaseContracts": [
-          10202
+          10225
         ],
         "name": "SecuredTokenTransfer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10200,
+              "id": 10223,
               "nodeType": "Block",
               "src": "590:592:78",
               "statements": [
                 {
                   "assignments": [
-                    10191
+                    10214
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10191,
+                      "id": 10214,
                       "name": "data",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10200,
+                      "scope": 10223,
                       "src": "600:17:78",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -67,7 +67,7 @@
                         "typeString": "bytes"
                       },
                       "typeName": {
-                        "id": 10190,
+                        "id": 10213,
                         "name": "bytes",
                         "nodeType": "ElementaryTypeName",
                         "src": "600:5:78",
@@ -80,14 +80,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10198,
+                  "id": 10221,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
                         "hexValue": "7472616e7366657228616464726573732c75696e7432353629",
-                        "id": 10194,
+                        "id": 10217,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -104,11 +104,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 10195,
+                        "id": 10218,
                         "name": "receiver",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10183,
+                        "referencedDeclaration": 10206,
                         "src": "673:8:78",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -117,11 +117,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 10196,
+                        "id": 10219,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10185,
+                        "referencedDeclaration": 10208,
                         "src": "683:6:78",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -146,18 +146,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 10192,
+                        "id": 10215,
                         "name": "abi",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 12868,
+                        "referencedDeclaration": 12891,
                         "src": "620:3:78",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_abi",
                           "typeString": "abi"
                         }
                       },
-                      "id": 10193,
+                      "id": 10216,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -171,7 +171,7 @@
                         "typeString": "function (string memory) pure returns (bytes memory)"
                       }
                     },
-                    "id": 10197,
+                    "id": 10220,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -192,7 +192,7 @@
                   "externalReferences": [
                     {
                       "data": {
-                        "declaration": 10191,
+                        "declaration": 10214,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "857:4:78",
@@ -201,7 +201,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 10191,
+                        "declaration": 10214,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "838:4:78",
@@ -210,7 +210,7 @@
                     },
                     {
                       "token": {
-                        "declaration": 10181,
+                        "declaration": 10204,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "824:5:78",
@@ -219,7 +219,7 @@
                     },
                     {
                       "transferred": {
-                        "declaration": 10188,
+                        "declaration": 10211,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1012:11:78",
@@ -228,7 +228,7 @@
                     },
                     {
                       "transferred": {
-                        "declaration": 10188,
+                        "declaration": 10211,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1148:11:78",
@@ -237,7 +237,7 @@
                     },
                     {
                       "transferred": {
-                        "declaration": 10188,
+                        "declaration": 10211,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1061:11:78",
@@ -245,7 +245,7 @@
                       }
                     }
                   ],
-                  "id": 10199,
+                  "id": 10222,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    let success := call(sub(gas(), 10000), token, 0, add(data, 0x20), mload(data), 0, 0)\n    let ptr := mload(0x40)\n    returndatacopy(ptr, 0, returndatasize())\n    switch returndatasize()\n    case 0 { transferred := success }\n    case 0x20 {\n        transferred := iszero(or(iszero(success), iszero(mload(ptr))))\n    }\n    default { transferred := 0 }\n}",
                   "src": "764:412:78"
@@ -253,22 +253,22 @@
               ]
             },
             "documentation": "@dev Transfers a token and returns if it was a success\n @param token Token that should be transferred\n @param receiver Receiver to whom the token should be transferred\n @param amount The amount of tokens that should be transferred",
-            "id": 10201,
+            "id": 10224,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10186,
+              "id": 10209,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10181,
+                  "id": 10204,
                   "name": "token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "463:13:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -277,7 +277,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10180,
+                    "id": 10203,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "463:7:78",
@@ -292,10 +292,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10183,
+                  "id": 10206,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "487:16:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -304,7 +304,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10182,
+                    "id": 10205,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "487:7:78",
@@ -319,10 +319,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10185,
+                  "id": 10208,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "513:14:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -331,7 +331,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10184,
+                    "id": 10207,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "513:7:78",
@@ -347,15 +347,15 @@
               "src": "453:80:78"
             },
             "returnParameters": {
-              "id": 10189,
+              "id": 10212,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10188,
+                  "id": 10211,
                   "name": "transferred",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "568:16:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -364,7 +364,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 10187,
+                    "id": 10210,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "568:4:78",
@@ -379,14 +379,14 @@
               ],
               "src": "567:18:78"
             },
-            "scope": 10202,
+            "scope": 10225,
             "src": "430:752:78",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 10203,
+        "scope": 10226,
         "src": "133:1051:78"
       }
     ],
@@ -396,14 +396,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/common/SecuredTokenTransfer.sol",
     "exportedSymbols": {
       "SecuredTokenTransfer": [
-        10202
+        10225
       ]
     },
-    "id": 10203,
+    "id": 10226,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10179,
+        "id": 10202,
         "literals": [
           "solidity",
           "^",
@@ -419,30 +419,30 @@
         "contractKind": "contract",
         "documentation": "@title SecuredTokenTransfer - Secure token transfer\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 10202,
+        "id": 10225,
         "linearizedBaseContracts": [
-          10202
+          10225
         ],
         "name": "SecuredTokenTransfer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10200,
+              "id": 10223,
               "nodeType": "Block",
               "src": "590:592:78",
               "statements": [
                 {
                   "assignments": [
-                    10191
+                    10214
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 10191,
+                      "id": 10214,
                       "name": "data",
                       "nodeType": "VariableDeclaration",
-                      "scope": 10200,
+                      "scope": 10223,
                       "src": "600:17:78",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -451,7 +451,7 @@
                         "typeString": "bytes"
                       },
                       "typeName": {
-                        "id": 10190,
+                        "id": 10213,
                         "name": "bytes",
                         "nodeType": "ElementaryTypeName",
                         "src": "600:5:78",
@@ -464,14 +464,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 10198,
+                  "id": 10221,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
                         "hexValue": "7472616e7366657228616464726573732c75696e7432353629",
-                        "id": 10194,
+                        "id": 10217,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -488,11 +488,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 10195,
+                        "id": 10218,
                         "name": "receiver",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10183,
+                        "referencedDeclaration": 10206,
                         "src": "673:8:78",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -501,11 +501,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 10196,
+                        "id": 10219,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10185,
+                        "referencedDeclaration": 10208,
                         "src": "683:6:78",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -530,18 +530,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 10192,
+                        "id": 10215,
                         "name": "abi",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 12868,
+                        "referencedDeclaration": 12891,
                         "src": "620:3:78",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_abi",
                           "typeString": "abi"
                         }
                       },
-                      "id": 10193,
+                      "id": 10216,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -555,7 +555,7 @@
                         "typeString": "function (string memory) pure returns (bytes memory)"
                       }
                     },
-                    "id": 10197,
+                    "id": 10220,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -576,7 +576,7 @@
                   "externalReferences": [
                     {
                       "data": {
-                        "declaration": 10191,
+                        "declaration": 10214,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "857:4:78",
@@ -585,7 +585,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 10191,
+                        "declaration": 10214,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "838:4:78",
@@ -594,7 +594,7 @@
                     },
                     {
                       "token": {
-                        "declaration": 10181,
+                        "declaration": 10204,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "824:5:78",
@@ -603,7 +603,7 @@
                     },
                     {
                       "transferred": {
-                        "declaration": 10188,
+                        "declaration": 10211,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1012:11:78",
@@ -612,7 +612,7 @@
                     },
                     {
                       "transferred": {
-                        "declaration": 10188,
+                        "declaration": 10211,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1148:11:78",
@@ -621,7 +621,7 @@
                     },
                     {
                       "transferred": {
-                        "declaration": 10188,
+                        "declaration": 10211,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1061:11:78",
@@ -629,7 +629,7 @@
                       }
                     }
                   ],
-                  "id": 10199,
+                  "id": 10222,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    let success := call(sub(gas(), 10000), token, 0, add(data, 0x20), mload(data), 0, 0)\n    let ptr := mload(0x40)\n    returndatacopy(ptr, 0, returndatasize())\n    switch returndatasize()\n    case 0 { transferred := success }\n    case 0x20 {\n        transferred := iszero(or(iszero(success), iszero(mload(ptr))))\n    }\n    default { transferred := 0 }\n}",
                   "src": "764:412:78"
@@ -637,22 +637,22 @@
               ]
             },
             "documentation": "@dev Transfers a token and returns if it was a success\n @param token Token that should be transferred\n @param receiver Receiver to whom the token should be transferred\n @param amount The amount of tokens that should be transferred",
-            "id": 10201,
+            "id": 10224,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10186,
+              "id": 10209,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10181,
+                  "id": 10204,
                   "name": "token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "463:13:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -661,7 +661,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10180,
+                    "id": 10203,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "463:7:78",
@@ -676,10 +676,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10183,
+                  "id": 10206,
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "487:16:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -688,7 +688,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10182,
+                    "id": 10205,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "487:7:78",
@@ -703,10 +703,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 10185,
+                  "id": 10208,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "513:14:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -715,7 +715,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10184,
+                    "id": 10207,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "513:7:78",
@@ -731,15 +731,15 @@
               "src": "453:80:78"
             },
             "returnParameters": {
-              "id": 10189,
+              "id": 10212,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10188,
+                  "id": 10211,
                   "name": "transferred",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10201,
+                  "scope": 10224,
                   "src": "568:16:78",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -748,7 +748,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 10187,
+                    "id": 10210,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "568:4:78",
@@ -763,14 +763,14 @@
               ],
               "src": "567:18:78"
             },
-            "scope": 10202,
+            "scope": 10225,
             "src": "430:752:78",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 10203,
+        "scope": 10226,
         "src": "133:1051:78"
       }
     ],
@@ -782,7 +782,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.192Z",
+  "updatedAt": "2020-01-22T10:54:09.867Z",
   "devdoc": {
     "author": "Richard Meissner - <richard@gnosis.pm>",
     "methods": {},

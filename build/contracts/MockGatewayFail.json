@@ -74,14 +74,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayFail.sol",
     "exportedSymbols": {
       "MockGatewayFail": [
-        2422
+        2445
       ]
     },
-    "id": 2423,
+    "id": 2446,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2390,
+        "id": 2413,
         "literals": [
           "solidity",
           "^",
@@ -97,16 +97,16 @@
         "contractKind": "contract",
         "documentation": "@title MockGatewayFail contract.\n * @notice Mocks gateway contract for negative test cases.",
         "fullyImplemented": true,
-        "id": 2422,
+        "id": 2445,
         "linearizedBaseContracts": [
-          2422
+          2445
         ],
         "name": "MockGatewayFail",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2397,
+              "id": 2420,
               "nodeType": "Block",
               "src": "993:26:14",
               "statements": [
@@ -114,7 +114,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "3130",
-                    "id": 2395,
+                    "id": 2418,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -129,36 +129,36 @@
                     },
                     "value": "10"
                   },
-                  "functionReturnParameters": 2394,
-                  "id": 2396,
+                  "functionReturnParameters": 2417,
+                  "id": 2419,
                   "nodeType": "Return",
                   "src": "1003:9:14"
                 }
               ]
             },
             "documentation": "@notice Returns bounty amount.\n     * @return Amount of ERC20 which needs to be staked by facilitator.",
-            "id": 2398,
+            "id": 2421,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "bounty",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2391,
+              "id": 2414,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "930:2:14"
             },
             "returnParameters": {
-              "id": 2394,
+              "id": 2417,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2393,
+                  "id": 2416,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2398,
+                  "scope": 2421,
                   "src": "980:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -167,7 +167,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2392,
+                    "id": 2415,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "980:7:14",
@@ -182,7 +182,7 @@
               ],
               "src": "979:9:14"
             },
-            "scope": 2422,
+            "scope": 2445,
             "src": "915:104:14",
             "stateMutability": "pure",
             "superFunction": null,
@@ -190,7 +190,7 @@
           },
           {
             "body": {
-              "id": 2420,
+              "id": 2443,
               "nodeType": "Block",
               "src": "1471:68:14",
               "statements": [
@@ -201,7 +201,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "66616c7365",
-                        "id": 2416,
+                        "id": 2439,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -219,7 +219,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "476174657761792e7374616b65282920657865637574696f6e206661696c65642e",
-                        "id": 2417,
+                        "id": 2440,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -246,21 +246,21 @@
                           "typeString": "literal_string \"Gateway.stake() execution failed.\""
                         }
                       ],
-                      "id": 2415,
+                      "id": 2438,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "1481:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2418,
+                    "id": 2441,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -274,29 +274,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2419,
+                  "id": 2442,
                   "nodeType": "ExpressionStatement",
                   "src": "1481:51:14"
                 }
               ]
             },
             "documentation": "@notice Mocks gateway.stake. It fails the execution.\n     * @dev parameters are in below order:\n     _amount\n     _beneficiary\n     _gasPrice\n     _gasLimit\n     _nonce\n     _hashLock\n     ",
-            "id": 2421,
+            "id": 2444,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "stake",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2411,
+              "id": 2434,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2400,
+                  "id": 2423,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1312:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -305,7 +305,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2399,
+                    "id": 2422,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1312:7:14",
@@ -319,10 +319,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2402,
+                  "id": 2425,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1329:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -331,7 +331,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2401,
+                    "id": 2424,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1329:7:14",
@@ -346,10 +346,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2404,
+                  "id": 2427,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1346:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -358,7 +358,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2403,
+                    "id": 2426,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1346:7:14",
@@ -372,10 +372,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2406,
+                  "id": 2429,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1363:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -384,7 +384,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2405,
+                    "id": 2428,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1363:7:14",
@@ -398,10 +398,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2408,
+                  "id": 2431,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1380:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -410,7 +410,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2407,
+                    "id": 2430,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1380:7:14",
@@ -424,10 +424,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2410,
+                  "id": 2433,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1397:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -436,7 +436,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2409,
+                    "id": 2432,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1397:7:14",
@@ -452,15 +452,15 @@
               "src": "1302:108:14"
             },
             "returnParameters": {
-              "id": 2414,
+              "id": 2437,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2413,
+                  "id": 2436,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1458:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -469,7 +469,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2412,
+                    "id": 2435,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1458:7:14",
@@ -484,14 +484,14 @@
               ],
               "src": "1457:9:14"
             },
-            "scope": 2422,
+            "scope": 2445,
             "src": "1288:251:14",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2423,
+        "scope": 2446,
         "src": "720:822:14"
       }
     ],
@@ -501,14 +501,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/test/gateway/MockGatewayFail.sol",
     "exportedSymbols": {
       "MockGatewayFail": [
-        2422
+        2445
       ]
     },
-    "id": 2423,
+    "id": 2446,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2390,
+        "id": 2413,
         "literals": [
           "solidity",
           "^",
@@ -524,16 +524,16 @@
         "contractKind": "contract",
         "documentation": "@title MockGatewayFail contract.\n * @notice Mocks gateway contract for negative test cases.",
         "fullyImplemented": true,
-        "id": 2422,
+        "id": 2445,
         "linearizedBaseContracts": [
-          2422
+          2445
         ],
         "name": "MockGatewayFail",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2397,
+              "id": 2420,
               "nodeType": "Block",
               "src": "993:26:14",
               "statements": [
@@ -541,7 +541,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "3130",
-                    "id": 2395,
+                    "id": 2418,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -556,36 +556,36 @@
                     },
                     "value": "10"
                   },
-                  "functionReturnParameters": 2394,
-                  "id": 2396,
+                  "functionReturnParameters": 2417,
+                  "id": 2419,
                   "nodeType": "Return",
                   "src": "1003:9:14"
                 }
               ]
             },
             "documentation": "@notice Returns bounty amount.\n     * @return Amount of ERC20 which needs to be staked by facilitator.",
-            "id": 2398,
+            "id": 2421,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "bounty",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2391,
+              "id": 2414,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "930:2:14"
             },
             "returnParameters": {
-              "id": 2394,
+              "id": 2417,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2393,
+                  "id": 2416,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2398,
+                  "scope": 2421,
                   "src": "980:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -594,7 +594,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2392,
+                    "id": 2415,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "980:7:14",
@@ -609,7 +609,7 @@
               ],
               "src": "979:9:14"
             },
-            "scope": 2422,
+            "scope": 2445,
             "src": "915:104:14",
             "stateMutability": "pure",
             "superFunction": null,
@@ -617,7 +617,7 @@
           },
           {
             "body": {
-              "id": 2420,
+              "id": 2443,
               "nodeType": "Block",
               "src": "1471:68:14",
               "statements": [
@@ -628,7 +628,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "66616c7365",
-                        "id": 2416,
+                        "id": 2439,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -646,7 +646,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "476174657761792e7374616b65282920657865637574696f6e206661696c65642e",
-                        "id": 2417,
+                        "id": 2440,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -673,21 +673,21 @@
                           "typeString": "literal_string \"Gateway.stake() execution failed.\""
                         }
                       ],
-                      "id": 2415,
+                      "id": 2438,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "1481:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2418,
+                    "id": 2441,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -701,29 +701,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2419,
+                  "id": 2442,
                   "nodeType": "ExpressionStatement",
                   "src": "1481:51:14"
                 }
               ]
             },
             "documentation": "@notice Mocks gateway.stake. It fails the execution.\n     * @dev parameters are in below order:\n     _amount\n     _beneficiary\n     _gasPrice\n     _gasLimit\n     _nonce\n     _hashLock\n     ",
-            "id": 2421,
+            "id": 2444,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "stake",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2411,
+              "id": 2434,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2400,
+                  "id": 2423,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1312:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -732,7 +732,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2399,
+                    "id": 2422,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1312:7:14",
@@ -746,10 +746,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2402,
+                  "id": 2425,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1329:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -758,7 +758,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2401,
+                    "id": 2424,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1329:7:14",
@@ -773,10 +773,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2404,
+                  "id": 2427,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1346:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -785,7 +785,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2403,
+                    "id": 2426,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1346:7:14",
@@ -799,10 +799,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2406,
+                  "id": 2429,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1363:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -811,7 +811,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2405,
+                    "id": 2428,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1363:7:14",
@@ -825,10 +825,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2408,
+                  "id": 2431,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1380:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -837,7 +837,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2407,
+                    "id": 2430,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1380:7:14",
@@ -851,10 +851,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2410,
+                  "id": 2433,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1397:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -863,7 +863,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2409,
+                    "id": 2432,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1397:7:14",
@@ -879,15 +879,15 @@
               "src": "1302:108:14"
             },
             "returnParameters": {
-              "id": 2414,
+              "id": 2437,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2413,
+                  "id": 2436,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2421,
+                  "scope": 2444,
                   "src": "1458:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -896,7 +896,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2412,
+                    "id": 2435,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1458:7:14",
@@ -911,14 +911,14 @@
               ],
               "src": "1457:9:14"
             },
-            "scope": 2422,
+            "scope": 2445,
             "src": "1288:251:14",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2423,
+        "scope": 2446,
         "src": "720:822:14"
       }
     ],
@@ -930,7 +930,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.026Z",
+  "updatedAt": "2020-01-22T10:54:09.771Z",
   "devdoc": {
     "methods": {
       "bounty()": {

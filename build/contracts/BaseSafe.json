@@ -348,14 +348,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/BaseSafe.sol",
     "exportedSymbols": {
       "BaseSafe": [
-        9210
+        9233
       ]
     },
-    "id": 9211,
+    "id": 9234,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9179,
+        "id": 9202,
         "literals": [
           "solidity",
           "^",
@@ -368,10 +368,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/Module.sol",
         "file": "./Module.sol",
-        "id": 9180,
+        "id": 9203,
         "nodeType": "ImportDirective",
-        "scope": 9211,
-        "sourceUnit": 9368,
+        "scope": 9234,
+        "sourceUnit": 9391,
         "src": "24:22:70",
         "symbolAliases": [],
         "unitAlias": ""
@@ -379,10 +379,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/ModuleManager.sol",
         "file": "./ModuleManager.sol",
-        "id": 9181,
+        "id": 9204,
         "nodeType": "ImportDirective",
-        "scope": 9211,
-        "sourceUnit": 9673,
+        "scope": 9234,
+        "sourceUnit": 9696,
         "src": "47:29:70",
         "symbolAliases": [],
         "unitAlias": ""
@@ -390,10 +390,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/OwnerManager.sol",
         "file": "./OwnerManager.sol",
-        "id": 9182,
+        "id": 9205,
         "nodeType": "ImportDirective",
-        "scope": 9211,
-        "sourceUnit": 10135,
+        "scope": 9234,
+        "sourceUnit": 10158,
         "src": "77:28:70",
         "symbolAliases": [],
         "unitAlias": ""
@@ -404,17 +404,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9183,
+              "id": 9206,
               "name": "ModuleManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 9672,
+              "referencedDeclaration": 9695,
               "src": "392:13:70",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ModuleManager_$9672",
+                "typeIdentifier": "t_contract$_ModuleManager_$9695",
                 "typeString": "contract ModuleManager"
               }
             },
-            "id": 9184,
+            "id": 9207,
             "nodeType": "InheritanceSpecifier",
             "src": "392:13:70"
           },
@@ -422,46 +422,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9185,
+              "id": 9208,
               "name": "OwnerManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 10134,
+              "referencedDeclaration": 10157,
               "src": "407:12:70",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OwnerManager_$10134",
+                "typeIdentifier": "t_contract$_OwnerManager_$10157",
                 "typeString": "contract OwnerManager"
               }
             },
-            "id": 9186,
+            "id": 9209,
             "nodeType": "InheritanceSpecifier",
             "src": "407:12:70"
           }
         ],
         "contractDependencies": [
-          9322,
-          9672,
-          10134,
-          10148,
-          10219
+          9345,
+          9695,
+          10157,
+          10171,
+          10242
         ],
         "contractKind": "contract",
         "documentation": "@title Base Safe - A multisignature wallet with support for modules and owners. This contract needs to be extented to add functionality to execute transactions.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 9210,
+        "id": 9233,
         "linearizedBaseContracts": [
-          9210,
-          10134,
-          9672,
-          9322,
-          10148,
-          10219
+          9233,
+          10157,
+          9695,
+          9345,
+          10171,
+          10242
         ],
         "name": "BaseSafe",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 9208,
+              "id": 9231,
               "nodeType": "Block",
               "src": "857:206:70",
               "statements": [
@@ -471,11 +471,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9199,
+                        "id": 9222,
                         "name": "_owners",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9189,
+                        "referencedDeclaration": 9212,
                         "src": "879:7:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
@@ -484,11 +484,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9200,
+                        "id": 9223,
                         "name": "_threshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9191,
+                        "referencedDeclaration": 9214,
                         "src": "888:10:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -507,18 +507,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 9198,
+                      "id": 9221,
                       "name": "setupOwners",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9805,
+                      "referencedDeclaration": 9828,
                       "src": "867:11:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_address_$dyn_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (address[] memory,uint256)"
                       }
                     },
-                    "id": 9201,
+                    "id": 9224,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -532,7 +532,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9202,
+                  "id": 9225,
                   "nodeType": "ExpressionStatement",
                   "src": "867:32:70"
                 },
@@ -542,11 +542,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9204,
+                        "id": 9227,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9193,
+                        "referencedDeclaration": 9216,
                         "src": "1047:2:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -555,11 +555,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9205,
+                        "id": 9228,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9195,
+                        "referencedDeclaration": 9218,
                         "src": "1051:4:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -578,18 +578,18 @@
                           "typeString": "bytes memory"
                         }
                       ],
-                      "id": 9203,
+                      "id": 9226,
                       "name": "setupModules",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9435,
+                      "referencedDeclaration": 9458,
                       "src": "1034:12:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,bytes memory)"
                       }
                     },
-                    "id": 9206,
+                    "id": 9229,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -603,29 +603,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9207,
+                  "id": 9230,
                   "nodeType": "ExpressionStatement",
                   "src": "1034:22:70"
                 }
               ]
             },
             "documentation": "@dev Setup function sets initial storage of contract.\n @param _owners List of Safe owners.\n @param _threshold Number of required confirmations for a Safe transaction.\n @param to Contract address for optional delegate call.\n @param data Data payload for optional delegate call.",
-            "id": 9209,
+            "id": 9232,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setupSafe",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9196,
+              "id": 9219,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9189,
+                  "id": 9212,
                   "name": "_owners",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "759:24:70",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -635,7 +635,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 9187,
+                      "id": 9210,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "759:7:70",
@@ -645,7 +645,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 9188,
+                    "id": 9211,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "759:9:70",
@@ -659,10 +659,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9191,
+                  "id": 9214,
                   "name": "_threshold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "785:18:70",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -671,7 +671,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9190,
+                    "id": 9213,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "785:7:70",
@@ -685,10 +685,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9193,
+                  "id": 9216,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "805:10:70",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -697,7 +697,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9192,
+                    "id": 9215,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "805:7:70",
@@ -712,10 +712,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9195,
+                  "id": 9218,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "817:17:70",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -724,7 +724,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 9194,
+                    "id": 9217,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "817:5:70",
@@ -740,19 +740,19 @@
               "src": "758:77:70"
             },
             "returnParameters": {
-              "id": 9197,
+              "id": 9220,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "857:0:70"
             },
-            "scope": 9210,
+            "scope": 9233,
             "src": "740:323:70",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 9211,
+        "scope": 9234,
         "src": "371:694:70"
       }
     ],
@@ -762,14 +762,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/BaseSafe.sol",
     "exportedSymbols": {
       "BaseSafe": [
-        9210
+        9233
       ]
     },
-    "id": 9211,
+    "id": 9234,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9179,
+        "id": 9202,
         "literals": [
           "solidity",
           "^",
@@ -782,10 +782,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/Module.sol",
         "file": "./Module.sol",
-        "id": 9180,
+        "id": 9203,
         "nodeType": "ImportDirective",
-        "scope": 9211,
-        "sourceUnit": 9368,
+        "scope": 9234,
+        "sourceUnit": 9391,
         "src": "24:22:70",
         "symbolAliases": [],
         "unitAlias": ""
@@ -793,10 +793,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/ModuleManager.sol",
         "file": "./ModuleManager.sol",
-        "id": 9181,
+        "id": 9204,
         "nodeType": "ImportDirective",
-        "scope": 9211,
-        "sourceUnit": 9673,
+        "scope": 9234,
+        "sourceUnit": 9696,
         "src": "47:29:70",
         "symbolAliases": [],
         "unitAlias": ""
@@ -804,10 +804,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/external/gnosis/safe-contracts/contracts/base/OwnerManager.sol",
         "file": "./OwnerManager.sol",
-        "id": 9182,
+        "id": 9205,
         "nodeType": "ImportDirective",
-        "scope": 9211,
-        "sourceUnit": 10135,
+        "scope": 9234,
+        "sourceUnit": 10158,
         "src": "77:28:70",
         "symbolAliases": [],
         "unitAlias": ""
@@ -818,17 +818,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9183,
+              "id": 9206,
               "name": "ModuleManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 9672,
+              "referencedDeclaration": 9695,
               "src": "392:13:70",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ModuleManager_$9672",
+                "typeIdentifier": "t_contract$_ModuleManager_$9695",
                 "typeString": "contract ModuleManager"
               }
             },
-            "id": 9184,
+            "id": 9207,
             "nodeType": "InheritanceSpecifier",
             "src": "392:13:70"
           },
@@ -836,46 +836,46 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9185,
+              "id": 9208,
               "name": "OwnerManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 10134,
+              "referencedDeclaration": 10157,
               "src": "407:12:70",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OwnerManager_$10134",
+                "typeIdentifier": "t_contract$_OwnerManager_$10157",
                 "typeString": "contract OwnerManager"
               }
             },
-            "id": 9186,
+            "id": 9209,
             "nodeType": "InheritanceSpecifier",
             "src": "407:12:70"
           }
         ],
         "contractDependencies": [
-          9322,
-          9672,
-          10134,
-          10148,
-          10219
+          9345,
+          9695,
+          10157,
+          10171,
+          10242
         ],
         "contractKind": "contract",
         "documentation": "@title Base Safe - A multisignature wallet with support for modules and owners. This contract needs to be extented to add functionality to execute transactions.\n @author Stefan George - <stefan@gnosis.pm>\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 9210,
+        "id": 9233,
         "linearizedBaseContracts": [
-          9210,
-          10134,
-          9672,
-          9322,
-          10148,
-          10219
+          9233,
+          10157,
+          9695,
+          9345,
+          10171,
+          10242
         ],
         "name": "BaseSafe",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 9208,
+              "id": 9231,
               "nodeType": "Block",
               "src": "857:206:70",
               "statements": [
@@ -885,11 +885,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9199,
+                        "id": 9222,
                         "name": "_owners",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9189,
+                        "referencedDeclaration": 9212,
                         "src": "879:7:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
@@ -898,11 +898,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9200,
+                        "id": 9223,
                         "name": "_threshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9191,
+                        "referencedDeclaration": 9214,
                         "src": "888:10:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -921,18 +921,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 9198,
+                      "id": 9221,
                       "name": "setupOwners",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9805,
+                      "referencedDeclaration": 9828,
                       "src": "867:11:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_address_$dyn_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (address[] memory,uint256)"
                       }
                     },
-                    "id": 9201,
+                    "id": 9224,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -946,7 +946,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9202,
+                  "id": 9225,
                   "nodeType": "ExpressionStatement",
                   "src": "867:32:70"
                 },
@@ -956,11 +956,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9204,
+                        "id": 9227,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9193,
+                        "referencedDeclaration": 9216,
                         "src": "1047:2:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -969,11 +969,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 9205,
+                        "id": 9228,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9195,
+                        "referencedDeclaration": 9218,
                         "src": "1051:4:70",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -992,18 +992,18 @@
                           "typeString": "bytes memory"
                         }
                       ],
-                      "id": 9203,
+                      "id": 9226,
                       "name": "setupModules",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9435,
+                      "referencedDeclaration": 9458,
                       "src": "1034:12:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,bytes memory)"
                       }
                     },
-                    "id": 9206,
+                    "id": 9229,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1017,29 +1017,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9207,
+                  "id": 9230,
                   "nodeType": "ExpressionStatement",
                   "src": "1034:22:70"
                 }
               ]
             },
             "documentation": "@dev Setup function sets initial storage of contract.\n @param _owners List of Safe owners.\n @param _threshold Number of required confirmations for a Safe transaction.\n @param to Contract address for optional delegate call.\n @param data Data payload for optional delegate call.",
-            "id": 9209,
+            "id": 9232,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setupSafe",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9196,
+              "id": 9219,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9189,
+                  "id": 9212,
                   "name": "_owners",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "759:24:70",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1049,7 +1049,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 9187,
+                      "id": 9210,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "759:7:70",
@@ -1059,7 +1059,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 9188,
+                    "id": 9211,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "759:9:70",
@@ -1073,10 +1073,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9191,
+                  "id": 9214,
                   "name": "_threshold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "785:18:70",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1085,7 +1085,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9190,
+                    "id": 9213,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "785:7:70",
@@ -1099,10 +1099,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9193,
+                  "id": 9216,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "805:10:70",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1111,7 +1111,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9192,
+                    "id": 9215,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "805:7:70",
@@ -1126,10 +1126,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9195,
+                  "id": 9218,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9209,
+                  "scope": 9232,
                   "src": "817:17:70",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1138,7 +1138,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 9194,
+                    "id": 9217,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "817:5:70",
@@ -1154,19 +1154,19 @@
               "src": "758:77:70"
             },
             "returnParameters": {
-              "id": 9197,
+              "id": 9220,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "857:0:70"
             },
-            "scope": 9210,
+            "scope": 9233,
             "src": "740:323:70",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 9211,
+        "scope": 9234,
         "src": "371:694:70"
       }
     ],
@@ -1178,7 +1178,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.178Z",
+  "updatedAt": "2020-01-22T10:54:09.854Z",
   "devdoc": {
     "author": "Stefan George - <stefan@gnosis.pm>Richard Meissner - <richard@gnosis.pm>",
     "methods": {

@@ -12,14 +12,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/proxies/MasterCopyNonUpgradable.sol",
     "exportedSymbols": {
       "MasterCopyNonUpgradable": [
-        5424
+        5447
       ]
     },
-    "id": 5425,
+    "id": 5448,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5421,
+        "id": 5444,
         "literals": [
           "solidity",
           "^",
@@ -35,19 +35,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5424,
+        "id": 5447,
         "linearizedBaseContracts": [
-          5424
+          5447
         ],
         "name": "MasterCopyNonUpgradable",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 5423,
+            "id": 5446,
             "name": "reservedStorageSlotForProxy",
             "nodeType": "VariableDeclaration",
-            "scope": 5424,
+            "scope": 5447,
             "src": "1245:35:45",
             "stateVariable": true,
             "storageLocation": "default",
@@ -56,7 +56,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 5422,
+              "id": 5445,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1245:7:45",
@@ -70,7 +70,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 5425,
+        "scope": 5448,
         "src": "613:670:45"
       }
     ],
@@ -80,14 +80,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/proxies/MasterCopyNonUpgradable.sol",
     "exportedSymbols": {
       "MasterCopyNonUpgradable": [
-        5424
+        5447
       ]
     },
-    "id": 5425,
+    "id": 5448,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5421,
+        "id": 5444,
         "literals": [
           "solidity",
           "^",
@@ -103,19 +103,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5424,
+        "id": 5447,
         "linearizedBaseContracts": [
-          5424
+          5447
         ],
         "name": "MasterCopyNonUpgradable",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 5423,
+            "id": 5446,
             "name": "reservedStorageSlotForProxy",
             "nodeType": "VariableDeclaration",
-            "scope": 5424,
+            "scope": 5447,
             "src": "1245:35:45",
             "stateVariable": true,
             "storageLocation": "default",
@@ -124,7 +124,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 5422,
+              "id": 5445,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1245:7:45",
@@ -138,7 +138,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 5425,
+        "scope": 5448,
         "src": "613:670:45"
       }
     ],
@@ -150,7 +150,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.125Z",
+  "updatedAt": "2020-01-22T10:54:09.803Z",
   "devdoc": {
     "methods": {}
   },

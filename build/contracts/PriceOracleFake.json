@@ -138,14 +138,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol",
     "exportedSymbols": {
       "PriceOracleFake": [
-        6942
+        6965
       ]
     },
-    "id": 6943,
+    "id": 6966,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6811,
+        "id": 6834,
         "literals": [
           "solidity",
           "^",
@@ -158,10 +158,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/PriceOracleInterface.sol",
         "file": "../../../rules/PriceOracleInterface.sol",
-        "id": 6812,
+        "id": 6835,
         "nodeType": "ImportDirective",
-        "scope": 6943,
-        "sourceUnit": 5679,
+        "scope": 6966,
+        "sourceUnit": 5702,
         "src": "613:49:59",
         "symbolAliases": [],
         "unitAlias": ""
@@ -172,41 +172,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6813,
+              "id": 6836,
               "name": "PriceOracleInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5678,
+              "referencedDeclaration": 5701,
               "src": "692:20:59",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PriceOracleInterface_$5678",
+                "typeIdentifier": "t_contract$_PriceOracleInterface_$5701",
                 "typeString": "contract PriceOracleInterface"
               }
             },
-            "id": 6814,
+            "id": 6837,
             "nodeType": "InheritanceSpecifier",
             "src": "692:20:59"
           }
         ],
         "contractDependencies": [
-          5678
+          5701
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6942,
+        "id": 6965,
         "linearizedBaseContracts": [
-          6942,
-          5678
+          6965,
+          5701
         ],
         "name": "PriceOracleFake",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 6816,
+            "id": 6839,
             "name": "baseCurrencyCode",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "739:23:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -215,7 +215,7 @@
               "typeString": "bytes3"
             },
             "typeName": {
-              "id": 6815,
+              "id": 6838,
               "name": "bytes3",
               "nodeType": "ElementaryTypeName",
               "src": "739:6:59",
@@ -229,10 +229,10 @@
           },
           {
             "constant": false,
-            "id": 6818,
+            "id": 6841,
             "name": "quoteCurrencyCode",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "769:24:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -241,7 +241,7 @@
               "typeString": "bytes3"
             },
             "typeName": {
-              "id": 6817,
+              "id": 6840,
               "name": "bytes3",
               "nodeType": "ElementaryTypeName",
               "src": "769:6:59",
@@ -255,10 +255,10 @@
           },
           {
             "constant": false,
-            "id": 6820,
+            "id": 6843,
             "name": "price",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "800:13:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -267,7 +267,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 6819,
+              "id": 6842,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "800:7:59",
@@ -281,10 +281,10 @@
           },
           {
             "constant": false,
-            "id": 6822,
+            "id": 6845,
             "name": "expirationHeight",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "820:24:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -293,7 +293,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 6821,
+              "id": 6844,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "820:7:59",
@@ -307,10 +307,10 @@
           },
           {
             "constant": false,
-            "id": 6824,
+            "id": 6847,
             "name": "quoteCurrencyDecimals",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "851:27:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -319,7 +319,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 6823,
+              "id": 6846,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "851:5:59",
@@ -333,7 +333,7 @@
           },
           {
             "body": {
-              "id": 6872,
+              "id": 6895,
               "nodeType": "Block",
               "src": "1115:446:59",
               "statements": [
@@ -347,18 +347,18 @@
                           "typeIdentifier": "t_bytes3",
                           "typeString": "bytes3"
                         },
-                        "id": 6842,
+                        "id": 6865,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6838,
+                          "id": 6861,
                           "name": "_baseCurrencyCode",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6826,
+                          "referencedDeclaration": 6849,
                           "src": "1146:17:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes3",
@@ -373,7 +373,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 6840,
+                              "id": 6863,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -396,7 +396,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 6839,
+                            "id": 6862,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -409,7 +409,7 @@
                             },
                             "typeName": "bytes3"
                           },
-                          "id": 6841,
+                          "id": 6864,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -432,7 +432,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "426173652063757272656e637920636f646520697320656d7074792e",
-                        "id": 6843,
+                        "id": 6866,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -459,21 +459,21 @@
                           "typeString": "literal_string \"Base currency code is empty.\""
                         }
                       ],
-                      "id": 6837,
+                      "id": 6860,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "1125:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6844,
+                    "id": 6867,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -487,7 +487,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6845,
+                  "id": 6868,
                   "nodeType": "ExpressionStatement",
                   "src": "1125:105:59"
                 },
@@ -501,18 +501,18 @@
                           "typeIdentifier": "t_bytes3",
                           "typeString": "bytes3"
                         },
-                        "id": 6851,
+                        "id": 6874,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6847,
+                          "id": 6870,
                           "name": "_quoteCurrencyCode",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6828,
+                          "referencedDeclaration": 6851,
                           "src": "1262:18:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes3",
@@ -527,7 +527,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 6849,
+                              "id": 6872,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -550,7 +550,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 6848,
+                            "id": 6871,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -563,7 +563,7 @@
                             },
                             "typeName": "bytes3"
                           },
-                          "id": 6850,
+                          "id": 6873,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -586,7 +586,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "51756f74652063757272656e637920636f646520697320656d7074792e",
-                        "id": 6852,
+                        "id": 6875,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -613,21 +613,21 @@
                           "typeString": "literal_string \"Quote currency code is empty.\""
                         }
                       ],
-                      "id": 6846,
+                      "id": 6869,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "1241:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6853,
+                    "id": 6876,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -641,25 +641,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6854,
+                  "id": 6877,
                   "nodeType": "ExpressionStatement",
                   "src": "1241:107:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6857,
+                    "id": 6880,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6855,
+                      "id": 6878,
                       "name": "baseCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6816,
+                      "referencedDeclaration": 6839,
                       "src": "1359:16:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -670,11 +670,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6856,
+                      "id": 6879,
                       "name": "_baseCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6826,
+                      "referencedDeclaration": 6849,
                       "src": "1378:17:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -687,25 +687,25 @@
                       "typeString": "bytes3"
                     }
                   },
-                  "id": 6858,
+                  "id": 6881,
                   "nodeType": "ExpressionStatement",
                   "src": "1359:36:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6861,
+                    "id": 6884,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6859,
+                      "id": 6882,
                       "name": "quoteCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6818,
+                      "referencedDeclaration": 6841,
                       "src": "1406:17:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -716,11 +716,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6860,
+                      "id": 6883,
                       "name": "_quoteCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6828,
+                      "referencedDeclaration": 6851,
                       "src": "1426:18:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -733,25 +733,25 @@
                       "typeString": "bytes3"
                     }
                   },
-                  "id": 6862,
+                  "id": 6885,
                   "nodeType": "ExpressionStatement",
                   "src": "1406:38:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6865,
+                    "id": 6888,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6863,
+                      "id": 6886,
                       "name": "quoteCurrencyDecimals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6824,
+                      "referencedDeclaration": 6847,
                       "src": "1455:21:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -762,11 +762,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6864,
+                      "id": 6887,
                       "name": "_quoteCurrencyDecimals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6830,
+                      "referencedDeclaration": 6853,
                       "src": "1479:22:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -779,7 +779,7 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 6866,
+                  "id": 6889,
                   "nodeType": "ExpressionStatement",
                   "src": "1455:46:59"
                 },
@@ -789,11 +789,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6868,
+                        "id": 6891,
                         "name": "_initialPrice",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6832,
+                        "referencedDeclaration": 6855,
                         "src": "1521:13:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -802,11 +802,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6869,
+                        "id": 6892,
                         "name": "_expirationHeight",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6834,
+                        "referencedDeclaration": 6857,
                         "src": "1536:17:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -825,18 +825,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 6867,
+                      "id": 6890,
                       "name": "setPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6941,
+                      "referencedDeclaration": 6964,
                       "src": "1512:8:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 6870,
+                    "id": 6893,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -850,29 +850,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6871,
+                  "id": 6894,
                   "nodeType": "ExpressionStatement",
                   "src": "1512:42:59"
                 }
               ]
             },
             "documentation": null,
-            "id": 6873,
+            "id": 6896,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6835,
+              "id": 6858,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6826,
+                  "id": 6849,
                   "name": "_baseCurrencyCode",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "926:24:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -881,7 +881,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6825,
+                    "id": 6848,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "926:6:59",
@@ -895,10 +895,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6828,
+                  "id": 6851,
                   "name": "_quoteCurrencyCode",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "960:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -907,7 +907,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6827,
+                    "id": 6850,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "960:6:59",
@@ -921,10 +921,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6830,
+                  "id": 6853,
                   "name": "_quoteCurrencyDecimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "995:28:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -933,7 +933,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 6829,
+                    "id": 6852,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "995:5:59",
@@ -947,10 +947,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6832,
+                  "id": 6855,
                   "name": "_initialPrice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "1033:21:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -959,7 +959,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6831,
+                    "id": 6854,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1033:7:59",
@@ -973,10 +973,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6834,
+                  "id": 6857,
                   "name": "_expirationHeight",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "1064:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -985,7 +985,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6833,
+                    "id": 6856,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1064:7:59",
@@ -1001,12 +1001,12 @@
               "src": "916:179:59"
             },
             "returnParameters": {
-              "id": 6836,
+              "id": 6859,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1115:0:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "905:656:59",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1014,54 +1014,54 @@
           },
           {
             "body": {
-              "id": 6880,
+              "id": 6903,
               "nodeType": "Block",
               "src": "1826:40:59",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6878,
+                    "id": 6901,
                     "name": "baseCurrencyCode",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6816,
+                    "referencedDeclaration": 6839,
                     "src": "1843:16:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes3",
                       "typeString": "bytes3"
                     }
                   },
-                  "functionReturnParameters": 6877,
-                  "id": 6879,
+                  "functionReturnParameters": 6900,
+                  "id": 6902,
                   "nodeType": "Return",
                   "src": "1836:23:59"
                 }
               ]
             },
             "documentation": "@notice Returns base currency code.\n     * @dev Base currency code is not according to ISO 4217 or other standard.",
-            "id": 6881,
+            "id": 6904,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "baseCurrency",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6874,
+              "id": 6897,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1764:2:59"
             },
             "returnParameters": {
-              "id": 6877,
+              "id": 6900,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6876,
+                  "id": 6899,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6881,
+                  "scope": 6904,
                   "src": "1814:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1070,7 +1070,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6875,
+                    "id": 6898,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "1814:6:59",
@@ -1085,62 +1085,62 @@
               ],
               "src": "1813:8:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "1743:123:59",
             "stateMutability": "view",
-            "superFunction": 5662,
+            "superFunction": 5685,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6888,
+              "id": 6911,
               "nodeType": "Block",
               "src": "2103:41:59",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6886,
+                    "id": 6909,
                     "name": "quoteCurrencyCode",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6818,
+                    "referencedDeclaration": 6841,
                     "src": "2120:17:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes3",
                       "typeString": "bytes3"
                     }
                   },
-                  "functionReturnParameters": 6885,
-                  "id": 6887,
+                  "functionReturnParameters": 6908,
+                  "id": 6910,
                   "nodeType": "Return",
                   "src": "2113:24:59"
                 }
               ]
             },
             "documentation": "@notice Returns quote currency code.\n     * @dev Quote currency code is not according to ISO 4217 or other standard.",
-            "id": 6889,
+            "id": 6912,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "quoteCurrency",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6882,
+              "id": 6905,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2041:2:59"
             },
             "returnParameters": {
-              "id": 6885,
+              "id": 6908,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6884,
+                  "id": 6907,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6889,
+                  "scope": 6912,
                   "src": "2091:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1149,7 +1149,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6883,
+                    "id": 6906,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "2091:6:59",
@@ -1164,62 +1164,62 @@
               ],
               "src": "2090:8:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "2019:125:59",
             "stateMutability": "view",
-            "superFunction": 5667,
+            "superFunction": 5690,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6896,
+              "id": 6919,
               "nodeType": "Block",
               "src": "2291:45:59",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6894,
+                    "id": 6917,
                     "name": "quoteCurrencyDecimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6824,
+                    "referencedDeclaration": 6847,
                     "src": "2308:21:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
                     }
                   },
-                  "functionReturnParameters": 6893,
-                  "id": 6895,
+                  "functionReturnParameters": 6916,
+                  "id": 6918,
                   "nodeType": "Return",
                   "src": "2301:28:59"
                 }
               ]
             },
             "documentation": "@notice Returns quote currency decimals.",
-            "id": 6897,
+            "id": 6920,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "decimals",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6890,
+              "id": 6913,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2231:2:59"
             },
             "returnParameters": {
-              "id": 6893,
+              "id": 6916,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6892,
+                  "id": 6915,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6897,
+                  "scope": 6920,
                   "src": "2280:5:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1228,7 +1228,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 6891,
+                    "id": 6914,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "2280:5:59",
@@ -1243,15 +1243,15 @@
               ],
               "src": "2279:7:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "2214:122:59",
             "stateMutability": "view",
-            "superFunction": 5672,
+            "superFunction": 5695,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6912,
+              "id": 6935,
               "nodeType": "Block",
               "src": "2818:177:59",
               "statements": [
@@ -1265,18 +1265,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 6906,
+                        "id": 6929,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6903,
+                          "id": 6926,
                           "name": "expirationHeight",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6822,
+                          "referencedDeclaration": 6845,
                           "src": "2849:16:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1289,18 +1289,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 6904,
+                            "id": 6927,
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 12871,
+                            "referencedDeclaration": 12894,
                             "src": "2868:5:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
                               "typeString": "block"
                             }
                           },
-                          "id": 6905,
+                          "id": 6928,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1323,7 +1323,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
-                        "id": 6907,
+                        "id": 6930,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1350,21 +1350,21 @@
                           "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
                         }
                       ],
-                      "id": 6902,
+                      "id": 6925,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "2828:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6908,
+                    "id": 6931,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1378,54 +1378,54 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6909,
+                  "id": 6932,
                   "nodeType": "ExpressionStatement",
                   "src": "2828:137:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6910,
+                    "id": 6933,
                     "name": "price",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6820,
+                    "referencedDeclaration": 6843,
                     "src": "2983:5:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 6901,
-                  "id": 6911,
+                  "functionReturnParameters": 6924,
+                  "id": 6934,
                   "nodeType": "Return",
                   "src": "2976:12:59"
                 }
               ]
             },
             "documentation": "@notice Returns an amount of the quote currency needed to purchase\n        one unit of the base currency.\n     * @dev Function throws an exception if the price is invalid, for example,\n     was not set, or became outdated, etc.\n     * @return An amount of the quote currency needed to purchase one unit of\n        the base base currency.",
-            "id": 6913,
+            "id": 6936,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPrice",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6898,
+              "id": 6921,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2755:2:59"
             },
             "returnParameters": {
-              "id": 6901,
+              "id": 6924,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6900,
+                  "id": 6923,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6913,
+                  "scope": 6936,
                   "src": "2805:7:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1434,7 +1434,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6899,
+                    "id": 6922,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2805:7:59",
@@ -1449,15 +1449,15 @@
               ],
               "src": "2804:9:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "2738:257:59",
             "stateMutability": "view",
-            "superFunction": 5677,
+            "superFunction": 5700,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6940,
+              "id": 6963,
               "nodeType": "Block",
               "src": "3132:262:59",
               "statements": [
@@ -1471,18 +1471,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 6924,
+                        "id": 6947,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6921,
+                          "id": 6944,
                           "name": "_expirationHeight",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6917,
+                          "referencedDeclaration": 6940,
                           "src": "3163:17:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1495,18 +1495,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 6922,
+                            "id": 6945,
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 12871,
+                            "referencedDeclaration": 12894,
                             "src": "3183:5:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
                               "typeString": "block"
                             }
                           },
-                          "id": 6923,
+                          "id": 6946,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1529,7 +1529,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
-                        "id": 6925,
+                        "id": 6948,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1556,21 +1556,21 @@
                           "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
                         }
                       ],
-                      "id": 6920,
+                      "id": 6943,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "3142:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6926,
+                    "id": 6949,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1584,25 +1584,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6927,
+                  "id": 6950,
                   "nodeType": "ExpressionStatement",
                   "src": "3142:138:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6930,
+                    "id": 6953,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6928,
+                      "id": 6951,
                       "name": "price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6820,
+                      "referencedDeclaration": 6843,
                       "src": "3291:5:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1613,11 +1613,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6929,
+                      "id": 6952,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6915,
+                      "referencedDeclaration": 6938,
                       "src": "3299:6:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1630,25 +1630,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 6931,
+                  "id": 6954,
                   "nodeType": "ExpressionStatement",
                   "src": "3291:14:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6934,
+                    "id": 6957,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6932,
+                      "id": 6955,
                       "name": "expirationHeight",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6822,
+                      "referencedDeclaration": 6845,
                       "src": "3316:16:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1659,11 +1659,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6933,
+                      "id": 6956,
                       "name": "_expirationHeight",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6917,
+                      "referencedDeclaration": 6940,
                       "src": "3335:17:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1676,7 +1676,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 6935,
+                  "id": 6958,
                   "nodeType": "ExpressionStatement",
                   "src": "3316:36:59"
                 },
@@ -1686,11 +1686,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6937,
+                        "id": 6960,
                         "name": "price",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6820,
+                        "referencedDeclaration": 6843,
                         "src": "3381:5:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1705,18 +1705,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 6936,
+                      "id": 6959,
                       "name": "PriceUpdated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5657,
+                      "referencedDeclaration": 5680,
                       "src": "3368:12:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 6938,
+                    "id": 6961,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1730,29 +1730,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6939,
+                  "id": 6962,
                   "nodeType": "EmitStatement",
                   "src": "3363:24:59"
                 }
               ]
             },
             "documentation": null,
-            "id": 6941,
+            "id": 6964,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setPrice",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6918,
+              "id": 6941,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6915,
+                  "id": 6938,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6941,
+                  "scope": 6964,
                   "src": "3057:14:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1761,7 +1761,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6914,
+                    "id": 6937,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3057:7:59",
@@ -1775,10 +1775,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6917,
+                  "id": 6940,
                   "name": "_expirationHeight",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6941,
+                  "scope": 6964,
                   "src": "3081:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1787,7 +1787,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6916,
+                    "id": 6939,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3081:7:59",
@@ -1803,19 +1803,19 @@
               "src": "3047:65:59"
             },
             "returnParameters": {
-              "id": 6919,
+              "id": 6942,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3132:0:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "3030:364:59",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 6943,
+        "scope": 6966,
         "src": "664:2732:59"
       }
     ],
@@ -1825,14 +1825,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/test_doubles/unit_tests/pricer_rule/PriceOracleFake.sol",
     "exportedSymbols": {
       "PriceOracleFake": [
-        6942
+        6965
       ]
     },
-    "id": 6943,
+    "id": 6966,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6811,
+        "id": 6834,
         "literals": [
           "solidity",
           "^",
@@ -1845,10 +1845,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/openst-contracts/contracts/rules/PriceOracleInterface.sol",
         "file": "../../../rules/PriceOracleInterface.sol",
-        "id": 6812,
+        "id": 6835,
         "nodeType": "ImportDirective",
-        "scope": 6943,
-        "sourceUnit": 5679,
+        "scope": 6966,
+        "sourceUnit": 5702,
         "src": "613:49:59",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1859,41 +1859,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 6813,
+              "id": 6836,
               "name": "PriceOracleInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5678,
+              "referencedDeclaration": 5701,
               "src": "692:20:59",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PriceOracleInterface_$5678",
+                "typeIdentifier": "t_contract$_PriceOracleInterface_$5701",
                 "typeString": "contract PriceOracleInterface"
               }
             },
-            "id": 6814,
+            "id": 6837,
             "nodeType": "InheritanceSpecifier",
             "src": "692:20:59"
           }
         ],
         "contractDependencies": [
-          5678
+          5701
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6942,
+        "id": 6965,
         "linearizedBaseContracts": [
-          6942,
-          5678
+          6965,
+          5701
         ],
         "name": "PriceOracleFake",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 6816,
+            "id": 6839,
             "name": "baseCurrencyCode",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "739:23:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1902,7 +1902,7 @@
               "typeString": "bytes3"
             },
             "typeName": {
-              "id": 6815,
+              "id": 6838,
               "name": "bytes3",
               "nodeType": "ElementaryTypeName",
               "src": "739:6:59",
@@ -1916,10 +1916,10 @@
           },
           {
             "constant": false,
-            "id": 6818,
+            "id": 6841,
             "name": "quoteCurrencyCode",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "769:24:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1928,7 +1928,7 @@
               "typeString": "bytes3"
             },
             "typeName": {
-              "id": 6817,
+              "id": 6840,
               "name": "bytes3",
               "nodeType": "ElementaryTypeName",
               "src": "769:6:59",
@@ -1942,10 +1942,10 @@
           },
           {
             "constant": false,
-            "id": 6820,
+            "id": 6843,
             "name": "price",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "800:13:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1954,7 +1954,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 6819,
+              "id": 6842,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "800:7:59",
@@ -1968,10 +1968,10 @@
           },
           {
             "constant": false,
-            "id": 6822,
+            "id": 6845,
             "name": "expirationHeight",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "820:24:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1980,7 +1980,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 6821,
+              "id": 6844,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "820:7:59",
@@ -1994,10 +1994,10 @@
           },
           {
             "constant": false,
-            "id": 6824,
+            "id": 6847,
             "name": "quoteCurrencyDecimals",
             "nodeType": "VariableDeclaration",
-            "scope": 6942,
+            "scope": 6965,
             "src": "851:27:59",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2006,7 +2006,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 6823,
+              "id": 6846,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "851:5:59",
@@ -2020,7 +2020,7 @@
           },
           {
             "body": {
-              "id": 6872,
+              "id": 6895,
               "nodeType": "Block",
               "src": "1115:446:59",
               "statements": [
@@ -2034,18 +2034,18 @@
                           "typeIdentifier": "t_bytes3",
                           "typeString": "bytes3"
                         },
-                        "id": 6842,
+                        "id": 6865,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6838,
+                          "id": 6861,
                           "name": "_baseCurrencyCode",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6826,
+                          "referencedDeclaration": 6849,
                           "src": "1146:17:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes3",
@@ -2060,7 +2060,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 6840,
+                              "id": 6863,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2083,7 +2083,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 6839,
+                            "id": 6862,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2096,7 +2096,7 @@
                             },
                             "typeName": "bytes3"
                           },
-                          "id": 6841,
+                          "id": 6864,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2119,7 +2119,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "426173652063757272656e637920636f646520697320656d7074792e",
-                        "id": 6843,
+                        "id": 6866,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2146,21 +2146,21 @@
                           "typeString": "literal_string \"Base currency code is empty.\""
                         }
                       ],
-                      "id": 6837,
+                      "id": 6860,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "1125:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6844,
+                    "id": 6867,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2174,7 +2174,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6845,
+                  "id": 6868,
                   "nodeType": "ExpressionStatement",
                   "src": "1125:105:59"
                 },
@@ -2188,18 +2188,18 @@
                           "typeIdentifier": "t_bytes3",
                           "typeString": "bytes3"
                         },
-                        "id": 6851,
+                        "id": 6874,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6847,
+                          "id": 6870,
                           "name": "_quoteCurrencyCode",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6828,
+                          "referencedDeclaration": 6851,
                           "src": "1262:18:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes3",
@@ -2214,7 +2214,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 6849,
+                              "id": 6872,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2237,7 +2237,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 6848,
+                            "id": 6871,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2250,7 +2250,7 @@
                             },
                             "typeName": "bytes3"
                           },
-                          "id": 6850,
+                          "id": 6873,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2273,7 +2273,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "51756f74652063757272656e637920636f646520697320656d7074792e",
-                        "id": 6852,
+                        "id": 6875,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2300,21 +2300,21 @@
                           "typeString": "literal_string \"Quote currency code is empty.\""
                         }
                       ],
-                      "id": 6846,
+                      "id": 6869,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "1241:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6853,
+                    "id": 6876,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2328,25 +2328,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6854,
+                  "id": 6877,
                   "nodeType": "ExpressionStatement",
                   "src": "1241:107:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6857,
+                    "id": 6880,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6855,
+                      "id": 6878,
                       "name": "baseCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6816,
+                      "referencedDeclaration": 6839,
                       "src": "1359:16:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -2357,11 +2357,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6856,
+                      "id": 6879,
                       "name": "_baseCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6826,
+                      "referencedDeclaration": 6849,
                       "src": "1378:17:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -2374,25 +2374,25 @@
                       "typeString": "bytes3"
                     }
                   },
-                  "id": 6858,
+                  "id": 6881,
                   "nodeType": "ExpressionStatement",
                   "src": "1359:36:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6861,
+                    "id": 6884,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6859,
+                      "id": 6882,
                       "name": "quoteCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6818,
+                      "referencedDeclaration": 6841,
                       "src": "1406:17:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -2403,11 +2403,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6860,
+                      "id": 6883,
                       "name": "_quoteCurrencyCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6828,
+                      "referencedDeclaration": 6851,
                       "src": "1426:18:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes3",
@@ -2420,25 +2420,25 @@
                       "typeString": "bytes3"
                     }
                   },
-                  "id": 6862,
+                  "id": 6885,
                   "nodeType": "ExpressionStatement",
                   "src": "1406:38:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6865,
+                    "id": 6888,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6863,
+                      "id": 6886,
                       "name": "quoteCurrencyDecimals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6824,
+                      "referencedDeclaration": 6847,
                       "src": "1455:21:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -2449,11 +2449,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6864,
+                      "id": 6887,
                       "name": "_quoteCurrencyDecimals",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6830,
+                      "referencedDeclaration": 6853,
                       "src": "1479:22:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -2466,7 +2466,7 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 6866,
+                  "id": 6889,
                   "nodeType": "ExpressionStatement",
                   "src": "1455:46:59"
                 },
@@ -2476,11 +2476,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6868,
+                        "id": 6891,
                         "name": "_initialPrice",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6832,
+                        "referencedDeclaration": 6855,
                         "src": "1521:13:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2489,11 +2489,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 6869,
+                        "id": 6892,
                         "name": "_expirationHeight",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6834,
+                        "referencedDeclaration": 6857,
                         "src": "1536:17:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2512,18 +2512,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 6867,
+                      "id": 6890,
                       "name": "setPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6941,
+                      "referencedDeclaration": 6964,
                       "src": "1512:8:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 6870,
+                    "id": 6893,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2537,29 +2537,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6871,
+                  "id": 6894,
                   "nodeType": "ExpressionStatement",
                   "src": "1512:42:59"
                 }
               ]
             },
             "documentation": null,
-            "id": 6873,
+            "id": 6896,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6835,
+              "id": 6858,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6826,
+                  "id": 6849,
                   "name": "_baseCurrencyCode",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "926:24:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2568,7 +2568,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6825,
+                    "id": 6848,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "926:6:59",
@@ -2582,10 +2582,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6828,
+                  "id": 6851,
                   "name": "_quoteCurrencyCode",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "960:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2594,7 +2594,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6827,
+                    "id": 6850,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "960:6:59",
@@ -2608,10 +2608,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6830,
+                  "id": 6853,
                   "name": "_quoteCurrencyDecimals",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "995:28:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2620,7 +2620,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 6829,
+                    "id": 6852,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "995:5:59",
@@ -2634,10 +2634,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6832,
+                  "id": 6855,
                   "name": "_initialPrice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "1033:21:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2646,7 +2646,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6831,
+                    "id": 6854,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1033:7:59",
@@ -2660,10 +2660,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6834,
+                  "id": 6857,
                   "name": "_expirationHeight",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6873,
+                  "scope": 6896,
                   "src": "1064:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2672,7 +2672,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6833,
+                    "id": 6856,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1064:7:59",
@@ -2688,12 +2688,12 @@
               "src": "916:179:59"
             },
             "returnParameters": {
-              "id": 6836,
+              "id": 6859,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1115:0:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "905:656:59",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2701,54 +2701,54 @@
           },
           {
             "body": {
-              "id": 6880,
+              "id": 6903,
               "nodeType": "Block",
               "src": "1826:40:59",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6878,
+                    "id": 6901,
                     "name": "baseCurrencyCode",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6816,
+                    "referencedDeclaration": 6839,
                     "src": "1843:16:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes3",
                       "typeString": "bytes3"
                     }
                   },
-                  "functionReturnParameters": 6877,
-                  "id": 6879,
+                  "functionReturnParameters": 6900,
+                  "id": 6902,
                   "nodeType": "Return",
                   "src": "1836:23:59"
                 }
               ]
             },
             "documentation": "@notice Returns base currency code.\n     * @dev Base currency code is not according to ISO 4217 or other standard.",
-            "id": 6881,
+            "id": 6904,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "baseCurrency",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6874,
+              "id": 6897,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1764:2:59"
             },
             "returnParameters": {
-              "id": 6877,
+              "id": 6900,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6876,
+                  "id": 6899,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6881,
+                  "scope": 6904,
                   "src": "1814:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2757,7 +2757,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6875,
+                    "id": 6898,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "1814:6:59",
@@ -2772,62 +2772,62 @@
               ],
               "src": "1813:8:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "1743:123:59",
             "stateMutability": "view",
-            "superFunction": 5662,
+            "superFunction": 5685,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6888,
+              "id": 6911,
               "nodeType": "Block",
               "src": "2103:41:59",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6886,
+                    "id": 6909,
                     "name": "quoteCurrencyCode",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6818,
+                    "referencedDeclaration": 6841,
                     "src": "2120:17:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes3",
                       "typeString": "bytes3"
                     }
                   },
-                  "functionReturnParameters": 6885,
-                  "id": 6887,
+                  "functionReturnParameters": 6908,
+                  "id": 6910,
                   "nodeType": "Return",
                   "src": "2113:24:59"
                 }
               ]
             },
             "documentation": "@notice Returns quote currency code.\n     * @dev Quote currency code is not according to ISO 4217 or other standard.",
-            "id": 6889,
+            "id": 6912,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "quoteCurrency",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6882,
+              "id": 6905,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2041:2:59"
             },
             "returnParameters": {
-              "id": 6885,
+              "id": 6908,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6884,
+                  "id": 6907,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6889,
+                  "scope": 6912,
                   "src": "2091:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2836,7 +2836,7 @@
                     "typeString": "bytes3"
                   },
                   "typeName": {
-                    "id": 6883,
+                    "id": 6906,
                     "name": "bytes3",
                     "nodeType": "ElementaryTypeName",
                     "src": "2091:6:59",
@@ -2851,62 +2851,62 @@
               ],
               "src": "2090:8:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "2019:125:59",
             "stateMutability": "view",
-            "superFunction": 5667,
+            "superFunction": 5690,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6896,
+              "id": 6919,
               "nodeType": "Block",
               "src": "2291:45:59",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6894,
+                    "id": 6917,
                     "name": "quoteCurrencyDecimals",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6824,
+                    "referencedDeclaration": 6847,
                     "src": "2308:21:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
                     }
                   },
-                  "functionReturnParameters": 6893,
-                  "id": 6895,
+                  "functionReturnParameters": 6916,
+                  "id": 6918,
                   "nodeType": "Return",
                   "src": "2301:28:59"
                 }
               ]
             },
             "documentation": "@notice Returns quote currency decimals.",
-            "id": 6897,
+            "id": 6920,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "decimals",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6890,
+              "id": 6913,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2231:2:59"
             },
             "returnParameters": {
-              "id": 6893,
+              "id": 6916,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6892,
+                  "id": 6915,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6897,
+                  "scope": 6920,
                   "src": "2280:5:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2915,7 +2915,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 6891,
+                    "id": 6914,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "2280:5:59",
@@ -2930,15 +2930,15 @@
               ],
               "src": "2279:7:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "2214:122:59",
             "stateMutability": "view",
-            "superFunction": 5672,
+            "superFunction": 5695,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6912,
+              "id": 6935,
               "nodeType": "Block",
               "src": "2818:177:59",
               "statements": [
@@ -2952,18 +2952,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 6906,
+                        "id": 6929,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6903,
+                          "id": 6926,
                           "name": "expirationHeight",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6822,
+                          "referencedDeclaration": 6845,
                           "src": "2849:16:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2976,18 +2976,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 6904,
+                            "id": 6927,
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 12871,
+                            "referencedDeclaration": 12894,
                             "src": "2868:5:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
                               "typeString": "block"
                             }
                           },
-                          "id": 6905,
+                          "id": 6928,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3010,7 +3010,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
-                        "id": 6907,
+                        "id": 6930,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3037,21 +3037,21 @@
                           "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
                         }
                       ],
-                      "id": 6902,
+                      "id": 6925,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "2828:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6908,
+                    "id": 6931,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3065,54 +3065,54 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6909,
+                  "id": 6932,
                   "nodeType": "ExpressionStatement",
                   "src": "2828:137:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6910,
+                    "id": 6933,
                     "name": "price",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 6820,
+                    "referencedDeclaration": 6843,
                     "src": "2983:5:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 6901,
-                  "id": 6911,
+                  "functionReturnParameters": 6924,
+                  "id": 6934,
                   "nodeType": "Return",
                   "src": "2976:12:59"
                 }
               ]
             },
             "documentation": "@notice Returns an amount of the quote currency needed to purchase\n        one unit of the base currency.\n     * @dev Function throws an exception if the price is invalid, for example,\n     was not set, or became outdated, etc.\n     * @return An amount of the quote currency needed to purchase one unit of\n        the base base currency.",
-            "id": 6913,
+            "id": 6936,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPrice",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6898,
+              "id": 6921,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2755:2:59"
             },
             "returnParameters": {
-              "id": 6901,
+              "id": 6924,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6900,
+                  "id": 6923,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6913,
+                  "scope": 6936,
                   "src": "2805:7:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3121,7 +3121,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6899,
+                    "id": 6922,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2805:7:59",
@@ -3136,15 +3136,15 @@
               ],
               "src": "2804:9:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "2738:257:59",
             "stateMutability": "view",
-            "superFunction": 5677,
+            "superFunction": 5700,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 6940,
+              "id": 6963,
               "nodeType": "Block",
               "src": "3132:262:59",
               "statements": [
@@ -3158,18 +3158,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 6924,
+                        "id": 6947,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 6921,
+                          "id": 6944,
                           "name": "_expirationHeight",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6917,
+                          "referencedDeclaration": 6940,
                           "src": "3163:17:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3182,18 +3182,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 6922,
+                            "id": 6945,
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 12871,
+                            "referencedDeclaration": 12894,
                             "src": "3183:5:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
                               "typeString": "block"
                             }
                           },
-                          "id": 6923,
+                          "id": 6946,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3216,7 +3216,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "50726963652065787069726174696f6e20686569676874206973206c746520746f207468652063757272656e7420626c6f636b206865696768742e",
-                        "id": 6925,
+                        "id": 6948,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3243,21 +3243,21 @@
                           "typeString": "literal_string \"Price expiration height is lte to the current block height.\""
                         }
                       ],
-                      "id": 6920,
+                      "id": 6943,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        12884,
-                        12885
+                        12907,
+                        12908
                       ],
-                      "referencedDeclaration": 12885,
+                      "referencedDeclaration": 12908,
                       "src": "3142:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 6926,
+                    "id": 6949,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3271,25 +3271,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6927,
+                  "id": 6950,
                   "nodeType": "ExpressionStatement",
                   "src": "3142:138:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6930,
+                    "id": 6953,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6928,
+                      "id": 6951,
                       "name": "price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6820,
+                      "referencedDeclaration": 6843,
                       "src": "3291:5:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3300,11 +3300,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6929,
+                      "id": 6952,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6915,
+                      "referencedDeclaration": 6938,
                       "src": "3299:6:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3317,25 +3317,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 6931,
+                  "id": 6954,
                   "nodeType": "ExpressionStatement",
                   "src": "3291:14:59"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 6934,
+                    "id": 6957,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 6932,
+                      "id": 6955,
                       "name": "expirationHeight",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6822,
+                      "referencedDeclaration": 6845,
                       "src": "3316:16:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3346,11 +3346,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 6933,
+                      "id": 6956,
                       "name": "_expirationHeight",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6917,
+                      "referencedDeclaration": 6940,
                       "src": "3335:17:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3363,7 +3363,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 6935,
+                  "id": 6958,
                   "nodeType": "ExpressionStatement",
                   "src": "3316:36:59"
                 },
@@ -3373,11 +3373,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 6937,
+                        "id": 6960,
                         "name": "price",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6820,
+                        "referencedDeclaration": 6843,
                         "src": "3381:5:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3392,18 +3392,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 6936,
+                      "id": 6959,
                       "name": "PriceUpdated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5657,
+                      "referencedDeclaration": 5680,
                       "src": "3368:12:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 6938,
+                    "id": 6961,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3417,29 +3417,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 6939,
+                  "id": 6962,
                   "nodeType": "EmitStatement",
                   "src": "3363:24:59"
                 }
               ]
             },
             "documentation": null,
-            "id": 6941,
+            "id": 6964,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setPrice",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6918,
+              "id": 6941,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6915,
+                  "id": 6938,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6941,
+                  "scope": 6964,
                   "src": "3057:14:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3448,7 +3448,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6914,
+                    "id": 6937,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3057:7:59",
@@ -3462,10 +3462,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 6917,
+                  "id": 6940,
                   "name": "_expirationHeight",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6941,
+                  "scope": 6964,
                   "src": "3081:25:59",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3474,7 +3474,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6916,
+                    "id": 6939,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3081:7:59",
@@ -3490,19 +3490,19 @@
               "src": "3047:65:59"
             },
             "returnParameters": {
-              "id": 6919,
+              "id": 6942,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3132:0:59"
             },
-            "scope": 6942,
+            "scope": 6965,
             "src": "3030:364:59",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 6943,
+        "scope": 6966,
         "src": "664:2732:59"
       }
     ],
@@ -3514,7 +3514,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.148Z",
+  "updatedAt": "2020-01-22T10:54:09.823Z",
   "devdoc": {
     "methods": {
       "baseCurrency()": {

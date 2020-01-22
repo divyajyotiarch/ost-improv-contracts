@@ -102,14 +102,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol",
     "exportedSymbols": {
       "UtilityTokenInterface": [
-        3267
+        3290
       ]
     },
-    "id": 3268,
+    "id": 3291,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3236,
+        "id": 3259,
         "literals": [
           "solidity",
           "^",
@@ -125,9 +125,9 @@
         "contractKind": "contract",
         "documentation": " @title UtilityTokenInterface contract.\n *  @notice Provides the interface to utility token contract.",
         "fullyImplemented": false,
-        "id": 3267,
+        "id": 3290,
         "linearizedBaseContracts": [
-          3267
+          3290
         ],
         "name": "UtilityTokenInterface",
         "nodeType": "ContractDefinition",
@@ -135,22 +135,22 @@
           {
             "body": null,
             "documentation": "@notice Increases the total token supply.\n     * @dev Adds number of tokens to beneficiary balance and increases the\n     total token supply.\n     * @param _account Account address for which the balance will be increased.\n                This is payable so that it provides flexibility of\n                transferring base token to account on increase supply.\n@param _amount Amount of tokens.\n     * @return success_ `true` if increase supply is successful, false otherwise.",
-            "id": 3245,
+            "id": 3268,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "increaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3241,
+              "id": 3264,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3238,
+                  "id": 3261,
                   "name": "_account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3245,
+                  "scope": 3268,
                   "src": "1624:24:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -159,7 +159,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 3237,
+                    "id": 3260,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1624:15:24",
@@ -174,10 +174,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3240,
+                  "id": 3263,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3245,
+                  "scope": 3268,
                   "src": "1658:15:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -186,7 +186,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3239,
+                    "id": 3262,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1658:7:24",
@@ -202,15 +202,15 @@
               "src": "1614:65:24"
             },
             "returnParameters": {
-              "id": 3244,
+              "id": 3267,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3243,
+                  "id": 3266,
                   "name": "success_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3245,
+                  "scope": 3268,
                   "src": "1714:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -219,7 +219,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3242,
+                    "id": 3265,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1714:4:24",
@@ -234,7 +234,7 @@
               ],
               "src": "1713:15:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "1591:138:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -243,22 +243,22 @@
           {
             "body": null,
             "documentation": "@notice Decreases the token supply.\n     * @dev Decreases the token balance from the msg.sender address and\n     decreases the total token supply count.\n     * @param _amount Amount of tokens.\n     * @return success_ `true` if decrease supply is successful, false otherwise.",
-            "id": 3252,
+            "id": 3275,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "decreaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3248,
+              "id": 3271,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3247,
+                  "id": 3270,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3252,
+                  "scope": 3275,
                   "src": "2085:15:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -267,7 +267,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3246,
+                    "id": 3269,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2085:7:24",
@@ -283,15 +283,15 @@
               "src": "2084:17:24"
             },
             "returnParameters": {
-              "id": 3251,
+              "id": 3274,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3250,
+                  "id": 3273,
                   "name": "success_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3252,
+                  "scope": 3275,
                   "src": "2120:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -300,7 +300,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3249,
+                    "id": 3272,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2120:4:24",
@@ -315,7 +315,7 @@
               ],
               "src": "2119:15:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "2061:74:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -324,22 +324,22 @@
           {
             "body": null,
             "documentation": "@notice Sets the CoGateway contract address.\n     * @dev Function requires:\n         - It is called by whitelisted workers.\n         - coGateway address is set only once.\n         - coGateway.utilityToken must match this contract.\n     * @param _coGateway CoGateway contract address.\n     ",
-            "id": 3259,
+            "id": 3282,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setCoGateway",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3255,
+              "id": 3278,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3254,
+                  "id": 3277,
                   "name": "_coGateway",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3259,
+                  "scope": 3282,
                   "src": "2512:18:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -348,7 +348,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3253,
+                    "id": 3276,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2512:7:24",
@@ -365,15 +365,15 @@
               "src": "2511:20:24"
             },
             "returnParameters": {
-              "id": 3258,
+              "id": 3281,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3257,
+                  "id": 3280,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3259,
+                  "scope": 3282,
                   "src": "2550:4:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -382,7 +382,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3256,
+                    "id": 3279,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2550:4:24",
@@ -397,7 +397,7 @@
               ],
               "src": "2549:6:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "2490:66:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -406,22 +406,22 @@
           {
             "body": null,
             "documentation": "@notice  Checks if an address exists.\n     * @param _actor Address that needs to be checked\n     * @return exists_ `true` if the address is allowed otherwise `false`",
-            "id": 3266,
+            "id": 3289,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "exists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3262,
+              "id": 3285,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3261,
+                  "id": 3284,
                   "name": "_actor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3266,
+                  "scope": 3289,
                   "src": "2781:14:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -430,7 +430,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3260,
+                    "id": 3283,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2781:7:24",
@@ -447,15 +447,15 @@
               "src": "2780:16:24"
             },
             "returnParameters": {
-              "id": 3265,
+              "id": 3288,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3264,
+                  "id": 3287,
                   "name": "exists_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3266,
+                  "scope": 3289,
                   "src": "2815:12:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -464,7 +464,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3263,
+                    "id": 3286,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2815:4:24",
@@ -479,14 +479,14 @@
               ],
               "src": "2814:14:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "2765:64:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3268,
+        "scope": 3291,
         "src": "976:1855:24"
       }
     ],
@@ -496,14 +496,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/UtilityTokenInterface.sol",
     "exportedSymbols": {
       "UtilityTokenInterface": [
-        3267
+        3290
       ]
     },
-    "id": 3268,
+    "id": 3291,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3236,
+        "id": 3259,
         "literals": [
           "solidity",
           "^",
@@ -519,9 +519,9 @@
         "contractKind": "contract",
         "documentation": " @title UtilityTokenInterface contract.\n *  @notice Provides the interface to utility token contract.",
         "fullyImplemented": false,
-        "id": 3267,
+        "id": 3290,
         "linearizedBaseContracts": [
-          3267
+          3290
         ],
         "name": "UtilityTokenInterface",
         "nodeType": "ContractDefinition",
@@ -529,22 +529,22 @@
           {
             "body": null,
             "documentation": "@notice Increases the total token supply.\n     * @dev Adds number of tokens to beneficiary balance and increases the\n     total token supply.\n     * @param _account Account address for which the balance will be increased.\n                This is payable so that it provides flexibility of\n                transferring base token to account on increase supply.\n@param _amount Amount of tokens.\n     * @return success_ `true` if increase supply is successful, false otherwise.",
-            "id": 3245,
+            "id": 3268,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "increaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3241,
+              "id": 3264,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3238,
+                  "id": 3261,
                   "name": "_account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3245,
+                  "scope": 3268,
                   "src": "1624:24:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -553,7 +553,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 3237,
+                    "id": 3260,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1624:15:24",
@@ -568,10 +568,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3240,
+                  "id": 3263,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3245,
+                  "scope": 3268,
                   "src": "1658:15:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -580,7 +580,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3239,
+                    "id": 3262,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1658:7:24",
@@ -596,15 +596,15 @@
               "src": "1614:65:24"
             },
             "returnParameters": {
-              "id": 3244,
+              "id": 3267,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3243,
+                  "id": 3266,
                   "name": "success_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3245,
+                  "scope": 3268,
                   "src": "1714:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -613,7 +613,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3242,
+                    "id": 3265,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1714:4:24",
@@ -628,7 +628,7 @@
               ],
               "src": "1713:15:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "1591:138:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -637,22 +637,22 @@
           {
             "body": null,
             "documentation": "@notice Decreases the token supply.\n     * @dev Decreases the token balance from the msg.sender address and\n     decreases the total token supply count.\n     * @param _amount Amount of tokens.\n     * @return success_ `true` if decrease supply is successful, false otherwise.",
-            "id": 3252,
+            "id": 3275,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "decreaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3248,
+              "id": 3271,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3247,
+                  "id": 3270,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3252,
+                  "scope": 3275,
                   "src": "2085:15:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -661,7 +661,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3246,
+                    "id": 3269,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2085:7:24",
@@ -677,15 +677,15 @@
               "src": "2084:17:24"
             },
             "returnParameters": {
-              "id": 3251,
+              "id": 3274,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3250,
+                  "id": 3273,
                   "name": "success_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3252,
+                  "scope": 3275,
                   "src": "2120:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -694,7 +694,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3249,
+                    "id": 3272,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2120:4:24",
@@ -709,7 +709,7 @@
               ],
               "src": "2119:15:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "2061:74:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -718,22 +718,22 @@
           {
             "body": null,
             "documentation": "@notice Sets the CoGateway contract address.\n     * @dev Function requires:\n         - It is called by whitelisted workers.\n         - coGateway address is set only once.\n         - coGateway.utilityToken must match this contract.\n     * @param _coGateway CoGateway contract address.\n     ",
-            "id": 3259,
+            "id": 3282,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setCoGateway",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3255,
+              "id": 3278,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3254,
+                  "id": 3277,
                   "name": "_coGateway",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3259,
+                  "scope": 3282,
                   "src": "2512:18:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -742,7 +742,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3253,
+                    "id": 3276,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2512:7:24",
@@ -759,15 +759,15 @@
               "src": "2511:20:24"
             },
             "returnParameters": {
-              "id": 3258,
+              "id": 3281,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3257,
+                  "id": 3280,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3259,
+                  "scope": 3282,
                   "src": "2550:4:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -776,7 +776,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3256,
+                    "id": 3279,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2550:4:24",
@@ -791,7 +791,7 @@
               ],
               "src": "2549:6:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "2490:66:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -800,22 +800,22 @@
           {
             "body": null,
             "documentation": "@notice  Checks if an address exists.\n     * @param _actor Address that needs to be checked\n     * @return exists_ `true` if the address is allowed otherwise `false`",
-            "id": 3266,
+            "id": 3289,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "exists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3262,
+              "id": 3285,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3261,
+                  "id": 3284,
                   "name": "_actor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3266,
+                  "scope": 3289,
                   "src": "2781:14:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -824,7 +824,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3260,
+                    "id": 3283,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2781:7:24",
@@ -841,15 +841,15 @@
               "src": "2780:16:24"
             },
             "returnParameters": {
-              "id": 3265,
+              "id": 3288,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3264,
+                  "id": 3287,
                   "name": "exists_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3266,
+                  "scope": 3289,
                   "src": "2815:12:24",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -858,7 +858,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3263,
+                    "id": 3286,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2815:4:24",
@@ -873,14 +873,14 @@
               ],
               "src": "2814:14:24"
             },
-            "scope": 3267,
+            "scope": 3290,
             "src": "2765:64:24",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 3268,
+        "scope": 3291,
         "src": "976:1855:24"
       }
     ],
@@ -892,7 +892,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-19T09:48:26.088Z",
+  "updatedAt": "2020-01-22T10:54:09.784Z",
   "devdoc": {
     "methods": {
       "decreaseSupply(uint256)": {
