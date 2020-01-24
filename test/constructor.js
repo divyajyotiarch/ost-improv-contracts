@@ -96,7 +96,7 @@ contract('OptimalWalletCreator::constructor', async(accounts) => {
       //       'UserWalletFactory contract address must not be zero.');
       //     });
           
-      });
+      // });
 
       contract('Storage', async () => {
 

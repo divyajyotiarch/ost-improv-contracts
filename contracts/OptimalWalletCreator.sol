@@ -14,8 +14,8 @@ import "./brandedtoken-contracts/contracts/utilitytoken/contracts/organization/c
 
 contract OptimalWalletCreator is Organized {
 
-    UserWalletFactory userWalletFactory;
-    UtilityBrandedToken utilityBrandedToken;
+    address ubtContractAddr;
+    address walletFactoryContractAddr;
 
     constructor(
         address _ubtContractAddr,
@@ -25,8 +25,8 @@ contract OptimalWalletCreator is Organized {
         public
         Organized(_organization)
     {
-        userWalletFactory = UserWalletFactory(_walletFactoryContractAddr);
-        utilityBrandedToken = UtilityBrandedToken(_ubtContractAddr);
+        walletFactoryContractAddr = _walletFactoryContractAddr;
+        ubtContractAddr = _ubtContractAddr;
     }
 
     /* External Functions  */
@@ -63,6 +63,12 @@ contract OptimalWalletCreator is Organized {
         onlyWorker
         returns (Proxy gnosisSafeProxy_, Proxy tokenHolderProxy_)
     {
+
+        UserWalletFactory userWalletFactory;
+        UtilityBrandedToken utilityBrandedToken;
+
+        userWalletFactory = UserWalletFactory(walletFactoryContractAddr);
+        utilityBrandedToken = UtilityBrandedToken(ubtContractAddr);
 
         (gnosisSafeProxy_, tokenHolderProxy_) = userWalletFactory.createUserWallet(
             _gnosisSafeMasterCopy,

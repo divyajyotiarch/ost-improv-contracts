@@ -72,14 +72,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockOrganization.sol",
     "exportedSymbols": {
       "MockOrganization": [
-        4020
+        4034
       ]
     },
-    "id": 4021,
+    "id": 4035,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3968,
+        "id": 3982,
         "literals": [
           "solidity",
           "^",
@@ -92,10 +92,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
         "file": "../organization/contracts/OrganizationInterface.sol",
-        "id": 3969,
+        "id": 3983,
         "nodeType": "ImportDirective",
-        "scope": 4021,
-        "sourceUnit": 3642,
+        "scope": 4035,
+        "sourceUnit": 3656,
         "src": "813:61:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -106,41 +106,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3970,
+              "id": 3984,
               "name": "OrganizationInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3641,
+              "referencedDeclaration": 3655,
               "src": "1099:21:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OrganizationInterface_$3641",
+                "typeIdentifier": "t_contract$_OrganizationInterface_$3655",
                 "typeString": "contract OrganizationInterface"
               }
             },
-            "id": 3971,
+            "id": 3985,
             "nodeType": "InheritanceSpecifier",
             "src": "1099:21:32"
           }
         ],
         "contractDependencies": [
-          3641
+          3655
         ],
         "contractKind": "contract",
         "documentation": "@title Mocks an organization interface implementation.\n * @notice The only valid registered owner and worker are given at\n        construction and cannot be changed or removed.",
         "fullyImplemented": true,
-        "id": 4020,
+        "id": 4034,
         "linearizedBaseContracts": [
-          4020,
-          3641
+          4034,
+          3655
         ],
         "name": "MockOrganization",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3973,
+            "id": 3987,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 4020,
+            "scope": 4034,
             "src": "1195:13:32",
             "stateVariable": true,
             "storageLocation": "default",
@@ -149,7 +149,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3972,
+              "id": 3986,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1195:7:32",
@@ -164,10 +164,10 @@
           },
           {
             "constant": false,
-            "id": 3975,
+            "id": 3989,
             "name": "worker",
             "nodeType": "VariableDeclaration",
-            "scope": 4020,
+            "scope": 4034,
             "src": "1264:14:32",
             "stateVariable": true,
             "storageLocation": "default",
@@ -176,7 +176,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3974,
+              "id": 3988,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1264:7:32",
@@ -191,25 +191,25 @@
           },
           {
             "body": {
-              "id": 3990,
+              "id": 4004,
               "nodeType": "Block",
               "src": "1591:57:32",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3984,
+                    "id": 3998,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3982,
+                      "id": 3996,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3973,
+                      "referencedDeclaration": 3987,
                       "src": "1601:5:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -220,11 +220,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3983,
+                      "id": 3997,
                       "name": "_owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3977,
+                      "referencedDeclaration": 3991,
                       "src": "1609:6:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -237,25 +237,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3985,
+                  "id": 3999,
                   "nodeType": "ExpressionStatement",
                   "src": "1601:14:32"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3988,
+                    "id": 4002,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3986,
+                      "id": 4000,
                       "name": "worker",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3975,
+                      "referencedDeclaration": 3989,
                       "src": "1625:6:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -266,11 +266,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3987,
+                      "id": 4001,
                       "name": "_worker",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3979,
+                      "referencedDeclaration": 3993,
                       "src": "1634:7:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -283,29 +283,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3989,
+                  "id": 4003,
                   "nodeType": "ExpressionStatement",
                   "src": "1625:16:32"
                 }
               ]
             },
             "documentation": "@notice Sets the address of the owner and the worker.\n     * @param _owner Address that should be used as a registered owner.\n@param _worker Address that should be used as a registered worker.",
-            "id": 3991,
+            "id": 4005,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3980,
+              "id": 3994,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3977,
+                  "id": 3991,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3991,
+                  "scope": 4005,
                   "src": "1551:14:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -314,7 +314,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3976,
+                    "id": 3990,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1551:7:32",
@@ -329,10 +329,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3979,
+                  "id": 3993,
                   "name": "_worker",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3991,
+                  "scope": 4005,
                   "src": "1567:15:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -341,7 +341,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3978,
+                    "id": 3992,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1567:7:32",
@@ -358,12 +358,12 @@
               "src": "1550:33:32"
             },
             "returnParameters": {
-              "id": 3981,
+              "id": 3995,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1591:0:32"
             },
-            "scope": 4020,
+            "scope": 4034,
             "src": "1539:109:32",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -371,175 +371,9 @@
           },
           {
             "body": {
-              "id": 4004,
-              "nodeType": "Block",
-              "src": "2118:57:32",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 4002,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 3998,
-                      "name": "isOrganization_",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3996,
-                      "src": "2128:15:32",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      },
-                      "id": 4001,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "id": 3999,
-                        "name": "owner",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 3973,
-                        "src": "2146:5:32",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "==",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "id": 4000,
-                        "name": "_organization",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 3993,
-                        "src": "2155:13:32",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      "src": "2146:22:32",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "src": "2128:40:32",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "id": 4003,
-                  "nodeType": "ExpressionStatement",
-                  "src": "2128:40:32"
-                }
-              ]
-            },
-            "documentation": "@notice Checks if an address is currently registered as the organization.\n     * @param _organization Address to check.\n     * @return isOrganization_ True if the given address represents the\n                        organization. Returns false otherwise.",
-            "id": 4005,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "isOrganization",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 3994,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 3993,
-                  "name": "_organization",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 4005,
-                  "src": "2017:21:32",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 3992,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2017:7:32",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2007:37:32"
-            },
-            "returnParameters": {
-              "id": 3997,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 3996,
-                  "name": "isOrganization_",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 4005,
-                  "src": "2092:20:32",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 3995,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2092:4:32",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2091:22:32"
-            },
-            "scope": 4020,
-            "src": "1984:191:32",
-            "stateMutability": "view",
-            "superFunction": 3633,
-            "visibility": "external"
-          },
-          {
-            "body": {
               "id": 4018,
               "nodeType": "Block",
-              "src": "2481:46:32",
+              "src": "2118:57:32",
               "statements": [
                 {
                   "expression": {
@@ -552,11 +386,11 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 4012,
-                      "name": "isWorker_",
+                      "name": "isOrganization_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 4010,
-                      "src": "2491:9:32",
+                      "src": "2128:15:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -578,11 +412,11 @@
                       "leftExpression": {
                         "argumentTypes": null,
                         "id": 4013,
-                        "name": "worker",
+                        "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3975,
-                        "src": "2503:6:32",
+                        "referencedDeclaration": 3987,
+                        "src": "2146:5:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -593,10 +427,176 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "id": 4014,
-                        "name": "_worker",
+                        "name": "_organization",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4007,
+                        "src": "2155:13:32",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "src": "2146:22:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "2128:40:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4017,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2128:40:32"
+                }
+              ]
+            },
+            "documentation": "@notice Checks if an address is currently registered as the organization.\n     * @param _organization Address to check.\n     * @return isOrganization_ True if the given address represents the\n                        organization. Returns false otherwise.",
+            "id": 4019,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOrganization",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4007,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4019,
+                  "src": "2017:21:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4006,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2017:7:32",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2007:37:32"
+            },
+            "returnParameters": {
+              "id": 4011,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4010,
+                  "name": "isOrganization_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4019,
+                  "src": "2092:20:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4009,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2092:4:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2091:22:32"
+            },
+            "scope": 4034,
+            "src": "1984:191:32",
+            "stateMutability": "view",
+            "superFunction": 3647,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4032,
+              "nodeType": "Block",
+              "src": "2481:46:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4030,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 4026,
+                      "name": "isWorker_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4024,
+                      "src": "2491:9:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "id": 4029,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 4027,
+                        "name": "worker",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3989,
+                        "src": "2503:6:32",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 4028,
+                        "name": "_worker",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4021,
                         "src": "2513:7:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -615,29 +615,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 4017,
+                  "id": 4031,
                   "nodeType": "ExpressionStatement",
                   "src": "2491:29:32"
                 }
               ]
             },
             "documentation": "@notice Checks if an address is currently registered as an active worker.\n     * @param _worker Address to check.\n     * @return isWorker_ True if the given address is a registered worker.",
-            "id": 4019,
+            "id": 4033,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isWorker",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4008,
+              "id": 4022,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4007,
+                  "id": 4021,
                   "name": "_worker",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4019,
+                  "scope": 4033,
                   "src": "2425:15:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -646,7 +646,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4006,
+                    "id": 4020,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2425:7:32",
@@ -663,15 +663,15 @@
               "src": "2424:17:32"
             },
             "returnParameters": {
-              "id": 4011,
+              "id": 4025,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4010,
+                  "id": 4024,
                   "name": "isWorker_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4019,
+                  "scope": 4033,
                   "src": "2465:14:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -680,7 +680,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4009,
+                    "id": 4023,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2465:4:32",
@@ -695,14 +695,14 @@
               ],
               "src": "2464:16:32"
             },
-            "scope": 4020,
+            "scope": 4034,
             "src": "2407:120:32",
             "stateMutability": "view",
-            "superFunction": 3640,
+            "superFunction": 3654,
             "visibility": "external"
           }
         ],
-        "scope": 4021,
+        "scope": 4035,
         "src": "1070:1459:32"
       }
     ],
@@ -712,14 +712,14 @@
     "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/test/MockOrganization.sol",
     "exportedSymbols": {
       "MockOrganization": [
-        4020
+        4034
       ]
     },
-    "id": 4021,
+    "id": 4035,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3968,
+        "id": 3982,
         "literals": [
           "solidity",
           "^",
@@ -732,10 +732,10 @@
       {
         "absolutePath": "/Users/OST/Documents/dj/ost-opt-contracts/contracts/brandedtoken-contracts/contracts/utilitytoken/contracts/organization/contracts/OrganizationInterface.sol",
         "file": "../organization/contracts/OrganizationInterface.sol",
-        "id": 3969,
+        "id": 3983,
         "nodeType": "ImportDirective",
-        "scope": 4021,
-        "sourceUnit": 3642,
+        "scope": 4035,
+        "sourceUnit": 3656,
         "src": "813:61:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -746,41 +746,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 3970,
+              "id": 3984,
               "name": "OrganizationInterface",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3641,
+              "referencedDeclaration": 3655,
               "src": "1099:21:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OrganizationInterface_$3641",
+                "typeIdentifier": "t_contract$_OrganizationInterface_$3655",
                 "typeString": "contract OrganizationInterface"
               }
             },
-            "id": 3971,
+            "id": 3985,
             "nodeType": "InheritanceSpecifier",
             "src": "1099:21:32"
           }
         ],
         "contractDependencies": [
-          3641
+          3655
         ],
         "contractKind": "contract",
         "documentation": "@title Mocks an organization interface implementation.\n * @notice The only valid registered owner and worker are given at\n        construction and cannot be changed or removed.",
         "fullyImplemented": true,
-        "id": 4020,
+        "id": 4034,
         "linearizedBaseContracts": [
-          4020,
-          3641
+          4034,
+          3655
         ],
         "name": "MockOrganization",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3973,
+            "id": 3987,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 4020,
+            "scope": 4034,
             "src": "1195:13:32",
             "stateVariable": true,
             "storageLocation": "default",
@@ -789,7 +789,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3972,
+              "id": 3986,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1195:7:32",
@@ -804,10 +804,10 @@
           },
           {
             "constant": false,
-            "id": 3975,
+            "id": 3989,
             "name": "worker",
             "nodeType": "VariableDeclaration",
-            "scope": 4020,
+            "scope": 4034,
             "src": "1264:14:32",
             "stateVariable": true,
             "storageLocation": "default",
@@ -816,7 +816,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 3974,
+              "id": 3988,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1264:7:32",
@@ -831,25 +831,25 @@
           },
           {
             "body": {
-              "id": 3990,
+              "id": 4004,
               "nodeType": "Block",
               "src": "1591:57:32",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3984,
+                    "id": 3998,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3982,
+                      "id": 3996,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3973,
+                      "referencedDeclaration": 3987,
                       "src": "1601:5:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -860,11 +860,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3983,
+                      "id": 3997,
                       "name": "_owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3977,
+                      "referencedDeclaration": 3991,
                       "src": "1609:6:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -877,25 +877,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3985,
+                  "id": 3999,
                   "nodeType": "ExpressionStatement",
                   "src": "1601:14:32"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3988,
+                    "id": 4002,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3986,
+                      "id": 4000,
                       "name": "worker",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3975,
+                      "referencedDeclaration": 3989,
                       "src": "1625:6:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -906,11 +906,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3987,
+                      "id": 4001,
                       "name": "_worker",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3979,
+                      "referencedDeclaration": 3993,
                       "src": "1634:7:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -923,29 +923,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 3989,
+                  "id": 4003,
                   "nodeType": "ExpressionStatement",
                   "src": "1625:16:32"
                 }
               ]
             },
             "documentation": "@notice Sets the address of the owner and the worker.\n     * @param _owner Address that should be used as a registered owner.\n@param _worker Address that should be used as a registered worker.",
-            "id": 3991,
+            "id": 4005,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3980,
+              "id": 3994,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3977,
+                  "id": 3991,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3991,
+                  "scope": 4005,
                   "src": "1551:14:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -954,7 +954,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3976,
+                    "id": 3990,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1551:7:32",
@@ -969,10 +969,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3979,
+                  "id": 3993,
                   "name": "_worker",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3991,
+                  "scope": 4005,
                   "src": "1567:15:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -981,7 +981,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3978,
+                    "id": 3992,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1567:7:32",
@@ -998,12 +998,12 @@
               "src": "1550:33:32"
             },
             "returnParameters": {
-              "id": 3981,
+              "id": 3995,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1591:0:32"
             },
-            "scope": 4020,
+            "scope": 4034,
             "src": "1539:109:32",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1011,175 +1011,9 @@
           },
           {
             "body": {
-              "id": 4004,
-              "nodeType": "Block",
-              "src": "2118:57:32",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 4002,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 3998,
-                      "name": "isOrganization_",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3996,
-                      "src": "2128:15:32",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      },
-                      "id": 4001,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "id": 3999,
-                        "name": "owner",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 3973,
-                        "src": "2146:5:32",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "==",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "id": 4000,
-                        "name": "_organization",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 3993,
-                        "src": "2155:13:32",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      "src": "2146:22:32",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "src": "2128:40:32",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "id": 4003,
-                  "nodeType": "ExpressionStatement",
-                  "src": "2128:40:32"
-                }
-              ]
-            },
-            "documentation": "@notice Checks if an address is currently registered as the organization.\n     * @param _organization Address to check.\n     * @return isOrganization_ True if the given address represents the\n                        organization. Returns false otherwise.",
-            "id": 4005,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "isOrganization",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 3994,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 3993,
-                  "name": "_organization",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 4005,
-                  "src": "2017:21:32",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 3992,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2017:7:32",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2007:37:32"
-            },
-            "returnParameters": {
-              "id": 3997,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 3996,
-                  "name": "isOrganization_",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 4005,
-                  "src": "2092:20:32",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 3995,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2092:4:32",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2091:22:32"
-            },
-            "scope": 4020,
-            "src": "1984:191:32",
-            "stateMutability": "view",
-            "superFunction": 3633,
-            "visibility": "external"
-          },
-          {
-            "body": {
               "id": 4018,
               "nodeType": "Block",
-              "src": "2481:46:32",
+              "src": "2118:57:32",
               "statements": [
                 {
                   "expression": {
@@ -1192,11 +1026,11 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 4012,
-                      "name": "isWorker_",
+                      "name": "isOrganization_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 4010,
-                      "src": "2491:9:32",
+                      "src": "2128:15:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1218,11 +1052,11 @@
                       "leftExpression": {
                         "argumentTypes": null,
                         "id": 4013,
-                        "name": "worker",
+                        "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3975,
-                        "src": "2503:6:32",
+                        "referencedDeclaration": 3987,
+                        "src": "2146:5:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1233,10 +1067,176 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "id": 4014,
-                        "name": "_worker",
+                        "name": "_organization",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4007,
+                        "src": "2155:13:32",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "src": "2146:22:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "2128:40:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4017,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2128:40:32"
+                }
+              ]
+            },
+            "documentation": "@notice Checks if an address is currently registered as the organization.\n     * @param _organization Address to check.\n     * @return isOrganization_ True if the given address represents the\n                        organization. Returns false otherwise.",
+            "id": 4019,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOrganization",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4007,
+                  "name": "_organization",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4019,
+                  "src": "2017:21:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4006,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2017:7:32",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2007:37:32"
+            },
+            "returnParameters": {
+              "id": 4011,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4010,
+                  "name": "isOrganization_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4019,
+                  "src": "2092:20:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4009,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2092:4:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2091:22:32"
+            },
+            "scope": 4034,
+            "src": "1984:191:32",
+            "stateMutability": "view",
+            "superFunction": 3647,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4032,
+              "nodeType": "Block",
+              "src": "2481:46:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4030,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 4026,
+                      "name": "isWorker_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4024,
+                      "src": "2491:9:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "id": 4029,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 4027,
+                        "name": "worker",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3989,
+                        "src": "2503:6:32",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 4028,
+                        "name": "_worker",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4021,
                         "src": "2513:7:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1255,29 +1255,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 4017,
+                  "id": 4031,
                   "nodeType": "ExpressionStatement",
                   "src": "2491:29:32"
                 }
               ]
             },
             "documentation": "@notice Checks if an address is currently registered as an active worker.\n     * @param _worker Address to check.\n     * @return isWorker_ True if the given address is a registered worker.",
-            "id": 4019,
+            "id": 4033,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isWorker",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4008,
+              "id": 4022,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4007,
+                  "id": 4021,
                   "name": "_worker",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4019,
+                  "scope": 4033,
                   "src": "2425:15:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1286,7 +1286,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 4006,
+                    "id": 4020,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2425:7:32",
@@ -1303,15 +1303,15 @@
               "src": "2424:17:32"
             },
             "returnParameters": {
-              "id": 4011,
+              "id": 4025,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4010,
+                  "id": 4024,
                   "name": "isWorker_",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4019,
+                  "scope": 4033,
                   "src": "2465:14:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1320,7 +1320,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4009,
+                    "id": 4023,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2465:4:32",
@@ -1335,14 +1335,14 @@
               ],
               "src": "2464:16:32"
             },
-            "scope": 4020,
+            "scope": 4034,
             "src": "2407:120:32",
             "stateMutability": "view",
-            "superFunction": 3640,
+            "superFunction": 3654,
             "visibility": "external"
           }
         ],
-        "scope": 4021,
+        "scope": 4035,
         "src": "1070:1459:32"
       }
     ],
@@ -1354,7 +1354,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-22T10:54:09.791Z",
+  "updatedAt": "2020-01-24T12:21:06.930Z",
   "devdoc": {
     "methods": {
       "constructor": {
