@@ -580,7 +580,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.21",
-  "updatedAt": "2020-01-22T10:54:09.821Z",
+  "updatedAt": "2020-01-26T06:01:47.036Z",
   "devdoc": {
     "methods": {},
     "title": "A contract that calls a method that is firewalled."
